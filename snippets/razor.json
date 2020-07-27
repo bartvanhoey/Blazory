@@ -16,7 +16,7 @@
   "pageDirective": {
       "prefix": "bPage",
       "body": [
-          "@page \"/${1:${TM_FILENAME_BASE}}\""
+          "@page \"/${1:${TM_FILENAME_BASE/(.*)/${2:/downcase}/}}\""
       ]
   },
   "pageDirectiveWithParameter": {
