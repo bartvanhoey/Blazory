@@ -2,7 +2,7 @@
 	"injectHttpClient": {
 		"prefix": "bInjectHttpClient",
 		"body": [
-			"[Inject$1] public Httpclient$2 Httpclient { get; set; }$0"
+			"[Inject$1] public HttpClient$2 HttpClient { get; set; }$0"
 		]
 	},
 	"injectNavigationManager": {
