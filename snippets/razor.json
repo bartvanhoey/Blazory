@@ -1,0 +1,218 @@
+{
+  "inheritsBaseComponent": {
+    "prefix": "bInheritsBaseComponent",
+    "body": [
+        "@inherits ${1:${TM_FILENAME_BASE}}Base$0"
+    ]
+  },
+  "codeBlock": {
+      "prefix": "bCode",
+      "body": [
+          "@code {",
+          "\t$0",
+          "}"
+      ]
+  },
+  "pageDirective": {
+      "prefix": "bPage",
+      "body": [
+          "@page \"/${1:${TM_FILENAME_BASE}}\""
+      ]
+  },
+  "pageDirectiveWithParameter": {
+      "prefix": "bPageParam",
+      "body": [
+          "@page \"/${1:${TM_FILENAME_BASE}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""
+      ]
+  },
+  "injectDirective": {
+      "prefix": "bInject",
+      "body": [
+          "@inject ${1:MyService} ${2:$1}"
+      ]
+  },
+  "injectIJSRuntime": {
+      "prefix": "bInjectIJSRuntime",
+      "body": [
+          "@inject IJSRuntime JSRuntime"
+      ]
+  },
+  "injectHttpClient": {
+      "prefix": "bInjectHttpClient",
+      "body": [
+          "@inject HttpClient HttpClient"
+      ]
+  },
+  "injectNavigationManager": {
+      "prefix": "bInjectNavigationManager",
+      "body": [
+          "@inject NavigationManager NavigationManager"
+      ]
+  },
+  "usingDirective": {
+      "prefix": "bUsing",
+      "body": [
+          "@using ${1:Namespace}"
+      ]
+  },
+  "implementsIDisposible": {
+      "prefix": "bImplementsIDisposable",
+      "body": [
+          "@implements ${1:IDisposable}"
+      ]
+  },
+  "voidDispose": {
+    "prefix": "bVoidDispose",
+    "body": [
+      "\tpublic void Dispose()",
+      "\t{",
+        "\t\t$0",
+      "\t}"
+    ]
+  },
+  "typeParamDirective": {
+      "prefix": "bTypeParam",
+      "body": [
+          "@typeparam ${1:T}"
+      ]
+  },
+  "layoutDirective": {
+      "prefix": "bLayout",
+      "body": [
+          "@layout ${1:Layout}"
+      ]
+  },
+  "attribute [Authorize] Directive": {
+      "prefix": "bAuthorize",
+      "body": [
+          "@attribute [Authorize]"
+      ]
+  },
+  "bindAttribute": {
+      "prefix": "bBind",
+      "body": [
+          "@bind=\"${1:Property}\""
+      ]
+  },
+  "bindValueAttribute": {
+      "prefix": "bBindValue",
+      "body": [
+          "@bind-${1:value}=\"${2:Property}\""
+      ]
+  },
+  "bindValueEventAttribute": {
+      "prefix": "bBindOnInputEvent",
+      "body": [
+          "@bind-${1:value}:event=\"${2:oninput}\""
+      ]
+  },
+  "bindFormatAttribute": {
+      "prefix": "bBindFormat",
+      "body": [
+          "@bind:format=\"${1:yyyy-MM-dd}\""
+      ]
+  },
+  "event:preventDefault Attribute": {
+      "prefix": "bPreventDefault",
+      "body": [
+          "@${1:onkeypress}:preventDefault"
+      ]
+  },
+  "refAttribute": {
+      "prefix": "bRef",
+      "body": [
+          "@ref=\"${1:Property}\""
+      ]
+  },
+  "component": {
+      "prefix": "bComponent",
+      "body": [
+          "@page \"/${1:${TM_FILENAME_BASE}}\"",
+          "",
+          "$0",
+          "",
+          "@code {",
+          "",
+          "}"
+      ]
+  },
+  "inheritsLayoutComponentBase": {
+      "prefix": "bInheritsLayoutComponentBase",
+      "body": [
+          "@inherits LayoutComponentBase",
+          "$0",
+          "@Body",
+          "",
+          "@code {",
+          "",
+          "}"
+      ]
+  },
+  "disposableComponent": {
+      "prefix": "bComponentDisposable",
+      "body": [
+          "@implements IDisposable",
+          "",
+          "@code {",
+          "\tpublic void Dispose()",
+          "\t{",
+          "\t\t$0",
+          "\t}",
+          "}"
+      ]
+  },
+  "componentChildContent": {
+      "prefix": "bComponentChildContent",
+      "body": [
+          "@ChildContent",
+          "",
+          "@code {",
+          "\t[Parameter] public RenderFragment ChildContent { get; set; }",
+          "}"
+      ]
+  },
+  "templatedComponent": {
+      "prefix": "bTemplatedComponent",
+      "body": [
+          "@typeparam TItem",
+          "",
+          "<table>",
+          "\t<thead>",
+          "\t\t<tr>@TableHeader</tr>",
+          "\t</thead>",
+          "\t<tbody>",
+          "\t\t@foreach (var item in Items)",
+          "\t\t{",
+          "\t\t\t<tr>@RowTemplate(item)</tr>",
+          "\t\t}",
+          "\t</tbody>",
+          "\t<tfoot>",
+          "\t\t<tr>@TableFooter</tr>",
+          "\t</tfoot>",
+          "</table>",
+          "",
+          "@code {",
+          "\t[Parameter] public RenderFragment TableHeader { get; set; }",
+          "",
+          "\t[Parameter] public RenderFragment<TItem> RowTemplate { get; set; }",
+          "",
+          "\t[Parameter] public RenderFragment TableFooter { get; set; }",
+          "",
+          "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }",
+          "}"
+      ]
+  },
+  "navLink": {
+      "prefix": "bNavLink",
+      "body": [
+          "<NavLink href=\"${1}\">${3:Home}</NavLink>"
+      ]
+  },
+  "navLinkWithMatchAttribute": {
+      "prefix": "bNavLinkMatch",
+      "body": [
+          "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>"
+      ]
+  }
+  
+  }

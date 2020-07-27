@@ -1,0 +1,41 @@
+{
+    "name": "blazory",
+    "displayName": "Blazory",
+    "description": "Blazor Snippets for Razor and C# Code-Behind files",
+    "publisher": "bartvanhoey",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bartvanhoey/Blazory.git"
+    },
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "Blazor",
+        ".NET Core",
+        "Razor",
+        "C#",
+        "ASP.NET Core",
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "aspnetcorerazor",
+                "path": "./snippets/razor.json"
+            },
+            {
+                "language": "razor",
+                "path": "./snippets/razor.json"
+            },
+            {
+                "language": "csharp",
+                "path": "./snippets/csharp.json"
+            }
+        ]
+    }
+}
