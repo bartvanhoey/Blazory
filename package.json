@@ -2,7 +2,7 @@
     "name": "blazory",
     "displayName": "Blazory",
     "description": "Blazor Snippets for Razor and C# Code-Behind files",
-    "publisher": "bartvanhoey",
+    "publisher": "Bart Van Hoey",
     "repository": {
         "type": "git",
         "url": "https://github.com/bartvanhoey/Blazory.git"
