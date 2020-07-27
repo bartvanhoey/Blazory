@@ -79,7 +79,7 @@
   "layoutDirective": {
       "prefix": "bLayout",
       "body": [
-          "@layout ${1:Layout}"
+          "@layout ${1:LayoutName}"
       ]
   },
   "attribute [Authorize] Directive": {

@@ -1,0 +1,194 @@
+{
+	"injectHttpClient": {
+		"prefix": "bInjectHttpClient",
+		"body": [
+			"[Inject$1] public HttpClient$2 HttpClient { get; set; }$0"
+		]
+	},
+	"injectNavigationManager": {
+		"prefix": "bInjectNavigationManager",
+		"body": [
+			"[Inject$1] public NavigationManager$2 NavigationManager { get; set; }$0"
+		]
+	},
+	"injectIJSRuntime": {
+		"prefix": "bInjectIJSRuntime",
+		"body": [
+			"[Inject$1] public IJSRuntime$2 JSRuntime { get; set; }$0"
+		]
+	},
+	"injectDirective": {
+		"prefix": "bInjectDirective",
+		"body": [
+				"[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"
+		]
+	},
+	"getSet": {
+		"prefix": "gs",
+		"body": [
+				"{ get; set; }$0"
+		]
+	},
+	"getPrivateSet": {
+		"prefix": "gps",
+		"body": [
+				"{ get; private set; }$0"
+		]
+	},
+	"InheritsComponentBase": {
+		"prefix": "bInheritsComponentBase",
+		"body": [
+			": ComponentBase$1"
+		]
+	},
+	"Parameter": {
+		"prefix": "bParameter",
+		"body": [
+			"[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
+		]
+	},
+	"ParameterCaptureUnmatchedValues ": {
+		"prefix": "bParameterCaptureUnMatchedValues",
+		"body": [
+			"[Parameter$1(CaptureUnMatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"
+		]
+	},
+	"cascadingParameter": {
+		"prefix": "bCascadingParameter",
+		"body": [
+			"[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
+		]
+	},
+	"authenticationStateTaskParameter": {
+		"prefix": "bAuthenticationStateTask",
+		"body": [
+			"[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"
+		]
+	},
+
+	"getFromJsonAsync": {
+		"prefix": "bGetFromJsonAsync",
+		"body": [
+			"${1:response} = await HttpClient.GetFromJsonAsync$2<${3:Type}>(\"${1:Url}\");"
+		]
+	},
+	"setParametersAsync": {
+		"prefix": "bSetParametersAsync",
+		"body": [
+			"public override async Task$1 SetParametersAsync(ParameterView Parameters)",
+			"{",
+			"\t$0",
+			"",
+			"\tawait base.SetParametersAsync(Parameters);",
+			"}"
+		]
+	},
+	"onInitialized": {
+		"prefix": "bOnInitialized",
+		"body": [
+			"protected override void OnInitialized()",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"onInitializedAsync": {
+		"prefix": "bOnInitializedAsync",
+		"body": [
+			"protected override async Task$1 OnInitializedAsync()",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"onParametersSet": {
+		"prefix": "bOnParametersSet",
+		"body": [
+			"protected override void onParametersSet()",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"onParametersSetAsync": {
+		"prefix": "bOnParametersSetAsync",
+		"body": [
+			"protected override async Task$1 OnParametersSetAsync()",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"onAfterRender": {
+		"prefix": "bOnAfterRender",
+		"body": [
+			"protected override void OnAfterRender(bool firstRender)",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"onAfterRenderAsync": {
+		"prefix": "bOnAfterRenderAsync",
+		"body": [
+			"protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"shouldRender": {
+		"prefix": "bShouldRender",
+		"body": [
+			"protected override bool ShouldRender()",
+			"{",
+			"\t$0",
+			"\treturn true;",
+			"}"
+		]
+	},
+	"eventHandler": {
+		"prefix": "bEventHandler",
+		"body": [
+			"${1:private} void ${2:Handle}(${3:MouseEventArgs} ${4:e})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"eventHandlerAsync": {
+		"prefix": "bEventHandlerAsync",
+		"body": [
+			"${1:private} async Task$2 ${3:HandleAsync}(${4:MouseEventArgs} ${5:e})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"eventCallback": {
+		"prefix": "bEventCallback",
+		"body": [
+			"[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
+		]
+	},
+	"eventCallbackExtended": {
+		"prefix": "bEventCallbackExtended",
+		"body": [
+			"[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+		]
+	},
+	"eventCallbackOnParameterChanged": {
+		"prefix": "bEventCallbackOnParameterChanged",
+		"body": [
+			"[Parameter] public ${1:string} ${2:ParameterName} { get; set; }",
+			"",
+			"[Parameter] public EventCallback<$1> $2Changed { get; set; }$0"
+		]
+	},
+	"jSRuntimeInvokeAsync": {
+		"prefix": "bJSRuntimeInvokeAsync",
+		"body": [
+			"await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"identifier\"}, ${4:args});"
+		]
+	}
+}
