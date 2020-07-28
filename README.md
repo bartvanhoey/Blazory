@@ -1,6 +1,6 @@
 # Blazory
 
-**Blazor Snippets** for **Razor and C# Code-Behind files** that start with an **`y`**
+**Blazor Snippets** for **Razor and C# Code-Behind files** that start with an **`y`**!
 
 ![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
 
