@@ -56,12 +56,12 @@
 |`yTypeParam`                        | @typeParam
 |`yLayout`                           | @layout
 |`yAuthorize`                        | @attribute [Authorize]
-|`yBind`                             | @bind
-|`yBindValue`                        | @bind-value
-|`yBindOnInputEvent`                 | @bind-value event:oninput
-|`yBindFormat`                       | @bind:format
+|`yBind`                             | @bind="MyProperty"
+|`yBindValue`                        | @bind-Value="MyProperty"
+|`yBindOnInputEvent`                 | @bind="Property" @bind:event="oninput"
+|`yBindFormat`                       | @bind:format="Format"
 |`yPreventDefault`                   | @preventDefault
-|`yRef`                              | @ref
+|`yRef`                              | @ref="MyProperty"
 |`yComponent`                        | Complete Component
 |`yInheritsLayoutComponentBase`      | Complete Layout Component inherits LayoutComponentBase
 |`yComponentDisposable`              | Complete Component inherits IDisposable

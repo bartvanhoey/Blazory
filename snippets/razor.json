@@ -1,12 +1,12 @@
 {
   "inheritsBaseComponent": {
-    "prefix": "bInheritsBaseComponent",
+    "prefix": "yInheritsBaseComponent",
     "body": [
         "@inherits ${1:${TM_FILENAME_BASE}}Base$0"
     ]
   },
   "codeBlock": {
-      "prefix": "bCode",
+      "prefix": "yCode",
       "body": [
           "@code {",
           "\t$0",
@@ -14,55 +14,55 @@
       ]
   },
   "pageDirective": {
-      "prefix": "bPage",
+      "prefix": "yPage",
       "body": [
         "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
       ]
   },
   "pageDirectiveWithParameter": {
-      "prefix": "bPageParam",
+      "prefix": "yPageParam",
       "body": [
           "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""
       ]
   },
   "injectDirective": {
-      "prefix": "bInject",
+      "prefix": "yInject",
       "body": [
           "@inject ${1:MyService} ${2:$1}"
       ]
   },
   "injectIJSRuntime": {
-      "prefix": "bInjectIJSRuntime",
+      "prefix": "yInjectIJSRuntime",
       "body": [
           "@inject IJSRuntime JSRuntime"
       ]
   },
   "injectHttpClient": {
-      "prefix": "bInjectHttpClient",
+      "prefix": "yInjectHttpClient",
       "body": [
           "@inject HttpClient HttpClient"
       ]
   },
   "injectNavigationManager": {
-      "prefix": "bInjectNavigationManager",
+      "prefix": "yInjectNavigationManager",
       "body": [
           "@inject NavigationManager NavigationManager"
       ]
   },
   "usingDirective": {
-      "prefix": "bUsing",
+      "prefix": "yUsing",
       "body": [
           "@using ${1:Namespace}"
       ]
   },
   "implementsIDisposible": {
-      "prefix": "bImplementsIDisposable",
+      "prefix": "yImplementsIDisposable",
       "body": [
           "@implements ${1:IDisposable}"
       ]
   },
   "voidDispose": {
-    "prefix": "bVoidDispose",
+    "prefix": "yVoidDispose",
     "body": [
       "\tpublic void Dispose()",
       "\t{",
@@ -71,61 +71,61 @@
     ]
   },
   "typeParamDirective": {
-      "prefix": "bTypeParam",
+      "prefix": "yTypeParam",
       "body": [
           "@typeparam ${1:T}"
       ]
   },
   "layoutDirective": {
-      "prefix": "bLayout",
+      "prefix": "yLayout",
       "body": [
           "@layout ${1:LayoutName}"
       ]
   },
   "attribute [Authorize] Directive": {
-      "prefix": "bAuthorize",
+      "prefix": "yAuthorize",
       "body": [
           "@attribute [Authorize]"
       ]
   },
   "bindAttribute": {
-      "prefix": "bBind",
+      "prefix": "yBind",
       "body": [
           "@bind=\"${1:Property}\""
       ]
   },
   "bindValueAttribute": {
-      "prefix": "bBindValue",
+      "prefix": "yBindValue",
       "body": [
-          "@bind-${1:value}=\"${2:Property}\""
+          "@bind-Value=\"${1:Property}\"$0"
       ]
   },
-  "bindValueEventAttribute": {
-      "prefix": "bBindOnInputEvent",
+  "bindOnInputEvent": {
+      "prefix": "yBindOnInputEvent",
       "body": [
-          "@bind-${1:value}:event=\"${2:oninput}\""
+          "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0"
       ]
   },
   "bindFormatAttribute": {
-      "prefix": "bBindFormat",
+      "prefix": "yBindFormat",
       "body": [
           "@bind:format=\"${1:yyyy-MM-dd}\""
       ]
   },
-  "event:preventDefault Attribute": {
-      "prefix": "bPreventDefault",
+  "event:preventDefaultAttribute": {
+      "prefix": "yPreventDefault",
       "body": [
           "@${1:onkeypress}:preventDefault"
       ]
   },
   "refAttribute": {
-      "prefix": "bRef",
+      "prefix": "yRef",
       "body": [
           "@ref=\"${1:Property}\""
       ]
   },
   "component": {
-      "prefix": "bComponent",
+      "prefix": "yComponent",
       "body": [
           "@page \"/${1:${TM_FILENAME_BASE}}\"",
           "",
@@ -137,7 +137,7 @@
       ]
   },
   "inheritsLayoutComponentBase": {
-      "prefix": "bInheritsLayoutComponentBase",
+      "prefix": "yInheritsLayoutComponentBase",
       "body": [
           "@inherits LayoutComponentBase",
           "$0",
@@ -149,7 +149,7 @@
       ]
   },
   "disposableComponent": {
-      "prefix": "bComponentDisposable",
+      "prefix": "yComponentDisposable",
       "body": [
           "@implements IDisposable",
           "",
@@ -162,7 +162,7 @@
       ]
   },
   "componentChildContent": {
-      "prefix": "bComponentChildContent",
+      "prefix": "yComponentChildContent",
       "body": [
           "@ChildContent",
           "",
@@ -172,7 +172,7 @@
       ]
   },
   "templatedComponent": {
-      "prefix": "bTemplatedComponent",
+      "prefix": "yTemplatedComponent",
       "body": [
           "@typeparam TItem",
           "",
@@ -203,35 +203,35 @@
       ]
   },
   "navLink": {
-      "prefix": "bNavLink",
+      "prefix": "yNavLink",
       "body": [
           "<NavLink href=\"${1}\">${3:Home}</NavLink>"
       ]
   },
   "navLinkWithMatchAttribute": {
-      "prefix": "bNavLinkMatch",
+      "prefix": "yNavLinkMatch",
       "body": [
           "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>"
       ]
   },
   "dataAnnotationsValidator": {
-    "prefix": "bDataAnnotationsValidator",
+    "prefix": "yDataAnnotationsValidator",
     "body": [
         "<DataAnnotationsValidator />"
         ]
     },
     "validationSummary ": {
-    "prefix": "bValidationSummary ",
+    "prefix": "yValidationSummary ",
     "body": [
         "<ValidationSummary  />"
         ]
     },
     "onValidSubmit" : {
-        "prefix": "bOnValidSubmit",
+        "prefix": "yOnValidSubmit",
         "body": "OnValidSubmit=\"${1:MethodName}\"$0"
     },
     "validationMessageFor" :{
-        "prefix": "bValidationMessageFor",
+        "prefix": "yValidationMessageFor",
         "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0"
     }
   }
