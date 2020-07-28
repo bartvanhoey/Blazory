@@ -2,74 +2,74 @@
 
 ![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
 
-Blazor Snippets for Razor and C# Code-Behind files
+**Blazor Snippets** for **Razor and C# Code-Behind files** that start with an **`y`**
 
 ## C# files
 
-| Prefix                                 | Description
-|----------------------------------------|----------------------------------------------|
-|`bInjectHttpClient`                     | Inject HttpClient
-|`bInjectNavigationManager`              | Inject NavigationManager
-|`bInjectIJSRuntime`                     | Inject IJSRuntime
-|`bInject`                               | Inject MyService
-|`bInheritsComponentBase`                | Inherits ComponentBase
-|`bParameter`                            | Parameter
-|`bParameterCaptureUnmatchedValues`      | Parameter CaptureUnmatchedValues
-|`bCascadingParameter`                   | CascadingParameter
-|`bAuthenticationStateTask`              | Parameter AuthenticationStateTask
-|`bGetFromJsonAsync`                     | GetFromJsonAsync
-|`bSetParametersAsync`                   | SetParametersAsync
-|`bOnInitialized`                        | OnInitialized
-|`bOnInitializedAsync`                   | OnInitializedAsync
-|`bOnParametersSet`                      | OnParameterSet
-|`bOnAfterRender`                        | OnAfterRender
-|`bOnAfterRenderAsync`                   | OnAfterRenderAsync
-|`bShouldRender`                         | ShouldRender
-|`bEventHandler`                         | EventHandler
-|`bEventHandlerAsync`                    | EventHandlerAsync
-|`bEventCallback`                        | EventCallback
-|`bEventCallbackExtended`                | EventCallbackExtended
-|`bEventCallbackOnParameterChanged`      | EventCallbackOnParameterChanged
-|`bJSRuntimeInvokeAsync`                 | JSRuntimeInvokeAsync
-|`protectedAsyncTaskMethodNoParameters`  | protected async Task Method no Parameters
-|`protectedAsyncTaskMethodWithParameters`| protected async Task Method with Parameters
-|`postAsJsonAsync`                       | HttpClient.PostAsJsonAsync call
-|`bReadIdFromJsonAsync`                  | HttpClient.ReadFromJsonAsync\<int> call
-|`bNavigateTo`                           | NavigationManager.NavigateTo Page
-|`bNavigateToId`                         | NavigationManager.NavigateTo Page\Id
+| Prefix                                  | Description
+|---------------------------------------- |----------------------------------------------|
+|`yInjectHttpClient`                      | Inject HttpClient
+|`yInjectNavigationManager`               | Inject NavigationManager
+|`yInjectIJSRuntime`                      | Inject IJSRuntime
+|`yInject`                                | Inject MyService
+|`yInheritsComponentBase`                 | Inherits ComponentBase
+|`yParameter`                             | Parameter
+|`yParameterCaptureUnmatchedValues`       | Parameter CaptureUnmatchedValues
+|`yCascadingParameter`                    | CascadingParameter
+|`yAuthenticationStateTask`               | Parameter AuthenticationStateTask
+|`yGetFromJsonAsync`                      | GetFromJsonAsync
+|`ySetParametersAsync`                    | SetParametersAsync
+|`yOnInitialized`                         | OnInitialized
+|`yOnInitializedAsync`                    | OnInitializedAsync
+|`yOnParametersSet`                       | OnParameterSet
+|`yOnAfterRender`                         | OnAfterRender
+|`yOnAfterRenderAsync`                    | OnAfterRenderAsync
+|`yShouldRender`                          | ShouldRender
+|`yEventHandler`                          | EventHandler
+|`yEventHandlerAsync`                     | EventHandlerAsync
+|`yEventCallback`                         | EventCallback
+|`yEventCallbackExtended`                 | EventCallbackExtended
+|`yEventCallbackOnParameterChanged`       | EventCallbackOnParameterChanged
+|`yJSRuntimeInvokeAsync`                  | JSRuntimeInvokeAsync
+|`yProtectedAsyncTaskMethodNoParameters`  | protected async Task Method no Parameters
+|`yProtectedAsyncTaskMethodWithParameters`| protected async Task Method with Parameters
+|`yPostAsJsonAsync`                       | HttpClient.PostAsJsonAsync call
+|`yReadIdFromJsonAsync`                   | HttpClient.ReadFromJsonAsync\<int> call
+|`yNavigateTo`                            | NavigationManager.NavigateTo Page
+|`yNavigateToId`                          | NavigationManager.NavigateTo Page\Id
 
 ## Razor files
 
 | Prefix                             | Description
 |------------------------------------|----------------------------------------------|
-|`bInheritsBaseComponent`            | @inherits BaseFile
-|`bCode`                             | @code Block
-|`bPage`                             | @page Directive
-|`bPageParam`                        | @page Directive with Parameter
-|`bInject`                           | @inject
-|`bInjectIJSRuntime`                 | @inject IJSRuntime
-|`bInjectHttpClient`                 | @inject HttpClient
-|`bInjectNavigationManager`          | @inject NavigationManager
-|`bUsing`                            | @using
-|`bImplementsIDisposable`            | @implements IDisposable
-|`bVoidDispose`                      | Dispose Method Stub
-|`bTypeParam`                        | @typeParam
-|`bLayout`                           | @layout
-|`bAuthorize`                        | @attribute [Authorize]
-|`bBind`                             | @bind
-|`bBindValue`                        | @bind-value
-|`bBindOnInputEvent`                 | @bind-value event:oninput
-|`bBindFormat`                       | @bind:format
-|`bPreventDefault`                   | @preventDefault
-|`bRef`                              | @ref
-|`bComponent`                        | Complete Component
-|`bInheritsLayoutComponentBase`      | Complete Layout Component inherits LayoutComponentBase
-|`bComponentDisposable`              | Complete Component inherits IDisposable
-|`bComponentChildContent`            | Complete Component with Child Content
-|`bTemplatedComponent`               | Templated Component
-|`bNavLink`                          | NavLink
-|`bNavLinkMatch`                     | NavLink with MatchAttribute
-|`bDataAnnotationsValidator`         | DataAnnotationsValidator
-|`bValidationSummary`                | ValidationSummary
-|`bOnValidSubmit`                    | OnValidSubmit
-|`bValidationMessageFor`             | ValidationMessageFor
+|`yInheritsBaseComponent`            | @inherits BaseFile
+|`yCode`                             | @code Block
+|`yPage`                             | @page Directive
+|`yPageParam`                        | @page Directive with Parameter
+|`yInject`                           | @inject
+|`yInjectIJSRuntime`                 | @inject IJSRuntime
+|`yInjectHttpClient`                 | @inject HttpClient
+|`yInjectNavigationManager`          | @inject NavigationManager
+|`yUsing`                            | @using
+|`yImplementsIDisposable`            | @implements IDisposable
+|`yVoidDispose`                      | Dispose Method Stub
+|`yTypeParam`                        | @typeParam
+|`yLayout`                           | @layout
+|`yAuthorize`                        | @attribute [Authorize]
+|`yBind`                             | @bind
+|`yBindValue`                        | @bind-value
+|`yBindOnInputEvent`                 | @bind-value event:oninput
+|`yBindFormat`                       | @bind:format
+|`yPreventDefault`                   | @preventDefault
+|`yRef`                              | @ref
+|`yComponent`                        | Complete Component
+|`yInheritsLayoutComponentBase`      | Complete Layout Component inherits LayoutComponentBase
+|`yComponentDisposable`              | Complete Component inherits IDisposable
+|`yComponentChildContent`            | Complete Component with Child Content
+|`yTemplatedComponent`               | Templated Component
+|`yNavLink`                          | NavLink
+|`yNavLinkMatch`                     | NavLink with MatchAttribute
+|`yDataAnnotationsValidator`         | DataAnnotationsValidator
+|`yValidationSummary`                | ValidationSummary
+|`yOnValidSubmit`                    | OnValidSubmit
+|`yValidationMessageFor`             | ValidationMessageFor

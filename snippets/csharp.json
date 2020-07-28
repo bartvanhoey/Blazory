@@ -1,20 +1,20 @@
 {
   "injectHttpClient": {
-    "prefix": "bInjectHttpClient",
+    "prefix": "yInjectHttpClient",
     "body": ["[Inject$1] HttpClient$2 HttpClient { get; set; }$0"]
   },
   "injectNavigationManager": {
-    "prefix": "bInjectNavigationManager",
+    "prefix": "yInjectNavigationManager",
     "body": [
       "[Inject$1] NavigationManager$2 NavigationManager { get; set; }$0"
     ]
   },
   "injectIJSRuntime": {
-    "prefix": "bInjectIJSRuntime",
+    "prefix": "yInjectIJSRuntime",
     "body": ["[Inject$1] IJSRuntime$2 JSRuntime { get; set; }$0"]
   },
   "injectDirective": {
-    "prefix": "bInject",
+    "prefix": "yInject",
     "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"]
   },
   "getSet": {
@@ -26,40 +26,40 @@
     "body": ["{ get; private set; }$0"]
   },
   "InheritsComponentBase": {
-    "prefix": "bInheritsComponentBase",
+    "prefix": "yInheritsComponentBase",
     "body": [": ComponentBase$1"]
   },
   "Parameter": {
-    "prefix": "bPara",
+    "prefix": "yPara",
     "body": ["[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"]
   },
   "ParameterCaptureUnmatchedValues ": {
-    "prefix": "bParaCaptureUnmatchedValues",
+    "prefix": "yParaCaptureUnmatchedValues",
     "body": [
       "[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"
     ]
   },
   "cascadingParameter": {
-    "prefix": "bCascadingPara",
+    "prefix": "yCascadingPara",
     "body": [
       "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
     ]
   },
   "authenticationStateTaskParameter": {
-    "prefix": "bAuthStateTask",
+    "prefix": "yAuthStateTask",
     "body": [
       "[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"
     ]
   },
 
   "getFromJsonAsync": {
-    "prefix": "bGetFromKJsonAsync",
+    "prefix": "yGetFromKJsonAsync",
     "body": [
       "${1:response} = await HttpClient.GetFromJsonAsync$2<${3:Type}>(\"${1:Url}\");"
     ]
   },
   "setParametersAsync": {
-    "prefix": "bSetParametersAsync",
+    "prefix": "ySetParametersAsync",
     "body": [
       "public override async Task$1 SetParametersAsync(ParameterView Parameters)",
       "{",
@@ -70,11 +70,11 @@
     ]
   },
   "onInitialized": {
-    "prefix": "bonInitialized",
+    "prefix": "yonInitialized",
     "body": ["protected override void OnInitialized()", "{", "\t$0", "}"]
   },
   "onInitializedAsync": {
-    "prefix": "bOnInitializedAsync",
+    "prefix": "yOnInitializedAsync",
     "body": [
       "protected override async Task$1 OnInitializedAsync()",
       "{",
@@ -83,11 +83,11 @@
     ]
   },
   "onParametersSet": {
-    "prefix": "bOnParametersSet",
+    "prefix": "yOnParametersSet",
     "body": ["protected override void onParametersSet()", "{", "\t$0", "}"]
   },
   "onParametersSetAsync": {
-    "prefix": "bOnParametersSetAsync",
+    "prefix": "yOnParametersSetAsync",
     "body": [
       "protected override async Task$1 OnParametersSetAsync()",
       "{",
@@ -96,7 +96,7 @@
     ]
   },
   "onAfterRender": {
-    "prefix": "bOnAfterRender",
+    "prefix": "yOnAfterRender",
     "body": [
       "protected override void OnAfterRender(bool firstRender)",
       "{",
@@ -105,7 +105,7 @@
     ]
   },
   "onAfterRenderAsync": {
-    "prefix": "bonAfterRenderAsync",
+    "prefix": "yonAfterRenderAsync",
     "body": [
       "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
       "{",
@@ -114,7 +114,7 @@
     ]
   },
   "shouldRender": {
-    "prefix": "bShouldRender",
+    "prefix": "yShouldRender",
     "body": [
       "protected override bool ShouldRender()",
       "{",
@@ -124,7 +124,7 @@
     ]
   },
   "eventHandler": {
-    "prefix": "bEventHandler",
+    "prefix": "yEventHandler",
     "body": [
       "${1:private} void ${2:Handle}(${3:MouseEventArgs} ${4:e})",
       "{",
@@ -133,7 +133,7 @@
     ]
   },
   "eventHandlerAsync": {
-    "prefix": "bEventHandlerAsync",
+    "prefix": "yEventHandlerAsync",
     "body": [
       "${1:private} async Task$2 ${3:HandleAsync}(${4:MouseEventArgs} ${5:e})",
       "{",
@@ -142,19 +142,19 @@
     ]
   },
   "eventCallback": {
-    "prefix": "bEventCallback",
+    "prefix": "yEventCallback",
     "body": [
       "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ]
   },
   "eventCallbackExtended": {
-    "prefix": "bEventCallbackExtended",
+    "prefix": "yEventCallbackExtended",
     "body": [
       "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
     ]
   },
   "eventCallbackOnParameterChanged": {
-    "prefix": "bEventCallbackOnParameterChanged",
+    "prefix": "yEventCallbackOnParameterChanged",
     "body": [
       "[Parameter] public ${1:string} ${2:ParameterName} { get; set; }",
       "",
@@ -168,11 +168,11 @@
     ]
   },
   "protectedAsyncTaskMethodNoParameters": {
-    "prefix": "bProtAsyncTaskMethodNoParameters",
+    "prefix": "yProtAsyncTaskMethodNoParameters",
     "body": ["protected async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"]
   },
   "protectedAsyncTaskMethodWithParameters": {
-    "prefix": "bProtAsyncTaskMethodWithParameters",
+    "prefix": "yProtAsyncTaskMethodWithParameters",
     "body": [
       "protected async Task$1 ${2:MethodName}Async(${3:parameters})",
       "{",
@@ -181,23 +181,23 @@
     ]
   },
   "postAsJsonAsync": {
-    "prefix": "bPostAsJsonAsync",
+    "prefix": "yPostAsJsonAsync",
     "body": [
       "var response = await HttpClient.PostAsJsonAsync$1(\"${2:url}\", ${3:value});$0"
     ]
   },
   "readFromJsonAsync": {
-    "prefix": "bReadIdFromJsonAsync",
+    "prefix": "yReadIdFromJsonAsync",
     "body": [
       "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
     ]
   },
   "navigateTo": {
-    "prefix": "bNavigateTo",
+    "prefix": "yNavigateTo",
     "body": ["NavigationManager.NavigateTo(\"${1:routeUrl}\");$0"]
   },
   "navigateToId": {
-    "prefix": "bNavigateToId",
+    "prefix": "yNavigateToId",
     "body": ["NavigationManager.NavigateTo($\"${1:routeUrl}/{${2:id}}\");$0"]
   }
 }
