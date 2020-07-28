@@ -5,7 +5,7 @@
   },
   "codeBlock": {
     "prefix": "yCode",
-    "body": "@code {", "\t$0", "}"
+    "body": ["@code {", "\t$0", "}"]
   },
   "pageDirective": {
     "prefix": "yPage",
@@ -47,7 +47,7 @@
   },
   "voidDispose": {
     "prefix": "yVoidDispose",
-    "body": "\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"
+    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"]
   },
   "typeParamDirective": {
     "prefix": "yTypeParam",
