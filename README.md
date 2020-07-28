@@ -11,6 +11,7 @@
 |`yInjectIJSRuntime`                      | Inject IJSRuntime property
 |`yInjectIMapper`                         | Inject IMapper property
 |`yInject`                                | Inject MyService
+|`yInjectSignOutSessionStateManager`      | Inject SignOutSessionStateManager property
 |`yInheritsComponentBase`                 | Inherits ComponentBase
 |`yParameter`                             | Parameter
 |`yParameterCaptureUnmatchedValues`       | Parameter CaptureUnmatchedValues
@@ -52,7 +53,7 @@
 |`yInjectIMapper`                    | @inject IMapper property
 |`yUsing`                            | @using
 |`yImplementsIDisposable`            | @implements IDisposable
-|`yVoidDispose`                      | Dispose Method Stub
+|`yVoidDispose`                      | Dispose Method stub
 |`yTypeParam`                        | @typeParam
 |`yLayout`                           | @layout
 |`yAuthorize`                        | @attribute [Authorize]
@@ -62,21 +63,22 @@
 |`yBindFormat`                       | @bind:format="Format"
 |`yPreventDefault`                   | @preventDefault
 |`yRef`                              | @ref="MyProperty"
-|`yComponent`                        | Complete Component
-|`yInheritsLayoutComponentBase`      | Complete Layout Component inherits LayoutComponentBase
-|`yComponentDisposable`              | Complete Component inherits IDisposable
-|`yComponentChildContent`            | Complete Component with Child Content
-|`yTemplatedComponent`               | Templated Component
+|`yComponent`                        | Complete component
+|`yInheritsLayoutComponentBase`      | Complete Layout component inherits LayoutComponentBase
+|`yComponentDisposable`              | Complete component inherits IDisposable
+|`yComponentChildContent`            | Complete component with Child Content
+|`yTemplatedComponent`               | Templated component
 |`yNavLink`                          | NavLink
 |`yNavLinkMatch`                     | NavLink with MatchAttribute
 |`yDataAnnotationsValidator`         | DataAnnotationsValidator
 |`yValidationSummary`                | ValidationSummary
 |`yOnValidSubmit`                    | OnValidSubmit
 |`yValidationMessageFor`             | ValidationMessageFor
-|`yInputTextArea`                    | Built-in InputTextArea Component
-|`yInputSelect`                      | Built-in InputSelect Component
-|`yInputText`                        | Built-in InputText Component
-|`yInputSelectForEach`               | Built-in InputSelectForEach Component
-|`yInputNumber`                      | Built-in InputNumber Component
-|`yInputCheckbox`                    | Built-in InputCheckbox Component
-|`yInputDate`                        | Built-in InputDate Component
+|`yInputTextArea`                    | Built-in InputTextArea component
+|`yInputSelect`                      | Built-in InputSelect component
+|`yInputText`                        | Built-in InputText component
+|`yInputSelectForEach`               | Built-in InputSelectForEach component
+|`yInputNumber`                      | Built-in InputNumber component
+|`yInputCheckbox`                    | Built-in InputCheckbox component
+|`yInputDate`                        | Built-in InputDate component
+|`yCascadingAuthenticationState`     | CascadingAuthenticationState stub

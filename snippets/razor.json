@@ -37,6 +37,13 @@
     "prefix": "yInjectIMapper",
     "body": "@inject IMapper Mapper"
   },
+  "injectSignOutSessionStateManager" : {
+    "prefix": "yInjectSignOutSessionStateManager",
+    "body": [
+      "@inject SignOutSessionStateManager SignOutManager",
+      "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"
+    ]
+  },
   "usingDirective": {
     "prefix": "yUsing",
     "body": "@using ${1:Namespace}"
@@ -228,5 +235,13 @@
   "inputDate": {
     "prefix": "yInputDate",
     "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0"
+  },
+  "cascadingAuthenticationState" : {
+    "prefix": "yCascadingAuthenticationState",
+    "body": [
+      "<CascadingAuthenticationState>",
+      "\t$0",
+      "</CascadingAuthenticationState>"
+    ]
   }
 }
