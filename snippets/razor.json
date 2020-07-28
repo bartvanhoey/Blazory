@@ -1,15 +1,15 @@
 {
   "inheritsBaseComponent": {
     "prefix": "yInheritsBaseComponent",
-    "body": ["@inherits ${1:${TM_FILENAME_BASE}}Base$0"]
+    "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0"
   },
   "codeBlock": {
     "prefix": "yCode",
-    "body": ["@code {", "\t$0", "}"]
+    "body": "@code {", "\t$0", "}"
   },
   "pageDirective": {
     "prefix": "yPage",
-    "body": ["@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""]
+    "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
   },
   "pageDirectiveWithParameter": {
     "prefix": "yPageParam",
@@ -19,67 +19,71 @@
   },
   "injectDirective": {
     "prefix": "yInject",
-    "body": ["@inject ${1:MyService} ${2:$1}"]
+    "body": "@inject ${1:MyService} ${2:$1}"
   },
   "injectIJSRuntime": {
     "prefix": "yInjectIJSRuntime",
-    "body": ["@inject IJSRuntime JSRuntime"]
+    "body": "@inject IJSRuntime JSRuntime"
   },
   "injectHttpClient": {
     "prefix": "yInjectHttpClient",
-    "body": ["@inject HttpClient HttpClient"]
+    "body": "@inject HttpClient HttpClient"
   },
   "injectNavigationManager": {
     "prefix": "yInjectNavigationManager",
-    "body": ["@inject NavigationManager NavigationManager"]
+    "body": "@inject NavigationManager NavigationManager"
+  },
+  "injectIMapper": {
+    "prefix": "yInjectIMapper",
+    "body": "@inject IMapper Mapper"
   },
   "usingDirective": {
     "prefix": "yUsing",
-    "body": ["@using ${1:Namespace}"]
+    "body": "@using ${1:Namespace}"
   },
   "implementsIDisposible": {
     "prefix": "yImplementsIDisposable",
-    "body": ["@implements ${1:IDisposable}"]
+    "body": "@implements ${1:IDisposable}"
   },
   "voidDispose": {
     "prefix": "yVoidDispose",
-    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"]
+    "body": "\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"
   },
   "typeParamDirective": {
     "prefix": "yTypeParam",
-    "body": ["@typeparam ${1:T}"]
+    "body": "@typeparam ${1:T}"
   },
   "layoutDirective": {
     "prefix": "yLayout",
-    "body": ["@layout ${1:LayoutName}"]
+    "body": "@layout ${1:LayoutName}"
   },
   "attribute [Authorize] Directive": {
     "prefix": "yAuthorize",
-    "body": ["@attribute [Authorize]"]
+    "body": "@attribute [Authorize]"
   },
   "bindAttribute": {
     "prefix": "yBind",
-    "body": ["@bind=\"${1:Property}\""]
+    "body": "@bind=\"${1:Property}\""
   },
   "bindValueAttribute": {
     "prefix": "yBindValue",
-    "body": ["@bind-Value=\"${1:Property}\"$0"]
+    "body": "@bind-Value=\"${1:Property}\"$0"
   },
   "bindOnInputEvent": {
     "prefix": "yBindOnInputEvent",
-    "body": ["@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0"]
+    "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0"
   },
   "bindFormatAttribute": {
     "prefix": "yBindFormat",
-    "body": ["@bind:format=\"${1:yyyy-MM-dd}\""]
+    "body": "@bind:format=\"${1:yyyy-MM-dd}\""
   },
   "event:preventDefaultAttribute": {
     "prefix": "yPreventDefault",
-    "body": ["@${1:onkeypress}:preventDefault"]
+    "body": "@${1:onkeypress}:preventDefault"
   },
   "refAttribute": {
     "prefix": "yRef",
-    "body": ["@ref=\"${1:Property}\""]
+    "body": "@ref=\"${1:Property}\""
   },
   "component": {
     "prefix": "yComponent",
@@ -161,21 +165,20 @@
   },
   "navLink": {
     "prefix": "yNavLink",
-    "body": ["<NavLink href=\"${1}\">${3:Home}</NavLink>"]
+    "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>"
   },
   "navLinkWithMatchAttribute": {
     "prefix": "yNavLinkMatch",
-    "body": [
+    "body": 
       "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>"
-    ]
   },
   "dataAnnotationsValidator": {
     "prefix": "yDataAnnotationsValidator",
-    "body": ["<DataAnnotationsValidator />"]
+    "body": "<DataAnnotationsValidator />"
   },
   "validationSummary ": {
     "prefix": "yValidationSummary ",
-    "body": ["<ValidationSummary  />"]
+    "body": "<ValidationSummary  />"
   },
   "onValidSubmit": {
     "prefix": "yOnValidSubmit",

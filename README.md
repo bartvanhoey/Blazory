@@ -6,9 +6,10 @@
 
 | Prefix                                  | Description
 |---------------------------------------- |----------------------------------------------|
-|`yInjectHttpClient`                      | Inject HttpClient
-|`yInjectNavigationManager`               | Inject NavigationManager
-|`yInjectIJSRuntime`                      | Inject IJSRuntime
+|`yInjectHttpClient`                      | Inject HttpClient property
+|`yInjectNavigationManager`               | Inject NavigationManager property
+|`yInjectIJSRuntime`                      | Inject IJSRuntime property
+|`yInjectIMapper`                         | Inject IMapper property
 |`yInject`                                | Inject MyService
 |`yInheritsComponentBase`                 | Inherits ComponentBase
 |`yParameter`                             | Parameter
@@ -16,25 +17,25 @@
 |`yCascadingParameter`                    | CascadingParameter
 |`yAuthenticationStateTask`               | Parameter AuthenticationStateTask
 |`yGetFromJsonAsync`                      | GetFromJsonAsync
-|`ySetParametersAsync`                    | SetParametersAsync
-|`yOnInitialized`                         | OnInitialized
-|`yOnInitializedAsync`                    | OnInitializedAsync
-|`yOnParametersSet`                       | OnParameterSet
-|`yOnAfterRender`                         | OnAfterRender
-|`yOnAfterRenderAsync`                    | OnAfterRenderAsync
-|`yShouldRender`                          | ShouldRender
-|`yEventHandler`                          | EventHandler
-|`yEventHandlerAsync`                     | EventHandlerAsync
-|`yEventCallback`                         | EventCallback
-|`yEventCallbackExtended`                 | EventCallbackExtended
+|`ySetParametersAsync`                    | SetParametersAsync method stub
+|`yOnInitialized`                         | OnInitialized method stub
+|`yOnInitializedAsync`                    | OnInitializedAsync method stub
+|`yOnParametersSet`                       | OnParameterSet method stub
+|`yOnAfterRender`                         | OnAfterRender method stub
+|`yOnAfterRenderAsync`                    | OnAfterRenderAsync method stub
+|`yShouldRender`                          | ShouldRender method stub
+|`yEventHandler`                          | EventHandler method stub
+|`yEventHandlerAsync`                     | EventHandlerAsync method stub
+|`yEventCallback`                         | EventCallback Parameter
+|`yEventCallbackExtended`                 | EventCallbackExtended Parameter
 |`yEventCallbackOnParameterChanged`       | EventCallbackOnParameterChanged
-|`yJSRuntimeInvokeAsync`                  | JSRuntimeInvokeAsync
-|`yProtectedAsyncTaskMethodNoParameters`  | protected async Task Method no Parameters
-|`yProtectedAsyncTaskMethodWithParameters`| protected async Task Method with Parameters
+|`yJSRuntimeInvokeAsync`                  | JSRuntimeInvokeAsync call
+|`yProtectedAsyncTaskMethodNoParameters`  | protected async Task method stub no Parameters
+|`yProtectedAsyncTaskMethodWithParameters`| protected async Task method stub with Parameters
 |`yPostAsJsonAsync`                       | HttpClient.PostAsJsonAsync call
 |`yReadIdFromJsonAsync`                   | HttpClient.ReadFromJsonAsync\<int> call
-|`yNavigateTo`                            | NavigationManager.NavigateTo Page
-|`yNavigateToId`                          | NavigationManager.NavigateTo Page\Id
+|`yNavigateTo`                            | NavigationManager.NavigateTo page
+|`yNavigateToId`                          | NavigationManager.NavigateTo page\Id
 
 ## Razor files
 
@@ -45,9 +46,10 @@
 |`yPage`                             | @page Directive
 |`yPageParam`                        | @page Directive with Parameter
 |`yInject`                           | @inject
-|`yInjectIJSRuntime`                 | @inject IJSRuntime
-|`yInjectHttpClient`                 | @inject HttpClient
-|`yInjectNavigationManager`          | @inject NavigationManager
+|`yInjectIJSRuntime`                 | @inject IJSRuntime property
+|`yInjectHttpClient`                 | @inject HttpClient property
+|`yInjectNavigationManager`          | @inject NavigationManager property
+|`yInjectIMapper`                    | @inject IMapper property
 |`yUsing`                            | @using
 |`yImplementsIDisposable`            | @implements IDisposable
 |`yVoidDispose`                      | Dispose Method Stub
