@@ -1,7 +1,7 @@
 {
     "name": "blazory",
     "displayName": "Blazory",
-    "description": "Blazor Snippets for Razor and C# Code-Behind files that start with an y",
+    "description": "Snippets that start with an y for Razor and C# code-behind files",
     "icon": "images/blazory-icon.png",
     "publisher": "BartVanHoey",
     "repository": {
