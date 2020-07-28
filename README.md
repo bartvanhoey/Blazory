@@ -1,10 +1,10 @@
 # Blazory
 
-**Blazor Snippets** for **Razor and C# Code-Behind files** that start with an **`y`**!
+**Snippets** that start with an **`y`** for **Razor** and **C# code-behind** files
 
 ![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
 
-## C# files
+## C# code-behind files
 
 | Prefix                                  | Description
 |---------------------------------------- |----------------------------------------------|
