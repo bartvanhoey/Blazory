@@ -2,12 +2,13 @@
     "name": "blazory",
     "displayName": "Blazory",
     "description": "Blazor Snippets for Razor and C# Code-Behind files",
+    "icon": "images/blazory-icon.png",
     "publisher": "BartVanHoey",
     "repository": {
         "type": "git",
         "url": "https://github.com/bartvanhoey/Blazory.git"
     },
-    "version": "0.0.13",
+    "version": "0.0.14",
     "engines": {
         "vscode": "^1.47.0"
     },
