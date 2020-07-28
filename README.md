@@ -1,6 +1,6 @@
 # Blazory
 
-![blazory](https://github.com/bartvanhoey/blazory/blob/master/blazory-icon.png?raw=true)
+![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
 
 Blazor Snippets for Razor and C# Code-Behind files
 
