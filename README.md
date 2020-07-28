@@ -70,3 +70,4 @@ Blazor Snippets for Razor and C# Code-Behind files
 |`bDataAnnotationsValidator`         | DataAnnotationsValidator
 |`bValidationSummary`                | ValidationSummary
 |`bOnValidSubmit`                    | OnValidSubmit
+|`bValidationMessageFor`             | ValidationMessageFor

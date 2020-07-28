@@ -229,5 +229,9 @@
     "onValidSubmit" : {
         "prefix": "bOnValidSubmit",
         "body": "OnValidSubmit=\"${1:MethodName}\"$0"
-      }
+    },
+    "validationMessageFor" :{
+        "prefix": "bValidationMessageFor",
+        "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0"
+    }
   }
