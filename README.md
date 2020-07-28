@@ -1,8 +1,8 @@
 # Blazory
 
-![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
-
 **Blazor Snippets** for **Razor and C# Code-Behind files** that start with an **`y`**
+
+![blazory](https://github.com/bartvanhoey/blazory/blob/master/images/blazory-icon.png?raw=true)
 
 ## C# files
 
@@ -73,3 +73,10 @@
 |`yValidationSummary`                | ValidationSummary
 |`yOnValidSubmit`                    | OnValidSubmit
 |`yValidationMessageFor`             | ValidationMessageFor
+|`yInputTextArea`                    | Built-in InputTextArea Component
+|`yInputSelect`                      | Built-in InputSelect Component
+|`yInputText`                        | Built-in InputText Component
+|`yInputSelectForEach`               | Built-in InputSelectForEach Component
+|`yInputNumber`                      | Built-in InputNumber Component
+|`yInputCheckbox`                    | Built-in InputCheckbox Component
+|`yInputDate`                        | Built-in InputDate Component
