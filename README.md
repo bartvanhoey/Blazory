@@ -67,3 +67,5 @@ Blazor Snippets for Razor and C# Code-Behind files
 |`bTemplatedComponent`               | Templated Component
 |`bNavLink`                          | NavLink
 |`bNavLinkMatch`                     | NavLink with MatchAttribute
+|`bDataAnnotationsValidator`         | DataAnnotationsValidator
+|`bValidationSummary`                | ValidationSummary
