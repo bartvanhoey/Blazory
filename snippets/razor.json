@@ -225,5 +225,9 @@
     "body": [
         "<ValidationSummary  />"
         ]
-    }
+    },
+    "onValidSubmit" : {
+        "prefix": "bOnValidSubmit",
+        "body": "OnValidSubmit=\"${1:MethodName}\"$0"
+      }
   }

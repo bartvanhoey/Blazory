@@ -69,3 +69,4 @@ Blazor Snippets for Razor and C# Code-Behind files
 |`bNavLinkMatch`                     | NavLink with MatchAttribute
 |`bDataAnnotationsValidator`         | DataAnnotationsValidator
 |`bValidationSummary`                | ValidationSummary
+|`bOnValidSubmit`                    | OnValidSubmit
