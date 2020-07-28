@@ -1,17 +1,17 @@
 {
   "injectHttpClient": {
     "prefix": "bInjectHttpClient",
-    "body": ["[Inject$1] public HttpClient$2 HttpClient { get; set; }$0"]
+    "body": ["[Inject$1] HttpClient$2 HttpClient { get; set; }$0"]
   },
   "injectNavigationManager": {
     "prefix": "bInjectNavigationManager",
     "body": [
-      "[Inject$1] public NavigationManager$2 NavigationManager { get; set; }$0"
+      "[Inject$1] NavigationManager$2 NavigationManager { get; set; }$0"
     ]
   },
   "injectIJSRuntime": {
     "prefix": "bInjectIJSRuntime",
-    "body": ["[Inject$1] public IJSRuntime$2 JSRuntime { get; set; }$0"]
+    "body": ["[Inject$1] IJSRuntime$2 JSRuntime { get; set; }$0"]
   },
   "injectDirective": {
     "prefix": "bInject",

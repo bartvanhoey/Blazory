@@ -213,6 +213,17 @@
       "body": [
           "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>"
       ]
-  }
-  
+  },
+  "dataAnnotationsValidator": {
+    "prefix": "bDataAnnotationsValidator",
+    "body": [
+        "<DataAnnotationsValidator />"
+        ]
+    },
+    "validationSummary ": {
+    "prefix": "bValidationSummary ",
+    "body": [
+        "<ValidationSummary  />"
+        ]
+    }
   }
