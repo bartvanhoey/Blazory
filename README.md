@@ -7,6 +7,7 @@
 | Prefix                                  | Description
 |---------------------------------------- |----------------------------------------------|
 |`yInjectHttpClient`                      | Inject HttpClient property
+|`yHttpClientField`                       | Readonly HttpClient field
 |`yInjectNavigationManager`               | Inject NavigationManager property
 |`yInjectIJSRuntime`                      | Inject IJSRuntime property
 |`yInjectIMapper`                         | Inject IMapper property
@@ -31,8 +32,10 @@
 |`yEventCallbackExtended`                 | EventCallbackExtended Parameter
 |`yEventCallbackOnParameterChanged`       | EventCallbackOnParameterChanged
 |`yJSRuntimeInvokeAsync`                  | JSRuntimeInvokeAsync call
-|`yProtectedAsyncTaskMethodNoParameters`  | protected async Task method stub no Parameters
-|`yProtectedAsyncTaskMethodWithParameters`| protected async Task method stub with Parameters
+|`yProtAsyncTaskMethodNoParameters`       | protected async Task method stub no parameters
+|`yPublicAsyncTaskMethodNoParameters`     | public async Task method stub no parameters
+|`yProtAsyncTaskMethodWithParameters`     | protected async Task method stub with parameters
+|`yPublicAsyncTaskMethodWithParameters`   | public async Task method stub with parameters
 |`yPostAsJsonAsync`                       | HttpClient.PostAsJsonAsync call
 |`yReadIdFromJsonAsync`                   | HttpClient.ReadFromJsonAsync\<int> call
 |`yNavigateTo`                            | NavigationManager.NavigateTo page

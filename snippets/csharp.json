@@ -1,24 +1,28 @@
 {
-  "injectHttpClient": {
-    "prefix": "yInjectHttpClient",
-    "body": ["[Inject$1] public HttpClient$2 HttpClient { get; set; }$0"]
+  "injectHttpClientProperty": {
+    "prefix": "yInjHttpClientProp",
+    "body": ["[Inject$1] public HttpClient$2 ${3:HttpClient} { get; set; }$0"]
+  },
+  "injectHttpClientField": {
+    "prefix": "yHttpClientField",
+    "body": ["private readonly HttpClient$2 ${3:_httpClient};$0"]
   },
   "injectNavigationManager": {
-    "prefix": "yInjectNavigationManager",
+    "prefix": "yInjNavigationManager",
     "body": [
-      "[Inject$1] public NavigationManager$2 NavigationManager { get; set; }$0"
+      "[Inject$1] public NavigationManager$2 ${3:NavigationManager} { get; set; }$0"
     ]
   },
   "injectIJSRuntime": {
-    "prefix": "yInjectIJSRuntime",
-    "body": ["[Inject$1] public IJSRuntime$2 JSRuntime { get; set; }$0"]
+    "prefix": "yInjIJSRuntime",
+    "body": ["[Inject$1] public IJSRuntime$2 ${3:JSRuntime} { get; set; }$0"]
   },
   "injectIMapper": {
-    "prefix": "yInjectIMapper",
-    "body": ["[Inject$1] public IMapper$2 Mapper { get; set; }$0"]
+    "prefix": "yInjIMapper",
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"]
   },
   "injectDirective": {
-    "prefix": "yInject",
+    "prefix": "yInj",
     "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"]
   },
   "getSet": {
@@ -55,9 +59,8 @@
       "[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"
     ]
   },
-
   "getFromJsonAsync": {
-    "prefix": "yGetFromKJsonAsync",
+    "prefix": "yGetFromJsonAsync",
     "body": [
       "${1:response} = await HttpClient.GetFromJsonAsync$2<${3:Type}>(\"${1:Url}\");"
     ]
@@ -171,6 +174,19 @@
       "await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"identifier\"}, ${4:args});"
     ]
   },
+  "publicAsyncTaskMethodNoParameters": {
+    "prefix": "yPublicAsyncTaskMethodNoParameters",
+    "body": ["public async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"]
+  },
+  "publicAsyncTaskMethodWithParameters": {
+    "prefix": "yPublicAsyncTaskMethodWithParameters",
+    "body": [
+      "public async Task$1 ${2:MethodName}Async(${3:paramType} ${4:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ]
+  },
   "protectedAsyncTaskMethodNoParameters": {
     "prefix": "yProtAsyncTaskMethodNoParameters",
     "body": ["protected async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"]
@@ -178,7 +194,7 @@
   "protectedAsyncTaskMethodWithParameters": {
     "prefix": "yProtAsyncTaskMethodWithParameters",
     "body": [
-      "protected async Task$1 ${2:MethodName}Async(${3:parameters})",
+      "protected async Task$1 ${2:MethodName}Async(${3:paramType} ${4:paramName})",
       "{",
       "\t$0",
       "}"
