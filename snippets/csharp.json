@@ -88,11 +88,11 @@
         "prefix": "jSRuntimeInvokeAsync"
     },
     "navigateTo": {
-        "body": ["NavigationManager.NavigateTo(\"${1:routeUrl}\");$0"],
+        "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${1:routeUrl}\");$0"],
         "prefix": "yNavigateTo"
     },
     "navigateToId": {
-        "body": ["NavigationManager.NavigateTo($\"${1:routeUrl}/{${2:id}}\");$0"],
+        "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${1:routeUrl}/{${2:id}}\");$0"],
         "prefix": "yNavigateToId"
     },
     "onAfterRender": {
