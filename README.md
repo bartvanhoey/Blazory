@@ -6,13 +6,13 @@
 
 | Prefix                                  | Description
 |---------------------------------------- |----------------------------------------------|
-|`yInjectHttpClient`                      | Inject HttpClient property
+|`yInjHttpClient`                      | Inject HttpClient property
 |`yHttpClientField`                       | Readonly HttpClient field
-|`yInjectNavigationManager`               | Inject NavigationManager property
-|`yInjectIJSRuntime`                      | Inject IJSRuntime property
-|`yInjectIMapper`                         | Inject IMapper property
-|`yInject`                                | Inject MyService
-|`yInjectSignOutSessionStateManager`      | Inject SignOutSessionStateManager property
+|`yInjNavigationManager`                  | Inject NavigationManager property
+|`yInjIJSRuntime`                         | Inject IJSRuntime property
+|`yInjIMapper`                            | Inject IMapper property
+|`yInjService`                            | Inject MyService
+|`yInjSignOutSessionStateManager`      | Inject SignOutSessionStateManager property
 |`yInheritsComponentBase`                 | Inherits ComponentBase
 |`yParameter`                             | Parameter
 |`yParameterCaptureUnmatchedValues`       | Parameter CaptureUnmatchedValues
@@ -50,17 +50,17 @@
 |`yCode`                             | @code Block
 |`yPage`                             | @page Directive
 |`yPageParam`                        | @page Directive with Parameter
-|`yInject`                           | @inject
-|`yInjectIJSRuntime`                 | @inject IJSRuntime property
-|`yInjectHttpClient`                 | @inject HttpClient property
-|`yInjectNavigationManager`          | @inject NavigationManager property
-|`yInjectIMapper`                    | @inject IMapper property
+|`yInjService`                       | @inject
+|`yInjIJSRuntime`                 | @inject IJSRuntime property
+|`yInjHttpClient`                 | @inject HttpClient property
+|`yInjNavigationManager`          | @inject NavigationManager property
+|`yInjIMapper`                    | @inject IMapper property
 |`yUsing`                            | @using
 |`yImplementsIDisposable`            | @implements IDisposable
 |`yVoidDispose`                      | Dispose Method stub
 |`yTypeParam`                        | @typeParam
 |`yLayout`                           | @layout
-|`yAuthorize`                        | @attribute [Authorize]
+|`yAuthorizeAttribute`               | @attribute [Authorize]
 |`yBind`                             | @bind="MyProperty"
 |`yBindValue`                        | @bind-Value="MyProperty"
 |`yBindOnInputEvent`                 | @bind="Property" @bind:event="oninput"

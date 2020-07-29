@@ -57,7 +57,7 @@
     },
     "injectDirective": {
         "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"],
-        "prefix": "yInj"
+        "prefix": "yInjService"
     },
     "injectHttpClientField": {
         "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
@@ -81,7 +81,7 @@
     },
     "injectSignOutSessionStateManager": {
         "body": ["[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"],
-        "prefix": "yInjectSignOutSessionStateManager"
+        "prefix": "yInjSignOutSessionStateManager"
     },
     "jSRuntimeInvokeAsync": {
         "body": ["await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"identifier\"}, ${4:args});"],

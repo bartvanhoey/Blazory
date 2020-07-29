@@ -1,247 +1,166 @@
 {
-  "inheritsBaseComponent": {
-    "prefix": "yInheritsBaseComponent",
-    "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0"
-  },
-  "codeBlock": {
-    "prefix": "yCode",
-    "body": ["@code {", "\t$0", "}"]
-  },
-  "pageDirective": {
-    "prefix": "yPage",
-    "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
-  },
-  "pageDirectiveWithParameter": {
-    "prefix": "yPageParam",
-    "body": [
-      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""
-    ]
-  },
-  "injectDirective": {
-    "prefix": "yInject",
-    "body": "@inject ${1:MyService} ${2:$1}"
-  },
-  "injectIJSRuntime": {
-    "prefix": "yInjectIJSRuntime",
-    "body": "@inject IJSRuntime JSRuntime"
-  },
-  "injectHttpClient": {
-    "prefix": "yInjectHttpClient",
-    "body": "@inject HttpClient HttpClient"
-  },
-  "injectNavigationManager": {
-    "prefix": "yInjectNavigationManager",
-    "body": "@inject NavigationManager NavigationManager"
-  },
-  "injectIMapper": {
-    "prefix": "yInjectIMapper",
-    "body": "@inject IMapper Mapper"
-  },
-  "injectSignOutSessionStateManager" : {
-    "prefix": "yInjectSignOutSessionStateManager",
-    "body": [
-      "@inject SignOutSessionStateManager SignOutManager",
-      "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"
-    ]
-  },
-  "usingDirective": {
-    "prefix": "yUsing",
-    "body": "@using ${1:Namespace}"
-  },
-  "implementsIDisposible": {
-    "prefix": "yImplementsIDisposable",
-    "body": "@implements ${1:IDisposable}"
-  },
-  "voidDispose": {
-    "prefix": "yVoidDispose",
-    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"]
-  },
-  "typeParamDirective": {
-    "prefix": "yTypeParam",
-    "body": "@typeparam ${1:T}"
-  },
-  "layoutDirective": {
-    "prefix": "yLayout",
-    "body": "@layout ${1:LayoutName}"
-  },
   "attribute [Authorize] Directive": {
-    "prefix": "yAuthorize",
-    "body": "@attribute [Authorize]"
+      "body": "@attribute [Authorize]",
+      "prefix": "yAuthorizeAttribute"
   },
   "bindAttribute": {
-    "prefix": "yBind",
-    "body": "@bind=\"${1:Property}\""
-  },
-  "bindValueAttribute": {
-    "prefix": "yBindValue",
-    "body": "@bind-Value=\"${1:Property}\"$0"
-  },
-  "bindOnInputEvent": {
-    "prefix": "yBindOnInputEvent",
-    "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0"
+      "body": "@bind=\"${1:Property}\"",
+      "prefix": "yBind"
   },
   "bindFormatAttribute": {
-    "prefix": "yBindFormat",
-    "body": "@bind:format=\"${1:yyyy-MM-dd}\""
+      "body": "@bind:format=\"${1:yyyy-MM-dd}\"",
+      "prefix": "yBindFormat"
   },
-  "event:preventDefaultAttribute": {
-    "prefix": "yPreventDefault",
-    "body": "@${1:onkeypress}:preventDefault"
+  "bindOnInputEvent": {
+      "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0",
+      "prefix": "yBindOnInputEvent"
   },
-  "refAttribute": {
-    "prefix": "yRef",
-    "body": "@ref=\"${1:Property}\""
+  "bindValueAttribute": {
+      "body": "@bind-Value=\"${1:Property}\"$0",
+      "prefix": "yBindValue"
+  },
+  "cascadingAuthenticationState": {
+      "body": ["<CascadingAuthenticationState>", "\t$0", "</CascadingAuthenticationState>"],
+      "prefix": "yCascadingAuthenticationState"
+  },
+  "codeBlock": {
+      "body": ["@code {", "\t$0", "}"],
+      "prefix": "yCode"
   },
   "component": {
-    "prefix": "yComponent",
-    "body": [
-      "@page \"/${1:${TM_FILENAME_BASE}}\"",
-      "",
-      "$0",
-      "",
-      "@code {",
-      "",
-      "}"
-    ]
-  },
-  "inheritsLayoutComponentBase": {
-    "prefix": "yInheritsLayoutComponentBase",
-    "body": [
-      "@inherits LayoutComponentBase",
-      "$0",
-      "@Body",
-      "",
-      "@code {",
-      "",
-      "}"
-    ]
-  },
-  "disposableComponent": {
-    "prefix": "yComponentDisposable",
-    "body": [
-      "@implements IDisposable",
-      "",
-      "@code {",
-      "\tpublic void Dispose()",
-      "\t{",
-      "\t\t$0",
-      "\t}",
-      "}"
-    ]
+      "body": ["@page \"/${1:${TM_FILENAME_BASE}}\"", "", "$0", "", "@code {", "", "}"],
+      "prefix": "yComponent"
   },
   "componentChildContent": {
-    "prefix": "yComponentChildContent",
-    "body": [
-      "@ChildContent",
-      "",
-      "@code {",
-      "\t[Parameter] public RenderFragment ChildContent { get; set; }",
-      "}"
-    ]
-  },
-  "templatedComponent": {
-    "prefix": "yTemplatedComponent",
-    "body": [
-      "@typeparam TItem",
-      "",
-      "<table>",
-      "\t<thead>",
-      "\t\t<tr>@TableHeader</tr>",
-      "\t</thead>",
-      "\t<tbody>",
-      "\t\t@foreach (var item in Items)",
-      "\t\t{",
-      "\t\t\t<tr>@RowTemplate(item)</tr>",
-      "\t\t}",
-      "\t</tbody>",
-      "\t<tfoot>",
-      "\t\t<tr>@TableFooter</tr>",
-      "\t</tfoot>",
-      "</table>",
-      "",
-      "@code {",
-      "\t[Parameter] public RenderFragment TableHeader { get; set; }",
-      "",
-      "\t[Parameter] public RenderFragment<TItem> RowTemplate { get; set; }",
-      "",
-      "\t[Parameter] public RenderFragment TableFooter { get; set; }",
-      "",
-      "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }",
-      "}"
-    ]
-  },
-  "navLink": {
-    "prefix": "yNavLink",
-    "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>"
-  },
-  "navLinkWithMatchAttribute": {
-    "prefix": "yNavLinkMatch",
-    "body": 
-      "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>"
+      "body": ["@ChildContent", "", "@code {", "\t[Parameter] public RenderFragment ChildContent { get; set; }", "}"],
+      "prefix": "yComponentChildContent"
   },
   "dataAnnotationsValidator": {
-    "prefix": "yDataAnnotationsValidator",
-    "body": "<DataAnnotationsValidator />"
+      "body": "<DataAnnotationsValidator />",
+      "prefix": "yDataAnnotationsValidator"
   },
-  "validationSummary ": {
-    "prefix": "yValidationSummary ",
-    "body": "<ValidationSummary  />"
+  "disposableComponent": {
+      "body": ["@implements IDisposable", "", "@code {", "\tpublic void Dispose()", "\t{", "\t\t$0", "\t}", "}"],
+      "prefix": "yComponentDisposable"
   },
-  "onValidSubmit": {
-    "prefix": "yOnValidSubmit",
-    "body": "OnValidSubmit=\"${1:MethodName}\"$0"
+  "event:preventDefaultAttribute": {
+      "body": "@${1:onkeypress}:preventDefault",
+      "prefix": "yPreventDefault"
   },
-  "validationMessageFor": {
-    "prefix": "yValidationMessageFor",
-    "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0"
+  "implementsIDisposible": {
+      "body": "@implements ${1:IDisposable}",
+      "prefix": "yImplementsIDisposable"
   },
-  "inputText": {
-    "prefix": "yInputText",
-    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0"
+  "inheritsBaseComponent": {
+      "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0",
+      "prefix": "yInheritsBaseComponent"
   },
-  "inputTextArea": {
-    "prefix": "yInputTextArea",
-    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0"
+  "inheritsLayoutComponentBase": {
+      "body": ["@inherits LayoutComponentBase", "$0", "@Body", "", "@code {", "", "}"],
+      "prefix": "yInheritsLayoutComponentBase"
   },
-  "inputSelect": {
-    "prefix": "yInputSelect",
-    "body": [
-      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
-      "\t<option value=\"\">Select...</option>",
-      "\t<option value=\"${3:YourValue}\">${4:$3}</option>",
-      "</InputSelect>$0"
-    ]
+  "injectDirective": {
+      "body": "@inject ${1:MyService} ${2:$1}",
+      "prefix": "yInjService"
   },
-  "inputSelectForEach": {
-    "prefix": "yInputSelectForEach",
-    "body": [
-      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
-      "\t<option value=\"\">Select...</option>",
-      "\t@foreach (var ${3:item} in ${4:Items})",
-      "{",
-      "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>",
-      "\t}",
-      "</InputSelect>$0"
-    ]
+  "injectHttpClient": {
+      "body": "@inject HttpClient HttpClient",
+      "prefix": "yInjHttpClient"
   },
-  "inputNumber": {
-    "prefix": "yInputNumber",
-    "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0"
+  "injectIJSRuntime": {
+      "body": "@inject IJSRuntime JSRuntime",
+      "prefix": "yInjIJSRuntime"
+  },
+  "injectIMapper": {
+      "body": "@inject IMapper Mapper",
+      "prefix": "yInjIMapper"
+  },
+  "injectNavigationManager": {
+      "body": "@inject NavigationManager NavigationManager",
+      "prefix": "yInjNavigationManager"
+  },
+  "injectSignOutSessionStateManager": {
+      "body": ["@inject SignOutSessionStateManager SignOutManager", "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"],
+      "prefix": "yInjSignOutSessionStateManager"
   },
   "inputCheckbox": {
-    "prefix": "yInputCheckbox",
-    "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0"
+      "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+      "prefix": "yInputCheckbox"
   },
   "inputDate": {
-    "prefix": "yInputDate",
-    "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0"
+      "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
+      "prefix": "yInputDate"
   },
-  "cascadingAuthenticationState" : {
-    "prefix": "yCascadingAuthenticationState",
-    "body": [
-      "<CascadingAuthenticationState>",
-      "\t$0",
-      "</CascadingAuthenticationState>"
-    ]
+  "inputNumber": {
+      "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+      "prefix": "yInputNumber"
+  },
+  "inputSelect": {
+      "body": ["<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0", "\t<option value=\"\">Select...</option>", "\t<option value=\"${3:YourValue}\">${4:$3}</option>", "</InputSelect>$0"],
+      "prefix": "yInputSelect"
+  },
+  "inputSelectForEach": {
+      "body": ["<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0", "\t<option value=\"\">Select...</option>", "\t@foreach (var ${3:item} in ${4:Items})", "{", "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>", "\t}", "</InputSelect>$0"],
+      "prefix": "yInputSelectForEach"
+  },
+  "inputText": {
+      "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+      "prefix": "yInputText"
+  },
+  "inputTextArea": {
+      "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+      "prefix": "yInputTextArea"
+  },
+  "layoutDirective": {
+      "body": "@layout ${1:LayoutName}",
+      "prefix": "yLayout"
+  },
+  "navLink": {
+      "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
+      "prefix": "yNavLink"
+  },
+  "navLinkWithMatchAttribute": {
+      "body": "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>",
+      "prefix": "yNavLinkMatch"
+  },
+  "onValidSubmit": {
+      "body": "OnValidSubmit=\"${1:MethodName}\"$0",
+      "prefix": "yOnValidSubmit"
+  },
+  "pageDirective": {
+      "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
+      "prefix": "yPage"
+  },
+  "pageDirectiveWithParameter": {
+      "body": ["@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""],
+      "prefix": "yPageParam"
+  },
+  "refAttribute": {
+      "body": "@ref=\"${1:Property}\"",
+      "prefix": "yRef"
+  },
+  "templatedComponent": {
+      "body": ["@typeparam TItem", "", "<table>", "\t<thead>", "\t\t<tr>@TableHeader</tr>", "\t</thead>", "\t<tbody>", "\t\t@foreach (var item in Items)", "\t\t{", "\t\t\t<tr>@RowTemplate(item)</tr>", "\t\t}", "\t</tbody>", "\t<tfoot>", "\t\t<tr>@TableFooter</tr>", "\t</tfoot>", "</table>", "", "@code {", "\t[Parameter] public RenderFragment TableHeader { get; set; }", "", "\t[Parameter] public RenderFragment<TItem> RowTemplate { get; set; }", "", "\t[Parameter] public RenderFragment TableFooter { get; set; }", "", "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }", "}"],
+      "prefix": "yTemplatedComponent"
+  },
+  "typeParamDirective": {
+      "body": "@typeparam ${1:T}",
+      "prefix": "yTypeParam"
+  },
+  "usingDirective": {
+      "body": "@using ${1:Namespace}",
+      "prefix": "yUsing"
+  },
+  "validationMessageFor": {
+      "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0",
+      "prefix": "yValidationMessageFor"
+  },
+  "validationSummary ": {
+      "body": "<ValidationSummary  />",
+      "prefix": "yValidationSummary "
+  },
+  "voidDispose": {
+      "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
+      "prefix": "yVoidDispose"
   }
 }
