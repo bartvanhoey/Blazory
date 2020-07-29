@@ -101,11 +101,11 @@
     },
     "onAfterRenderAsync": {
         "body": ["protected override async Task$1 OnAfterRenderAsync(bool firstRender)", "{", "\t$0", "}"],
-        "prefix": "yonAfterRenderAsync"
+        "prefix": "yOnAfterRenderAsync"
     },
     "onInitialized": {
         "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
-        "prefix": "yonInitialized"
+        "prefix": "yOnInitialized"
     },
     "onInitializedAsync": {
         "body": ["protected override async Task$1 OnInitializedAsync()", "{", "\t$0", "}"],
