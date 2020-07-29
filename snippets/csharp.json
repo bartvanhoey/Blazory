@@ -48,7 +48,7 @@
         "prefix": "gs"
     },
     "iEnumerable": {
-        "body": ["IEnumerable$1<$2:TypeName>$0"],
+        "body": ["IEnumerable$1<${2:TypeName}>$0"],
         "prefix": "yIEnumerable"
     },
     "inheritsComponentBase": {
