@@ -62,7 +62,7 @@
   "getFromJsonAsync": {
     "prefix": "yGetFromJsonAsync",
     "body": [
-      "${1|var response =, response =, return|} await ${2:HttpClient}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
     ]
   },
   "setParametersAsync": {
