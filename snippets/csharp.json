@@ -62,20 +62,18 @@
   "getFromJsonAsync": {
     "prefix": "yGetFromJsonAsync",
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
     ]
   },
   "getFromByIdJsonAsync": {
     "prefix": "yGetFromByIdJsonAsync",
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/${6:$4}Id\");"
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/${6:$4}Id\");"
     ]
   },
   "iEnumerable": {
     "prefix": "yIEnumerable",
-    "body": [
-      "IEnumerable$1<$2:TypeName>$0"
-    ]
+    "body": ["IEnumerable$1<$2:TypeName>$0"]
   },
   "setParametersAsync": {
     "prefix": "ySetParametersAsync",
@@ -215,7 +213,10 @@
   "postAsJsonAsync": {
     "prefix": "yPostAsJsonAsync",
     "body": [
-      "var response = await HttpClient.PostAsJsonAsync$1(\"${2:url}\", ${3:value});$0"
+      "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();",
+      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
+      "return ${9:$6}Id;$0"
     ]
   },
   "readFromJsonAsync": {
