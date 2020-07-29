@@ -1,21 +1,25 @@
 {
   "injectHttpClientProperty": {
     "prefix": "yInjHttpClientProp",
-    "body": ["[Inject$1] public HttpClient$2 ${3:HttpClient} { get; set; }$0"]
+    "body": ["[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"]
   },
   "injectHttpClientField": {
     "prefix": "yHttpClientField",
-    "body": ["private readonly HttpClient$2 ${3:_httpClient};$0"]
+    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"]
   },
   "injectNavigationManager": {
     "prefix": "yInjNavigationManager",
     "body": [
-      "[Inject$1] public NavigationManager$2 ${3:NavigationManager} { get; set; }$0"
+      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
     ]
   },
   "injectIJSRuntime": {
     "prefix": "yInjIJSRuntime",
-    "body": ["[Inject$1] public IJSRuntime$2 ${3:JSRuntime} { get; set; }$0"]
+    "body": ["[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"]
+  },
+  "injectSignOutSessionStateManager": {
+    "prefix": "yInjectSignOutSessionStateManager",
+    "body": ["[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"]
   },
   "injectIMapper": {
     "prefix": "yInjIMapper",
