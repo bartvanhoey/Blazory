@@ -4,85 +4,85 @@
 
 ## C# code-behind files
 
-| Prefix                                  | Description
-|---------------------------------------- |----------------------------------------------|
-|`yInjHttpClient`                      | Inject HttpClient property
-|`yHttpClientField`                       | Readonly HttpClient field
-|`yInjNavigationManager`                  | Inject NavigationManager property
-|`yInjIJSRuntime`                         | Inject IJSRuntime property
-|`yInjIMapper`                            | Inject IMapper property
-|`yInjService`                            | Inject MyService
-|`yInjSignOutSessionStateManager`      | Inject SignOutSessionStateManager property
-|`yInheritsComponentBase`                 | Inherits ComponentBase
-|`yParameter`                             | Parameter
-|`yParameterCaptureUnmatchedValues`       | Parameter CaptureUnmatchedValues
-|`yCascadingParameter`                    | CascadingParameter
-|`yAuthenticationStateTask`               | Parameter AuthenticationStateTask
-|`yGetFromJsonAsync`                      | GetFromJsonAsync
-|`ySetParametersAsync`                    | SetParametersAsync method stub
-|`yOnInitialized`                         | OnInitialized method stub
-|`yOnInitializedAsync`                    | OnInitializedAsync method stub
-|`yOnParametersSet`                       | OnParameterSet method stub
-|`yOnAfterRender`                         | OnAfterRender method stub
-|`yOnAfterRenderAsync`                    | OnAfterRenderAsync method stub
-|`yShouldRender`                          | ShouldRender method stub
-|`yEventHandler`                          | EventHandler method stub
-|`yEventHandlerAsync`                     | EventHandlerAsync method stub
-|`yEventCallback`                         | EventCallback Parameter
-|`yEventCallbackExtended`                 | EventCallbackExtended Parameter
-|`yEventCallbackOnParameterChanged`       | EventCallbackOnParameterChanged
-|`yJSRuntimeInvokeAsync`                  | JSRuntimeInvokeAsync call
-|`yProtAsyncTaskMethodNoParameters`       | protected async Task method stub no parameters
-|`yPublicAsyncTaskMethodNoParameters`     | public async Task method stub no parameters
-|`yProtAsyncTaskMethodWithParameters`     | protected async Task method stub with parameters
-|`yPublicAsyncTaskMethodWithParameters`   | public async Task method stub with parameters
-|`yPostAsJsonAsync`                       | HttpClient.PostAsJsonAsync call
-|`yReadIdFromJsonAsync`                   | HttpClient.ReadFromJsonAsync\<int> call
-|`yNavigateTo`                            | NavigationManager.NavigateTo page
-|`yNavigateToId`                          | NavigationManager.NavigateTo page\Id
-|`yAddHttpClientWithHttpMessageHandler`   | Add HttpClient with HttpMessageHandler
+| Prefix                                 | Description                                      |
+| -------------------------------------- | ------------------------------------------------ |
+| `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
+| `yAuthenticationStateTask`             | Parameter AuthenticationStateTask                |
+| `yCascadingParameter`                  | CascadingParameter                               |
+| `yEventCallbackExtended`               | EventCallbackExtended Parameter                  |
+| `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged                  |
+| `yEventCallback`                       | EventCallback Parameter                          |
+| `yEventHandlerAsync`                   | EventHandlerAsync method stub                    |
+| `yEventHandler`                        | EventHandler method stub                         |
+| `yGetFromJsonAsync`                    | GetFromJsonAsync                                 |
+| `yHttpClientField`                     | Readonly HttpClient field                        |
+| `yInheritsComponentBase`               | Inherits ComponentBase                           |
+| `yInjHttpClient`                       | Inject HttpClient property                       |
+| `yInjIJSRuntime`                       | Inject IJSRuntime property                       |
+| `yInjIMapper`                          | Inject IMapper property                          |
+| `yInjNavigationManager`                | Inject NavigationManager property                |
+| `yInjService`                          | Inject MyService                                 |
+| `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property       |
+| `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                        |
+| `yNavigateToId`                        | NavigationManager.NavigateTo page\Id             |
+| `yNavigateTo`                          | NavigationManager.NavigateTo page                |
+| `yOnAfterRenderAsync`                  | OnAfterRenderAsync method stub                   |
+| `yOnAfterRender`                       | OnAfterRender method stub                        |
+| `yOnInitializedAsync`                  | OnInitializedAsync method stub                   |
+| `yOnInitialized`                       | OnInitialized method stub                        |
+| `yOnParametersSet`                     | OnParameterSet method stub                       |
+| `yParameterCaptureUnmatchedValues`     | Parameter CaptureUnmatchedValues                 |
+| `yParameter`                           | Parameter                                        |
+| `yPostAsJsonAsync`                     | HttpClient.PostAsJsonAsync call                  |
+| `yProtAsyncTaskMethodNoParameters`     | protected async Task method stub no parameters   |
+| `yProtAsyncTaskMethodWithParameters`   | protected async Task method stub with parameters |
+| `yPublicAsyncTaskMethodNoParameters`   | public async Task method stub no parameters      |
+| `yPublicAsyncTaskMethodWithParameters` | public async Task method stub with parameters    |
+| `yReadIdFromJsonAsync`                 | HttpClient.ReadFromJsonAsync\<int> call          |
+| `ySetParametersAsync`                  | SetParametersAsync method stub                   |
+| `yShouldRender`                        | ShouldRender method stub                         |
 
 ## Razor files
 
-| Prefix                             | Description
-|------------------------------------|----------------------------------------------|
-|`yInheritsBaseComponent`            | @inherits BaseFile
-|`yCode`                             | @code Block
-|`yPage`                             | @page Directive
-|`yPageParam`                        | @page Directive with Parameter
-|`yInjService`                       | @inject
-|`yInjIJSRuntime`                 | @inject IJSRuntime property
-|`yInjHttpClient`                 | @inject HttpClient property
-|`yInjNavigationManager`          | @inject NavigationManager property
-|`yInjIMapper`                    | @inject IMapper property
-|`yUsing`                            | @using
-|`yImplementsIDisposable`            | @implements IDisposable
-|`yVoidDispose`                      | Dispose Method stub
-|`yTypeParam`                        | @typeParam
-|`yLayout`                           | @layout
-|`yAuthorizeAttribute`               | @attribute [Authorize]
-|`yBind`                             | @bind="MyProperty"
-|`yBindValue`                        | @bind-Value="MyProperty"
-|`yBindOnInputEvent`                 | @bind="Property" @bind:event="oninput"
-|`yBindFormat`                       | @bind:format="Format"
-|`yPreventDefault`                   | @preventDefault
-|`yRef`                              | @ref="MyProperty"
-|`yComponent`                        | Complete component
-|`yInheritsLayoutComponentBase`      | Complete Layout component inherits LayoutComponentBase
-|`yComponentDisposable`              | Complete component inherits IDisposable
-|`yComponentChildContent`            | Complete component with Child Content
-|`yTemplatedComponent`               | Templated component
-|`yNavLink`                          | NavLink
-|`yNavLinkMatch`                     | NavLink with MatchAttribute
-|`yDataAnnotationsValidator`         | DataAnnotationsValidator
-|`yValidationSummary`                | ValidationSummary
-|`yOnValidSubmit`                    | OnValidSubmit
-|`yValidationMessageFor`             | ValidationMessageFor
-|`yInputTextArea`                    | Built-in InputTextArea component
-|`yInputSelect`                      | Built-in InputSelect component
-|`yInputText`                        | Built-in InputText component
-|`yInputSelectForEach`               | Built-in InputSelectForEach component
-|`yInputNumber`                      | Built-in InputNumber component
-|`yInputCheckbox`                    | Built-in InputCheckbox component
-|`yInputDate`                        | Built-in InputDate component
-|`yCascadingAuthenticationState`     | CascadingAuthenticationState stub
+| Prefix                          | Description                                            |
+| ------------------------------- | ------------------------------------------------------ |
+| `yAuthorizeAttribute`           | @attribute [Authorize]                                 |
+| `yBindFormat`                   | @bind:format="Format"                                  |
+| `yBindOnInputEvent`             | @bind="Property" @bind:event="oninput"                 |
+| `yBindValue`                    | @bind-Value="MyProperty"                               |
+| `yBind`                         | @bind="MyProperty"                                     |
+| `yCascadingAuthenticationState` | CascadingAuthenticationState stub                      |
+| `yCode`                         | @code Block                                            |
+| `yComponentChildContent`        | Complete component with Child Content                  |
+| `yComponentDisposable`          | Complete component inherits IDisposable                |
+| `yComponent`                    | Complete component                                     |
+| `yDataAnnotationsValidator`     | DataAnnotationsValidator                               |
+| `yImplementsIDisposable`        | @implements IDisposable                                |
+| `yInheritsBaseComponent`        | @inherits BaseFile                                     |
+| `yInheritsLayoutComponentBase`  | Complete Layout component inherits LayoutComponentBase |
+| `yInjHttpClient`                | @inject HttpClient property                            |
+| `yInjIJSRuntime`                | @inject IJSRuntime property                            |
+| `yInjIMapper`                   | @inject IMapper property                               |
+| `yInjNavigationManager`         | @inject NavigationManager property                     |
+| `yInjService`                   | @inject                                                |
+| `yInputCheckbox`                | Built-in InputCheckbox component                       |
+| `yInputDate`                    | Built-in InputDate component                           |
+| `yInputNumber`                  | Built-in InputNumber component                         |
+| `yInputSelectForEach`           | Built-in InputSelectForEach component                  |
+| `yInputSelect`                  | Built-in InputSelect component                         |
+| `yInputTextArea`                | Built-in InputTextArea component                       |
+| `yInputText`                    | Built-in InputText component                           |
+| `yLayout`                       | @layout                                                |
+| `yNavLinkMatch`                 | NavLink with MatchAttribute                            |
+| `yNavLink`                      | NavLink                                                |
+| `yOnValidSubmit`                | OnValidSubmit                                          |
+| `yPageParam`                    | @page Directive with Parameter                         |
+| `yPage`                         | @page Directive                                        |
+| `yPreventDefault`               | @preventDefault                                        |
+| `yRef`                          | @ref="MyProperty"                                      |
+| `yTemplatedComponent`           | Templated component                                    |
+| `yTypeParam`                    | @typeParam                                             |
+| `yUsing`                        | @using                                                 |
+| `yValidationMessageFor`         | ValidationMessageFor                                   |
+| `yValidationSummary`            | ValidationSummary                                      |
+| `yVoidDispose`                  | Dispose Method stub                                    |
