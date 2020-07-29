@@ -68,7 +68,7 @@
   "iEnumerable": {
     "prefix": "yIEnumerable",
     "body": [
-      "IEnumerable$1<$2:Type>$0"
+      "IEnumerable$1<$2:TypeName>$0"
     ]
   },
   "setParametersAsync": {
