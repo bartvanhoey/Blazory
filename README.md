@@ -40,6 +40,7 @@
 |`yReadIdFromJsonAsync`                   | HttpClient.ReadFromJsonAsync\<int> call
 |`yNavigateTo`                            | NavigationManager.NavigateTo page
 |`yNavigateToId`                          | NavigationManager.NavigateTo page\Id
+|`yAddHttpClientWithHttpMessageHandler`   | Add HttpClient with HttpMessageHandler
 
 ## Razor files
 

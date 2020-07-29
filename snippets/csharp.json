@@ -232,5 +232,12 @@
   "navigateToId": {
     "prefix": "yNavigateToId",
     "body": ["NavigationManager.NavigateTo($\"${1:routeUrl}/{${2:id}}\");$0"]
+  },
+  "addHttpClientWithHttpMessageHandler": {
+    "prefix": "yAddHttpClientWithHttpMessageHandler",
+    "body": [
+      "builder.Services.AddHttpClient<${1:YourService}>(s => s.BaseAddress = new Uri(${2:builder.HostEnvironment.BaseAddress}))",
+      "\t.AddHttpMessageHandler<${3:BaseAddressAuthorizationMessageHandler}>();$0"
+    ]
   }
 }
