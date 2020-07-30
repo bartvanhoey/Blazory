@@ -18,8 +18,8 @@ steps:
 - script: npm install vsce --save-dev
   displayName: 'install visual Studio Code Extensions'
 
-- bash:
-    vsce publish patch
+- bash: |
+    yarn deploy
   displayName: Publish
   env:
     VSCE_PAT: $(VSCE_PAT)
