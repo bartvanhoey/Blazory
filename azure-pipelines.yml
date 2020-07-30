@@ -15,7 +15,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: npm install vsce --save-dev
+- script: yarn add vsce --dev
   displayName: 'install visual Studio Code Extensions'
 
 - bash: |
