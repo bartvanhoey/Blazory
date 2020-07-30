@@ -24,7 +24,7 @@
         "Snippets"
     ],
     "scripts": {
-        "deploy": "vsce publish --yarn"
+        "deploy": "vsce publish"
       },
     "contributes": {
         "snippets": [
