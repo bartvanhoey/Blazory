@@ -136,7 +136,7 @@
         "prefix": "yProtAsyncTaskMethodNoParameters"
     },
     "protectedAsyncTaskMethodWithParameters": {
-        "body": ["protected async Task$1 ${2:MethodName}Async(${3:paramType} ${4:paramName})", "{", "\t$0", "}"],
+        "body": ["protected async Task$1<${2:TypeName}> ${3:MethodName}Async(${4:paramType} ${5:paramName})", "{", "\t$0", "}"],
         "prefix": "yProtAsyncTaskMethodWithParameters"
     },
     "publicAsyncTaskMethodNoParameters": {
