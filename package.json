@@ -10,7 +10,7 @@
     },
     "version": "0.0.52",
     "engines": {
-        "vscode": "*"
+        "vscode": "^1.47.0"
     },
     "categories": [
         "Snippets"
