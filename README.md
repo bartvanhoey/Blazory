@@ -1,8 +1,8 @@
-# Blazory
+# Blazor Snippets that start with an y
 
-**Snippets** that start with an **`y`** for **Razor** and **C# code-behind** files
+**Snippets** for **Razor** and **C# code-behind** files
 
-## C# code-behind files
+## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_csharp.json)
 
 | Prefix                                 | Description                                      |
 | -------------------------------------- | ------------------------------------------------ |
@@ -42,13 +42,13 @@
 | `ySetParametersAsync`                  | SetParametersAsync method stub                   |
 | `yShouldRender`                        | ShouldRender method stub                         |
 
-## Razor files
+## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_razor.json)
 
 | Prefix                          | Description                                            |
 | ------------------------------- | ------------------------------------------------------ |
 | `yAuthorizeAttribute`           | @attribute [Authorize]                                 |
 | `yBindFormat`                   | @bind:format="MyFormat"                                |
-| `yBindOnInputEvent`             | @bind="MyProperty" @bind:event="oninput"                 |
+| `yBindOnInputEvent`             | @bind="MyProperty" @bind:event="oninput"               |
 | `yBindValue`                    | @bind-Value="MyProperty"                               |
 | `yBind`                         | @bind="MyProperty"                                     |
 | `yCascadingAuthenticationState` | CascadingAuthenticationState stub                      |
@@ -60,11 +60,12 @@
 | `yImplementsIDisposable`        | @implements IDisposable                                |
 | `yInheritsBaseComponent`        | @inherits C# code-behind base class                    |
 | `yInheritsLayoutComponentBase`  | Complete Layout component inherits LayoutComponentBase |
-| `yInjHttpClient`                | @inject HttpClient property                            |
-| `yInjIJSRuntime`                | @inject IJSRuntime property                            |
-| `yInjIMapper`                   | @inject IMapper property                               |
-| `yInjNavigationManager`         | @inject NavigationManager property                     |
+| `yInjHttpClient`                | @inject HttpClient directive                           |
+| `yInjIJSRuntime`                | @inject IJSRuntime directive                           |
+| `yInjIMapper`                   | @inject IMapper directive                              |
+| `yInjNavigationManager`         | @inject NavigationManager directive                    |
 | `yInjService`                   | @inject MyService MyService                            |
+| `yInjSignOutSessionStateManager`| @inject SignOutSessionStateManager directive           |
 | `yInputCheckbox`                | Built-in InputCheckbox component                       |
 | `yInputDate`                    | Built-in InputDate component                           |
 | `yInputNumber`                  | Built-in InputNumber component                         |
