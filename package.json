@@ -24,7 +24,7 @@
         "Snippets"
     ],
     "scripts": {
-        "deploy": "vsce publish patch"
+        "deploy": "vsce publish patch --force"
       },
     "contributes": {
         "snippets": [
