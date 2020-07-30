@@ -1,4 +1,4 @@
-# `Blazor Snippets` that start with an `y`
+# Blazor Snippets `that start with an y`
 
 **Snippets** for **Razor** and **C# code-behind** files
 
