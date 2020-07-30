@@ -148,7 +148,7 @@
       "prefix": "yTypeParam"
   },
   "usingDirective": {
-      "body": "@using ${1:Namespace}",
+      "body": "@using ${1:MyNameSpace}",
       "prefix": "yUsing"
   },
   "validationMessageFor": {
