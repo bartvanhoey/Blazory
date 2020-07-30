@@ -19,7 +19,6 @@ steps:
   displayName: 'install visual Studio Code Extensions'
 
 - bash: |
-    echo ">>> Publish"
     yarn deploy
   displayName: Publish
   env:
