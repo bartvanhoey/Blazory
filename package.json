@@ -23,6 +23,9 @@
         "ASP.NET Core",
         "Snippets"
     ],
+    "scripts": {
+        "deploy": "vsce publish --yarn"
+      },
     "contributes": {
         "snippets": [
             {
