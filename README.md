@@ -1,6 +1,6 @@
 # Blazor Snippets `that start with an y`
 
-![Blazory in Action!](https://github.com/bartvanhoey/Blazory/blob/master/images/blazory_csharp.gif "Blazory in Action!")
+![Blazory in Action!](images/blazory_csharp.gif "Blazory - snippets that start with an 'y' - in Action!")
 
 ## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_csharp.json)
 
