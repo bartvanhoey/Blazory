@@ -1,7 +1,5 @@
 # Blazor Snippets `that start with an y`
 
-**Snippets** for **Razor** and **C# code-behind** files
-
 ## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_csharp.json)
 
 | Prefix                                 | Description                                      |

@@ -63,9 +63,9 @@
         "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
         "prefix": "yHttpClientField"
     },
-    "injectHttpClientProperty": {
+    "injectHttpClient": {
         "body": ["[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"],
-        "prefix": "yInjHttpClientProp"
+        "prefix": "yInjHttpClient"
     },
     "injectIJSRuntime": {
         "body": ["[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"],
