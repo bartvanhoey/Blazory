@@ -1,6 +1,6 @@
 git add .
 git commit -m "update"
 
-npm version patch --force
+npm version patch
 
 git push
