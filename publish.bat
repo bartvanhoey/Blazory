@@ -1,5 +1,5 @@
 git add .
-git commit -m node -pe "require('./package.json').version"e
+git commit -m node -pe "require('./package.json').version"
 
 npm version patch --force
 
