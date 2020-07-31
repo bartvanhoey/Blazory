@@ -88,4 +88,3 @@
 | `yValidationSummary`            | ValidationSummary component                            |
 | `yVoidDispose`                  | Dispose method stub                                    |
 
-Enjoy Blazory!
