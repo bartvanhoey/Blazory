@@ -24,6 +24,7 @@
 | `yInjService`                          | Inject MyService MyService                       |
 | `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property       |
 | `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                        |
+| `yJSRuntimeInvokeVoidAsync`                | JSRuntimeInvokeAsync call                        |
 | `yNavigateToId`                        | NavigationManager.NavigateTo page\Id             |
 | `yNavigateTo`                          | NavigationManager.NavigateTo page                |
 | `yOnAfterRenderAsync`                  | OnAfterRenderAsync method stub                   |
