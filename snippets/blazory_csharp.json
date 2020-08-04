@@ -85,7 +85,7 @@
     },
     "jSRuntimeInvokeAsync": {
         "body": ["await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"identifier\"}, ${4:args});"],
-        "prefix": "jSRuntimeInvokeAsync"
+        "prefix": "yJSRuntimeInvokeAsync"
     },
     "navigateTo": {
         "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${1:routeUrl}\");$0"],
