@@ -9,5 +9,5 @@ git commit -m %CURRENT_VERSION%
 git push
 
 
-vsce publish patch --force
+vsce publish patch
 
