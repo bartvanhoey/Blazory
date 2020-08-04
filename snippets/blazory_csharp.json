@@ -84,8 +84,12 @@
         "prefix": "yInjSignOutSessionStateManager"
     },
     "jSRuntimeInvokeAsync": {
-        "body": ["await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"Path-to-JavaScript-function\"}, ${4:arguments});"],
+        "body": ["await ${1|JSRuntime,Js|}.InvokeAsync<${2:TResult}>(${3:\"Path-to-JavaScript-function\"}, ${4:arguments});"],
         "prefix": "yJSRuntimeInvokeAsync"
+    },
+    "jSRuntimeInvokeVoidAsync": {
+        "body": ["await ${1|JSRuntime,Js|}.InvokeVoidAsync(${3:\"Path-to-JavaScript-function\"}, ${4:arguments});"],
+        "prefix": "yJSRuntimeInvokeVoidAsync"
     },
     "navigateTo": {
         "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${1:routeUrl}\");$0"],
