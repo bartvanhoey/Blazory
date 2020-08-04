@@ -84,7 +84,7 @@
         "prefix": "yInjSignOutSessionStateManager"
     },
     "jSRuntimeInvokeAsync": {
-        "body": ["await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"identifier\"}, ${4:args});"],
+        "body": ["await ${1:JSRuntime}.InvokeAsync<${2:object}>(${3:\"Path-to-JavaScript-function\"}, ${4:arguments});"],
         "prefix": "yJSRuntimeInvokeAsync"
     },
     "navigateTo": {
