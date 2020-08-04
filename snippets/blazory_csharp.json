@@ -31,14 +31,6 @@
         "body": ["${1:private} async Task$2 ${3:HandleAsync}(${4:MouseEventArgs} ${5:e})", "{", "\t$0", "}"],
         "prefix": "yEventHandlerAsync"
     },
-    "getFromByIdJsonAsync": {
-        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"],
-        "prefix": "yGetFromByIdJsonAsync"
-    },
-    "getFromJsonAsync": {
-        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"],
-        "prefix": "yGetFromJsonAsync"
-    },
     "getPrivateSet": {
         "body": ["{ get; private set; }$0"],
         "prefix": "gps"
@@ -46,6 +38,22 @@
     "getSet": {
         "body": ["{ get; set; }$0"],
         "prefix": "gs"
+    },
+    "httpClientGetFromByIdJsonAsync": {
+        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"],
+        "prefix": "yHttpClientGetFromByIdJsonAsync"
+    },
+    "httpClientGetFromJsonAsync": {
+        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"],
+        "prefix": "yHttpClientGetFromJsonAsync"
+    },
+    "httpClientPostAsJsonAsync": {
+        "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();", "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();", "return ${9:$6}Id;$0"],
+        "prefix": "yHttpCLientPostAsJsonAsync"
+    },
+    "httpClientPutAsJsonAsync": {
+        "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();$0"],
+        "prefix": "yHttpClientPutAsJsonAsync"
     },
     "iEnumerable": {
         "body": ["IEnumerable$1<${2:TypeName}>$0"],
@@ -59,13 +67,13 @@
         "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"],
         "prefix": "yInjService"
     },
-    "injectHttpClientField": {
-        "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
-        "prefix": "yHttpClientField"
-    },
     "injectHttpClient": {
         "body": ["[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"],
         "prefix": "yInjHttpClient"
+    },
+    "injectHttpClientField": {
+        "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
+        "prefix": "yHttpClientField"
     },
     "injectIJSRuntime": {
         "body": ["[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"],
@@ -130,10 +138,6 @@
     "parameterCaptureUnmatchedValues ": {
         "body": ["[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"],
         "prefix": "yParaCaptureUnmatchedValues"
-    },
-    "postAsJsonAsync": {
-        "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();", "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();", "return ${9:$6}Id;$0"],
-        "prefix": "yPostAsJsonAsync"
     },
     "protectedAsyncTaskMethodNoParameters": {
         "body": ["protected async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"],
