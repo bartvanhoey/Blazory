@@ -61,6 +61,7 @@
 | `yComponentDisposable`           | Complete component inherits IDisposable                |
 | `yComponent`                     | Complete component                                     |
 | `yDataAnnotationsValidator`      | DataAnnotationsValidator                               |
+| `yEditForm`                      | Inserts EditForm component                             |
 | `yImplementsIDisposable`         | @implements IDisposable                                |
 | `yInheritsBaseComponent`         | @inherits C# code-behind base class                    |
 | `yInheritsLayoutComponentBase`   | Complete Layout component inherits LayoutComponentBase |
