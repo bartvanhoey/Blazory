@@ -11,6 +11,10 @@
         "body": ["[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"],
         "prefix": "yCascadingPara"
     },
+    "compareAttribute": {
+        "body": ["[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]", "$0"],
+        "prefix": "yCompareAttribute"
+    },
     "eventCallback": {
         "body": ["[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"],
         "prefix": "yEventCallback"
@@ -162,6 +166,10 @@
     "readFromJsonAsync": {
         "body": ["var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"],
         "prefix": "yReadIdFromJsonAsync"
+    },
+    "requiredAttribute": {
+        "body": ["[Required$1]", "$0"],
+        "prefix": "yRequiredAttribute"
     },
     "setParametersAsync": {
         "body": ["public override async Task$1 SetParametersAsync(ParameterView Parameters)", "{", "\t$0", "", "\tawait base.SetParametersAsync(Parameters);", "}"],

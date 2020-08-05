@@ -9,6 +9,7 @@
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
 | `yAuthenticationStateTask`             | Parameter AuthenticationStateTask                |
 | `yCascadingParameter`                  | CascadingParameter attribute                     |
+| `yCompareAttribute`                    | Compare attribute                     |
 | `yEventCallbackExtended`               | EventCallbackExtended Parameter                  |
 | `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged                  |
 | `yEventCallback`                       | EventCallback Parameter                          |
@@ -43,6 +44,7 @@
 | `yPublicAsyncTaskMethodNoParameters`   | public async Task method stub no parameters      |
 | `yPublicAsyncTaskMethodWithParameters` | public async Task method stub with parameters    |
 | `yReadIdFromJsonAsync`                 | HttpClient.ReadFromJsonAsync\<int> call          |
+| `yRequiredAttribute`                   | RequiredAttribute                                |
 | `ySetParametersAsync`                  | SetParametersAsync method stub                   |
 | `yShouldRender`                        | ShouldRender method stub                         |
 
