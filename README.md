@@ -14,8 +14,9 @@
 | `yEventCallback`                       | EventCallback Parameter                          |
 | `yEventHandlerAsync`                   | EventHandlerAsync method stub                    |
 | `yEventHandler`                        | EventHandler method stub                         |
+| `yHttpClientDeleteAsync`               | HttpClient.DeleteAsync call                      |
 | `yHttpClientField`                     | Readonly HttpClient field                        |
-| `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsynccall              |
+| `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsync call             |
 | `yHttpClientGetFromJsonAsync`          | HttpClient.GetFromJsonAsync call                 |
 | `yHttpClientPostAsJsonAsync`           | HttpClient.PostAsJsonAsync call                  |
 | `yHttpClientPutAsJsonAsync`            | HttpClient.PutAsJsonAsync call                   |

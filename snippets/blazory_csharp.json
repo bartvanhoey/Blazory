@@ -53,7 +53,7 @@
     },
     "httpClientPostAsJsonAsync": {
         "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();", "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();", "return ${9:$6}Id;$0"],
-        "prefix": "yHttpCLientPostAsJsonAsync"
+        "prefix": "yHttpClientPostAsJsonAsync"
     },
     "httpClientPutAsJsonAsync": {
         "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();$0"],
