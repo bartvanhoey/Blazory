@@ -62,6 +62,13 @@
 | `yComponent`                     | Complete component                                     |
 | `yDataAnnotationsValidator`      | DataAnnotationsValidator                               |
 | `yEditForm`                      | Inserts EditForm component                             |
+| `yFormGroupInputCheckBox`        | Inserts form-group class InputCheckBox component       |
+| `yFormGroupInputDate`            | Inserts form-group class InputDate component           |
+| `yFormGroupInputNumber`          | Inserts form-group class InputNumber component         |
+| `yFormGroupInputSelect`          | Inserts form-group class InputSelect component         |
+| `yFormGroupInputSelectForEach`   | Inserts form-group class InputSelect ForEach           |
+| `yFormGroupInputText`            | Inserts form-group class InputText component           |
+| `yFormGroupInputTextArea`        | Inserts form-group class InputTextArea component       |
 | `yImplementsIDisposable`         | @implements IDisposable                                |
 | `yInheritsBaseComponent`         | @inherits C# code-behind base class                    |
 | `yInheritsLayoutComponentBase`   | Complete Layout component inherits LayoutComponentBase |

@@ -44,12 +44,40 @@
         "prefix": "yComponentDisposable"
     },
     "editForm": {
-        "body": ["<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">", "\t<DataAnnotationsValidator />", "\t<ValidationSummary />", "<div class=\"form-group\">", "\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>", "\t\t<div>", "\t\t\t<InputText id=\"${5:$3}\" @bind-Value=\"@${6:$1}.${7:property}\" />", "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", "\t\t</div>", "\t</div>", "\t<button type=\"submit\">${10|Add,Edit,Submit|} ${11:$1}</button>", "</EditForm>"],
+        "body": ["<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">", "\t<DataAnnotationsValidator />", "\t<ValidationSummary />", "\t<div class=\"form-group\">", "\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>", "\t\t<div>", "\t\t\t<InputText id=\"${5:$3}\" @bind-Value=\"@${6:$1}.${7:property}\" />", "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", "\t\t</div>", "\t</div>", "\t<button type=\"submit\">${10|Add,Edit,Submit|} ${11:$1}</button>", "</EditForm>"],
         "prefix": "yEditForm"
     },
     "event:preventDefaultAttribute": {
         "body": "@${1:onkeypress}:preventDefault",
         "prefix": "yPreventDefault"
+    },
+    "formGroupInputCheckBox": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputCheckbox id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputCheckBox"
+    },
+    "formGroupInputDate": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputText id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<InputDate id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:dateProperty}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputDate"
+    },
+    "formGroupInputNumber": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputNumber id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputNumber"
+    },
+    "formGroupInputSelect": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputSelect id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:Property}\" >$0", "\t\t\t<option disabled value=\"\">${6:Select...}</option>", "\t\t\t<option value=\"${7:YourValue}\">${8:$7}</option>", "\t\t</InputSelect>$0", "\t\t<ValidationMessage For=\"@(() => ${9:$4}.${10:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputSelect"
+    },
+    "formGroupInputSelectForEach": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputSelect id=\"${3:$1}\" @bind-Value=\"${4:Model}.${5:Property}\" >$0", "\t\t\t<option disabled value=\"\">${6:Select...}</option>", "\t\t\t@foreach (var ${7:item} in ${8:Items})", "\t\t{", "\t\t\t\t<option value=\"${9:$7}.${10:Id}\">${11:$7}.${12:DisplayProperty}</option>", "\t\t\t}", "\t\t</InputSelect>", "\t\t<ValidationMessage For=\"@(() => ${13:$4}.${14:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputSelectForEach"
+    },
+    "formGroupInputText": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputText id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputText"
+    },
+    "formGroupInputTextArea": {
+        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputTextArea}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputTextArea id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
+        "prefix": "yFormGroupInputTextArea"
     },
     "implementsIDisposible": {
         "body": "@implements ${1:IDisposable}",
