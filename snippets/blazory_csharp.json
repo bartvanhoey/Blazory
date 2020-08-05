@@ -39,6 +39,10 @@
         "body": ["{ get; set; }$0"],
         "prefix": "gs"
     },
+    "httpClientDeleteAsync": {
+        "body": ["await ${1|HttpClient,_httpClient,http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"],
+        "prefix": "yHttpClientDeleteAsync"
+    },
     "httpClientGetFromByIdJsonAsync": {
         "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"],
         "prefix": "yHttpClientGetFromByIdJsonAsync"
