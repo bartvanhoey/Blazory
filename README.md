@@ -9,7 +9,7 @@
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
 | `yAuthenticationStateTask`             | Parameter AuthenticationStateTask                |
 | `yCascadingParameter`                  | CascadingParameter attribute                     |
-| `yCompareAttribute`                    | Compare attribute                     |
+| `yCompareAttribute`                    | Compare attribute                                |
 | `yEventCallbackExtended`               | EventCallbackExtended Parameter                  |
 | `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged                  |
 | `yEventCallback`                       | EventCallback Parameter                          |
