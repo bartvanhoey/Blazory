@@ -44,8 +44,19 @@
         "prefix": "yComponentDisposable"
     },
     "editForm": {
-        "body": ["<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">", "\t<DataAnnotationsValidator />", "\t<ValidationSummary />", "\t<div class=\"form-group\">", 
-            "\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>", "\t\t<div>", "\t\t\t<InputText id=\"${5:$3}\" class=\"form-control\" @bind-Value=\"@${6:$1}.${7:property}\" />", "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", "\t\t</div>", "\t</div>", "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit|} ${12:$1}</button>", "</EditForm>"],
+        "body": [
+            "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">", 
+                "\t<DataAnnotationsValidator />", 
+                "\t<ValidationSummary />", 
+                "\t<div class=\"form-group\">", 
+                    "\t\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>", 
+                    "\t\t<div>", 
+                        "\t\t\t<InputText id=\"${5:$3}\" class=\"form-control\" @bind-Value=\"@${6:$1}.${7:property}\" />", 
+                        "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", 
+                    "\t\t</div>", 
+                "\t</div>", 
+                "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit|} ${12:$1}</button>", 
+            "</EditForm>"],
         "prefix": "yEditForm"
     },
     "event:preventDefaultAttribute": {
