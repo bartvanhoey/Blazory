@@ -11,6 +11,10 @@
         "body": ["[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"],
         "prefix": "yAuthStateTask"
     },
+    "authorizeAttribute": {
+        "body": ["[Authorize]", "$0"],
+        "prefix": "yAuthorizeAttribute"
+    },
     "cascadingParameter": {
         "body": ["[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"],
         "prefix": "yCascadingPara"
