@@ -55,7 +55,7 @@
                         "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", 
                     "\t\t</div>", 
                 "\t</div>", 
-                "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add $1,Edit $1, Submit, Sign In|}</button>", 
+                "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit,Sign In,Logout|} ${12:MyText}</button>", 
             "</EditForm>",
             "$0"
         ],
