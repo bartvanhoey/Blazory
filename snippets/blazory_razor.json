@@ -1,218 +1,363 @@
 {
-    "attribute [Authorize] Directive": {
-        "body": "@attribute [Authorize]",
-        "prefix": "yAuthorizeAttribute"
-    },
-    "bindAttribute": {
-        "body": "@bind=\"${1:Property}\"",
-        "prefix": "yBind"
-    },
-    "bindFormatAttribute": {
-        "body": "@bind:format=\"${1:yyyy-MM-dd}\"",
-        "prefix": "yBindFormat"
-    },
-    "bindOnInputEvent": {
-        "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0",
-        "prefix": "yBindOnInputEvent"
-    },
-    "bindValueAttribute": {
-        "body": "@bind-Value=\"${1:Property}\"$0",
-        "prefix": "yBindValue"
-    },
-    "cascadingAuthenticationState": {
-        "body": ["<CascadingAuthenticationState>", "\t$0", "</CascadingAuthenticationState>"],
-        "prefix": "yCascadingAuthenticationState"
-    },
-    "codeBlock": {
-        "body": ["@code {", "\t$0", "}"],
-        "prefix": "yCode"
-    },
-    "component": {
-        "body": ["@page \"/${1:${TM_FILENAME_BASE}}\"", "", "$0", "", "@code {", "", "}"],
-        "prefix": "yComponent"
-    },
-    "componentChildContent": {
-        "body": ["@ChildContent", "", "@code {", "\t[Parameter] public RenderFragment ChildContent { get; set; }", "}"],
-        "prefix": "yComponentChildContent"
-    },
-    "dataAnnotationsValidator": {
-        "body": "<DataAnnotationsValidator />",
-        "prefix": "yDataAnnotationsValidator"
-    },
-    "disposableComponent": {
-        "body": ["@implements IDisposable", "", "@code {", "\tpublic void Dispose()", "\t{", "\t\t$0", "\t}", "}"],
-        "prefix": "yComponentDisposable"
-    },
-    "editForm": {
-        "body": [
-            "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">", 
-                "\t<DataAnnotationsValidator />", 
-                "\t<ValidationSummary />", 
-                "\t<div class=\"form-group\">", 
-                    "\t\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>", 
-                    "\t\t<div>", 
-                        "\t\t\t<InputText id=\"${5:$3}\" class=\"form-control\" @bind-Value=\"@${6:$1}.${7:property}\" />", 
-                        "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />", 
-                    "\t\t</div>", 
-                "\t</div>", 
-                "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit,Sign In,Logout|} ${12:MyText}</button>", 
-            "</EditForm>",
-            "$0"
-        ],
-        "prefix": "yEditForm"
-    },
-    "event:preventDefaultAttribute": {
-        "body": "@${1:onkeypress}:preventDefault",
-        "prefix": "yPreventDefault"
-    },
-    "formCheckInputCheckBox": {
-        "body": [
-            "<div class=\"form-check\">", 
-                "\t<InputCheckbox id=\"${3:$1}\" class=\"form-check-input\" @bind-Value=\"@${4:model}.${5:property}\" />", 
-                "\t<label class=\"form-check-label\" for=\"${1:idInputText}\">${2:LabelText}:</label>", 
-                "\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", 
-            "</div>", 
-                        "$0"],
-        "prefix": "yFormCheckInputCheckBox"
-    },
-    "formGroupInputDate": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputText id=\"${3:$1}\" class=\"form-control\"  @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<InputDate id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:dateProperty}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputDate"
-    },
-    "formGroupInputNumber": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputNumber id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputNumber"
-    },
-    "formGroupInputSelect": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:Property}\" >$0", "\t\t\t<option disabled value=\"\">${6:Select...}</option>", "\t\t\t<option value=\"${7:YourValue}\">${8:$7}</option>", "\t\t</InputSelect>$0", "\t\t<ValidationMessage For=\"@(() => ${9:$4}.${10:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputSelect"
-    },
-    "formGroupInputSelectForEach": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"${4:Model}.${5:Property}\" >$0", "\t\t\t<option disabled value=\"\">${6:Select...}</option>", "\t\t\t@foreach (var ${7:item} in ${8:Items})", "\t\t{", "\t\t\t\t<option value=\"${9:$7}.${10:Id}\">${11:$7}.${12:DisplayProperty}</option>", "\t\t\t}", "\t\t</InputSelect>", "\t\t<ValidationMessage For=\"@(() => ${13:$4}.${14:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputSelectForEach"
-    },
-    "formGroupInputText": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputText id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputText"
-    },
-    "formGroupInputTextArea": {
-        "body": ["<div class=\"form-group\">", "\t<label for=\"${1:idInputTextArea}\">${2:LabelText}:</label>", "\t<div>", "\t\t<InputTextArea id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />", "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />", "\t</div>", "</div>", "$0"],
-        "prefix": "yFormGroupInputTextArea"
-    },
-    "implementsIDisposible": {
-        "body": "@implements ${1:IDisposable}",
-        "prefix": "yImplementsIDisposable"
-    },
-    "inheritsBaseComponent": {
-        "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0",
-        "prefix": "yInheritsBaseComponent"
-    },
-    "inheritsLayoutComponentBase": {
-        "body": ["@inherits LayoutComponentBase", "$0", "@Body", "", "@code {", "", "}"],
-        "prefix": "yInheritsLayoutComponentBase"
-    },
-    "injectDirective": {
-        "body": "@inject ${1:MyService} ${2:$1}",
-        "prefix": "yInjService"
-    },
-    "injectHttpClient": {
-        "body": "@inject HttpClient HttpClient",
-        "prefix": "yInjHttpClient"
-    },
-    "injectIJSRuntime": {
-        "body": "@inject IJSRuntime JSRuntime",
-        "prefix": "yInjIJSRuntime"
-    },
-    "injectIMapper": {
-        "body": "@inject IMapper Mapper",
-        "prefix": "yInjIMapper"
-    },
-    "injectNavigationManager": {
-        "body": "@inject NavigationManager NavigationManager",
-        "prefix": "yInjNavigationManager"
-    },
-    "injectSignOutSessionStateManager": {
-        "body": ["@inject SignOutSessionStateManager SignOutManager", "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"],
-        "prefix": "yInjSignOutSessionStateManager"
-    },
-    "inputCheckbox": {
-        "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-        "prefix": "yInputCheckbox"
-    },
-    "inputDate": {
-        "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
-        "prefix": "yInputDate"
-    },
-    "inputNumber": {
-        "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-        "prefix": "yInputNumber"
-    },
-    "inputSelect": {
-        "body": ["<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0", "\t<option value=\"\">Select...</option>", "\t<option value=\"${3:YourValue}\">${4:$3}</option>", "</InputSelect>$0"],
-        "prefix": "yInputSelect"
-    },
-    "inputSelectForEach": {
-        "body": ["<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0", "\t<option value=\"\">Select...</option>", "\t@foreach (var ${3:item} in ${4:Items})", "{", "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>", "\t}", "</InputSelect>$0"],
-        "prefix": "yInputSelectForEach"
-    },
-    "inputText": {
-        "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-        "prefix": "yInputText"
-    },
-    "inputTextArea": {
-        "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-        "prefix": "yInputTextArea"
-    },
-    "layoutDirective": {
-        "body": "@layout ${1:LayoutName}",
-        "prefix": "yLayout"
-    },
-    "navLink": {
-        "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
-        "prefix": "yNavLink"
-    },
-    "navLinkWithMatchAttribute": {
-        "body": "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>",
-        "prefix": "yNavLinkMatch"
-    },
-    "onValidSubmit": {
-        "body": "OnValidSubmit=\"${1:MethodName}\"$0",
-        "prefix": "yOnValidSubmit"
-    },
-    "pageDirective": {
-        "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-        "prefix": "yPage"
-    },
-    "pageDirectiveWithParameter": {
-        "body": ["@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""],
-        "prefix": "yPageParam"
-    },
-    "refAttribute": {
-        "body": "@ref=\"${1:Property}\"",
-        "prefix": "yRef"
-    },
-    "templatedComponent": {
-        "body": ["@typeparam TItem", "", "<table>", "\t<thead>", "\t\t<tr>@TableHeader</tr>", "\t</thead>", "\t<tbody>", "\t\t@foreach (var item in Items)", "\t\t{", "\t\t\t<tr>@RowTemplate(item)</tr>", "\t\t}", "\t</tbody>", "\t<tfoot>", "\t\t<tr>@TableFooter</tr>", "\t</tfoot>", "</table>", "", "@code {", "\t[Parameter] public RenderFragment TableHeader { get; set; }", "", "\t[Parameter] public RenderFragment<TItem> RowTemplate { get; set; }", "", "\t[Parameter] public RenderFragment TableFooter { get; set; }", "", "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }", "}"],
-        "prefix": "yTemplatedComponent"
-    },
-    "typeParamDirective": {
-        "body": "@typeparam ${1:T}",
-        "prefix": "yTypeParam"
-    },
-    "usingDirective": {
-        "body": "@using ${1:MyNameSpace}",
-        "prefix": "yUsing"
-    },
-    "validationMessageFor": {
-        "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0",
-        "prefix": "yValidationMessageFor"
-    },
-    "validationSummary ": {
-        "body": "<ValidationSummary  />",
-        "prefix": "yValidationSummary "
-    },
-    "voidDispose": {
-        "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
-        "prefix": "yVoidDispose"
-    }
+  "attribute [Authorize] Directive": {
+    "body": "@attribute [Authorize]",
+    "prefix": "yAuthorizeAttribute"
+  },
+  "bindAttribute": {
+    "body": "@bind=\"${1:Property}\"",
+    "prefix": "yBind"
+  },
+  "bindFormatAttribute": {
+    "body": "@bind:format=\"${1:yyyy-MM-dd}\"",
+    "prefix": "yBindFormat"
+  },
+  "bindOnInputEvent": {
+    "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0",
+    "prefix": "yBindOnInputEvent"
+  },
+  "bindValueAttribute": {
+    "body": "@bind-Value=\"${1:Property}\"$0",
+    "prefix": "yBindValue"
+  },
+  "cascadingAuthenticationState": {
+    "body": [
+      "<CascadingAuthenticationState>",
+      "\t$0",
+      "</CascadingAuthenticationState>"
+    ],
+    "prefix": "yCascadingAuthenticationState"
+  },
+  "codeBlock": {
+    "body": ["@code {", "\t$0", "}"],
+    "prefix": "yCode"
+  },
+  "component": {
+    "body": [
+      "@page \"/${1:${TM_FILENAME_BASE}}\"",
+      "",
+      "$0",
+      "",
+      "@code {",
+      "",
+      "}"
+    ],
+    "prefix": "yComponent"
+  },
+  "componentChildContent": {
+    "body": [
+      "@ChildContent",
+      "",
+      "@code {",
+      "\t[Parameter] public RenderFragment ChildContent { get; set; }",
+      "}"
+    ],
+    "prefix": "yComponentChildContent"
+  },
+  "dataAnnotationsValidator": {
+    "body": "<DataAnnotationsValidator />",
+    "prefix": "yDataAnnotationsValidator"
+  },
+  "disposableComponent": {
+    "body": [
+      "@implements IDisposable",
+      "",
+      "@code {",
+      "\tpublic void Dispose()",
+      "\t{",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "prefix": "yComponentDisposable"
+  },
+  "editForm": {
+    "body": [
+      "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+      "\t<DataAnnotationsValidator />",
+      "\t<ValidationSummary />",
+      "\t<div class=\"form-group\">",
+      "\t\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>",
+      "\t\t<div>",
+      "\t\t\t<InputText id=\"${5:$3}\" class=\"form-control\" @bind-Value=\"@${6:$1}.${7:property}\" />",
+      "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />",
+      "\t\t</div>",
+      "\t</div>",
+      "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit,Sign In,Logout|} ${12:MyText}</button>",
+      "</EditForm>",
+      "$0"
+    ],
+    "prefix": "yEditForm"
+  },
+  "event:preventDefaultAttribute": {
+    "body": "@${1:onkeypress}:preventDefault",
+    "prefix": "yPreventDefault"
+  },
+  "formCheckInputCheckBox": {
+    "body": [
+      "<div class=\"form-check\">",
+      "\t<InputCheckbox id=\"${1:idInputCheckBox}\" class=\"form-check-input\" @bind-Value=\"@${2:model}.${3:property}\" />",
+      "\t<label class=\"form-check-label\" for=\"${4:$1}\">${5:LabelText}:</label>",
+      "\t<ValidationMessage For=\"@(() => ${6:$2}.${7:$3})\" />",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormCheckInputCheckBox"
+  },
+  "formGroupInputDate": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputText id=\"${3:$1}\" class=\"form-control\"  @bind-Value=\"@${4:model}.${5:property}\" />",
+      "\t\t<InputDate id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:dateProperty}\" />",
+      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputDate"
+  },
+  "formGroupInputNumber": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputNumber id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
+      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputNumber"
+  },
+  "formGroupInputSelect": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:Property}\" >$0",
+      "\t\t\t<option disabled value=\"\">${6:Select...}</option>",
+      "\t\t\t<option value=\"${7:YourValue}\">${8:$7}</option>",
+      "\t\t</InputSelect>$0",
+      "\t\t<ValidationMessage For=\"@(() => ${9:$4}.${10:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputSelect"
+  },
+  "formGroupInputSelectForEach": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"${4:Model}.${5:Property}\" >$0",
+      "\t\t\t<option disabled value=\"\">${6:Select...}</option>",
+      "\t\t\t@foreach (var ${7:item} in ${8:Items})",
+      "\t\t{",
+      "\t\t\t\t<option value=\"${9:$7}.${10:Id}\">${11:$7}.${12:DisplayProperty}</option>",
+      "\t\t\t}",
+      "\t\t</InputSelect>",
+      "\t\t<ValidationMessage For=\"@(() => ${13:$4}.${14:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputSelectForEach"
+  },
+  "formGroupInputText": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputText id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
+      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputText"
+  },
+  "formGroupInputTextArea": {
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:idInputTextArea}\">${2:LabelText}:</label>",
+      "\t<div>",
+      "\t\t<InputTextArea id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
+      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "prefix": "yFormGroupInputTextArea"
+  },
+  "implementsIDisposible": {
+    "body": "@implements ${1:IDisposable}",
+    "prefix": "yImplementsIDisposable"
+  },
+  "inheritsBaseComponent": {
+    "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0",
+    "prefix": "yInheritsBaseComponent"
+  },
+  "inheritsLayoutComponentBase": {
+    "body": [
+      "@inherits LayoutComponentBase",
+      "$0",
+      "@Body",
+      "",
+      "@code {",
+      "",
+      "}"
+    ],
+    "prefix": "yInheritsLayoutComponentBase"
+  },
+  "injectDirective": {
+    "body": "@inject ${1:MyService} ${2:$1}",
+    "prefix": "yInjService"
+  },
+  "injectHttpClient": {
+    "body": "@inject HttpClient HttpClient",
+    "prefix": "yInjHttpClient"
+  },
+  "injectIJSRuntime": {
+    "body": "@inject IJSRuntime JSRuntime",
+    "prefix": "yInjIJSRuntime"
+  },
+  "injectIMapper": {
+    "body": "@inject IMapper Mapper",
+    "prefix": "yInjIMapper"
+  },
+  "injectNavigationManager": {
+    "body": "@inject NavigationManager NavigationManager",
+    "prefix": "yInjNavigationManager"
+  },
+  "injectSignOutSessionStateManager": {
+    "body": [
+      "@inject SignOutSessionStateManager SignOutManager",
+      "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"
+    ],
+    "prefix": "yInjSignOutSessionStateManager"
+  },
+  "inputCheckbox": {
+    "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "prefix": "yInputCheckbox"
+  },
+  "inputDate": {
+    "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
+    "prefix": "yInputDate"
+  },
+  "inputNumber": {
+    "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "prefix": "yInputNumber"
+  },
+  "inputSelect": {
+    "body": [
+      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
+      "\t<option value=\"\">Select...</option>",
+      "\t<option value=\"${3:YourValue}\">${4:$3}</option>",
+      "</InputSelect>$0"
+    ],
+    "prefix": "yInputSelect"
+  },
+  "inputSelectForEach": {
+    "body": [
+      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
+      "\t<option value=\"\">Select...</option>",
+      "\t@foreach (var ${3:item} in ${4:Items})",
+      "{",
+      "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>",
+      "\t}",
+      "</InputSelect>$0"
+    ],
+    "prefix": "yInputSelectForEach"
+  },
+  "inputText": {
+    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "prefix": "yInputText"
+  },
+  "inputTextArea": {
+    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "prefix": "yInputTextArea"
+  },
+  "layoutDirective": {
+    "body": "@layout ${1:LayoutName}",
+    "prefix": "yLayout"
+  },
+  "navLink": {
+    "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
+    "prefix": "yNavLink"
+  },
+  "navLinkWithMatchAttribute": {
+    "body": "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>",
+    "prefix": "yNavLinkMatch"
+  },
+  "onValidSubmit": {
+    "body": "OnValidSubmit=\"${1:MethodName}\"$0",
+    "prefix": "yOnValidSubmit"
+  },
+  "pageDirective": {
+    "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
+    "prefix": "yPage"
+  },
+  "pageDirectiveWithParameter": {
+    "body": [
+      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""
+    ],
+    "prefix": "yPageParam"
+  },
+  "refAttribute": {
+    "body": "@ref=\"${1:Property}\"",
+    "prefix": "yRef"
+  },
+  "templatedComponent": {
+    "body": [
+      "@typeparam TItem",
+      "",
+      "<table>",
+      "\t<thead>",
+      "\t\t<tr>@TableHeader</tr>",
+      "\t</thead>",
+      "\t<tbody>",
+      "\t\t@foreach (var item in Items)",
+      "\t\t{",
+      "\t\t\t<tr>@RowTemplate(item)</tr>",
+      "\t\t}",
+      "\t</tbody>",
+      "\t<tfoot>",
+      "\t\t<tr>@TableFooter</tr>",
+      "\t</tfoot>",
+      "</table>",
+      "",
+      "@code {",
+      "\t[Parameter] public RenderFragment TableHeader { get; set; }",
+      "",
+      "\t[Parameter] public RenderFragment<TItem> RowTemplate { get; set; }",
+      "",
+      "\t[Parameter] public RenderFragment TableFooter { get; set; }",
+      "",
+      "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }",
+      "}"
+    ],
+    "prefix": "yTemplatedComponent"
+  },
+  "typeParamDirective": {
+    "body": "@typeparam ${1:T}",
+    "prefix": "yTypeParam"
+  },
+  "usingDirective": {
+    "body": "@using ${1:MyNameSpace}",
+    "prefix": "yUsing"
+  },
+  "validationMessageFor": {
+    "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0",
+    "prefix": "yValidationMessageFor"
+  },
+  "validationSummary ": {
+    "body": "<ValidationSummary  />",
+    "prefix": "yValidationSummary "
+  },
+  "voidDispose": {
+    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
+    "prefix": "yVoidDispose"
+  }
 }
