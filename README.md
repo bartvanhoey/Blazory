@@ -7,6 +7,7 @@
 | Prefix                                 | Description                                      |
 | -------------------------------------- | ------------------------------------------------ |
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
+| `yApiController`                       | ApiController attribute                          |
 | `yAuthenticationStateTask`             | Parameter AuthenticationStateTask                |
 | `yCascadingParameter`                  | CascadingParameter attribute                     |
 | `yCompareAttribute`                    | Compare attribute                                |
@@ -45,6 +46,7 @@
 | `yPublicAsyncTaskMethodWithParameters` | public async Task method stub with parameters    |
 | `yReadIdFromJsonAsync`                 | HttpClient.ReadFromJsonAsync\<int> call          |
 | `yRequiredAttribute`                   | RequiredAttribute                                |
+| `yRouteAttribute`                      | RouteAttribute                                   |
 | `ySetParametersAsync`                  | SetParametersAsync method stub                   |
 | `yShouldRender`                        | ShouldRender method stub                         |
 

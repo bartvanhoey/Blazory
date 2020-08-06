@@ -3,6 +3,10 @@
         "body": ["builder.Services.AddHttpClient<${1:YourService}>(s => s.BaseAddress = new Uri(${2:builder.HostEnvironment.BaseAddress}))", "\t.AddHttpMessageHandler<${3:BaseAddressAuthorizationMessageHandler}>();$0"],
         "prefix": "yAddHttpClientWithHttpMessageHandler"
     },
+    "ApiControllerAttribute": {
+        "body": ["[ApiController]", "$0"],
+        "prefix": "yApiControllerAttribute"
+    },
     "authenticationStateTaskParameter": {
         "body": ["[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"],
         "prefix": "yAuthStateTask"
@@ -170,6 +174,10 @@
     "requiredAttribute": {
         "body": ["[Required$1]", "$0"],
         "prefix": "yRequiredAttribute"
+    },
+    "routeAttribute": {
+        "body": ["[Route(\"api/[controller]/[action]\")]", "$0"],
+        "prefix": "yRouteAttribute"
     },
     "setParametersAsync": {
         "body": ["public override async Task$1 SetParametersAsync(ParameterView Parameters)", "{", "\t$0", "", "\tawait base.SetParametersAsync(Parameters);", "}"],
