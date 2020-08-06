@@ -12,9 +12,9 @@
   },
   "authenticationStateTaskParameter": {
     "body": [
-      "[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"
+      "[CascadingParameter$1] ${2:protected} Task$3<AuthenticationState$4> ${5:AuthenticationState} { get; set; }$0"
     ],
-    "prefix": "yAuthStateTask"
+    "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
     "body": ["[Authorize]", "$0"],

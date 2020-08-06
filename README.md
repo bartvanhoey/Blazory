@@ -8,9 +8,9 @@
 | -------------------------------------- | ------------------------------------------------ |
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
 | `yApiController`                       | ApiController attribute                          |
-| `yAuthenticationStateTask`             | Parameter AuthenticationStateTask                |
 | `yAuthorizeAttribute`                  | AuthorizeAttribute                               |
-| `yCascadingParameter`                  | CascadingParameter attribute                     |
+| `yCascadingParaAuthState`              | Cascading Parameter AuthenticationState          |
+| `yCascadingPara`                       | CascadingParameter attribute                     |
 | `yCompareAttribute`                    | Compare attribute                                |
 | `yEventCallbackExtended`               | EventCallbackExtended Parameter                  |
 | `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged                  |
