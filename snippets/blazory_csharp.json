@@ -1,194 +1,306 @@
 {
-    "addHttpClientWithHttpMessageHandler": {
-        "body": ["builder.Services.AddHttpClient<${1:YourService}>(s => s.BaseAddress = new Uri(${2:builder.HostEnvironment.BaseAddress}))", "\t.AddHttpMessageHandler<${3:BaseAddressAuthorizationMessageHandler}>();$0"],
-        "prefix": "yAddHttpClientWithHttpMessageHandler"
-    },
-    "ApiControllerAttribute": {
-        "body": ["[ApiController]", "$0"],
-        "prefix": "yApiControllerAttribute"
-    },
-    "authenticationStateTaskParameter": {
-        "body": ["[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"],
-        "prefix": "yAuthStateTask"
-    },
-    "authorizeAttribute": {
-        "body": ["[Authorize]", "$0"],
-        "prefix": "yAuthorizeAttribute"
-    },
-    "cascadingParameter": {
-        "body": ["[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"],
-        "prefix": "yCascadingPara"
-    },
-    "compareAttribute": {
-        "body": ["[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]", "$0"],
-        "prefix": "yCompareAttribute"
-    },
-    "eventCallback": {
-        "body": ["[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"],
-        "prefix": "yEventCallback"
-    },
-    "eventCallbackExtended": {
-        "body": ["[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"],
-        "prefix": "yEventCallbackExtended"
-    },
-    "eventCallbackOnParameterChanged": {
-        "body": ["[Parameter] public ${1:string} ${2:ParameterName} { get; set; }", "", "[Parameter] public EventCallback<$1> $2Changed { get; set; }$0"],
-        "prefix": "yEventCallbackOnParameterChanged"
-    },
-    "eventHandler": {
-        "body": ["${1:private} void ${2:Handle}(${3:MouseEventArgs} ${4:e})", "{", "\t$0", "}"],
-        "prefix": "yEventHandler"
-    },
-    "eventHandlerAsync": {
-        "body": ["${1:private} async Task$2 ${3:HandleAsync}(${4:MouseEventArgs} ${5:e})", "{", "\t$0", "}"],
-        "prefix": "yEventHandlerAsync"
-    },
-    "getPrivateSet": {
-        "body": ["{ get; private set; }$0"],
-        "prefix": "gps"
-    },
-    "getSet": {
-        "body": ["{ get; set; }$0"],
-        "prefix": "gs"
-    },
-    "httpClientDeleteAsync": {
-        "body": ["await ${1|HttpClient,_httpClient,http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"],
-        "prefix": "yHttpClientDeleteAsync"
-    },
-    "httpClientGetFromByIdJsonAsync": {
-        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"],
-        "prefix": "yHttpClientGetFromByIdJsonAsync"
-    },
-    "httpClientGetFromJsonAsync": {
-        "body": ["${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"],
-        "prefix": "yHttpClientGetFromJsonAsync"
-    },
-    "httpClientPostAsJsonAsync": {
-        "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();", "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();", "return ${9:$6}Id;$0"],
-        "prefix": "yHttpClientPostAsJsonAsync"
-    },
-    "httpClientPutAsJsonAsync": {
-        "body": ["var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});", "response.EnsureSuccessStatusCode();$0"],
-        "prefix": "yHttpClientPutAsJsonAsync"
-    },
-    "iEnumerable": {
-        "body": ["IEnumerable$1<${2:TypeName}>$0"],
-        "prefix": "yIEnumerable"
-    },
-    "inheritsComponentBase": {
-        "body": [": ComponentBase$1"],
-        "prefix": "yInheritsComponentBase"
-    },
-    "injectDirective": {
-        "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"],
-        "prefix": "yInjService"
-    },
-    "injectHttpClient": {
-        "body": ["[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"],
-        "prefix": "yInjHttpClient"
-    },
-    "injectHttpClientField": {
-        "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
-        "prefix": "yHttpClientField"
-    },
-    "injectIJSRuntime": {
-        "body": ["[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"],
-        "prefix": "yInjIJSRuntime"
-    },
-    "injectIMapper": {
-        "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
-        "prefix": "yInjIMapper"
-    },
-    "injectNavigationManager": {
-        "body": ["[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"],
-        "prefix": "yInjNavigationManager"
-    },
-    "injectSignOutSessionStateManager": {
-        "body": ["[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"],
-        "prefix": "yInjSignOutSessionStateManager"
-    },
-    "jSRuntimeInvokeAsync": {
-        "body": ["${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});"],
-        "prefix": "yJSRuntimeInvokeAsync"
-    },
-    "jSRuntimeInvokeVoidAsync": {
-        "body": ["await ${1|JSRuntime,Js|}.InvokeVoidAsync(\"${3:Path-to-JavaScript-function}\", ${4:arguments});"],
-        "prefix": "yJSRuntimeInvokeVoidAsync"
-    },
-    "navigateTo": {
-        "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${2:routeUrl}\");$0"],
-        "prefix": "yNavigateTo"
-    },
-    "navigateToId": {
-        "body": ["${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\");$0"],
-        "prefix": "yNavigateToId"
-    },
-    "onAfterRender": {
-        "body": ["protected override void OnAfterRender(bool firstRender)", "{", "\t$0", "}"],
-        "prefix": "yOnAfterRender"
-    },
-    "onAfterRenderAsync": {
-        "body": ["protected override async Task$1 OnAfterRenderAsync(bool firstRender)", "{", "\t$0", "}"],
-        "prefix": "yOnAfterRenderAsync"
-    },
-    "onInitialized": {
-        "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
-        "prefix": "yOnInitialized"
-    },
-    "onInitializedAsync": {
-        "body": ["protected override async Task$1 OnInitializedAsync()", "{", "\t$0", "}"],
-        "prefix": "yOnInitializedAsync"
-    },
-    "onParametersSet": {
-        "body": ["protected override void onParametersSet()", "{", "\t$0", "}"],
-        "prefix": "yOnParametersSet"
-    },
-    "onParametersSetAsync": {
-        "body": ["protected override async Task$1 OnParametersSetAsync()", "{", "\t$0", "}"],
-        "prefix": "yOnParametersSetAsync"
-    },
-    "parameter": {
-        "body": ["[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"],
-        "prefix": "yPara"
-    },
-    "parameterCaptureUnmatchedValues ": {
-        "body": ["[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"],
-        "prefix": "yParaCaptureUnmatchedValues"
-    },
-    "protectedAsyncTaskMethodNoParameters": {
-        "body": ["protected async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"],
-        "prefix": "yProtAsyncTaskMethodNoParameters"
-    },
-    "protectedAsyncTaskMethodWithParameters": {
-        "body": ["protected async Task$1<${2:TypeName}> ${3:MethodName}Async(${4:paramType} ${5:paramName})", "{", "\t$0", "}"],
-        "prefix": "yProtAsyncTaskMethodWithParameters"
-    },
-    "publicAsyncTaskMethodNoParameters": {
-        "body": ["public async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"],
-        "prefix": "yPublicAsyncTaskMethodNoParameters"
-    },
-    "publicAsyncTaskMethodWithParameters": {
-        "body": ["public async Task$1 ${2:MethodName}Async(${3:paramType} ${4:paramName})", "{", "\t$0", "}"],
-        "prefix": "yPublicAsyncTaskMethodWithParameters"
-    },
-    "readFromJsonAsync": {
-        "body": ["var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"],
-        "prefix": "yReadIdFromJsonAsync"
-    },
-    "requiredAttribute": {
-        "body": ["[Required$1]", "$0"],
-        "prefix": "yRequiredAttribute"
-    },
-    "routeAttribute": {
-        "body": ["[Route(\"api/[controller]/[action]\")]", "$0"],
-        "prefix": "yRouteAttribute"
-    },
-    "setParametersAsync": {
-        "body": ["public override async Task$1 SetParametersAsync(ParameterView Parameters)", "{", "\t$0", "", "\tawait base.SetParametersAsync(Parameters);", "}"],
-        "prefix": "ySetParametersAsync"
-    },
-    "shouldRender": {
-        "body": ["protected override bool ShouldRender()", "{", "\t$0", "\treturn true;", "}"],
-        "prefix": "yShouldRender"
-    }
+  "addHttpClientWithHttpMessageHandler": {
+    "body": [
+      "builder.Services.AddHttpClient<${1:YourService}>(s => s.BaseAddress = new Uri(${2:builder.HostEnvironment.BaseAddress}))",
+      "\t.AddHttpMessageHandler<${3:BaseAddressAuthorizationMessageHandler}>();$0"
+    ],
+    "prefix": "yAddHttpClientWithHttpMessageHandler"
+  },
+  "ApiControllerAttribute": {
+    "body": ["[ApiController]", "$0"],
+    "prefix": "yApiControllerAttribute"
+  },
+  "authenticationStateTaskParameter": {
+    "body": [
+      "[CascadingParameter$1] ${2:private} Task$3<AuthenticationState$4> ${5:AuthenticationStateTask} { get; set; }$0"
+    ],
+    "prefix": "yAuthStateTask"
+  },
+  "authorizeAttribute": {
+    "body": ["[Authorize]", "$0"],
+    "prefix": "yAuthorizeAttribute"
+  },
+  "cascadingParameter": {
+    "body": [
+      "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
+    ],
+    "prefix": "yCascadingPara"
+  },
+  "compareAttribute": {
+    "body": [
+      "[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
+      "$0"
+    ],
+    "prefix": "yCompareAttribute"
+  },
+  "eventCallback": {
+    "body": [
+      "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
+    ],
+    "prefix": "yEventCallback"
+  },
+  "eventCallbackExtended": {
+    "body": [
+      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+    ],
+    "prefix": "yEventCallbackExtended"
+  },
+  "eventCallbackOnParameterChanged": {
+    "body": [
+      "[Parameter] public ${1:string} ${2:ParameterName} { get; set; }",
+      "",
+      "[Parameter] public EventCallback<$1> $2Changed { get; set; }$0"
+    ],
+    "prefix": "yEventCallbackOnParameterChanged"
+  },
+  "eventHandler": {
+    "body": [
+      "${1:private} void ${2:Handle}(${3:MouseEventArgs} ${4:e})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yEventHandler"
+  },
+  "eventHandlerAsync": {
+    "body": [
+      "${1:private} async Task$2 ${3:HandleAsync}(${4:MouseEventArgs} ${5:e})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yEventHandlerAsync"
+  },
+  "getPrivateSet": {
+    "body": ["{ get; private set; }$0"],
+    "prefix": "gps"
+  },
+  "getSet": {
+    "body": ["{ get; set; }$0"],
+    "prefix": "gs"
+  },
+  "httpClientDeleteAsync": {
+    "body": [
+      "await ${1|HttpClient,_httpClient,http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+    ],
+    "prefix": "yHttpClientDeleteAsync"
+  },
+  "httpClientGetFromByIdJsonAsync": {
+    "body": [
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"
+    ],
+    "prefix": "yHttpClientGetFromByIdJsonAsync"
+  },
+  "httpClientGetFromJsonAsync": {
+    "body": [
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
+    ],
+    "prefix": "yHttpClientGetFromJsonAsync"
+  },
+  "httpClientPostAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();"
+    ],
+    "prefix": "yHttpClientPostAsync"
+  },
+  "httpClientPostAsJsonAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();",
+      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
+      "return ${9:$6}Id;$0"
+    ],
+    "prefix": "yHttpClientPostAsJsonAsync"
+  },
+  "httpClientPutAsJsonAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();$0"
+    ],
+    "prefix": "yHttpClientPutAsJsonAsync"
+  },
+  "iEnumerable": {
+    "body": ["IEnumerable$1<${2:TypeName}>$0"],
+    "prefix": "yIEnumerable"
+  },
+  "inheritsComponentBase": {
+    "body": [": ComponentBase$1"],
+    "prefix": "yInheritsComponentBase"
+  },
+  "injectDirective": {
+    "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"],
+    "prefix": "yInjService"
+  },
+  "injectHttpClient": {
+    "body": [
+      "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
+    ],
+    "prefix": "yInjHttpClient"
+  },
+  "injectHttpClientField": {
+    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
+    "prefix": "yHttpClientField"
+  },
+  "injectIJSRuntime": {
+    "body": [
+      "[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"
+    ],
+    "prefix": "yInjIJSRuntime"
+  },
+  "injectIMapper": {
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "prefix": "yInjIMapper"
+  },
+  "injectNavigationManager": {
+    "body": [
+      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
+    ],
+    "prefix": "yInjNavigationManager"
+  },
+  "injectSignOutSessionStateManager": {
+    "body": [
+      "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"
+    ],
+    "prefix": "yInjSignOutSessionStateManager"
+  },
+  "jSRuntimeInvokeAsync": {
+    "body": [
+      "${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});"
+    ],
+    "prefix": "yJSRuntimeInvokeAsync"
+  },
+  "jSRuntimeInvokeVoidAsync": {
+    "body": [
+      "await ${1|JSRuntime,Js|}.InvokeVoidAsync(\"${3:Path-to-JavaScript-function}\", ${4:arguments});"
+    ],
+    "prefix": "yJSRuntimeInvokeVoidAsync"
+  },
+  "navigateTo": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${2:routeUrl}\");$0"
+    ],
+    "prefix": "yNavigateTo"
+  },
+  "navigateToId": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\");$0"
+    ],
+    "prefix": "yNavigateToId"
+  },
+  "onAfterRender": {
+    "body": [
+      "protected override void OnAfterRender(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yOnAfterRender"
+  },
+  "onAfterRenderAsync": {
+    "body": [
+      "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yOnAfterRenderAsync"
+  },
+  "onInitialized": {
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "prefix": "yOnInitialized"
+  },
+  "onInitializedAsync": {
+    "body": [
+      "protected override async Task$1 OnInitializedAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yOnInitializedAsync"
+  },
+  "onParametersSet": {
+    "body": ["protected override void onParametersSet()", "{", "\t$0", "}"],
+    "prefix": "yOnParametersSet"
+  },
+  "onParametersSetAsync": {
+    "body": [
+      "protected override async Task$1 OnParametersSetAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yOnParametersSetAsync"
+  },
+  "parameter": {
+    "body": ["[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"],
+    "prefix": "yPara"
+  },
+  "parameterCaptureUnmatchedValues ": {
+    "body": [
+      "[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"
+    ],
+    "prefix": "yParaCaptureUnmatchedValues"
+  },
+  "protectedAsyncTaskMethodNoParameters": {
+    "body": ["protected async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"],
+    "prefix": "yProtAsyncTaskMethodNoParameters"
+  },
+  "protectedAsyncTaskMethodWithParameters": {
+    "body": [
+      "protected async Task$1<${2:TypeName}> ${3:MethodName}Async(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yProtAsyncTaskMethodWithParameters"
+  },
+  "publicAsyncTaskMethodNoParameters": {
+    "body": ["public async Task$1 ${2:MethodName}Async()", "{", "\t$0", "}"],
+    "prefix": "yPublicAsyncTaskMethodNoParameters"
+  },
+  "publicAsyncTaskMethodWithParameters": {
+    "body": [
+      "public async Task$1 ${2:MethodName}Async(${3:paramType} ${4:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "yPublicAsyncTaskMethodWithParameters"
+  },
+  "readFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
+    ],
+    "prefix": "yReadIdFromJsonAsync"
+  },
+  "requiredAttribute": {
+    "body": ["[Required$1]", "$0"],
+    "prefix": "yRequiredAttribute"
+  },
+  "routeAttribute": {
+    "body": ["[Route(\"api/[controller]/[action]\")]", "$0"],
+    "prefix": "yRouteAttribute"
+  },
+  "setParametersAsync": {
+    "body": [
+      "public override async Task$1 SetParametersAsync(ParameterView Parameters)",
+      "{",
+      "\t$0",
+      "",
+      "\tawait base.SetParametersAsync(Parameters);",
+      "}"
+    ],
+    "prefix": "ySetParametersAsync"
+  },
+  "shouldRender": {
+    "body": [
+      "protected override bool ShouldRender()",
+      "{",
+      "\t$0",
+      "\treturn true;",
+      "}"
+    ],
+    "prefix": "yShouldRender"
+  }
 }

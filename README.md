@@ -22,6 +22,7 @@
 | `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsync call             |
 | `yHttpClientGetFromJsonAsync`          | HttpClient.GetFromJsonAsync call                 |
 | `yHttpClientPostAsJsonAsync`           | HttpClient.PostAsJsonAsync call                  |
+| `yHttpClientPostAsync`                 | HttpClient.PostAsync call                        |
 | `yHttpClientPutAsJsonAsync`            | HttpClient.PutAsJsonAsync call                   |
 | `yInheritsComponentBase`               | Inherits ComponentBase                           |
 | `yInjHttpClient`                       | Inject HttpClient property                       |
