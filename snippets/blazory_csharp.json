@@ -279,7 +279,7 @@
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": ["[Route(\"api/[controller]/[action]\")]", "$0"],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "prefix": "yRouteAttribute"
   },
   "setParametersAsync": {
