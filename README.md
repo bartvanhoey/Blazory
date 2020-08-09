@@ -16,7 +16,7 @@
 | `yCompareAttribute`                    | Compare attribute                          |
 | `yEventCallbackExtended`               | EventCallbackExtended parameter            |
 | `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged            |
-| `yEventCallback`                       | EventCallback Parameter                    |
+| `yEventCallback`                       | EventCallback parameter                    |
 | `yEventHandlerAsync`                   | EventHandlerAsync method stub              |
 | `yEventHandler`                        | EventHandler method stub                   |
 | `yHttpClientDeleteAsync`               | HttpClient.DeleteAsync call                |
