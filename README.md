@@ -4,53 +4,51 @@
 
 ## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_csharp.json)
 
-| Prefix                                 | Description                                      |
-| -------------------------------------- | ------------------------------------------------ |
-| `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler           |
-| `yApiController`                       | ApiController attribute                          |
-| `yAuthorizeAttribute`                  | AuthorizeAttribute                               |
-| `yCascadingParaAuthState`              | Cascading Parameter AuthenticationState          |
-| `yCascadingPara`                       | CascadingParameter attribute                     |
-| `yCompareAttribute`                    | Compare attribute                                |
-| `yEventCallbackExtended`               | EventCallbackExtended Parameter                  |
-| `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged                  |
-| `yEventCallback`                       | EventCallback Parameter                          |
-| `yEventHandlerAsync`                   | EventHandlerAsync method stub                    |
-| `yEventHandler`                        | EventHandler method stub                         |
-| `yHttpClientDeleteAsync`               | HttpClient.DeleteAsync call                      |
-| `yHttpClientField`                     | Readonly HttpClient field                        |
-| `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsync call             |
-| `yHttpClientGetFromJsonAsync`          | HttpClient.GetFromJsonAsync call                 |
-| `yHttpClientPostAsJsonAsync`           | HttpClient.PostAsJsonAsync call                  |
-| `yHttpClientPostAsync`                 | HttpClient.PostAsync call                        |
-| `yHttpClientPutAsJsonAsync`            | HttpClient.PutAsJsonAsync call                   |
-| `yInheritsComponentBase`               | Inherits ComponentBase                           |
-| `yInjHttpClient`                       | Inject HttpClient property                       |
-| `yInjIJSRuntime`                       | Inject IJSRuntime property                       |
-| `yInjIMapper`                          | Inject IMapper property                          |
-| `yInjNavigationManager`                | Inject NavigationManager property                |
-| `yInjService`                          | Inject MyService MyService                       |
-| `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property       |
-| `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                        |
-| `yJSRuntimeInvokeVoidAsync`            | JSRuntimeInvokeVoidAsync call                    |
-| `yNavigateToId`                        | NavigationManager.NavigateTo page\Id             |
-| `yNavigateTo`                          | NavigationManager.NavigateTo page                |
-| `yOnAfterRenderAsync`                  | OnAfterRenderAsync method stub                   |
-| `yOnAfterRender`                       | OnAfterRender method stub                        |
-| `yOnInitializedAsync`                  | OnInitializedAsync method stub                   |
-| `yOnInitialized`                       | OnInitialized method stub                        |
-| `yOnParametersSet`                     | OnParameterSet method stub                       |
-| `yParameterCaptureUnmatchedValues`     | Parameter CaptureUnmatchedValues attribute       |
-| `yParameter`                           | Parameter attribute                              |
-| `yProtAsyncTaskMethodNoParameters`     | protected async Task method stub no parameters   |
-| `yProtAsyncTaskMethodWithParameters`   | protected async Task method stub with parameters |
-| `yPublicAsyncTaskMethodNoParameters`   | public async Task method stub no parameters      |
-| `yPublicAsyncTaskMethodWithParameters` | public async Task method stub with parameters    |
-| `yReadIdFromJsonAsync`                 | HttpClient.ReadFromJsonAsync\<int> call          |
-| `yRequiredAttribute`                   | RequiredAttribute                                |
-| `yRouteAttribute`                      | RouteAttribute                                   |
-| `ySetParametersAsync`                  | SetParametersAsync method stub                   |
-| `yShouldRender`                        | ShouldRender method stub                         |
+| Prefix                                 | Description                                |
+| -------------------------------------- | ------------------------------------------ |
+| `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler     |
+| `yApiController`                       | ApiController attribute                    |
+| `yAsyncMethodNoParameters`             | async method stub no parameters            |
+| `yAsyncMethodWithParameters`           | async method stub with parameters          |
+| `yAuthorizeAttribute`                  | AuthorizeAttribute                         |
+| `yCascadingParaAuthState`              | Cascading parameter AuthenticationState    |
+| `yCascadingPara`                       | CascadingParameter attribute               |
+| `yCompareAttribute`                    | Compare attribute                          |
+| `yEventCallbackExtended`               | EventCallbackExtended parameter            |
+| `yEventCallbackOnParameterChanged`     | EventCallbackOnParameterChanged            |
+| `yEventCallback`                       | EventCallback Parameter                    |
+| `yEventHandlerAsync`                   | EventHandlerAsync method stub              |
+| `yEventHandler`                        | EventHandler method stub                   |
+| `yHttpClientDeleteAsync`               | HttpClient.DeleteAsync call                |
+| `yHttpClientField`                     | Readonly HttpClient field                  |
+| `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsync call       |
+| `yHttpClientGetFromJsonAsync`          | HttpClient.GetFromJsonAsync call           |
+| `yHttpClientPostAsJsonAsync`           | HttpClient.PostAsJsonAsync call            |
+| `yHttpClientPostAsync`                 | HttpClient.PostAsync call                  |
+| `yHttpClientPutAsJsonAsync`            | HttpClient.PutAsJsonAsync call             |
+| `yInheritsComponentBase`               | Inherits ComponentBase                     |
+| `yInjHttpClient`                       | Inject HttpClient property                 |
+| `yInjIJSRuntime`                       | Inject IJSRuntime property                 |
+| `yInjIMapper`                          | Inject IMapper property                    |
+| `yInjNavigationManager`                | Inject NavigationManager property          |
+| `yInjService`                          | Inject MyService MyService                 |
+| `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property |
+| `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                  |
+| `yJSRuntimeInvokeVoidAsync`            | JSRuntimeInvokeVoidAsync call              |
+| `yNavigateToId`                        | NavigationManager.NavigateTo page\Id       |
+| `yNavigateTo`                          | NavigationManager.NavigateTo page          |
+| `yOnAfterRenderAsync`                  | OnAfterRenderAsync method stub             |
+| `yOnAfterRender`                       | OnAfterRender method stub                  |
+| `yOnInitializedAsync`                  | OnInitializedAsync method stub             |
+| `yOnInitialized`                       | OnInitialized method stub                  |
+| `yOnParametersSet`                     | OnParameterSet method stub                 |
+| `yParameterCaptureUnmatchedValues`     | Parameter CaptureUnmatchedValues attribute |
+| `yParameter`                           | Parameter attribute                        |
+| `yReadIdFromJsonAsync`                 | HttpClient.ReadFromJsonAsync\<int> call    |
+| `yRequiredAttribute`                   | RequiredAttribute                          |
+| `yRouteAttribute`                      | RouteAttribute                             |
+| `ySetParametersAsync`                  | SetParametersAsync method stub             |
+| `yShouldRender`                        | ShouldRender method stub                   |
 
 ## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_razor.json)
 
