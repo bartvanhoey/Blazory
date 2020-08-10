@@ -11,8 +11,12 @@
     "body": "@bind:format=\"${1:yyyy-MM-dd}\"",
     "prefix": "yBindFormat"
   },
+  "bindOnProperty": {
+    "body": "@bind=\"${1:Property}\"$0",
+    "prefix": "yBindOnProperty"
+  },
   "bindOnInputEvent": {
-    "body": "@bind=\"${1:Property}\"  @bind:event=\"oninput\"$0",
+    "body": "@bind=\"@bind:event=\"oninput\"$0",
     "prefix": "yBindOnInputEvent"
   },
   "bindValueAttribute": {

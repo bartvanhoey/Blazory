@@ -56,7 +56,8 @@
 | -------------------------------- | ------------------------------------------------------ |
 | `yAuthorizeAttribute`            | @attribute [Authorize]                                 |
 | `yBindFormat`                    | @bind:format="MyFormat"                                |
-| `yBindOnInputEvent`              | @bind="MyProperty" @bind:event="oninput"               |
+| `yBindOnInputEvent`              | @bind:event="oninput"                                  |
+| `yBindOnProperty`                | @bind="MyProperty""                                    |
 | `yBindValue`                     | @bind-Value="MyProperty"                               |
 | `yBind`                          | @bind="MyProperty"                                     |
 | `yCascadingAuthenticationState`  | CascadingAuthenticationState stub                      |
