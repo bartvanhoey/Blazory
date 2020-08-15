@@ -8,8 +8,10 @@
 | -------------------------------------- | ------------------------------------------ |
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler     |
 | `yApiController`                       | ApiController attribute                    |
-| `yAsyncMethodNoParameters`             | async method stub no parameters            |
-| `yAsyncMethodWithParameters`           | async method stub with parameters          |
+| `yMethodAsync`                         | async method stub                          |
+| `yMethodAsyncReturn`                   | async method stub                          |
+| `yMethodVoidReturn`                    | void method stub                           |
+| `yMethodReturn`                        | method stub                                |
 | `yAuthorizeAttribute`                  | AuthorizeAttribute                         |
 | `yCascadingParaAuthState`              | Cascading parameter AuthenticationState    |
 | `yCascadingPara`                       | CascadingParameter attribute               |
