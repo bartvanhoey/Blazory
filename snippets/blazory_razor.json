@@ -220,19 +220,19 @@
     "prefix": "yInjService"
   },
   "injectHttpClient": {
-    "body": "@inject HttpClient HttpClient",
+    "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
     "prefix": "yInjHttpClient"
   },
   "injectIJSRuntime": {
-    "body": "@inject IJSRuntime JSRuntime",
+    "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
     "prefix": "yInjIJSRuntime"
   },
   "injectIMapper": {
-    "body": "@inject IMapper Mapper",
+    "body": "@inject IMapper Mapper$0",
     "prefix": "yInjIMapper"
   },
   "injectNavigationManager": {
-    "body": "@inject NavigationManager NavigationManager",
+    "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
     "prefix": "yInjNavigationManager"
   },
   "injectSignOutSessionStateManager": {
