@@ -1,41 +1,45 @@
 {
-    "name": "blazory",
-    "displayName": "Blazory",
-    "description": "Snippets that start with an y for Razor and C# code-behind files",
-    "icon": "images/blazory-icon.png",
-    "publisher": "BartVanHoey",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/bartvanhoey/Blazory.git"
-    },
-    "version": "0.0.127",
-    "engines": {
-        "vscode": "^1.47.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "keywords": [
-        "Blazor",
-        ".NET Core",
-        "Razor",
-        "C#",
-        "ASP.NET Core",
-        "Snippets"
-    ],
-    "scripts": {
-        "deploy": "vsce publish --yarn"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": "razor",
-                "path": "./snippets/blazory_razor.json"
-            },
-            {
-                "language": "csharp",
-                "path": "./snippets/blazory_csharp.json"
-            }
-        ]
-    }
+  "name": "blazory",
+  "displayName": "Blazory",
+  "description": "Snippets that start with an y for Razor and C# code-behind files",
+  "icon": "images/blazory-icon.png",
+  "publisher": "BartVanHoey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartvanhoey/Blazory.git"
+  },
+  "version": "0.0.127",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Blazor",
+    ".NET Core",
+    "Razor",
+    "C#",
+    "ASP.NET Core",
+    "Snippets"
+  ],
+  "scripts": {
+    "deploy": "vsce publish --yarn"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "aspnetcorerazor",
+        "path": "./snippets/blazory_razor.json"
+      },
+      {
+        "language": "razor",
+        "path": "./snippets/blazory_razor.json"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/blazory_csharp.json"
+      }
+    ]
+  }
 }
