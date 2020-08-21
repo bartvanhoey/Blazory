@@ -28,10 +28,7 @@
     },
     "contributes": {
         "snippets": [
-            {
-                "language": "aspnetcorerazor",
-                "path": "./snippets/blazory_razor.json"
-            },
+    
             {
                 "language": "razor",
                 "path": "./snippets/blazory_razor.json"
