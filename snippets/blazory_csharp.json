@@ -111,6 +111,10 @@
         "body": ["[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"],
         "prefix": "yInjSignOutSessionStateManager"
     },
+    "invokeAsyncEventCallback": {
+        "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
+        "prefix": "yInvokeAsyncEventCallback"
+    },
     "jSRuntimeInvokeAsync": {
         "body": ["${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});"],
         "prefix": "yJSRuntimeInvokeAsync"
