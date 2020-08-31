@@ -8,10 +8,6 @@
 | -------------------------------------- | ------------------------------------------ |
 | `yAddHttpClientWithHttpMessageHandler` | Add HttpClient with HttpMessageHandler     |
 | `yApiController`                       | ApiController attribute                    |
-| `yMethodAsync`                         | async method stub                          |
-| `yMethodAsyncReturn`                   | async method stub                          |
-| `yMethodVoidReturn`                    | void method stub                           |
-| `yMethodReturn`                        | method stub                                |
 | `yAuthorizeAttribute`                  | AuthorizeAttribute                         |
 | `yCascadingParaAuthState`              | Cascading parameter AuthenticationState    |
 | `yCascadingPara`                       | CascadingParameter attribute               |
@@ -35,8 +31,13 @@
 | `yInjNavigationManager`                | Inject NavigationManager property          |
 | `yInjService`                          | Inject MyService MyService                 |
 | `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property |
+| `yInvokeAsyncEventCallback`            | Invoke async Eventcallback                 |
 | `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                  |
 | `yJSRuntimeInvokeVoidAsync`            | JSRuntimeInvokeVoidAsync call              |
+| `yMethodAsyncReturn`                   | async method stub                          |
+| `yMethodAsync`                         | async method stub                          |
+| `yMethodReturn`                        | method stub                                |
+| `yMethodVoidReturn`                    | void method stub                           |
 | `yNavigateToId`                        | NavigationManager.NavigateTo page\Id       |
 | `yNavigateTo`                          | NavigationManager.NavigateTo page          |
 | `yOnAfterRenderAsync`                  | OnAfterRenderAsync method stub             |
@@ -106,3 +107,14 @@
 | `yValidationMessageFor`          | ValidationMessageFor                                   |
 | `yValidationSummary`             | ValidationSummary component                            |
 | `yVoidDispose`                   | Dispose method stub                                    |
+
+## Some handy C# snippets
+
+| Prefix             | Description              |
+| ------------------ | ------------------------ |
+| `yIfInline`        | If inline statement      |
+| `yIfNotNullInline` | If null inline statement |
+| `yIfNotNull`       | If null statement        |
+| `yIfNullInline`    | If null inline statement |
+| `yIfNull`          | If null statement        |
+| `yIf`              | If statement             |

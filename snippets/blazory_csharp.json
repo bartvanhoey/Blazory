@@ -79,6 +79,30 @@
         "body": ["IEnumerable$1<${2:TypeName}>$0"],
         "prefix": "yIEnumerable"
     },
+    "ifInlineStatement": {
+        "body": ["if (${1:MyCondition}) $2", "$0"],
+        "prefix": "yIfInline"
+    },
+    "ifNotNullStatement": {
+        "body": ["if (${1:MyCondition} != null)", "{", "\t$2", "}", "$0"],
+        "prefix": "yIfNotNull"
+    },
+    "ifNotNullInlineStatement": {
+        "body": ["if (${1:MyCondition} != null) $2", "$0"],
+        "prefix": "yIfNotNullInline"
+    },
+    "ifNullInlineStatement": {
+        "body": ["if (${1:MyCondition} == null) $2", "$0"],
+        "prefix": "yIfNullInline"
+    },
+    "ifNullStatement": {
+        "body": ["if (${1:MyCondition} == null)", "{", "\t$2", "}", "$0"],
+        "prefix": "yIfNull"
+    },
+    "ifStatement": {
+        "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+        "prefix": "yIf"
+    },
     "inheritsComponentBase": {
         "body": [": ComponentBase$1"],
         "prefix": "yInheritsComponentBase"
