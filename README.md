@@ -118,3 +118,5 @@
 | `yIfNullInline`    | If null inline statement |
 | `yIfNull`          | If null statement        |
 | `yIf`              | If statement             |
+| `yIsNotNull`       | != null                  |
+| `yIsNull`          | == null                  |
