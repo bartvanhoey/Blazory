@@ -153,7 +153,7 @@
     "prefix": "yInheritsComponentBase"
   },
   "injectService": {
-    "body": ["[Inject$1] public ${2:MyService} ${3:$2} { get; set; }$0"],
+    "body": ["[Inject$1] ${2|protected,public|} ${3:MyService} ${4:$3} { get; set; }$0"],
     "prefix": "yInjectService"
   },
   "injectHttpClient": {
