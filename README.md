@@ -18,19 +18,19 @@
 | `yEventHandlerAsync`                   | EventHandlerAsync method stub              |
 | `yEventHandler`                        | EventHandler method stub                   |
 | `yHttpClientDeleteAsync`               | HttpClient.DeleteAsync call                |
-| `yHttpClientField`                     | Readonly HttpClient field                  |
+| `yInjectHttpClientField`                     | Readonly HttpClient field                  |
 | `yHttpClientGetFromByIdJsonAsync`      | HttpClient.GetFromByIdJsonAsync call       |
 | `yHttpClientGetFromJsonAsync`          | HttpClient.GetFromJsonAsync call           |
 | `yHttpClientPostAsJsonAsync`           | HttpClient.PostAsJsonAsync call            |
 | `yHttpClientPostAsync`                 | HttpClient.PostAsync call                  |
 | `yHttpClientPutAsJsonAsync`            | HttpClient.PutAsJsonAsync call             |
 | `yInheritsComponentBase`               | Inherits ComponentBase                     |
-| `yInjHttpClient`                       | Inject HttpClient property                 |
-| `yInjIJSRuntime`                       | Inject IJSRuntime property                 |
-| `yInjIMapper`                          | Inject IMapper property                    |
-| `yInjNavigationManager`                | Inject NavigationManager property          |
-| `yInjService`                          | Inject MyService MyService                 |
-| `yInjSignOutSessionStateManager`       | Inject SignOutSessionStateManager property |
+| `yInjectHttpClient`                       | Inject HttpClient property                 |
+| `yInjectIJSRuntime`                       | Inject IJSRuntime property                 |
+| `yInjectIMapper`                          | Inject IMapper property                    |
+| `yInjectNavigationManager`                | Inject NavigationManager property          |
+| `yInjectService`                          | Inject MyService MyService                 |
+| `yInjectSignOutSessionStateManager`       | Inject SignOutSessionStateManager property |
 | `yInvokeAsyncEventCallback`            | Invoke async Eventcallback                 |
 | `yJSRuntimeInvokeAsync`                | JSRuntimeInvokeAsync call                  |
 | `yJSRuntimeInvokeVoidAsync`            | JSRuntimeInvokeVoidAsync call              |
@@ -80,12 +80,12 @@
 | `yImplementsIDisposable`         | @implements IDisposable                                |
 | `yInheritsBaseComponent`         | @inherits C# code-behind base class                    |
 | `yInheritsLayoutComponentBase`   | Complete Layout component inherits LayoutComponentBase |
-| `yInjHttpClient`                 | @inject HttpClient directive                           |
-| `yInjIJSRuntime`                 | @inject IJSRuntime directive                           |
-| `yInjIMapper`                    | @inject IMapper directive                              |
-| `yInjNavigationManager`          | @inject NavigationManager directive                    |
-| `yInjService`                    | @inject MyService MyService                            |
-| `yInjSignOutSessionStateManager` | @inject SignOutSessionStateManager directive           |
+| `yInjectHttpClient`                 | @inject HttpClient directive                           |
+| `yInjectIJSRuntime`                 | @inject IJSRuntime directive                           |
+| `yInjectIMapper`                    | @inject IMapper directive                              |
+| `yInjectNavigationManager`          | @inject NavigationManager directive                    |
+| `yInjectService`                    | @inject MyService MyService                            |
+| `yInjectSignOutSessionStateManager` | @inject SignOutSessionStateManager directive           |
 | `yInputCheckbox`                 | Built-in InputCheckbox component                       |
 | `yInputDate`                     | Built-in InputDate component                           |
 | `yInputNumber`                   | Built-in InputNumber component                         |

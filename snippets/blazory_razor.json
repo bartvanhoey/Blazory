@@ -217,30 +217,30 @@
   },
   "injectDirective": {
     "body": "@inject ${1:MyService} ${2:$1}",
-    "prefix": "yInjService"
+    "prefix": "yInjectService"
   },
   "injectHttpClient": {
     "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
-    "prefix": "yInjHttpClient"
+    "prefix": "yInjectHttpClient"
   },
   "injectIJSRuntime": {
     "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
-    "prefix": "yInjIJSRuntime"
+    "prefix": "yInjectIJSRuntime"
   },
   "injectIMapper": {
     "body": "@inject IMapper Mapper$0",
-    "prefix": "yInjIMapper"
+    "prefix": "yInjectIMapper"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
-    "prefix": "yInjNavigationManager"
+    "prefix": "yInjectNavigationManager"
   },
   "injectSignOutSessionStateManager": {
     "body": [
       "@inject SignOutSessionStateManager SignOutManager",
       "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"
     ],
-    "prefix": "yInjSignOutSessionStateManager"
+    "prefix": "yInjectSignOutSessionStateManager"
   },
   "inputCheckbox": {
     "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0",
