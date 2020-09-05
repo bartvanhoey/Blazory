@@ -250,13 +250,13 @@
   },
   "navigateTo": {
     "body": [
-      "${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${2:routeUrl}\");$0"
+      "${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
     ],
     "prefix": "yNavigateTo"
   },
   "navigateToId": {
     "body": [
-      "${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\");$0"
+      "${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
     ],
     "prefix": "yNavigateToId"
   },
