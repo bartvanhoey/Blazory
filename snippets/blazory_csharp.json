@@ -135,19 +135,19 @@
     "prefix": "yIfInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyCondition} != null)", "{", "\t$2", "}", "$0"],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "prefix": "yIfNotNull"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyCondition} != null) $2", "$0"],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "prefix": "yIfNotNullInline"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyCondition} == null) $2", "$0"],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "prefix": "yIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyCondition} == null)", "{", "\t$2", "}", "$0"],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "prefix": "yIfNull"
   },
   "ifStatement": {
