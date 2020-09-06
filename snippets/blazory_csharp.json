@@ -85,15 +85,21 @@
     ],
     "prefix": "yHttpClientDeleteAsync"
   },
+  "httpClientGetAsync": {
+    "body": [
+      "${1:var response =} await ${1|HttpClient,_httpClient,http,_http|}.GetAsync$2(\"${3:url}\");$0"
+    ],
+    "prefix": "yHttpClientGetAsync"
+  },
   "httpClientGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");"
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
     "prefix": "yHttpClientGetFromByIdJsonAsync"
   },
   "httpClientGetFromJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");"
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
     "prefix": "yHttpClientGetFromJsonAsync"
   },
