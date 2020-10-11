@@ -298,7 +298,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void onParametersSet()", "{", "\t$0", "}"],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "prefix": "yOnParametersSet"
   },
   "onParametersSetAsync": {
