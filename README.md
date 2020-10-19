@@ -1,8 +1,8 @@
 # Blazor Snippets `that start with an y`
 
-![Blazory in Action!](images/blazory_csharp.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
+![Blazory in Action!](images/csharp.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
 
-## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_csharp.json)
+## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
 
 | Prefix                                 | Description                                |
 | -------------------------------------- | ------------------------------------------ |
@@ -54,7 +54,7 @@
 | `ySetParametersAsync`                  | SetParametersAsync method stub             |
 | `yShouldRender`                        | ShouldRender method stub                   |
 
-## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/blazory_razor.json)
+## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json.json)
 
 | Prefix                              | Description                                            |
 | ----------------------------------- | ------------------------------------------------------ |
