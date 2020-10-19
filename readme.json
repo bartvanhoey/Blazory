@@ -1,0 +1,7 @@
+{
+  "title" : "# Blazor Snippets `that start with an y`",
+  "animated_gif" : "![Blazory in Action!](images/blazory_in_action.gif \"Blazory - Blazor snippets that start with an 'y' - in Action!\")",
+  "csharp_table_header" : "## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)",
+  "razor_table_header": "## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)"
+
+}

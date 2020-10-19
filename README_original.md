@@ -54,7 +54,7 @@
 | `ySetParametersAsync`                  | SetParametersAsync method stub             |
 | `yShouldRender`                        | ShouldRender method stub                   |
 
-## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json.json)
+## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
 | Prefix                              | Description                                            |
 | ----------------------------------- | ------------------------------------------------------ |
