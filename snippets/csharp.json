@@ -4,26 +4,37 @@
       "builder.Services.AddHttpClient<${1:YourService}>(s => s.BaseAddress = new Uri(${2:builder.HostEnvironment.BaseAddress}))",
       "\t.AddHttpMessageHandler<${3:BaseAddressAuthorizationMessageHandler}>();$0"
     ],
+    "description": "Add HttpClient with HttpMessageHandler",
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": ["[ApiController]", "$0"],
+    "body": [
+      "[ApiController]",
+      "$0"
+    ],
+    "description": "ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
   "authenticationStateTaskParameter": {
     "body": [
       "[CascadingParameter$1] ${2:protected} Task$3<AuthenticationState$4> ${5:AuthenticationState} { get; set; }$0"
     ],
+    "description": "Cascading parameter AuthenticationState",
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": ["[Authorize]", "$0"],
+    "body": [
+      "[Authorize]",
+      "$0"
+    ],
+    "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
   "cascadingParameter": {
     "body": [
       "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
     ],
+    "description": "CascadingParameter attribute",
     "prefix": "yCascadingPara"
   },
   "compareAttribute": {
@@ -31,18 +42,21 @@
       "[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
       "$0"
     ],
+    "description": "Compare attribute",
     "prefix": "yCompareAttribute"
   },
   "eventCallback": {
     "body": [
       "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ],
+    "description": "EventCallback parameter",
     "prefix": "yEventCallback"
   },
   "eventCallbackExtended": {
     "body": [
       "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
     ],
+    "description": "EventCallbackExtended parameter",
     "prefix": "yEventCallbackExtended"
   },
   "eventCallbackOnParameterChanged": {
@@ -51,6 +65,7 @@
       "",
       "[Parameter] public EventCallback<$1> $2Changed { get; set; }$0"
     ],
+    "description": "EventCallbackOnParameterChanged",
     "prefix": "yEventCallbackOnParameterChanged"
   },
   "eventHandler": {
@@ -60,6 +75,7 @@
       "\t$0",
       "}"
     ],
+    "description": "EventHandler method stub",
     "prefix": "yEventHandler"
   },
   "eventHandlerAsync": {
@@ -69,38 +85,49 @@
       "\t$0",
       "}"
     ],
+    "description": "EventHandlerAsync method stub",
     "prefix": "yEventHandlerAsync"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
-    "prefix": "gps"
+    "body": [
+      "{ get; private set; }$0"
+    ],
+    "description": "{ get, private set }",
+    "prefix": "yGps"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
-    "prefix": "gs"
+    "body": [
+      "{ get; set; }$0"
+    ],
+    "description": "{ get, set }",
+    "prefix": "yGs"
   },
   "httpClientDeleteAsync": {
     "body": [
       "await ${1|HttpClient,_httpClient,http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
     ],
+    "description": "HttpClient.DeleteAsync call",
     "prefix": "yHttpClientDeleteAsync"
   },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,http,_http|}.GetAsync$2(\"${3:url}\");$0"
     ],
+    "description": "HttpClient.GetAsync call",
     "prefix": "yHttpClientGetAsync"
   },
   "httpClientGetFromByIdJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
+    "description": "HttpClient.GetFromByIdJsonAsync call",
     "prefix": "yHttpClientGetFromByIdJsonAsync"
   },
   "httpClientGetFromJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
+    "description": "HttpClient.GetFromJsonAsync call",
     "prefix": "yHttpClientGetFromJsonAsync"
   },
   "httpClientPostAsJsonAsync": {
@@ -110,6 +137,7 @@
       "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
       "return ${9:$6}Id;$0"
     ],
+    "description": "HttpClient.PostAsJsonAsync call",
     "prefix": "yHttpClientPostAsJsonAsync"
   },
   "httpClientPostAsync": {
@@ -117,6 +145,7 @@
       "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PostAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();"
     ],
+    "description": "HttpClient.PostAsync call",
     "prefix": "yHttpClientPostAsync"
   },
   "httpClientPutAsJsonAsync": {
@@ -124,98 +153,155 @@
       "var ${1:response} = await ${2|HttpClient,_httpClient,http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();$0"
     ],
+    "description": "HttpClient.PutAsJsonAsync call",
     "prefix": "yHttpClientPutAsJsonAsync"
   },
   "iEnumerable": {
-    "body": ["IEnumerable$1<${2:TypeName}>$0"],
+    "body": [
+      "IEnumerable$1<${2:TypeName}>$0"
+    ],
+    "description": "IEnumerable statement",
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
+    "description": "If inline statement",
     "prefix": "yIfInline"
   },
+  "ifNotNullInlineStatement": {
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
+    "description": "If not null inline statement",
+    "prefix": "yIfNotNullInline statement"
+  },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
-  "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
-    "prefix": "yIfNotNullInline"
-  },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
-    "prefix": "yIfNullInline"
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
+    "description": "If null inline statement",
+    "prefix": "yIfNullInline statement"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
     "prefix": "yIf"
   },
   "inheritsComponentBase": {
-    "body": [": ComponentBase$1"],
+    "body": [
+      ": ComponentBase$1"
+    ],
+    "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
-  },
-  "injectService": {
-    "body": ["[Inject$1] ${2|protected,public|} ${3:MyService} ${4:$3} { get; set; }$0"],
-    "prefix": "yInjectService"
   },
   "injectHttpClient": {
     "body": [
       "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
     ],
+    "description": "Inject HttpClient property",
     "prefix": "yInjectHttpClient"
-  },
-  "injectHttpClientField": {
-    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
-    "prefix": "yHttpClientField"
   },
   "injectIJSRuntime": {
     "body": [
       "[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"
     ],
+    "description": "Inject IJSRuntime property",
     "prefix": "yInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
+    "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
   "injectNavigationManager": {
     "body": [
       "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
     ],
+    "description": "Inject NavigationManager property",
     "prefix": "yInjectNavigationManager"
+  },
+  "injectService": {
+    "body": [
+      "[Inject$1] ${2|protected,public|} ${3:MyService} ${4:$3} { get; set; }$0"
+    ],
+    "description": "Inject MyService MyService",
+    "prefix": "yInjectService"
   },
   "injectSignOutSessionStateManager": {
     "body": [
       "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"
     ],
+    "description": "Inject SignOutSessionStateManager property",
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "invokeAsyncEventCallback": {
-    "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
+    "body": [
+      "await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"
+    ],
+    "description": "Invoke async Eventcallback",
     "prefix": "yInvokeAsyncEventCallback"
   },
   "isNotNull": {
-    "body": [" != null$0"],
+    "body": [
+      "!= null$0"
+    ],
+    "description": "Is not null",
     "prefix": "yIsNotNull"
   },
   "isNull": {
-    "body": [" == null$0"],
+    "body": [
+      "== null$0"
+    ],
+    "description": "Is equal to null",
     "prefix": "yIsNull"
   },
   "jSRuntimeInvokeAsync": {
     "body": [
       "${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});"
     ],
+    "description": "JSRuntimeInvokeAsync call",
     "prefix": "yJSRuntimeInvokeAsync"
   },
   "jSRuntimeInvokeVoidAsync": {
     "body": [
       "await ${1|JSRuntime,Js|}.InvokeVoidAsync(\"${3:Path-to-JavaScript-function}\", ${4:arguments});"
     ],
+    "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
   },
   "methodAsync": {
@@ -225,6 +311,7 @@
       "\t$0",
       "}"
     ],
+    "description": "async method stub",
     "prefix": "yMethodAsync"
   },
   "methodAsyncReturn": {
@@ -234,6 +321,7 @@
       "\t$0",
       "}"
     ],
+    "description": "async task method stub ",
     "prefix": "yMethodAsyncReturn"
   },
   "methodReturn": {
@@ -243,6 +331,7 @@
       "\t$0",
       "}"
     ],
+    "description": "method stub",
     "prefix": "yMethodReturn"
   },
   "methodVoid": {
@@ -252,18 +341,21 @@
       "\t$0",
       "}"
     ],
+    "description": "void method stub",
     "prefix": "yMethodVoid"
   },
   "navigateTo": {
     "body": [
       "${1|NavigationManager,Navigation,Nav|}.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
     ],
+    "description": "NavigationManager.NavigateTo page",
     "prefix": "yNavigateTo"
   },
   "navigateToId": {
     "body": [
       "${1|NavigationManager,Navigation,Nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
     ],
+    "description": "NavigationManager.NavigateTo page\\Id",
     "prefix": "yNavigateToId"
   },
   "onAfterRender": {
@@ -273,6 +365,7 @@
       "\t$0",
       "}"
     ],
+    "description": "OnAfterRender method stub",
     "prefix": "yOnAfterRender"
   },
   "onAfterRenderAsync": {
@@ -282,10 +375,17 @@
       "\t$0",
       "}"
     ],
+    "description": "OnAfterRenderAsync method stub",
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
   "onInitializedAsync": {
@@ -295,10 +395,17 @@
       "\t$0",
       "}"
     ],
+    "description": "OnInitializedAsync method stub",
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
   "onParametersSetAsync": {
@@ -308,30 +415,51 @@
       "\t$0",
       "}"
     ],
+    "description": "OnParameterSetAsync method stub",
     "prefix": "yOnParametersSetAsync"
   },
   "parameter": {
-    "body": ["[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"],
+    "body": [
+      "[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
+    ],
+    "description": "Parameter attribute",
     "prefix": "yPara"
   },
   "parameterCaptureUnmatchedValues ": {
     "body": [
       "[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"
     ],
+    "description": "Parameter CaptureUnmatchedValues attribute",
     "prefix": "yParaCaptureUnmatchedValues"
   },
   "readFromJsonAsync": {
     "body": [
       "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
     ],
+    "description": "HttpClient.ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },
+  "readOnlyHttpClientField": {
+    "body": [
+      "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"
+    ],
+    "description": "Readonly HttpClient field",
+    "prefix": "yReadOnlyHttpClientField"
+  },
   "requiredAttribute": {
-    "body": ["[Required$1]", "$0"],
+    "body": [
+      "[Required$1]",
+      "$0"
+    ],
+    "description": "RequiredAttribute",
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
+    "body": [
+      "[Route(\"${1:api/[controller]/[action]}\")]",
+      "$0"
+    ],
+    "description": "RouteAttribute",
     "prefix": "yRouteAttribute"
   },
   "setParametersAsync": {
@@ -343,6 +471,7 @@
       "\tawait base.SetParametersAsync(Parameters);",
       "}"
     ],
+    "description": "SetParametersAsync method stub",
     "prefix": "ySetParametersAsync"
   },
   "shouldRender": {
@@ -353,6 +482,7 @@
       "\treturn true;",
       "}"
     ],
+    "description": "ShouldRender method stub",
     "prefix": "yShouldRender"
   }
 }
