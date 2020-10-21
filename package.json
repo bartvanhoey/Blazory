@@ -30,11 +30,11 @@
     "snippets": [
       {
         "language": "aspnetcorerazor",
-        "path": "./snippets/razor.json.json"
+        "path": "./snippets/razor.json"
       },
       {
         "language": "razor",
-        "path": "./snippets/razor.json.json"
+        "path": "./snippets/razor.json"
       },
       {
         "language": "csharp",
