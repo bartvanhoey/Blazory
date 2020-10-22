@@ -1,4 +1,4 @@
-# Blazor Snippets `that start with an y`
+# Code Snippets `that start with an y` to speed up the Blazor development process
 
 ![Blazory in Action!](images/blazory_in_action.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
 
