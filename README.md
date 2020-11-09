@@ -2,6 +2,7 @@
 
 ![Blazory in Action!](images/blazory_in_action.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
 
+
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/Blazory/issues/new), I will see what I can do!
 
 ## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
