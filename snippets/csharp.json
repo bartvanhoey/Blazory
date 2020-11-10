@@ -306,7 +306,7 @@
   },
   "methodAsync": {
     "body": [
-      "${1|private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
       "{",
       "\t$0",
       "}"
@@ -316,7 +316,7 @@
   },
   "methodAsyncReturn": {
     "body": [
-      "${1|private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
       "{",
       "\t$0",
       "}"
@@ -326,7 +326,7 @@
   },
   "methodReturn": {
     "body": [
-      "${1|private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
       "{",
       "\t$0",
       "}"
@@ -336,7 +336,7 @@
   },
   "methodVoid": {
     "body": [
-      "${1|private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
       "{",
       "\t$0",
       "}"
