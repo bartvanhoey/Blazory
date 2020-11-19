@@ -72,60 +72,61 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
 ## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
-     Prefix                            | Description                                           
-     --------------------------------- | ------------------------------------------------------ 
-     yAuthorizeAttribute               | @attribute [Authorize]                                
-     yBind                             | Bind attribute                                        
-     yBindFormat                       | @bind:format="MyFormat"                               
-     yBindOnInputEvent                 | @bind:event="oninput"                                 
-     yBindOnProperty                   | @bind="MyProperty"                                    
-     yBindValue                        | @bind-Value="MyProperty"                              
-     yCascadingAuthenticationState     | CascadingAuthenticationState stub                     
-     yCode                             | @code block                                           
-     yComponent                        | Complete component                                    
-     yComponentChildContent            | Complete component with ChildContent RenderFragment   
-     yDataAnnotationsValidator         | DataAnnotationsValidator                              
-     yComponentDisposable              | Complete component inherits IDisposable               
-     yEditForm                         | Inserts EditForm component                            
-     yPreventDefault                   | PreventDefault attribute                              
-     yFormCheckInputCheckBox           | Inserts form-group class InputCheckBox component      
-     yFormControlClass                 | Inserts form-control class attribute                  
-     yFormGroupInputDate               | Inserts form-group class InputDate component          
-     yFormGroupInputNumber             | Inserts form-group class InputNumber component        
-     yFormGroupInputSelect             | Inserts form-group class InputSelect component        
-     yFormGroupInputSelectForEach      | Inserts form-group class InputSelect ForEach          
-     yFormGroupInputText               | Inserts form-group class InputText component          
-     yFormGroupInputTextArea           | Inserts form-group class InputTextArea component      
-     yImplementsIDisposable            | @implements IDisposable                               
-     yInheritsBaseComponent            | @inherits C# code-behind base class                   
-     yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase
-     yInjectHttpClient                 | @inject HttpClient directive                          
-     yInjectIJSRuntime                 | @inject IJSRuntime directive                          
-     yInjectIMapper                    | @inject IMapper directive                             
-     yInjectService                    | @inject MyService MyService                           
-     yInjectNavigationManager          | @inject NavigationManager directive                   
-     yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive          
-     yInputCheckbox                    | InputCheckbox component                               
-     yInputDate                        | InputDate component                                   
-     yInputFileComponent               | InputFile component                                   
-     yInputNumber                      | InputNumber component                                 
-     yInputSelect                      | InputSelect component                                 
-     yInputSelectForEach               | InputSelectForEach component                          
-     yInputText                        | InputText component                                   
-     yInputTextArea                    | InputTextArea component                               
-     yLayout                           | @layout MyLayout                                      
-     yNavLink                          | NavLink                                               
-     yNavLinkMatch                     | NavLink with MatchAttribute                           
-     yOnValidSubmit                    | OnValidSubmit                                         
-     yPage                             | @page directive                                       
-     yPageParam                        | @page directive with Parameter                        
-     yRef                              | @ref="MyProperty"                                     
-     yTemplatedComponent               | Templated component                                   
-     yTypeParam                        | @typeParam                                            
-     yUsing                            | @using MyNameSpace                                    
-     yValidationMessageFor             | ValidationMessageFor                                  
-     yValidationSummary                | ValidationSummary component                           
-     yVirtualizeComponent              | Inserts the Virtualize component                      
-     yVoidDispose                      | Dispose method stub                                   
+     Prefix                            | Description                                                 
+     --------------------------------- | ------------------------------------------------------------ 
+     yAuthorizeAttribute               | @attribute [Authorize]                                      
+     yBind                             | Bind attribute                                              
+     yBindFormat                       | @bind:format="MyFormat"                                     
+     yBindOnInputEvent                 | @bind:event="oninput"                                       
+     yBindOnProperty                   | @bind="MyProperty"                                          
+     yBindValue                        | @bind-Value="MyProperty"                                    
+     yCascadingAuthenticationState     | CascadingAuthenticationState stub                           
+     yCode                             | @code block                                                 
+     yComponent                        | Complete component                                          
+     yComponentChildContent            | Complete component with ChildContent RenderFragment         
+     yDataAnnotationsValidator         | DataAnnotationsValidator                                    
+     yComponentDisposable              | Complete component inherits IDisposable                     
+     yEditForm                         | Inserts EditForm component                                  
+     yPreventDefault                   | PreventDefault attribute                                    
+     yFormCheckInputCheckBox           | Inserts form-group class InputCheckBox component            
+     yFormControlClass                 | Inserts form-control class attribute                        
+     yFormGroupInputDate               | Inserts form-group class InputDate component                
+     yFormGroupInputNumber             | Inserts form-group class InputNumber component              
+     yFormGroupInputSelect             | Inserts form-group class InputSelect component              
+     yFormGroupInputSelectForEach      | Inserts form-group class InputSelect ForEach                
+     yFormGroupInputText               | Inserts form-group class InputText component                
+     yFormGroupInputTextArea           | Inserts form-group class InputTextArea component            
+     yImplementsIDisposable            | @implements IDisposable                                     
+     yInheritsBaseComponent            | @inherits C# code-behind base class                         
+     yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
+     yInjectHttpClient                 | @inject HttpClient directive                                
+     yInjectIJSRuntime                 | @inject IJSRuntime directive                                
+     yInjectIMapper                    | @inject IMapper directive                                   
+     yInjectService                    | @inject MyService MyService                                 
+     yInjectNavigationManager          | @inject NavigationManager directive                         
+     yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
+     yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
+     yInputCheckbox                    | InputCheckbox component                                     
+     yInputDate                        | InputDate component                                         
+     yInputFileComponent               | InputFile component                                         
+     yInputNumber                      | InputNumber component                                       
+     yInputSelect                      | InputSelect component                                       
+     yInputSelectForEach               | InputSelectForEach component                                
+     yInputText                        | InputText component                                         
+     yInputTextArea                    | InputTextArea component                                     
+     yLayout                           | @layout MyLayout                                            
+     yNavLink                          | NavLink                                                     
+     yNavLinkMatch                     | NavLink with MatchAttribute                                 
+     yOnValidSubmit                    | OnValidSubmit                                               
+     yPage                             | @page directive                                             
+     yPageParam                        | @page directive with Parameter                              
+     yRef                              | @ref="MyProperty"                                           
+     yTemplatedComponent               | Templated component                                         
+     yTypeParam                        | @typeParam                                                  
+     yUsing                            | @using MyNameSpace                                          
+     yValidationMessageFor             | ValidationMessageFor                                        
+     yValidationSummary                | ValidationSummary component                                 
+     yVirtualizeComponent              | Inserts the Virtualize component                            
+     yVoidDispose                      | Dispose method stub                                         
 
 

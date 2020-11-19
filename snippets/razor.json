@@ -273,6 +273,11 @@
     "description": "@inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
   },
+  "injectProtectedLocalStorage": {
+    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
+    "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
+    "prefix": "yInjectProtectedLocalStorage"
+  },
   "injectSignOutSessionStateManager": {
     "body": [
       "@inject SignOutSessionStateManager SignOutManager",
