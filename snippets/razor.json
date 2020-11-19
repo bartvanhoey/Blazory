@@ -283,7 +283,15 @@
     "prefix": "yInputCheckbox"
   },
   "inputFile": {
-    "body": "<InputFile OnChange=\"@HandleFileChosenAsync\" />$0",
+    "body": [
+      "div class=\"file\">",
+      "\t<span>@Cell.Content</span>:",
+      "",
+      "\t\t<InputFile OnChange=\"@HandleFileChosenAsync\" />",
+      "",
+      "\t<div>@status</div>",
+      "</div>"
+    ],
     "description": "InputFile component",
     "prefix": "yInputFileComponent"
   },
