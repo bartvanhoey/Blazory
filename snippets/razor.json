@@ -342,6 +342,23 @@
     "description": "InputText component",
     "prefix": "yInputText"
   },
+  "inputRadio": {
+    "body": "<InputRadio Value=\"${1:value}\" />$0",
+    "description": "InputRadio component",
+    "prefix": "yInputRadio"
+  },
+  "inputRadioGroup": {
+    "body": [
+      "<InputRadioGroup Name=\"${1:NameInputRadioGroup}\" @bind-Value=\"${2:Type}.${3:Property}\">",
+      "    <InputRadio Name=\"$1\" Value=\"${4:Value1}\" />$4<br>",
+      "    <InputRadio Name=\"$1\" Value=\"${5:Value2}\" />$5<br>",
+      "    <InputRadio Name=\"$1\" Value=\"${6:Value3}\" />$6<br>",
+      "    <InputRadio Name=\"$1\" Value=\"${7:Value4}\" />$7<br>",
+      "</InputRadioGroup>"
+    ],
+    "description": "Inserts a RadioGroup component",
+    "prefix": "yInputRadioGroup"
+  },
   "inputTextArea": {
     "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
     "description": "InputTextArea component",

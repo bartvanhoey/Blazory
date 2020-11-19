@@ -113,6 +113,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInputSelect                      | InputSelect component                                       
      yInputSelectForEach               | InputSelectForEach component                                
      yInputText                        | InputText component                                         
+     yInputRadio                       | InputRadio component                                        
+     yInputRadioGroup                  | Inserts a RadioGroup component                              
      yInputTextArea                    | InputTextArea component                                     
      yLayout                           | @layout MyLayout                                            
      yNavLink                          | NavLink                                                     
