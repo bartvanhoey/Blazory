@@ -282,6 +282,11 @@
     "description": "InputCheckbox component",
     "prefix": "yInputCheckbox"
   },
+  "inputFile": {
+    "body": "<InputFile OnChange=\"@HandleFileChosenAsync\" />$0",
+    "description": "InputFile component",
+    "prefix": "yInputFileComponent"
+  },
   "inputDate": {
     "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
     "description": "InputDate component",

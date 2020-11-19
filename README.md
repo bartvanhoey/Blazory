@@ -105,6 +105,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInjectNavigationManager          | @inject NavigationManager directive                   
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive          
      yInputCheckbox                    | InputCheckbox component                               
+     yInputFileComponent               | InputFile component                                   
      yInputDate                        | InputDate component                                   
      yInputNumber                      | InputNumber component                                 
      yInputSelect                      | InputSelect component                                 
