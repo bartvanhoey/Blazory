@@ -39,7 +39,11 @@
     "prefix": "yCascadingAuthenticationState"
   },
   "codeBlock": {
-    "body": ["@code {", "\t$0", "}"],
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
     "description": "@code block",
     "prefix": "yCode"
   },
@@ -244,11 +248,6 @@
     "description": "Complete Layout component inherits LayoutComponentBase",
     "prefix": "yInheritsLayoutComponentBase"
   },
-  "injectMyServiceDirective": {
-    "body": "@inject ${1:MyService} ${2:$1}",
-    "description": "@inject MyService MyService",
-    "prefix": "yInjectService"
-  },
   "injectHttpClient": {
     "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
     "description": "@inject HttpClient directive",
@@ -263,6 +262,11 @@
     "body": "@inject IMapper Mapper$0",
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
+  },
+  "injectMyServiceDirective": {
+    "body": "@inject ${1:MyService} ${2:$1}",
+    "description": "@inject MyService MyService",
+    "prefix": "yInjectService"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
@@ -282,6 +286,11 @@
     "description": "InputCheckbox component",
     "prefix": "yInputCheckbox"
   },
+  "inputDate": {
+    "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
+    "description": "InputDate component",
+    "prefix": "yInputDate"
+  },
   "inputFile": {
     "body": [
       "div class=\"file\">",
@@ -294,11 +303,6 @@
     ],
     "description": "InputFile component",
     "prefix": "yInputFileComponent"
-  },
-  "inputDate": {
-    "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
-    "description": "InputDate component",
-    "prefix": "yInputDate"
   },
   "inputNumber": {
     "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0",
@@ -427,8 +431,23 @@
     "description": "ValidationSummary component",
     "prefix": "yValidationSummary "
   },
+  "virtualizeComponent": {
+    "body": [
+      "@* [Parameter] public ICollection<object> Data { get; set; } *@",
+      "<Virtualize Items=\"Data\" Context=\"entry\">",
+      "\t$0",
+      "</Virtualize>"
+    ],
+    "description": "Inserts the Virtualize component",
+    "prefix": "yVirtualizeComponent"
+  },
   "voidDispose": {
-    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
+    "body": [
+      "\tpublic void Dispose()",
+      "\t{",
+      "\t\t$0",
+      "\t}"
+    ],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }

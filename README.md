@@ -99,15 +99,15 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yImplementsIDisposable            | @implements IDisposable                               
      yInheritsBaseComponent            | @inherits C# code-behind base class                   
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase
-     yInjectService                    | @inject MyService MyService                           
      yInjectHttpClient                 | @inject HttpClient directive                          
      yInjectIJSRuntime                 | @inject IJSRuntime directive                          
      yInjectIMapper                    | @inject IMapper directive                             
+     yInjectService                    | @inject MyService MyService                           
      yInjectNavigationManager          | @inject NavigationManager directive                   
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive          
      yInputCheckbox                    | InputCheckbox component                               
-     yInputFileComponent               | InputFile component                                   
      yInputDate                        | InputDate component                                   
+     yInputFileComponent               | InputFile component                                   
      yInputNumber                      | InputNumber component                                 
      yInputSelect                      | InputSelect component                                 
      yInputSelectForEach               | InputSelectForEach component                          
@@ -125,6 +125,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yUsing                            | @using MyNameSpace                                    
      yValidationMessageFor             | ValidationMessageFor                                  
      yValidationSummary                | ValidationSummary component                           
+     yVirtualizeComponent              | Inserts the Virtualize component                      
      yVoidDispose                      | Dispose method stub                                   
 
 
