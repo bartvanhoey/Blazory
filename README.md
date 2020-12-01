@@ -22,6 +22,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yEventHandlerAsync                   | EventHandlerAsync method stub                                    
      yGps                                 | { get, private set }                                             
      yGs                                  | { get, set }                                                     
+     yHandleFileChosenAsync               | Inserts the HandleFileChosenAsync method for an InputFile element
      yHttpClientDeleteAsync               | HttpClient.DeleteAsync call                                      
      yHttpClientGetAsync                  | HttpClient.GetAsync call                                         
      yHttpClientGetFromByIdJsonAsync      | HttpClient.GetFromByIdJsonAsync call                             
@@ -48,11 +49,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yIsNull                              | Is equal to null                                                 
      yJSRuntimeInvokeAsync                | JSRuntimeInvokeAsync call                                        
      yJSRuntimeInvokeVoidAsync            | JSRuntimeInvokeVoidAsync call                                    
-     yMethodAsync                         | async method stub                                                
-     yMethodAsyncReturn                   | async task method stub                                           
-     yMethodReturn                        | method stub                                                      
-     yHandleFileChosenAsync               | Inserts the HandleFileChosenAsync method for an InputFile element
-     yMethodVoid                          | void method stub                                                 
+     yMethodAsyncWithArgs                 | async method stub with arguments                                 
+     yMethodAsyncReturnWithArgs           | async task method stub with arguments                            
+     yMethodReturnWithArgs                | method stub with arguments                                       
+     yMethodVoidWithArgs                  | void method stub with arguments                                  
+     yMethodAsync                         | async method stub without arguments                              
+     yMethodAsyncReturn                   | async task method stub without arguments                         
+     yMethodReturn                        | method stub without arguments                                    
+     yMethodVoid                          | void method stub without arguments                               
      yNavigateTo                          | NavigationManager.NavigateTo page                                
      yNavigateToId                        | NavigationManager.NavigateTo page\\Id                            
      yOnAfterRender                       | OnAfterRender method stub                                        

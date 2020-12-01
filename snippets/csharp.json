@@ -102,6 +102,29 @@
     "description": "{ get, set }",
     "prefix": "yGs"
   },
+  "handleFileChosenAsync": {
+    "body": [
+      "\\ @inject HttpClient Http",
+      "[Parameter]",
+      "public blazoract.Shared.Cell Cell { get; set; }",
+      "",
+      "private string status = null;",
+      "",
+      "private async Task HandleFileChosenAsync(InputFileChangeEventArgs eventArgs)",
+      "{",
+      "    status = $\"Sending {eventArgs.File.Size.ToDisplayString()}...\";",
+      "",
+      "    // Stream the data directly to the backend API",
+      "    using var fileStream = eventArgs.File.OpenReadStream(maxAllowedSize: 5*1024*1024);",
+      "    var url = $\"api/code/uploadfile?notebookId={Cell.NotebookId}&variable={Cell.Content}\";",
+      "    await Http.PostAsync(url, new StreamContent(fileStream));",
+      "",
+      "    status = $\"Finished sending {eventArgs.File.Size.ToDisplayString()}\";",
+      "}"
+    ],
+    "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
+    "prefix": "yHandleFileChosenAsync"
+  },
   "httpClientDeleteAsync": {
     "body": [
       "await ${1|HttpClient,_httpClient,http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
@@ -304,67 +327,84 @@
     "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
   },
-  "methodAsync": {
+  "methodAsyncWithArgs": {
     "body": [
       "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "async method stub",
-    "prefix": "yMethodAsync"
+    "description": "async method stub with arguments",
+    "prefix": "yMethodAsyncWithArgs"
   },
-  "methodAsyncReturn": {
+  "methodAsyncReturnWithArgs": {
     "body": [
       "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "async task method stub ",
-    "prefix": "yMethodAsyncReturn"
+    "description": "async task method stub with arguments",
+    "prefix": "yMethodAsyncReturnWithArgs"
   },
-  "methodReturn": {
+  "methodReturnWithArgs": {
     "body": [
       "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "method stub",
-    "prefix": "yMethodReturn"
+    "description": "method stub with arguments",
+    "prefix": "yMethodReturnWithArgs"
   },
-  "handleFileChosenAsync": {
-    "body": [
-    "\\ @inject HttpClient Http",
-    "[Parameter]",
-    "public blazoract.Shared.Cell Cell { get; set; }",
-    "",
-    "private string status = null;",
-    "",
-    "private async Task HandleFileChosenAsync(InputFileChangeEventArgs eventArgs)",
-    "{",
-    "    status = $\"Sending {eventArgs.File.Size.ToDisplayString()}...\";",
-    "",
-    "    // Stream the data directly to the backend API",
-    "    using var fileStream = eventArgs.File.OpenReadStream(maxAllowedSize: 5*1024*1024);",
-    "    var url = $\"api/code/uploadfile?notebookId={Cell.NotebookId}&variable={Cell.Content}\";",
-    "    await Http.PostAsync(url, new StreamContent(fileStream));",
-    "",
-    "    status = $\"Finished sending {eventArgs.File.Size.ToDisplayString()}\";",
-    "}",
-    ],
-    "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
-    "prefix": "yHandleFileChosenAsync"
-  },
-  "methodVoid": {
+  "methodVoidWithArgs": {
     "body": [
       "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "void method stub",
+    "description": "void method stub with arguments",
+    "prefix": "yMethodVoidWithArgs"
+  },
+    "methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "yMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "yMethodAsyncReturn"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "yMethodReturn"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
     "prefix": "yMethodVoid"
   },
   "navigateTo": {
