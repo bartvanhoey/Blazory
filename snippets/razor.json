@@ -274,12 +274,17 @@
     "prefix": "yInjectNavigationManager"
   },
   "injectIAccessTokenProvider": {
-    "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|$0",
+    "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
     "description": "@inject IAccessTokenProvider directive in Blazor Server app",
     "prefix": "yInjectIAccessTokenProvider"
   },
+  "injectIConfiguration": {
+    "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
+    "description": "@inject IConfiguration directive in Blazor Server app",
+    "prefix": "yInjectIConfiguration"
+  },
   "injectProtectedLocalStorage": {
-    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
+    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|}$0",
     "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
     "prefix": "yInjectProtectedLocalStorage"
   },
