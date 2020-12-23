@@ -108,6 +108,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInjectIMapper                    | @inject IMapper directive                                   
      yInjectService                    | @inject MyService MyService                                 
      yInjectNavigationManager          | @inject NavigationManager directive                         
+     yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive in Blazor Server app 
      yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | InputCheckbox component                                     

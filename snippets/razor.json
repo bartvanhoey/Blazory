@@ -273,6 +273,11 @@
     "description": "@inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
   },
+  "injectIAccessTokenProvider": {
+    "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|$0",
+    "description": "@inject IAccessTokenProvider directive in Blazor Server app",
+    "prefix": "yInjectIAccessTokenProvider"
+  },
   "injectProtectedLocalStorage": {
     "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
     "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
