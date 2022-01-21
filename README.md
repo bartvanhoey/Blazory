@@ -93,7 +93,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yEditForm                         | Inserts EditForm component                                  
      yPreventDefault                   | PreventDefault attribute                                    
      yFormCheckInputCheckBox           | Inserts form-group class InputCheckBox component            
-     yFormControlClass                 | Inserts form-control class attribute                        
+     yFormControlClass                 | Inserts a form-control class attribute                      
      yFormGroupInputDate               | Inserts form-group class InputDate component                
      yFormGroupInputNumber             | Inserts form-group class InputNumber component              
      yFormGroupInputSelect             | Inserts form-group class InputSelect component              
