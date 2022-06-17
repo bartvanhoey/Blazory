@@ -15,7 +15,7 @@
     "prefix": "yBindFormat"
   },
   "bindOnInputEvent": {
-    "body": "@bind=\"@bind:event=\"oninput\"$0",
+    "body": "@bind:event=\"oninput\"$0",
     "description": " @bind:event=\"oninput\"",
     "prefix": "yBindOnInputEvent"
   },
