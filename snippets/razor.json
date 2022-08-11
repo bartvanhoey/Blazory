@@ -128,7 +128,7 @@
   },
   "formControlClass": {
     "body": "class=\"form-control\"",
-    "description": "Inserts form-control class attribute",
+    "description": "Inserts a form-control class attribute",
     "prefix": "yFormControlClass"
   },
   "formGroupInputDate": {
