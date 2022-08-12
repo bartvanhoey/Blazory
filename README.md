@@ -1,4 +1,4 @@
-# Code Snippets `that start with an y` to speed up your Blazor development process
+# Snippets `that start with an y` to speed up your Blazor development
 
 ![Blazory in Action!](images/blazory_in_action.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
 
@@ -11,9 +11,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      ------------------------------------ | ----------------------------------------------------------------- 
      yAddHttpClientWithHttpMessageHandler | Add HttpClient with HttpMessageHandler                           
      yApiControllerAttribute              | ApiController attribute                                          
-     yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yAuthorizeAttribute                  | AuthorizeAttribute                                               
      yCascadingPara                       | CascadingParameter attribute                                     
+     yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yCompareAttribute                    | Compare attribute                                                
      yEventCallback                       | EventCallback parameter                                          
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
@@ -31,12 +31,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yHttpClientPostAsync                 | HttpClient.PostAsync call                                        
      yHttpClientPutAsJsonAsync            | HttpClient.PutAsJsonAsync call                                   
      yIEnumerable                         | IEnumerable statement                                            
-     yIfInline                            | If inline statement                                              
-     yIfNotNullInline statement           | If not null inline statement                                     
-     yIfNotNull                           | If not null statement                                            
-     yIfNullInline statement              | If null inline statement                                         
-     yIfNull                              | If null statement                                                
      yIf                                  | If statement                                                     
+     yIfInline                            | If inline statement                                              
+     yIfNotNull                           | If not null statement                                            
+     yIfNotNullInline statement           | If not null inline statement                                     
+     yIfNull                              | If null statement                                                
+     yIfNullInline statement              | If null inline statement                                         
      yInheritsComponentBase               | Inherits ComponentBase                                           
      yInjectHttpClient                    | Inject HttpClient property                                       
      yInjectIJSRuntime                    | Inject IJSRuntime property                                       
@@ -49,14 +49,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yIsNull                              | Is equal to null                                                 
      yJSRuntimeInvokeAsync                | JSRuntimeInvokeAsync call                                        
      yJSRuntimeInvokeVoidAsync            | JSRuntimeInvokeVoidAsync call                                    
-     yMethodAsyncWithArgs                 | async method stub with arguments                                 
-     yMethodAsyncReturnWithArgs           | async task method stub with arguments                            
-     yMethodReturnWithArgs                | method stub with arguments                                       
-     yMethodVoidWithArgs                  | void method stub with arguments                                  
      yMethodAsync                         | async method stub without arguments                              
      yMethodAsyncReturn                   | async task method stub without arguments                         
+     yMethodAsyncReturnWithArgs           | async task method stub with arguments                            
+     yMethodAsyncWithArgs                 | async method stub with arguments                                 
      yMethodReturn                        | method stub without arguments                                    
+     yMethodReturnWithArgs                | method stub with arguments                                       
      yMethodVoid                          | void method stub without arguments                               
+     yMethodVoidWithArgs                  | void method stub with arguments                                  
      yNavigateTo                          | NavigationManager.NavigateTo page                                
      yNavigateToId                        | NavigationManager.NavigateTo page\\Id                            
      yOnAfterRender                       | OnAfterRender method stub                                        
@@ -88,10 +88,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yCode                             | @code block                                                 
      yComponent                        | Complete component                                          
      yComponentChildContent            | Complete component with ChildContent RenderFragment         
-     yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yComponentDisposable              | Complete component inherits IDisposable                     
+     yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yEditForm                         | Inserts EditForm component                                  
-     yPreventDefault                   | PreventDefault attribute                                    
      yFormCheckInputCheckBox           | Inserts form-group class InputCheckBox component            
      yFormControlClass                 | Inserts a form-control class attribute                      
      yFormGroupInputDate               | Inserts form-group class InputDate component                
@@ -104,23 +103,23 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInheritsBaseComponent            | @inherits C# code-behind base class                         
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
      yInjectHttpClient                 | @inject HttpClient directive                                
-     yInjectIJSRuntime                 | @inject IJSRuntime directive                                
-     yInjectIMapper                    | @inject IMapper directive                                   
-     yInjectService                    | @inject MyService MyService                                 
-     yInjectNavigationManager          | @inject NavigationManager directive                         
      yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive in Blazor Server app 
      yInjectIConfiguration             | @inject IConfiguration directive in Blazor Server app       
+     yInjectIJSRuntime                 | @inject IJSRuntime directive                                
+     yInjectIMapper                    | @inject IMapper directive                                   
+     yInjectNavigationManager          | @inject NavigationManager directive                         
      yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
+     yInjectService                    | @inject MyService MyService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | InputCheckbox component                                     
      yInputDate                        | InputDate component                                         
      yInputFileComponent               | InputFile component                                         
      yInputNumber                      | InputNumber component                                       
+     yInputRadio                       | InputRadio component                                        
+     yInputRadioGroup                  | Inserts a RadioGroup component                              
      yInputSelect                      | InputSelect component                                       
      yInputSelectForEach               | InputSelectForEach component                                
      yInputText                        | InputText component                                         
-     yInputRadio                       | InputRadio component                                        
-     yInputRadioGroup                  | Inserts a RadioGroup component                              
      yInputTextArea                    | InputTextArea component                                     
      yLayout                           | @layout MyLayout                                            
      yNavLink                          | NavLink                                                     
@@ -128,6 +127,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yOnValidSubmit                    | OnValidSubmit                                               
      yPage                             | @page directive                                             
      yPageParam                        | @page directive with Parameter                              
+     yPreventDefault                   | PreventDefault attribute                                    
      yRef                              | @ref="MyProperty"                                           
      yTemplatedComponent               | Templated component                                         
      yTypeParam                        | @typeParam                                                  
