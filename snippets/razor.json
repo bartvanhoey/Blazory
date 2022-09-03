@@ -401,7 +401,7 @@
   },
   "pageDirectiveWithParameter": {
     "body": [
-      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\""
+      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long,string|}}\""
     ],
     "description": "@page directive with Parameter",
     "prefix": "yPageParam"
