@@ -250,6 +250,13 @@
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
+  "injectAttribute": {
+    "body": [
+      "[Inject$1]$0"
+    ],
+    "description": "Inserts InjectAttribute",
+    "prefix": "yInjectAttribute"
+  },
   "injectHttpClient": {
     "body": [
       "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
