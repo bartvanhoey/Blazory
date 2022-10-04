@@ -8,11 +8,7 @@
     "type": "git",
     "url": "https://github.com/bartvanhoey/Blazory.git"
   },
-<<<<<<< HEAD
-  "version": "0.0.171",
-=======
   "version": "0.0.176",
->>>>>>> a24ab20cebd03d1ce988584193acde164f005080
   "engines": {
     "vscode": "^1.47.0"
   },
