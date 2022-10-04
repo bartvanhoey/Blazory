@@ -481,12 +481,19 @@
     "description": "OnParameterSetAsync method stub",
     "prefix": "yOnParametersSetAsync"
   },
-  "parameter": {
+  "parameterProperty": {
     "body": [
       "[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
     ],
-    "description": "Parameter attribute",
-    "prefix": "yPara"
+    "description": "Inserts a property with Parameter attribute",
+    "prefix": "yParaProp"
+  },
+  "parameterAttribute": {
+    "body": [
+      "[Parameter$1]$0"
+    ],
+    "description": "Inserts a Parameter attribute",
+    "prefix": "yParaAttribute"
   },
   "parameterCaptureUnmatchedValues ": {
     "body": [
