@@ -245,7 +245,7 @@
   },
   "inheritsComponentBase": {
     "body": [
-      ": ComponentBase$1"
+      " ComponentBase$1"
     ],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
