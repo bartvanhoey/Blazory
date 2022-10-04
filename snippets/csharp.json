@@ -245,10 +245,17 @@
   },
   "inheritsComponentBase": {
     "body": [
-      ": ComponentBase$1"
+      " ComponentBase$1"
     ],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
+  },
+  "injectAttribute": {
+    "body": [
+      "[Inject$1]$0"
+    ],
+    "description": "Inserts InjectAttribute",
+    "prefix": "yInjectAttribute"
   },
   "injectHttpClient": {
     "body": [
@@ -412,7 +419,7 @@
       "${1|NavigationManager,Navigation,Nav,_navigationManager|}.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
     ],
     "description": "NavigationManager.NavigateTo page",
-    "prefix": "yNavigateTo"
+    "prefix": "yNavigateToPage"
   },
   "navigateToId": {
     "body": [
@@ -481,12 +488,26 @@
     "description": "OnParameterSetAsync method stub",
     "prefix": "yOnParametersSetAsync"
   },
-  "parameter": {
+  "parameterProperty": {
     "body": [
-      "[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
+      "[Parameter$1] public ${2:Type} ${3:PropertyName} { get; set; }$0"
     ],
-    "description": "Parameter attribute",
-    "prefix": "yPara"
+    "description": "Inserts a property with Parameter attribute",
+    "prefix": "yParaProp"
+  },
+  "parameterIdProperty": {
+    "body": [
+      "[Parameter$1] public ${2|int,bool,datetime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
+    ],
+    "description": "Inserts an Id property with Parameter attribute",
+    "prefix": "yParaIdProp"
+  },
+  "parameterAttribute": {
+    "body": [
+      "[Parameter$1]$0"
+    ],
+    "description": "Inserts a Parameter attribute",
+    "prefix": "yParaAttribute"
   },
   "parameterCaptureUnmatchedValues ": {
     "body": [

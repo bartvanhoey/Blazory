@@ -15,7 +15,7 @@
     "prefix": "yBindFormat"
   },
   "bindOnInputEvent": {
-    "body": "@bind=\"@bind:event=\"oninput\"$0",
+    "body": "@bind:event=\"oninput\"$0",
     "description": " @bind:event=\"oninput\"",
     "prefix": "yBindOnInputEvent"
   },
@@ -91,24 +91,24 @@
     "prefix": "yComponentDisposable"
   },
   "editForm": {
-    "body": [
-      "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
-      "\t<DataAnnotationsValidator />",
-      "\t<ValidationSummary />",
-      "\t<div class=\"form-group\">",
-      "\t\t<label for=\"${3:idInputText}\">${4:LabelText}:</label>",
-      "\t\t<div>",
-      "\t\t\t<InputText id=\"${5:$3}\" class=\"form-control\" @bind-Value=\"@${6:$1}.${7:property}\" />",
-      "\t\t\t<ValidationMessage For=\"@(() => ${8:$1}.${9:$7})\" />",
-      "\t\t</div>",
-      "\t</div>",
-      "\t<button class=\"${10:btn btn-success}\" type=\"submit\">${11|Add,Edit,Submit,Sign In,Logout|} ${12:MyText}</button>",
-      "</EditForm>",
-      "$0"
-    ],
-    "description": "Inserts EditForm component",
-    "prefix": "yEditForm"
-  },
+		"body": [
+		  "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+		  "\t<DataAnnotationsValidator />",
+		  "\t<ValidationSummary />",
+		  "\t<div class=\"form-group\">",
+		  "\t\t<label for=\"id$3\">${4:$3}:</label>",
+		  "\t\t<div>",
+		  "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" />",
+		  "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
+		  "\t\t</div>",
+		  "\t</div>",
+		  "\t<button class=\"btn btn-success\" type=\"submit\">${5|Add,Edit,Submit,Sign In,Logout|} ${6:$1}</button>",
+		  "</EditForm>",
+		  "$0"
+		],
+		"description": "Inserts EditForm component",
+		"prefix": "yEditForm"
+	  },
   "event:preventDefaultAttribute": {
     "body": "@${1:onkeypress}:preventDefault",
     "description": "PreventDefault attribute",
@@ -401,7 +401,7 @@
   },
   "pageDirectiveWithParameter": {
     "body": [
-      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long,string|}}\""
+      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:ParameterName}:${3|int,bool,datetime,decimal,double,float,guid,long,string|}}\""
     ],
     "description": "@page directive with Parameter",
     "prefix": "yPageParam"
