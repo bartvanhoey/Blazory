@@ -483,7 +483,7 @@
   },
   "parameterProperty": {
     "body": [
-      "[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
+      "[Parameter$1] public ${2:Type} ${3:Name} { get; set; }$0"
     ],
     "description": "Inserts a property with Parameter attribute",
     "prefix": "yParaProp"
