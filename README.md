@@ -81,6 +81,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
      Prefix                            | Description                                                 
      --------------------------------- | ------------------------------------------------------------ 
+     inputTextAreaDivClassMb3          | Inserts InputTextArea component + label                     
      yAuthorizeAttribute               | @attribute [Authorize]                                      
      yBind                             | Bind attribute                                              
      yBindFormat                       | @bind:format="MyFormat"                                     
@@ -95,12 +96,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yEditForm                         | Inserts EditForm component                                  
      yFormControlClass                 | Inserts a form-control class attribute                      
-     yFormGroupInputDate               | Inserts form-group class InputDate component                
-     yFormGroupInputNumber             | Inserts form-group class InputNumber component              
-     yFormGroupInputSelect             | Inserts form-group class InputSelect component              
-     yFormGroupInputSelectForEach      | Inserts form-group class InputSelect ForEach                
-     yFormGroupInputText               | Inserts form-group class InputText component                
-     yFormGroupInputTextArea           | Inserts form-group class InputTextArea component            
      yImplementsIDisposable            | @implements IDisposable                                     
      yInheritsBaseComponent            | @inherits C# code-behind base class                         
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
@@ -116,14 +111,19 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInputCheckbox                    | InputCheckbox component                                     
      yInputCheckBoxFormCheck           | Inserts an InputCheckBox component in form-check class      
      yInputDate                        | InputDate component                                         
+     yInputDateDivClassMb3             | Inserts an InputDate component + label                      
      yInputFileComponent               | InputFile component                                         
      yInputNumber                      | InputNumber component                                       
+     yInputNumberDivClassMb3           | Inserts an InputNumber component + label                    
      yInputRadio                       | InputRadio component                                        
      yInputRadioGroup                  | Inserts a RadioGroup component                              
      yInputSelect                      | InputSelect component                                       
+     yInputSelectDivClassMb3           | Inserts InputSelect component + label                       
      yInputSelectForEach               | InputSelectForEach component                                
+     yInputSelectForEachDivClassMb3    | Inserts InputSelect ForEach + label                         
      yInputText                        | InputText component                                         
      yInputTextArea                    | InputTextArea component                                     
+     yInputTextDivClassMb3             | Inserts an InputText component + label                      
      yLayout                           | @layout MyLayout                                            
      yNavLink                          | NavLink                                                     
      yNavLinkMatch                     | NavLink with MatchAttribute                                 

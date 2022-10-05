@@ -92,17 +92,17 @@
   },
   "editForm": {
 		"body": [
-		  "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+		  "<EditForm Model=\"@${1:Model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
 		  "\t<DataAnnotationsValidator />",
 		  "\t<ValidationSummary />",
-		  "\t<div class=\"form-group\">",
-		  "\t\t<label for=\"id$3\">${4:$3}:</label>",
+		  "\t<div class=\"mb-3\">",
+		  "\t\t<label for=\"id$3\" class=\"form-label\" >${5:$3}</label>",
 		  "\t\t<div>",
-		  "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" />",
+		  "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" placeholder=\"${4:$3}...\" />",
 		  "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
 		  "\t\t</div>",
 		  "\t</div>",
-		  "\t<button class=\"btn btn-success\" type=\"submit\">${5|Add,Edit,Submit,Sign In,Logout|} ${6:$1}</button>",
+		  "\t<button class=\"btn btn-success\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
 		  "</EditForm>",
 		  "$0"
 		],
@@ -131,101 +131,100 @@
     "description": "Inserts a form-control class attribute",
     "prefix": "yFormControlClass"
   },
-  "formGroupInputDate": {
+  "inputDateDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputText id=\"${3:$1}\" class=\"form-control\"  @bind-Value=\"@${4:model}.${5:property}\" />",
-      "\t\t<InputDate id=\"${3:$1}\" @bind-Value=\"@${4:model}.${5:dateProperty}\" />",
-      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t\t<InputDate id=\"id$2\" class=\"form-control\"  @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputDate component",
-    "prefix": "yFormGroupInputDate"
+    "description": "Inserts an InputDate component + label",
+    "prefix": "yInputDateDivClassMb3"
   },
-  "formGroupInputNumber": {
+  "inputNumberDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputNumber id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
-      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t\t<InputNumber id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputNumber component ",
-    "prefix": "yFormGroupInputNumber"
+    "description": "Inserts an InputNumber component + label",
+    "prefix": "yInputNumberDivClassMb3"
   },
-  "formGroupInputSelect": {
+  "InputSelectDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:Property}\" >$0",
-      "\t\t\t<option disabled value=\"\">${6:Select...}</option>",
-      "\t\t\t<option value=\"${7:YourValue}\">${8:$7}</option>",
+      "\t\t<InputSelect id=\"$id$2}\" class=\"form-select\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" >$0",
+      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
+      "\t\t\t<option value=\"${5:YourValue}\">${6:$5}</option>",
       "\t\t</InputSelect>$0",
-      "\t\t<ValidationMessage For=\"@(() => ${9:$4}.${10:$5})\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputSelect component",
-    "prefix": "yFormGroupInputSelect"
+    "description": "Inserts InputSelect component + label",
+    "prefix": "yInputSelectDivClassMb3"
   },
-  "formGroupInputSelectForEach": {
+  "InputSelectForEachDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputSelect}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputSelect id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"${4:Model}.${5:Property}\" >$0",
-      "\t\t\t<option disabled value=\"\">${6:Select...}</option>",
-      "\t\t\t@foreach (var ${7:item} in ${8:Items})",
+      "\t\t<InputSelect id=\"$id$2\" class=\"form-select\" @bind-Value=\"${1:Model}.${2:PropertyName}\" >$0",
+      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
+      "\t\t\t@foreach (var ${5:item} in ${6:Items})",
       "\t\t{",
-      "\t\t\t\t<option value=\"${9:$7}.${10:Id}\">${11:$7}.${12:DisplayProperty}</option>",
+      "\t\t\t\t<option value=\"${7:$5}.${8:Id}\">${9:$5}.${10:DisplayProperty}</option>",
       "\t\t\t}",
       "\t\t</InputSelect>",
-      "\t\t<ValidationMessage For=\"@(() => ${13:$4}.${14:$5})\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputSelect ForEach",
-    "prefix": "yFormGroupInputSelectForEach"
+    "description": "Inserts InputSelect ForEach + label",
+    "prefix": "yInputSelectForEachDivClassMb3"
   },
-  "formGroupInputText": {
+  "inputTextDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputText}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputText id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
-      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputText component",
-    "prefix": "yFormGroupInputText"
+    "description": "Inserts an InputText component + label",
+    "prefix": "yInputTextDivClassMb3"
   },
-  "formGroupInputTextArea": {
+  "inputTextAreaDivClassMb3": {
     "body": [
-      "<div class=\"form-group\">",
-      "\t<label for=\"${1:idInputTextArea}\">${2:LabelText}:</label>",
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputTextArea id=\"${3:$1}\" class=\"form-control\" @bind-Value=\"@${4:model}.${5:property}\" />",
-      "\t\t<ValidationMessage For=\"@(() => ${6:$4}.${7:$5})\" />",
+      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputTextArea component",
-    "prefix": "yFormGroupInputTextArea"
+    "description": "Inserts InputTextArea component + label",
+    "prefix": "inputTextAreaDivClassMb3"
   },
-  "implementsIDisposible": {
+  "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
     "description": "@implements IDisposable",
     "prefix": "yImplementsIDisposable"
