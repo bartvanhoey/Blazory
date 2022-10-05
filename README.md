@@ -38,6 +38,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yIfNull                              | If null statement                                                
      yIfNullInline statement              | If null inline statement                                         
      yInheritsComponentBase               | Inherits ComponentBase                                           
+     yInjectAttribute                     | Inserts InjectAttribute                                          
      yInjectHttpClient                    | Inject HttpClient property                                       
      yInjectIJSRuntime                    | Inject IJSRuntime property                                       
      yInjectIMapper                       | Inject IMapper property                                          
@@ -57,16 +58,18 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yMethodReturnWithArgs                | method stub with arguments                                       
      yMethodVoid                          | void method stub without arguments                               
      yMethodVoidWithArgs                  | void method stub with arguments                                  
-     yNavigateTo                          | NavigationManager.NavigateTo page                                
      yNavigateToId                        | NavigationManager.NavigateTo page\\Id                            
+     yNavigateToPage                      | NavigationManager.NavigateTo page                                
      yOnAfterRender                       | OnAfterRender method stub                                        
      yOnAfterRenderAsync                  | OnAfterRenderAsync method stub                                   
      yOnInitialized                       | OnInitialized method stub                                        
      yOnInitializedAsync                  | OnInitializedAsync method stub                                   
      yOnParametersSet                     | OnParameterSet method stub                                       
      yOnParametersSetAsync                | OnParameterSetAsync method stub                                  
-     yPara                                | Parameter attribute                                              
+     yParaAttribute                       | Inserts a Parameter attribute                                    
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
+     yParaIdProp                          | Inserts an Id property with Parameter attribute                  
+     yParaProp                            | Inserts a property with Parameter attribute                      
      yReadIdFromJsonAsync                 | HttpClient.ReadFromJsonAsync call                                
      yReadOnlyHttpClientField             | Readonly HttpClient field                                        
      yRequiredAttribute                   | RequiredAttribute                                                
@@ -91,7 +94,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yComponentDisposable              | Complete component inherits IDisposable                     
      yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yEditForm                         | Inserts EditForm component                                  
-     yFormCheckInputCheckBox           | Inserts form-group class InputCheckBox component            
      yFormControlClass                 | Inserts a form-control class attribute                      
      yFormGroupInputDate               | Inserts form-group class InputDate component                
      yFormGroupInputNumber             | Inserts form-group class InputNumber component              
@@ -112,6 +114,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInjectService                    | @inject MyService MyService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | InputCheckbox component                                     
+     yInputCheckBoxFormCheck           | Inserts an InputCheckBox component in form-check class      
      yInputDate                        | InputDate component                                         
      yInputFileComponent               | InputFile component                                         
      yInputNumber                      | InputNumber component                                       

@@ -114,17 +114,17 @@
     "description": "PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
-  "formCheckInputCheckBox": {
+  "InputCheckBoxFormCheck": {
     "body": [
       "<div class=\"form-check\">",
-      "\t<InputCheckbox id=\"${1:idInputCheckBox}\" class=\"form-check-input\" @bind-Value=\"@${2:model}.${3:property}\" />",
-      "\t<label class=\"form-check-label\" for=\"${4:$1}\">${5:LabelText}:</label>",
-      "\t<ValidationMessage For=\"@(() => ${6:$2}.${7:$3})\" />",
+      "\t<InputCheckbox id=\"id$2\" class=\"form-check-input\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t<label class=\"form-check-label\" for=\"id$2\">${3:$2}</label>",
+      "\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "</div>",
       "$0"
     ],
-    "description": "Inserts form-group class InputCheckBox component",
-    "prefix": "yFormCheckInputCheckBox"
+    "description": "Inserts an InputCheckBox component in form-check class",
+    "prefix": "yInputCheckBoxFormCheck"
   },
   "formControlClass": {
     "body": "class=\"form-control\"",
