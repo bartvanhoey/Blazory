@@ -509,6 +509,16 @@
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
+  "stringLengthAttribute": {
+    "body": ["[StringLength(${1:50})$2]$0"],
+    "description": "StringLength attribute",
+    "prefix": "yStringLengthAttribute"
+  },
+  "rangeAttribute": {
+    "body": ["[Range$1(${2:0},${2:1000})]$0"],
+    "description": "Range attribute",
+    "prefix": "yRangeAttribute"
+  },
   "parameterCaptureUnmatchedValues ": {
     "body": [
       "[Parameter$1(CaptureUnmatchedValues = true)] public Dictionary<string, object> ${2:Attributes} { get; set; }$0"
