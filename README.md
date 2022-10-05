@@ -81,7 +81,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
      Prefix                            | Description                                                 
      --------------------------------- | ------------------------------------------------------------ 
-     inputTextAreaDivClassMb3          | Inserts InputTextArea component + label                     
+     inputTextAreaAndLabel             | Inserts an InputTextArea component + label                  
      yAuthorizeAttribute               | @attribute [Authorize]                                      
      yBind                             | Bind attribute                                              
      yBindFormat                       | @bind:format="MyFormat"                                     
@@ -108,22 +108,22 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
      yInjectService                    | @inject MyService MyService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
-     yInputCheckbox                    | InputCheckbox component                                     
-     yInputCheckBoxFormCheck           | Inserts an InputCheckBox component in form-check class      
+     yInputCheckbox                    | Inserts an InputCheckbox component                          
+     yInputCheckBoxAndLabel            | Inserts an InputCheckBox component + label                  
      yInputDate                        | InputDate component                                         
-     yInputDateDivClassMb3             | Inserts an InputDate component + label                      
-     yInputFileComponent               | InputFile component                                         
-     yInputNumber                      | InputNumber component                                       
-     yInputNumberDivClassMb3           | Inserts an InputNumber component + label                    
-     yInputRadio                       | InputRadio component                                        
+     yInputDateAndLabel                | Inserts an InputDate component + label                      
+     yInputFileComponent               | Inserts an InputFile component                              
+     yInputNumber                      | Inserts an InputNumber component                            
+     yInputNumberAndLabel              | Inserts an InputNumber component + label                    
+     yInputRadio                       | Inserts a InputRadio component                              
      yInputRadioGroup                  | Inserts a RadioGroup component                              
-     yInputSelect                      | InputSelect component                                       
-     yInputSelectDivClassMb3           | Inserts InputSelect component + label                       
-     yInputSelectForEach               | InputSelectForEach component                                
-     yInputSelectForEachDivClassMb3    | Inserts InputSelect ForEach + label                         
-     yInputText                        | InputText component                                         
-     yInputTextArea                    | InputTextArea component                                     
-     yInputTextDivClassMb3             | Inserts an InputText component + label                      
+     yInputSelect                      | Inserts an InputSelect component                            
+     yInputSelectAndLabel              | Inserts an InputSelect component + label                    
+     yInputSelectForEach               | Inserts an InputSelect (foreach) component                  
+     yInputSelectForEachAndLabel       | Inserts InputSelect (foreach) component + label             
+     yInputText                        | Inserts an InputText component                              
+     yInputTextAndLabel                | Inserts an InputText component + label                      
+     yInputTextArea                    | Inserts an InputTextArea component                          
      yLayout                           | @layout MyLayout                                            
      yNavLink                          | NavLink                                                     
      yNavLinkMatch                     | NavLink with MatchAttribute                                 

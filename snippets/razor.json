@@ -91,138 +91,33 @@
     "prefix": "yComponentDisposable"
   },
   "editForm": {
-		"body": [
-		  "<EditForm Model=\"@${1:Model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
-		  "\t<DataAnnotationsValidator />",
-		  "\t<ValidationSummary />",
-		  "\t<div class=\"mb-3\">",
-		  "\t\t<label for=\"id$3\" class=\"form-label\" >${5:$3}</label>",
-		  "\t\t<div>",
-		  "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" placeholder=\"${4:$3}...\" />",
-		  "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
-		  "\t\t</div>",
-		  "\t</div>",
-		  "\t<button class=\"btn btn-success\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
-		  "</EditForm>",
-		  "$0"
-		],
-		"description": "Inserts EditForm component",
-		"prefix": "yEditForm"
-	  },
+    "body": [
+      "<EditForm Model=\"@${1:Model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+      "\t<DataAnnotationsValidator />",
+      "\t<ValidationSummary />",
+      "\t<div class=\"mb-3\">",
+      "\t\t<label for=\"id$3\" class=\"form-label\" >${5:$3}</label>",
+      "\t\t<div>",
+      "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" placeholder=\"${4:$3}...\" />",
+      "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
+      "\t\t</div>",
+      "\t</div>",
+      "\t<button class=\"btn btn-success\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
+      "</EditForm>",
+      "$0"
+    ],
+    "description": "Inserts EditForm component",
+    "prefix": "yEditForm"
+  },
   "event:preventDefaultAttribute": {
     "body": "@${1:onkeypress}:preventDefault",
     "description": "PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
-  "InputCheckBoxFormCheck": {
-    "body": [
-      "<div class=\"form-check\">",
-      "\t<InputCheckbox id=\"id$2\" class=\"form-check-input\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t<label class=\"form-check-label\" for=\"id$2\">${3:$2}</label>",
-      "\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts an InputCheckBox component in form-check class",
-    "prefix": "yInputCheckBoxFormCheck"
-  },
   "formControlClass": {
     "body": "class=\"form-control\"",
     "description": "Inserts a form-control class attribute",
     "prefix": "yFormControlClass"
-  },
-  "inputDateDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputDate id=\"id$2\" class=\"form-control\"  @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts an InputDate component + label",
-    "prefix": "yInputDateDivClassMb3"
-  },
-  "inputNumberDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputNumber id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts an InputNumber component + label",
-    "prefix": "yInputNumberDivClassMb3"
-  },
-  "InputSelectDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputSelect id=\"$id$2}\" class=\"form-select\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" >$0",
-      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
-      "\t\t\t<option value=\"${5:YourValue}\">${6:$5}</option>",
-      "\t\t</InputSelect>$0",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts InputSelect component + label",
-    "prefix": "yInputSelectDivClassMb3"
-  },
-  "InputSelectForEachDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputSelect id=\"$id$2\" class=\"form-select\" @bind-Value=\"${1:Model}.${2:PropertyName}\" >$0",
-      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
-      "\t\t\t@foreach (var ${5:item} in ${6:Items})",
-      "\t\t{",
-      "\t\t\t\t<option value=\"${7:$5}.${8:Id}\">${9:$5}.${10:DisplayProperty}</option>",
-      "\t\t\t}",
-      "\t\t</InputSelect>",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts InputSelect ForEach + label",
-    "prefix": "yInputSelectForEachDivClassMb3"
-  },
-  "inputTextDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts an InputText component + label",
-    "prefix": "yInputTextDivClassMb3"
-  },
-  "inputTextAreaDivClassMb3": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts InputTextArea component + label",
-    "prefix": "inputTextAreaDivClassMb3"
   },
   "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
@@ -252,6 +147,16 @@
     "description": "@inject HttpClient directive",
     "prefix": "yInjectHttpClient"
   },
+  "injectIAccessTokenProvider": {
+    "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
+    "description": "@inject IAccessTokenProvider directive in Blazor Server app",
+    "prefix": "yInjectIAccessTokenProvider"
+  },
+  "injectIConfiguration": {
+    "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
+    "description": "@inject IConfiguration directive in Blazor Server app",
+    "prefix": "yInjectIConfiguration"
+  },
   "injectIJSRuntime": {
     "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
     "description": "@inject IJSRuntime directive",
@@ -272,16 +177,6 @@
     "description": "@inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
   },
-  "injectIAccessTokenProvider": {
-    "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
-    "description": "@inject IAccessTokenProvider directive in Blazor Server app",
-    "prefix": "yInjectIAccessTokenProvider"
-  },
-  "injectIConfiguration": {
-    "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
-    "description": "@inject IConfiguration directive in Blazor Server app",
-    "prefix": "yInjectIConfiguration"
-  },
   "injectProtectedLocalStorage": {
     "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|}$0",
     "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
@@ -295,15 +190,41 @@
     "description": "@inject SignOutSessionStateManager directive",
     "prefix": "yInjectSignOutSessionStateManager"
   },
+  "inputCheckBoxAndLabel": {
+    "body": [
+      "<div class=\"form-check\">",
+      "\t<InputCheckbox id=\"id$2\" class=\"form-check-input\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t<label class=\"form-check-label\" for=\"id$2\">${3:$2}</label>",
+      "\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputCheckBox component + label",
+    "prefix": "yInputCheckBoxAndLabel"
+  },
   "inputCheckbox": {
     "body": "<InputCheckbox @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-    "description": "InputCheckbox component",
+    "description": "Inserts an InputCheckbox component",
     "prefix": "yInputCheckbox"
   },
   "inputDate": {
     "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
     "description": "InputDate component",
     "prefix": "yInputDate"
+  },
+  "inputDateAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputDate id=\"id$2\" class=\"form-control\"  @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputDate component + label",
+    "prefix": "yInputDateAndLabel"
   },
   "inputFile": {
     "body": [
@@ -315,45 +236,31 @@
       "\t<div>@status</div>",
       "</div>"
     ],
-    "description": "InputFile component",
+    "description": "Inserts an InputFile component",
     "prefix": "yInputFileComponent"
   },
   "inputNumber": {
     "body": "<InputNumber @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-    "description": "InputNumber component",
+    "description": "Inserts an InputNumber component",
     "prefix": "yInputNumber"
   },
-  "inputSelect": {
+  "inputNumberAndLabel": {
     "body": [
-      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
-      "\t<option value=\"\">Select...</option>",
-      "\t<option value=\"${3:YourValue}\">${4:$3}</option>",
-      "</InputSelect>$0"
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputNumber id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
     ],
-    "description": "InputSelect component",
-    "prefix": "yInputSelect"
-  },
-  "inputSelectForEach": {
-    "body": [
-      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
-      "\t<option value=\"\">Select...</option>",
-      "\t@foreach (var ${3:item} in ${4:Items})",
-      "{",
-      "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>",
-      "\t}",
-      "</InputSelect>$0"
-    ],
-    "description": "InputSelectForEach component",
-    "prefix": "yInputSelectForEach"
-  },
-  "inputText": {
-    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-    "description": "InputText component",
-    "prefix": "yInputText"
+    "description": "Inserts an InputNumber component + label",
+    "prefix": "yInputNumberAndLabel"
   },
   "inputRadio": {
     "body": "<InputRadio Value=\"${1:value}\" />$0",
-    "description": "InputRadio component",
+    "description": "Inserts a InputRadio component",
     "prefix": "yInputRadio"
   },
   "inputRadioGroup": {
@@ -368,10 +275,103 @@
     "description": "Inserts a RadioGroup component",
     "prefix": "yInputRadioGroup"
   },
+  "inputSelect": {
+    "body": [
+      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
+      "\t<option value=\"\">Select...</option>",
+      "\t<option value=\"${3:YourValue}\">${4:$3}</option>",
+      "</InputSelect>$0"
+    ],
+    "description": "Inserts an InputSelect component",
+    "prefix": "yInputSelect"
+  },
+  "inputSelectAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputSelect id=\"$id$2}\" class=\"form-select\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" >$0",
+      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
+      "\t\t\t<option value=\"${5:YourValue}\">${6:$5}</option>",
+      "\t\t</InputSelect>$0",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputSelect component + label",
+    "prefix": "yInputSelectAndLabel"
+  },
+  "inputSelectForEach": {
+    "body": [
+      "<InputSelect @bind-Value=\"${1:Model}.${2:Property}\" >$0",
+      "\t<option value=\"\">Select...</option>",
+      "\t@foreach (var ${3:item} in ${4:Items})",
+      "{",
+      "\t\t<option value=\"${5:$3}.${6:Id}\">${7:$5}.${8:DisplayProperty}</option>",
+      "\t}",
+      "</InputSelect>$0"
+    ],
+    "description": "Inserts an InputSelect (foreach) component",
+    "prefix": "yInputSelectForEach"
+  },
+  "inputSelectForEachAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputSelect id=\"$id$2\" class=\"form-select\" @bind-Value=\"${1:Model}.${2:PropertyName}\" >$0",
+      "\t\t\t<option disabled value=\"\">${4:Select...}</option>",
+      "\t\t\t@foreach (var ${5:item} in ${6:Items})",
+      "\t\t{",
+      "\t\t\t\t<option value=\"${7:$5}.${8:Id}\">${9:$5}.${10:DisplayProperty}</option>",
+      "\t\t\t}",
+      "\t\t</InputSelect>",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts InputSelect (foreach) component + label",
+    "prefix": "yInputSelectForEachAndLabel"
+  },
+  "inputText": {
+    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "description": "Inserts an InputText component",
+    "prefix": "yInputText"
+  },
   "inputTextArea": {
     "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
-    "description": "InputTextArea component",
+    "description": "Inserts an InputTextArea component",
     "prefix": "yInputTextArea"
+  },
+  "inputTextAreaAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputTextArea component + label",
+    "prefix": "inputTextAreaAndLabel"
+  },
+  "inputTextAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputText component + label",
+    "prefix": "yInputTextAndLabel"
   },
   "layoutDirective": {
     "body": "@layout ${1:LayoutName}",

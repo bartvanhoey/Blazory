@@ -1,3 +1,5 @@
+git pull
+
 if "%~1"=="" SET argument=patch
 if "%~1"=="patch" SET result=true
 if "%~1"=="minor" SET result=true
