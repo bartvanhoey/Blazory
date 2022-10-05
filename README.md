@@ -1,11 +1,11 @@
-# Snippets `that start with an y` to speed up your Blazor development
+## Snippets `that start with an y` to speed up your Blazor development
 
 ![Blazory in Action!](images/blazory_in_action.gif "Blazory - Blazor snippets that start with an 'y' - in Action!")
 
 
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/Blazory/issues/new), I will see what I can do!
 
-## C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
+### C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
 
      Prefix                               | Description                                                      
      ------------------------------------ | ----------------------------------------------------------------- 
@@ -77,7 +77,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      ySetParametersAsync                  | SetParametersAsync method stub                                   
      yShouldRender                        | ShouldRender method stub                                         
 
-## Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
+### Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
      Prefix                            | Description                                                 
      --------------------------------- | ------------------------------------------------------------ 
