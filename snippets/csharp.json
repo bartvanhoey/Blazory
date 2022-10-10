@@ -30,11 +30,18 @@
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
-  "cascadingParameter": {
+  "cascadingParaProp": {
     "body": [
       "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
     ],
-    "description": "CascadingParameter attribute",
+    "description": "Inserts a property with CascadingParameter attribute",
+    "prefix": "yCascadingParaProp"
+  },
+  "cascadingPara": {
+    "body": [
+      "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
+    ],
+    "description": "Inserts a CascadingParameter attribute",
     "prefix": "yCascadingPara"
   },
   "compareAttribute": {
@@ -567,6 +574,11 @@
     ],
     "description": "SetParametersAsync method stub",
     "prefix": "ySetParametersAsync"
+  },
+  "stateHasChanged": {
+    "body": "StateHasChanged();$0",
+    "description": "Inserts StateHasChanged() method",
+    "prefix": "yStateHasChanged"
   },
   "shouldRender": {
     "body": [
