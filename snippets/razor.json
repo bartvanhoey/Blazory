@@ -258,6 +258,15 @@
     "description": "Inserts an InputNumber component + label",
     "prefix": "yInputNumberAndLabel"
   },
+  "cascadingValue": {
+    "body": [
+      "<CascadingValue Value=\"@${1:PropertyName}\" Name=\"@${2:ValueName}\" IsFixed=\"false\" >",
+      "\t$0",
+      "</CascadingValue>"
+    ],
+    "description": "Inserts a CascadingValue attribute",
+    "prefix": "yCascadingValue"
+  },
   "inputRadio": {
     "body": "<InputRadio Value=\"${1:value}\" />$0",
     "description": "Inserts a InputRadio component",
