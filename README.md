@@ -12,8 +12,9 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAddHttpClientWithHttpMessageHandler | Add HttpClient with HttpMessageHandler                           
      yApiControllerAttribute              | ApiController attribute                                          
      yAuthorizeAttribute                  | AuthorizeAttribute                                               
-     yCascadingPara                       | CascadingParameter attribute                                     
+     yCascadingPara                       | Inserts a CascadingParameter attribute                           
      yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
+     yCascadingParaProp                   | Inserts a property with CascadingParameter attribute             
      yCompareAttribute                    | Compare attribute                                                
      yEventCallback                       | EventCallback parameter                                          
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
@@ -70,12 +71,15 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
      yParaIdProp                          | Inserts an Id property with Parameter attribute                  
      yParaProp                            | Inserts a property with Parameter attribute                      
+     yRangeAttribute                      | Range attribute                                                  
      yReadIdFromJsonAsync                 | HttpClient.ReadFromJsonAsync call                                
      yReadOnlyHttpClientField             | Readonly HttpClient field                                        
      yRequiredAttribute                   | RequiredAttribute                                                
      yRouteAttribute                      | RouteAttribute                                                   
      ySetParametersAsync                  | SetParametersAsync method stub                                   
      yShouldRender                        | ShouldRender method stub                                         
+     yStateHasChanged                     | Inserts StateHasChanged() method                                 
+     yStringLengthAttribute               | StringLength attribute                                           
 
 ### Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
@@ -89,6 +93,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yBindOnProperty                   | @bind="MyProperty"                                          
      yBindValue                        | @bind-Value="MyProperty"                                    
      yCascadingAuthenticationState     | CascadingAuthenticationState stub                           
+     yCascadingValue                   | Inserts a CascadingValue attribute                          
      yCode                             | @code block                                                 
      yComponent                        | Complete component                                          
      yComponentChildContent            | Complete component with ChildContent RenderFragment         
@@ -99,6 +104,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yImplementsIDisposable            | @implements IDisposable                                     
      yInheritsBaseComponent            | @inherits C# code-behind base class                         
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
+     yInheritsOwningComponentBase      | @inherits OwningComponentBase<ApplicationDbContext>         
      yInjectHttpClient                 | @inject HttpClient directive                                
      yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive in Blazor Server app 
      yInjectIConfiguration             | @inject IConfiguration directive in Blazor Server app       

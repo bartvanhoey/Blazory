@@ -129,6 +129,11 @@
     "description": "@inherits C# code-behind base class",
     "prefix": "yInheritsBaseComponent"
   },
+  "inheritsOwningComponentBase": {
+    "body": "@inherits OwningComponentBase<${1:ApplicationDbContext}>$0",
+    "description": "@inherits OwningComponentBase<ApplicationDbContext>",
+    "prefix": "yInheritsOwningComponentBase"
+  },
   "inheritsLayoutComponentBase": {
     "body": [
       "@inherits LayoutComponentBase",
