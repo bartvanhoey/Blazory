@@ -146,6 +146,13 @@
     "description": "HttpClient.GetAsync call",
     "prefix": "yHttpClientGetAsync"
   },
+  "paginationState": {
+    "body": [
+      "protected PaginationState pagination = new PaginationState { ItemsPerPage = ${1:10};$0"
+    ],
+    "description": "Inserts a PaginationState field",
+    "prefix": "yPaginationState"
+  },
   "httpClientGetFromByIdJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"

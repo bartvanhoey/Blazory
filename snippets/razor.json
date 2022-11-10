@@ -134,6 +134,46 @@
     "description": "@inherits OwningComponentBase<ApplicationDbContext>",
     "prefix": "yInheritsOwningComponentBase"
   },
+  "quickGrid": {
+    "body": [
+      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" />",
+      "\t$0",
+      "</QuickGrid>"
+    ],
+    "description": "Inserts a QuickGrid",
+    "prefix": "yQuickGrid"
+  },
+  "propertyColumn": {
+    "body": [
+      "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0"
+    ],
+    "description": "PropertyColumn",
+    "prefix": "yPropertyColumn"
+  },
+  "templateColumn": {
+    "body": [
+      "<TemplateColumn Title=\"${1:Title}\" Align=\"@Align.${2|Left,Center,Right|}\" />$0"
+    ],
+    "description": "TemplateColumn",
+    "prefix": "yTemplateColumn"
+  },
+  "columnOptions": {
+    "body": [
+      "<ColumnOptions>",
+      "\t",
+      "<ColumnOptions/>"
+    ],
+    "description": "ColumnOptions",
+    "prefix": "yColumnOptions"
+  },
+  "paginator": {
+    "body": [
+      "<Paginator Value=\"@pagination\" />$0"
+    ],
+    "description": "PropertyColumn",
+    "prefix": "yPaginator"
+  },
+
   "inheritsLayoutComponentBase": {
     "body": [
       "@inherits LayoutComponentBase",

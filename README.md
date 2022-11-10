@@ -67,6 +67,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yOnInitializedAsync                  | OnInitializedAsync method stub                                   
      yOnParametersSet                     | OnParameterSet method stub                                       
      yOnParametersSetAsync                | OnParameterSetAsync method stub                                  
+     yPaginationState                     | Inserts a PaginationState field                                  
      yParaAttribute                       | Inserts a Parameter attribute                                    
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
      yParaIdProp                          | Inserts an Id property with Parameter attribute                  
@@ -95,6 +96,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yCascadingAuthenticationState     | CascadingAuthenticationState stub                           
      yCascadingValue                   | Inserts a CascadingValue attribute                          
      yCode                             | @code block                                                 
+     yColumnOptions                    | ColumnOptions                                               
      yComponent                        | Complete component                                          
      yComponentChildContent            | Complete component with ChildContent RenderFragment         
      yComponentDisposable              | Complete component inherits IDisposable                     
@@ -136,8 +138,12 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yOnValidSubmit                    | OnValidSubmit                                               
      yPage                             | @page directive                                             
      yPageParam                        | @page directive with Parameter                              
+     yPaginator                        | PropertyColumn                                              
      yPreventDefault                   | PreventDefault attribute                                    
+     yPropertyColumn                   | PropertyColumn                                              
+     yQuickGrid                        | Inserts a QuickGrid                                         
      yRef                              | @ref="MyProperty"                                           
+     yTemplateColumn                   | TemplateColumn                                              
      yTemplatedComponent               | Templated component                                         
      yTypeParam                        | @typeParam                                                  
      yUsing                            | @using MyNameSpace                                          
