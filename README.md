@@ -39,7 +39,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yIfNull                              | If null statement                                                
      yIfNullInline statement              | If null inline statement                                         
      yInheritsComponentBase               | Inherits ComponentBase                                           
-     yInjectAttribute                     | Inserts InjectAttribute                                          
+     yInjectAttribute                     | Inserts an InjectAttribute                                          
      yInjectHttpClient                    | Inject HttpClient property                                       
      yInjectIJSRuntime                    | Inject IJSRuntime property                                       
      yInjectIMapper                       | Inject IMapper property                                          
