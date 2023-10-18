@@ -8,10 +8,7 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": [
-      "[ApiController]",
-      "$0"
-    ],
+    "body": ["[ApiController]", "$0"],
     "description": "ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -23,10 +20,7 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize]",
-      "$0"
-    ],
+    "body": ["[Authorize]", "$0"],
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
@@ -96,16 +90,12 @@
     "prefix": "yEventHandlerAsync"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "{ get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "{ get, set }",
     "prefix": "yGs"
   },
@@ -194,80 +184,47 @@
     "prefix": "yHttpClientPutAsJsonAsync"
   },
   "iEnumerable": {
-    "body": [
-      "IEnumerable$1<${2:TypeName}>$0"
-    ],
+    "body": ["IEnumerable$1<${2:TypeName}>$0"],
     "description": "IEnumerable statement",
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "yIf"
   },
   "inheritsComponentBase": {
-    "body": [
-      " ComponentBase$1"
-    ],
+    "body": [" ComponentBase$1"],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
   "injectAttribute": {
-    "body": [
-      "[Inject$1]$0"
-    ],
+    "body": ["[Inject$1]$0"],
     "description": "Inserts InjectAttribute",
     "prefix": "yInjectAttribute"
   },
@@ -286,9 +243,7 @@
     "prefix": "yInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": [
-      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
-    ],
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
@@ -314,23 +269,17 @@
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "invokeAsyncEventCallback": {
-    "body": [
-      "await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"
-    ],
+    "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
     "description": "Invoke async Eventcallback",
     "prefix": "yInvokeAsyncEventCallback"
   },
   "isNotNull": {
-    "body": [
-      "!= null$0"
-    ],
+    "body": ["!= null$0"],
     "description": "Is not null",
     "prefix": "yIsNotNull"
   },
   "isNull": {
-    "body": [
-      "== null$0"
-    ],
+    "body": ["== null$0"],
     "description": "Is equal to null",
     "prefix": "yIsNull"
   },
@@ -388,7 +337,7 @@
     "description": "void method stub with arguments",
     "prefix": "yMethodVoidWithArgs"
   },
-    "methodAsync": {
+  "methodAsync": {
     "body": [
       "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
       "{",
@@ -463,12 +412,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -483,12 +427,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -517,9 +456,7 @@
     "prefix": "yParaIdProp"
   },
   "parameterAttribute": {
-    "body": [
-      "[Parameter$1]$0"
-    ],
+    "body": ["[Parameter$1]$0"],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
@@ -548,25 +485,17 @@
     "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
-    "body": [
-      "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"
-    ],
+    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
     "description": "Readonly HttpClient field",
     "prefix": "yReadOnlyHttpClientField"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1]",
-      "$0"
-    ],
+    "body": ["[Required$1]", "$0"],
     "description": "RequiredAttribute",
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": [
-      "[Route(\"${1:api/[controller]/[action]}\")]",
-      "$0"
-    ],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "description": "RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -597,5 +526,30 @@
     ],
     "description": "ShouldRender method stub",
     "prefix": "yShouldRender"
+  },
+  "builderEntity": {
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
+    "description": "builder.Entity stub",
+    "prefix": "yBuilderEntity"
+  },
+  "modelBuilderEntity": {
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
+    "description": "builder.Entity stub",
+    "prefix": "yModelBuilderEntity"
+  },
+  "dbSet": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSet"
+  },
+  "dbSetNewSyntax": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSetNewSyntax"
+  },
+  "implementCorrespondingInterface": {
+    "body": "I${TM_FILENAME_BASE}$0",
+    "description": "Implements corresponding interface",
+    "prefix": "yImpCorrespondingInterface"
   }
 }
