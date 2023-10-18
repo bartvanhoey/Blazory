@@ -536,5 +536,15 @@
     "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "builder.Entity stub",
     "prefix": "yModelBuilderEntity"
+  },
+  "dbSet": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSet"
+  },
+  "dbSetNewSyntax": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSetNewSyntax"
   }
 }
