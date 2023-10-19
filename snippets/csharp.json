@@ -450,7 +450,7 @@
   },
   "parameterIdProperty": {
     "body": [
-      "[Parameter$1] public ${2|int,bool,datetime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
+      "[Parameter$1] public ${2|int,bool,DateTime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
     ],
     "description": "Inserts an Id property with Parameter attribute",
     "prefix": "yParaIdProp"

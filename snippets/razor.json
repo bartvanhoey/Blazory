@@ -39,11 +39,7 @@
     "prefix": "yCascadingAuthenticationState"
   },
   "codeBlock": {
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "yCode"
   },
@@ -158,18 +154,12 @@
     "prefix": "yTemplateColumn"
   },
   "columnOptions": {
-    "body": [
-      "<ColumnOptions>",
-      "\t",
-      "<ColumnOptions/>"
-    ],
+    "body": ["<ColumnOptions>", "\t", "<ColumnOptions/>"],
     "description": "ColumnOptions",
     "prefix": "yColumnOptions"
   },
   "paginator": {
-    "body": [
-      "<Paginator Value=\"@pagination\" />$0"
-    ],
+    "body": ["<Paginator Value=\"@pagination\" />$0"],
     "description": "PropertyColumn",
     "prefix": "yPaginator"
   },
@@ -213,9 +203,9 @@
     "prefix": "yInjectIMapper"
   },
   "injectServiceDirective": {
-    "body": "@inject I${1:MyService} ${2:$1}",
-    "description": "@inject MyService MyService",
-    "prefix": "yInjectService"
+    "body": "@inject I${1:Name}Service$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Service$0",
+    "description": "@inject MyService myService",
+    "prefix": "xInjectService"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
@@ -527,12 +517,7 @@
     "prefix": "yVirtualizeComponent"
   },
   "voidDispose": {
-    "body": [
-      "\tpublic void Dispose()",
-      "\t{",
-      "\t\t$0",
-      "\t}"
-    ],
+    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }
