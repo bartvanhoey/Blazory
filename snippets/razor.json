@@ -520,5 +520,55 @@
     "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
+  },
+  "onAfterRender": {
+    "body": [
+      "protected override void OnAfterRender(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRender method stub",
+    "prefix": "yOnAfterRender"
+  },
+  "onAfterRenderAsync": {
+    "body": [
+      "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRenderAsync method stub",
+    "prefix": "yOnAfterRenderAsync"
+  },
+  "onInitialized": {
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "description": "OnInitialized method stub",
+    "prefix": "yOnInitialized"
+  },
+  "onInitializedAsync": {
+    "body": [
+      "protected override async Task$1 OnInitializedAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitializedAsync method stub",
+    "prefix": "yOnInitializedAsync"
+  },
+  "onParametersSet": {
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "description": "OnParameterSet method stub",
+    "prefix": "yOnParametersSet"
+  },
+  "onParametersSetAsync": {
+    "body": [
+      "protected override async Task$1 OnParametersSetAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSetAsync method stub",
+    "prefix": "yOnParametersSetAsync"
   }
 }
