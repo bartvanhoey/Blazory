@@ -205,7 +205,7 @@
   "injectServiceDirective": {
     "body": "@inject I${1:Name}Service$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Service$0",
     "description": "@inject MyService myService",
-    "prefix": "xInjectService"
+    "prefix": "yInjectService"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
