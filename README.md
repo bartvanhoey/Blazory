@@ -3,7 +3,7 @@
 ![Blazory in Action!](images/blazory_in_action.gif "Blazory - Blazor snippets that start with an 'y'!")
 
 
-Do you see **room for improvement** or do **you have a snippet in mind** you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/Blazory/issues/new)!
+Do you see **room for improvement** or do **you have a snippet in mind** you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/Blazory/issues/new), I will see what I can do!
 
 ### C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
 
@@ -12,10 +12,13 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAddHttpClientWithHttpMessageHandler | Add HttpClient with HttpMessageHandler                           
      yApiControllerAttribute              | ApiController attribute                                          
      yAuthorizeAttribute                  | AuthorizeAttribute                                               
+     yBuilderEntity                       | builder.Entity stub                                              
      yCascadingPara                       | Inserts a CascadingParameter attribute                           
      yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yCascadingParaProp                   | Inserts a property with CascadingParameter attribute             
      yCompareAttribute                    | Compare attribute                                                
+     yDbSet                               | Inserts a DbSet for a class statement in DbContext               
+     yDbSetNewSyntax                      | Inserts a DbSet for a class statement in DbContext               
      yEventCallback                       | EventCallback parameter                                          
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
      yEventCallbackOnParameterChanged     | EventCallbackOnParameterChanged                                  
@@ -38,8 +41,9 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yIfNotNullInline statement           | If not null inline statement                                     
      yIfNull                              | If null statement                                                
      yIfNullInline statement              | If null inline statement                                         
+     yImpCorrespondingInterface           | Implements corresponding interface                               
      yInheritsComponentBase               | Inherits ComponentBase                                           
-     yInjectAttribute                     | Inserts an InjectAttribute                                          
+     yInjectAttribute                     | Inserts InjectAttribute                                          
      yInjectHttpClient                    | Inject HttpClient property                                       
      yInjectIJSRuntime                    | Inject IJSRuntime property                                       
      yInjectIMapper                       | Inject IMapper property                                          
@@ -59,6 +63,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yMethodReturnWithArgs                | method stub with arguments                                       
      yMethodVoid                          | void method stub without arguments                               
      yMethodVoidWithArgs                  | void method stub with arguments                                  
+     yModelBuilderEntity                  | builder.Entity stub                                              
      yNavigateToId                        | NavigationManager.NavigateTo page\\Id                            
      yNavigateToPage                      | NavigationManager.NavigateTo page                                
      yOnAfterRender                       | OnAfterRender method stub                                        
