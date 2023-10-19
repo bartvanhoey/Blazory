@@ -203,7 +203,7 @@
     "prefix": "yInjectIMapper"
   },
   "injectServiceDirective": {
-    "body": "@inject I${1:Name}Service$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Service$0",
+    "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
     "description": "@inject MyService myService",
     "prefix": "yInjectService"
   },
@@ -588,6 +588,15 @@
     "body": ["[Parameter$1]$0"],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
+  },   "getPrivateSet": {
+    "body": ["{ get; private set; }$0"],
+    "description": "{ get, private set }",
+    "prefix": "yGps"
+  },
+  "getSet": {
+    "body": ["{ get; set; }$0"],
+    "description": "{ get, set }",
+    "prefix": "yGs"
   }
 
 }
