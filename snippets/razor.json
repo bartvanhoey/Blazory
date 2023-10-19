@@ -699,5 +699,35 @@
     "body": ["public string Filter{ get; set; }$0"],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
+  }, 
+  "ifInlineStatement": {
+    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "description": "If inline statement",
+    "prefix": "yIfInline"
   },
+  "ifNotNullInlineStatement": {
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "description": "If not null inline statement",
+    "prefix": "yIfNotNullInline statement"
+  },
+  "ifNotNullStatement": {
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "description": "If not null statement",
+    "prefix": "yIfNotNull"
+  },
+  "ifNullInlineStatement": {
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "description": "If null inline statement",
+    "prefix": "yIfNullInline statement"
+  },
+  "ifNullStatement": {
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "description": "If null statement",
+    "prefix": "yIfNull"
+  },
+  "ifStatement": {
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "description": "If statement",
+    "prefix": "yIf"
+  }
 }
