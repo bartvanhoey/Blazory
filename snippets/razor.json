@@ -212,8 +212,8 @@
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
-  "injectMyServiceDirective": {
-    "body": "@inject ${1:MyService} ${2:$1}",
+  "injectServiceDirective": {
+    "body": "@inject I${1:MyService} ${2:$1}",
     "description": "@inject MyService MyService",
     "prefix": "yInjectService"
   },
