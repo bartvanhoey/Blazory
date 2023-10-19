@@ -551,5 +551,107 @@
     "body": "I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding interface",
     "prefix": "yImpCorrespondingInterface"
+  },
+  "propId": {
+    "body": [
+      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an Id property",
+    "prefix": "yPropId"
+  },
+  "propName": {
+    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Name property ",
+    "prefix": "yPropName"
+  },
+  "propFirstName": {
+    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropFirstName"
+  },
+  "propLastName": {
+    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropLastName"
+  },
+  "propZipCode": {
+    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a ZipCode property ",
+    "prefix": "yPropZipCode"
+  },
+  "propCountry": {
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Country property ",
+    "prefix": "yPropCountry"
+  },
+  "propMobilePhone": {
+    "body": [
+      "public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Mobile Phone property ",
+    "prefix": "yPropMobilePhone"
+  },
+  "propPhone": {
+    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Phone property ",
+    "prefix": "yPropPhone"
+  },
+  "propCity": {
+    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a City property ",
+    "prefix": "yPropCity"
+  },
+  "propStreet": {
+    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Street property ",
+    "prefix": "yPropStreet"
+  },
+  "propTitle": {
+    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
+    "description": "Inserts an Title property ",
+    "prefix": "yPropTitle"
+  },
+  "propDescription": {
+    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
+    "description": "Inserts a Description property ",
+    "prefix": "yPropDescription"
+  },
+  "propStartDate": {
+    "body": [
+      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a DateTime StartDate property ",
+    "prefix": "yPropStartDate"
+  },
+  "propStartTime": {
+    "body": [
+      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime StartTime property ",
+    "prefix": "yPropStartTime"
+  },
+  "propEndDate": {
+    "body": [
+      "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime EndDate property ",
+    "prefix": "yPropEndDate"
+  },
+  "propEndTime": {
+    "body": [
+      "public DateTime$2 ${1:EndTime} { get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime EndTime property ",
+    "prefix": "yPropEndTime"
+  },
+  "propBirthDate": {
+    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
+    "description": "Inserts an BirthDate property ",
+    "prefix": "yPropBirthDate"
+  },
+  "propFilter": {
+    "body": ["public string Filter{ get; set; }$0"],
+    "description": "Inserts a Filter property ",
+    "prefix": "yPropFilter"
   }
 }
