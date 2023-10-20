@@ -8,7 +8,10 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": ["[ApiController]", "$0"],
+    "body": [
+      "[ApiController]",
+      "$0"
+    ],
     "description": "ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -20,16 +23,19 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": ["[Authorize]", "$0"],
+    "body": [
+      "[Authorize]",
+      "$0"
+    ],
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
-  "cascadingParaProp": {
+  "builderEntity": {
     "body": [
-      "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
+      "modelBuilder.Entity<${1:ClassName}>()$0;"
     ],
-    "description": "Inserts a property with CascadingParameter attribute",
-    "prefix": "yCascadingParaProp"
+    "description": "builder.Entity stub",
+    "prefix": "yBuilderEntity"
   },
   "cascadingPara": {
     "body": [
@@ -38,6 +44,13 @@
     "description": "Inserts a CascadingParameter attribute",
     "prefix": "yCascadingPara"
   },
+  "cascadingParaProp": {
+    "body": [
+      "[CascadingParameter$1] ${2:private} ${3:string} ${4:Name} { get; set; }$0"
+    ],
+    "description": "Inserts a property with CascadingParameter attribute",
+    "prefix": "yCascadingParaProp"
+  },
   "compareAttribute": {
     "body": [
       "[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
@@ -45,6 +58,16 @@
     ],
     "description": "Compare attribute",
     "prefix": "yCompareAttribute"
+  },
+  "dbSet": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSet"
+  },
+  "dbSetNewSyntax": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "yDbSetNewSyntax"
   },
   "eventCallback": {
     "body": [
@@ -90,12 +113,16 @@
     "prefix": "yEventHandlerAsync"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "{ get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "{ get, set }",
     "prefix": "yGs"
   },
@@ -122,109 +149,140 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
-  "httpClientDeleteAsync": {
+  "httpDeleteAsync": {
     "body": [
       "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
     ],
-    "description": "HttpClient.DeleteAsync call",
-    "prefix": "yHttpClientDeleteAsync"
+    "description": "Http.DeleteAsync call",
+    "prefix": "yHttpDeleteAsync"
   },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
     ],
-    "description": "HttpClient.GetAsync call",
-    "prefix": "yHttpClientGetAsync"
+    "description": "Http.GetAsync call",
+    "prefix": "yHttpGetAsync"
   },
-  "paginationState": {
-    "body": [
-      "protected PaginationState pagination = new PaginationState { ItemsPerPage = ${1:10};$0"
-    ],
-    "description": "Inserts a PaginationState field",
-    "prefix": "yPaginationState"
-  },
-  "httpClientGetFromByIdJsonAsync": {
+  "httpGetFromByIdJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
-    "description": "HttpClient.GetFromByIdJsonAsync call",
-    "prefix": "yHttpClientGetFromByIdJsonAsync"
+    "description": "Http.GetFromByIdJsonAsync call",
+    "prefix": "yHttpGetFromByIdJsonAsync"
   },
-  "httpClientGetFromJsonAsync": {
+  "httpGetFromJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
-    "description": "HttpClient.GetFromJsonAsync call",
-    "prefix": "yHttpClientGetFromJsonAsync"
+    "description": "Http.GetFromJsonAsync call",
+    "prefix": "yHttpGetFromJsonAsync"
   },
-  "httpClientPostAsJsonAsync": {
+  "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();",
       "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
       "return ${9:$6}Id;$0"
     ],
-    "description": "HttpClient.PostAsJsonAsync call",
-    "prefix": "yHttpClientPostAsJsonAsync"
+    "description": "Http.PostAsJsonAsync call",
+    "prefix": "yHttpPostAsJsonAsync"
   },
-  "httpClientPostAsync": {
+  "httpPostAsync": {
     "body": [
       "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();"
     ],
-    "description": "HttpClient.PostAsync call",
-    "prefix": "yHttpClientPostAsync"
+    "description": "Http.PostAsync call",
+    "prefix": "yHttpPostAsync"
   },
-  "httpClientPutAsJsonAsync": {
+  "httpPutAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();$0"
     ],
-    "description": "HttpClient.PutAsJsonAsync call",
-    "prefix": "yHttpClientPutAsJsonAsync"
+    "description": "Http.PutAsJsonAsync call",
+    "prefix": "yHttpPutAsJsonAsync"
   },
   "iEnumerable": {
-    "body": ["IEnumerable$1<${2:TypeName}>$0"],
+    "body": [
+      "IEnumerable$1<${2:TypeName}>$0"
+    ],
     "description": "IEnumerable statement",
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "yIf"
   },
+  "implementCorrespondingInterface": {
+    "body": "I${TM_FILENAME_BASE}$0",
+    "description": "Implements corresponding interface",
+    "prefix": "yImpCorrespondingInterface"
+  },
   "inheritsComponentBase": {
-    "body": [" ComponentBase$1"],
+    "body": [
+      " ComponentBase$1"
+    ],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
   "injectAttribute": {
-    "body": ["[Inject$1]$0"],
+    "body": [
+      "[Inject$1]$0"
+    ],
     "description": "Inserts InjectAttribute",
     "prefix": "yInjectAttribute"
   },
@@ -243,7 +301,9 @@
     "prefix": "yInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
@@ -269,17 +329,23 @@
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "invokeAsyncEventCallback": {
-    "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
+    "body": [
+      "await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"
+    ],
     "description": "Invoke async Eventcallback",
     "prefix": "yInvokeAsyncEventCallback"
   },
   "isNotNull": {
-    "body": ["!= null$0"],
+    "body": [
+      "!= null$0"
+    ],
     "description": "Is not null",
     "prefix": "yIsNotNull"
   },
   "isNull": {
-    "body": ["== null$0"],
+    "body": [
+      "== null$0"
+    ],
     "description": "Is equal to null",
     "prefix": "yIsNull"
   },
@@ -296,46 +362,6 @@
     ],
     "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
-  },
-  "methodAsyncWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async method stub with arguments",
-    "prefix": "yMethodAsyncWithArgs"
-  },
-  "methodAsyncReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub with arguments",
-    "prefix": "yMethodAsyncReturnWithArgs"
-  },
-  "methodReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub with arguments",
-    "prefix": "yMethodReturnWithArgs"
-  },
-  "methodVoidWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub with arguments",
-    "prefix": "yMethodVoidWithArgs"
   },
   "methodAsync": {
     "body": [
@@ -357,6 +383,26 @@
     "description": "async task method stub without arguments",
     "prefix": "yMethodAsyncReturn"
   },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "yMethodAsyncReturnWithArgs"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "yMethodAsyncWithArgs"
+  },
   "methodReturn": {
     "body": [
       "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
@@ -367,6 +413,16 @@
     "description": "method stub without arguments",
     "prefix": "yMethodReturn"
   },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "yMethodReturnWithArgs"
+  },
   "methodVoid": {
     "body": [
       "${1|internal,private,public,protected|} void ${3:MethodName}()",
@@ -376,6 +432,23 @@
     ],
     "description": "void method stub without arguments",
     "prefix": "yMethodVoid"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "yMethodVoidWithArgs"
+  },
+  "modelBuilderEntity": {
+    "body": [
+      "modelBuilder.Entity<${1:ClassName}>()$0;"
+    ],
+    "description": "builder.Entity stub",
+    "prefix": "yModelBuilderEntity"
   },
   "navigateTo": {
     "body": [
@@ -412,7 +485,12 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -427,7 +505,12 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -441,34 +524,19 @@
     "description": "OnParameterSetAsync method stub",
     "prefix": "yOnParametersSetAsync"
   },
-  "parameterProperty": {
+  "paginationState": {
     "body": [
-      "[Parameter$1] public ${2:Type} ${3:PropertyName} { get; set; }$0"
+      "protected PaginationState pagination = new PaginationState { ItemsPerPage = ${1:10};$0"
     ],
-    "description": "Inserts a property with Parameter attribute",
-    "prefix": "yParaProp"
-  },
-  "parameterIdProperty": {
-    "body": [
-      "[Parameter$1] public ${2|int,bool,DateTime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
-    ],
-    "description": "Inserts an Id property with Parameter attribute",
-    "prefix": "yParaIdProp"
+    "description": "Inserts a PaginationState field",
+    "prefix": "yPaginationState"
   },
   "parameterAttribute": {
-    "body": ["[Parameter$1]$0"],
+    "body": [
+      "[Parameter$1]$0"
+    ],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
-  },
-  "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
-    "description": "StringLength attribute",
-    "prefix": "yStringLengthAttribute"
-  },
-  "rangeAttribute": {
-    "body": ["[Range$1(${2:0},${2:1000})]$0"],
-    "description": "Range attribute",
-    "prefix": "yRangeAttribute"
   },
   "parameterCaptureUnmatchedValues ": {
     "body": [
@@ -477,158 +545,47 @@
     "description": "Parameter CaptureUnmatchedValues attribute",
     "prefix": "yParaCaptureUnmatchedValues"
   },
-  "readFromJsonAsync": {
+  "parameterIdProperty": {
     "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
+      "[Parameter$1] public ${2|int,bool,DateTime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
     ],
-    "description": "HttpClient.ReadFromJsonAsync call",
-    "prefix": "yReadIdFromJsonAsync"
+    "description": "Inserts an Id property with Parameter attribute",
+    "prefix": "yParaIdProp"
   },
-  "readOnlyHttpClientField": {
-    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
-    "description": "Readonly HttpClient field",
-    "prefix": "yReadOnlyHttpClientField"
-  },
-  "requiredAttribute": {
-    "body": ["[Required$1]", "$0"],
-    "description": "RequiredAttribute",
-    "prefix": "yRequiredAttribute"
-  },
-  "routeAttribute": {
-    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
-    "description": "RouteAttribute",
-    "prefix": "yRouteAttribute"
-  },
-  "setParametersAsync": {
+  "parameterProperty": {
     "body": [
-      "public override async Task$1 SetParametersAsync(ParameterView Parameters)",
-      "{",
-      "\t$0",
-      "",
-      "\tawait base.SetParametersAsync(Parameters);",
-      "}"
+      "[Parameter$1] public ${2:Type} ${3:PropertyName} { get; set; }$0"
     ],
-    "description": "SetParametersAsync method stub",
-    "prefix": "ySetParametersAsync"
+    "description": "Inserts a property with Parameter attribute",
+    "prefix": "yParaProp"
   },
-  "stateHasChanged": {
-    "body": "StateHasChanged();$0",
-    "description": "Inserts StateHasChanged() method",
-    "prefix": "yStateHasChanged"
-  },
-  "shouldRender": {
+  "propBirthDate": {
     "body": [
-      "protected override bool ShouldRender()",
-      "{",
-      "\t$0",
-      "\treturn true;",
-      "}"
+      "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
     ],
-    "description": "ShouldRender method stub",
-    "prefix": "yShouldRender"
-  },
-  "builderEntity": {
-    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
-    "description": "builder.Entity stub",
-    "prefix": "yBuilderEntity"
-  },
-  "modelBuilderEntity": {
-    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
-    "description": "builder.Entity stub",
-    "prefix": "yModelBuilderEntity"
-  },
-  "dbSet": {
-    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
-    "description": "Inserts a DbSet for a class statement in DbContext",
-    "prefix": "yDbSet"
-  },
-  "dbSetNewSyntax": {
-    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
-    "description": "Inserts a DbSet for a class statement in DbContext",
-    "prefix": "yDbSetNewSyntax"
-  },
-  "implementCorrespondingInterface": {
-    "body": "I${TM_FILENAME_BASE}$0",
-    "description": "Implements corresponding interface",
-    "prefix": "yImpCorrespondingInterface"
-  },
-  "propId": {
-    "body": [
-      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
-    ],
-    "description": "Inserts an Id property",
-    "prefix": "yPropId"
-  },
-  "propName": {
-    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Name property ",
-    "prefix": "yPropName"
-  },
-  "propFirstName": {
-    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a First Name property ",
-    "prefix": "yPropFirstName"
-  },
-  "propLastName": {
-    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a First Name property ",
-    "prefix": "yPropLastName"
-  },
-  "propZipCode": {
-    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a ZipCode property ",
-    "prefix": "yPropZipCode"
-  },
-  "propCountry": {
-    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Country property ",
-    "prefix": "yPropCountry"
-  },
-  "propMobilePhone": {
-    "body": [
-      "public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"
-    ],
-    "description": "Inserts a Mobile Phone property ",
-    "prefix": "yPropMobilePhone"
-  },
-  "propPhone": {
-    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Phone property ",
-    "prefix": "yPropPhone"
+    "description": "Inserts an BirthDate property ",
+    "prefix": "yPropBirthDate"
   },
   "propCity": {
-    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:City} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
-  "propStreet": {
-    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Street property ",
-    "prefix": "yPropStreet"
-  },
-  "propTitle": {
-    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
-    "description": "Inserts an Title property ",
-    "prefix": "yPropTitle"
+  "propCountry": {
+    "body": [
+      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Country property ",
+    "prefix": "yPropCountry"
   },
   "propDescription": {
-    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
+    "body": [
+      "public string Description{ get; ${1|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
-  },
-  "propStartDate": {
-    "body": [
-      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
-    ],
-    "description": "Inserts a DateTime StartDate property ",
-    "prefix": "yPropStartDate"
-  },
-  "propStartTime": {
-    "body": [
-      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
-    ],
-    "description": "Inserts a DateTime StartTime property ",
-    "prefix": "yPropStartTime"
   },
   "propEndDate": {
     "body": [
@@ -644,14 +601,160 @@
     "description": "Inserts a DateTime EndTime property ",
     "prefix": "yPropEndTime"
   },
-  "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
-    "description": "Inserts an BirthDate property ",
-    "prefix": "yPropBirthDate"
-  },
   "propFilter": {
-    "body": ["public string Filter{ get; set; }$0"],
+    "body": [
+      "public string Filter{ get; set; }$0"
+    ],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
+  },
+  "propFirstName": {
+    "body": [
+      "public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropFirstName"
+  },
+  "propId": {
+    "body": [
+      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an Id property",
+    "prefix": "yPropId"
+  },
+  "propLastName": {
+    "body": [
+      "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropLastName"
+  },
+  "propMobilePhone": {
+    "body": [
+      "public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Mobile Phone property ",
+    "prefix": "yPropMobilePhone"
+  },
+  "propName": {
+    "body": [
+      "public string ${1:Name} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Name property ",
+    "prefix": "yPropName"
+  },
+  "propPhone": {
+    "body": [
+      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Phone property ",
+    "prefix": "yPropPhone"
+  },
+  "propStartDate": {
+    "body": [
+      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a DateTime StartDate property ",
+    "prefix": "yPropStartDate"
+  },
+  "propStartTime": {
+    "body": [
+      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime StartTime property ",
+    "prefix": "yPropStartTime"
+  },
+  "propStreet": {
+    "body": [
+      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Street property ",
+    "prefix": "yPropStreet"
+  },
+  "propTitle": {
+    "body": [
+      "public string Title { get; ${1|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an Title property ",
+    "prefix": "yPropTitle"
+  },
+  "propZipCode": {
+    "body": [
+      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a ZipCode property ",
+    "prefix": "yPropZipCode"
+  },
+  "rangeAttribute": {
+    "body": [
+      "[Range$1(${2:0},${2:1000})]$0"
+    ],
+    "description": "Range attribute",
+    "prefix": "yRangeAttribute"
+  },
+  "readFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
+    ],
+    "description": "HttpClient.ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
+  },
+  "readOnlyHttpClientField": {
+    "body": [
+      "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"
+    ],
+    "description": "Readonly HttpClient field",
+    "prefix": "yReadOnlyHttpClientField"
+  },
+  "requiredAttribute": {
+    "body": [
+      "[Required$1]",
+      "$0"
+    ],
+    "description": "RequiredAttribute",
+    "prefix": "yRequiredAttribute"
+  },
+  "routeAttribute": {
+    "body": [
+      "[Route(\"${1:api/[controller]/[action]}\")]",
+      "$0"
+    ],
+    "description": "RouteAttribute",
+    "prefix": "yRouteAttribute"
+  },
+  "setParametersAsync": {
+    "body": [
+      "public override async Task$1 SetParametersAsync(ParameterView Parameters)",
+      "{",
+      "\t$0",
+      "",
+      "\tawait base.SetParametersAsync(Parameters);",
+      "}"
+    ],
+    "description": "SetParametersAsync method stub",
+    "prefix": "ySetParametersAsync"
+  },
+  "shouldRender": {
+    "body": [
+      "protected override bool ShouldRender()",
+      "{",
+      "\t$0",
+      "\treturn true;",
+      "}"
+    ],
+    "description": "ShouldRender method stub",
+    "prefix": "yShouldRender"
+  },
+  "stateHasChanged": {
+    "body": "StateHasChanged();$0",
+    "description": "Inserts StateHasChanged() method",
+    "prefix": "yStateHasChanged"
+  },
+  "stringLengthAttribute": {
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
+    "description": "StringLength attribute",
+    "prefix": "yStringLengthAttribute"
   }
 }
