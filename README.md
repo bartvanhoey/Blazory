@@ -96,7 +96,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropTitle                           | Inserts an Title property                                        
      yPropZipCode                         | Inserts a ZipCode property                                       
      yRangeAttribute                      | Range attribute                                                  
-     yReadIdFromJsonAsync                 | HttpClient.ReadFromJsonAsync call                                
+     yReadFromJsonAsync                   | ReadFromJsonAsync call                                           
+     yReadIdFromJsonAsync                 | ReadFromJsonAsync call                                           
      yReadOnlyHttpClientField             | Readonly HttpClient field                                        
      yRequiredAttribute                   | RequiredAttribute                                                
      yRouteAttribute                      | RouteAttribute                                                   
@@ -209,6 +210,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropTitle                        | Inserts an Title property                                   
      yPropZipCode                      | Inserts a ZipCode property                                  
      yQuickGrid                        | Inserts a QuickGrid                                         
+     yReadFromJsonAsync                | ReadFromJsonAsync call                                      
      yRef                              | @ref="MyProperty"                                           
      yTemplateColumn                   | TemplateColumn                                              
      yTemplatedComponent               | Templated component                                         

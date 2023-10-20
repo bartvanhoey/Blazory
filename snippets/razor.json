@@ -797,6 +797,13 @@
     "description": "Inserts a QuickGrid",
     "prefix": "yQuickGrid"
   },
+  "readFromJsonAsync": {
+    "body": [
+      "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadFromJsonAsync"
+  },
   "refAttribute": {
     "body": "@ref=\"${1:Property}\"",
     "description": "@ref=\"MyProperty\"",

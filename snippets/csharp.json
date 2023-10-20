@@ -692,12 +692,19 @@
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
+  "readIDFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
+  },
   "readFromJsonAsync": {
     "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<int>();$0"
+      "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
     ],
-    "description": "HttpClient.ReadFromJsonAsync call",
-    "prefix": "yReadIdFromJsonAsync"
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadFromJsonAsync"
   },
   "readOnlyHttpClientField": {
     "body": [
@@ -757,4 +764,5 @@
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
   }
+  
 }
