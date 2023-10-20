@@ -20,8 +20,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yDbSet                               | Inserts a DbSet for a class statement in DbContext               
      yDbSetNewSyntax                      | Inserts a DbSet for a class statement in DbContext               
      yEventCallback                       | EventCallback parameter                                          
+     yEventCallbackChanged                | EventCallbackChanged                                             
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
-     yEventCallbackOnParameterChanged     | EventCallbackOnParameterChanged                                  
      yEventHandler                        | EventHandler method stub                                         
      yEventHandlerAsync                   | EventHandlerAsync method stub                                    
      yGps                                 | { get, private set }                                             
@@ -126,6 +126,9 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yComponentDisposable              | Complete component inherits IDisposable                     
      yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yEditForm                         | Inserts EditForm component                                  
+     yEventCallback                    | EventCallback parameter                                     
+     yEventCallbackChanged             | EventCallbackChanged                                        
+     yEventCallbackExtended            | EventCallbackExtended parameter                             
      yFormControlClass                 | Inserts a form-control class attribute                      
      yGps                              | { get, private set }                                        
      yGs                               | { get, set }                                                

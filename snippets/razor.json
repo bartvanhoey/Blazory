@@ -812,5 +812,30 @@
     "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
+  },
+  "eventCallback": {
+    "body": [
+      "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
+    ],
+    "description": "EventCallback parameter",
+    "prefix": "yEventCallback"
+  },
+  "eventCallbackExtended": {
+    "body": [
+      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+    ],
+    "description": "EventCallbackExtended parameter",
+    "prefix": "yEventCallbackExtended"
+  },
+  "eventCallbackChanged": {
+    "body": [
+      "[Parameter]",
+      "public ${1:string} ${2:PropertyName} { get; set; }",
+      "",
+      "[Parameter]",
+      "public EventCallback<$1> $2Changed { get; set; }$0"
+    ],
+    "description": "EventCallbackChanged",
+    "prefix": "yEventCallbackChanged"
   }
 }

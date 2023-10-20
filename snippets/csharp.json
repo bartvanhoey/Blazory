@@ -83,14 +83,16 @@
     "description": "EventCallbackExtended parameter",
     "prefix": "yEventCallbackExtended"
   },
-  "eventCallbackOnParameterChanged": {
+  "eventCallbackChanged": {
     "body": [
-      "[Parameter] public ${1:string} ${2:ParameterName} { get; set; }",
+      "[Parameter]",
+      "public ${1:string} ${2:PropertyName} { get; set; }",
       "",
-      "[Parameter] public EventCallback<$1> $2Changed { get; set; }$0"
+      "[Parameter]",
+      "public EventCallback<$1> $2Changed { get; set; }$0"
     ],
-    "description": "EventCallbackOnParameterChanged",
-    "prefix": "yEventCallbackOnParameterChanged"
+    "description": "EventCallbackChanged",
+    "prefix": "yEventCallbackChanged"
   },
   "eventHandler": {
     "body": [
