@@ -211,6 +211,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropZipCode                      | Inserts a ZipCode property                                  
      yQuickGrid                        | Inserts a QuickGrid                                         
      yReadFromJsonAsync                | ReadFromJsonAsync call                                      
+     yReadIdFromJsonAsync              | ReadFromJsonAsync call                                      
      yRef                              | @ref="MyProperty"                                           
      yTemplateColumn                   | TemplateColumn                                              
      yTemplatedComponent               | Templated component                                         

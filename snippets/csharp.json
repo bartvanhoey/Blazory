@@ -692,7 +692,7 @@
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
-  "readIDFromJsonAsync": {
+  "readIdFromJsonAsync": {
     "body": [
       "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
     ],

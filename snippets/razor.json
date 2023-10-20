@@ -48,20 +48,12 @@
     "prefix": "yCascadingValue"
   },
   "codeBlock": {
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "yCode"
   },
   "columnOptions": {
-    "body": [
-      "<ColumnOptions>",
-      "\t",
-      "<ColumnOptions/>"
-    ],
+    "body": ["<ColumnOptions>", "\t", "<ColumnOptions/>"],
     "description": "ColumnOptions",
     "prefix": "yColumnOptions"
   },
@@ -138,16 +130,12 @@
     "prefix": "yFormControlClass"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "{ get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "{ get, set }",
     "prefix": "yGs"
   },
@@ -206,59 +194,32 @@
     "prefix": "yHttpPutAsJsonAsync"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "yIf"
   },
@@ -571,12 +532,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -591,12 +547,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -628,16 +579,12 @@
     "prefix": "yPageParam"
   },
   "paginator": {
-    "body": [
-      "<Paginator Value=\"@pagination\" />$0"
-    ],
+    "body": ["<Paginator Value=\"@pagination\" />$0"],
     "description": "PropertyColumn",
     "prefix": "yPaginator"
   },
   "parameterAttribute": {
-    "body": [
-      "[Parameter$1]$0"
-    ],
+    "body": ["[Parameter$1]$0"],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
@@ -656,30 +603,22 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": [
-      "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
-    ],
+    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
     "description": "Inserts an BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
-    "body": [
-      "public string ${1:City} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
   "propCountry": {
-    "body": [
-      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
   },
   "propDescription": {
-    "body": [
-      "public string Description{ get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
   },
@@ -698,16 +637,12 @@
     "prefix": "yPropEndTime"
   },
   "propFilter": {
-    "body": [
-      "public string Filter{ get; set; }$0"
-    ],
+    "body": ["public string Filter{ get; set; }$0"],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
   },
   "propFirstName": {
-    "body": [
-      "public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
     "prefix": "yPropFirstName"
   },
@@ -719,9 +654,7 @@
     "prefix": "yPropId"
   },
   "propLastName": {
-    "body": [
-      "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
     "prefix": "yPropLastName"
   },
@@ -733,16 +666,12 @@
     "prefix": "yPropMobilePhone"
   },
   "propName": {
-    "body": [
-      "public string ${1:Name} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
   "propPhone": {
-    "body": [
-      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
   },
@@ -761,23 +690,17 @@
     "prefix": "yPropStartTime"
   },
   "propStreet": {
-    "body": [
-      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Street property ",
     "prefix": "yPropStreet"
   },
   "propTitle": {
-    "body": [
-      "public string Title { get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
   },
   "propZipCode": {
-    "body": [
-      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a ZipCode property ",
     "prefix": "yPropZipCode"
   },
@@ -803,6 +726,13 @@
     ],
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
+  },
+  "readIdFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
   },
   "refAttribute": {
     "body": "@ref=\"${1:Property}\"",
@@ -879,12 +809,7 @@
     "prefix": "yVirtualizeComponent"
   },
   "voidDispose": {
-    "body": [
-      "\tpublic void Dispose()",
-      "\t{",
-      "\t\t$0",
-      "\t}"
-    ],
+    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }
