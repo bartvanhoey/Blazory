@@ -256,7 +256,7 @@
   },
   "injectService": {
     "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3} ${3:Name} { get; set; }$0"
+      "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0"
     ],
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
