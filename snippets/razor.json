@@ -822,18 +822,18 @@
   },
   "eventCallbackExtended": {
     "body": [
-      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+      "[Parameter$1] public EventCallback<${2:MouseEventArgs}> On${3:Click} { get; set; }$0"
     ],
     "description": "EventCallbackExtended parameter",
     "prefix": "yEventCallbackExtended"
   },
   "eventCallbackChanged": {
     "body": [
-      "[Parameter]",
-      "public ${1:string} ${2:PropertyName} { get; set; }",
+      "[Parameter$1]",
+      "public ${2:string} ${3:PropertyName} { get; set; }",
       "",
       "[Parameter]",
-      "public EventCallback<$1> $2Changed { get; set; }$0"
+      "public EventCallback<$2> $3Changed { get; set; }$0"
     ],
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
