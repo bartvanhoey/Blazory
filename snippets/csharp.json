@@ -249,7 +249,7 @@
   },
   "injectNavigationManager": {
     "body": [
-      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
+      "[Inject$1] public NavigationManager$2? ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
     ],
     "description": "Inject NavigationManager property",
     "prefix": "yInjectNavigationManager"
