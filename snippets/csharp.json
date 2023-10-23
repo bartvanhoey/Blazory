@@ -76,13 +76,6 @@
     "description": "EventCallback parameter",
     "prefix": "yEventCallback"
   },
-  "eventCallbackExtended": {
-    "body": [
-      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
-    ],
-    "description": "EventCallbackExtended parameter",
-    "prefix": "yEventCallbackExtended"
-  },
   "eventCallbackChanged": {
     "body": [
       "[Parameter]",
@@ -93,6 +86,13 @@
     ],
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
+  },
+  "eventCallbackExtended": {
+    "body": [
+      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+    ],
+    "description": "EventCallbackExtended parameter",
+    "prefix": "yEventCallbackExtended"
   },
   "eventHandler": {
     "body": [
@@ -151,19 +151,19 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
-  "httpDeleteAsync": {
-    "body": [
-      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
-    ],
-    "description": "Http.DeleteAsync call",
-    "prefix": "yHttpDeleteAsync"
-  },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
     ],
     "description": "Http.GetAsync call",
     "prefix": "yHttpGetAsync"
+  },
+  "httpDeleteAsync": {
+    "body": [
+      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+    ],
+    "description": "Http.DeleteAsync call",
+    "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
@@ -645,6 +645,13 @@
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
+  "propPage": {
+    "body": [
+      "public int Page { get; set;} }$0"
+    ],
+    "description": "Inserts a Page property",
+    "prefix": "yPropPage"
+  },
   "propPhone": {
     "body": [
       "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
@@ -694,19 +701,19 @@
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
-  "readIdFromJsonAsync": {
-    "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
-    ],
-    "description": "ReadFromJsonAsync call",
-    "prefix": "yReadIdFromJsonAsync"
-  },
   "readFromJsonAsync": {
     "body": [
       "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
     ],
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
+  },
+  "readIdFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
     "body": [
@@ -766,5 +773,4 @@
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
   }
-  
 }
