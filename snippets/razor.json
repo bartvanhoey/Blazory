@@ -38,10 +38,24 @@
     "description": "CascadingAuthenticationState stub",
     "prefix": "yCascadingAuthenticationState"
   },
+  "cascadingValue": {
+    "body": [
+      "<CascadingValue Value=\"@${1:PropertyName}\" Name=\"@${2:ValueName}\" IsFixed=\"false\" >",
+      "\t$0",
+      "</CascadingValue>"
+    ],
+    "description": "Inserts a CascadingValue attribute",
+    "prefix": "yCascadingValue"
+  },
   "codeBlock": {
     "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "yCode"
+  },
+  "columnOptions": {
+    "body": ["<ColumnOptions>", "\t", "<ColumnOptions/>"],
+    "description": "ColumnOptions",
+    "prefix": "yColumnOptions"
   },
   "component": {
     "body": [
@@ -115,6 +129,100 @@
     "description": "Inserts a form-control class attribute",
     "prefix": "yFormControlClass"
   },
+  "getPrivateSet": {
+    "body": ["{ get; private set; }$0"],
+    "description": "{ get, private set }",
+    "prefix": "yGps"
+  },
+  "getSet": {
+    "body": ["{ get; set; }$0"],
+    "description": "{ get, set }",
+    "prefix": "yGs"
+  },
+  "httpClientGetAsync": {
+    "body": [
+      "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
+    ],
+    "description": "Http.GetAsync call",
+    "prefix": "yHttpGetAsync"
+  },
+  "httpDeleteAsync": {
+    "body": [
+      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+    ],
+    "description": "Http.DeleteAsync call",
+    "prefix": "yHttpDeleteAsync"
+  },
+  "httpGetFromByIdJsonAsync": {
+    "body": [
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
+    ],
+    "description": "Http.GetFromByIdJsonAsync call",
+    "prefix": "yHttpGetFromByIdJsonAsync"
+  },
+  "httpGetFromJsonAsync": {
+    "body": [
+      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
+    ],
+    "description": "Http.GetFromJsonAsync call",
+    "prefix": "yHttpGetFromJsonAsync"
+  },
+  "httpPostAsJsonAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();",
+      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
+      "return ${9:$6}Id;$0"
+    ],
+    "description": "Http.PostAsJsonAsync call",
+    "prefix": "yHttpPostAsJsonAsync"
+  },
+  "httpPostAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();"
+    ],
+    "description": "Http.PostAsync call",
+    "prefix": "yHttpPostAsync"
+  },
+  "httpPutAsJsonAsync": {
+    "body": [
+      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "response.EnsureSuccessStatusCode();$0"
+    ],
+    "description": "Http.PutAsJsonAsync call",
+    "prefix": "yHttpPutAsJsonAsync"
+  },
+  "ifInlineStatement": {
+    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "description": "If inline statement",
+    "prefix": "yIfInline"
+  },
+  "ifNotNullInlineStatement": {
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "description": "If not null inline statement",
+    "prefix": "yIfNotNullInline statement"
+  },
+  "ifNotNullStatement": {
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "description": "If not null statement",
+    "prefix": "yIfNotNull"
+  },
+  "ifNullInlineStatement": {
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "description": "If null inline statement",
+    "prefix": "yIfNullInline statement"
+  },
+  "ifNullStatement": {
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "description": "If null statement",
+    "prefix": "yIfNull"
+  },
+  "ifStatement": {
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "description": "If statement",
+    "prefix": "yIf"
+  },
   "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
     "description": "@implements IDisposable",
@@ -125,45 +233,6 @@
     "description": "@inherits C# code-behind base class",
     "prefix": "yInheritsBaseComponent"
   },
-  "inheritsOwningComponentBase": {
-    "body": "@inherits OwningComponentBase<${1:ApplicationDbContext}>$0",
-    "description": "@inherits OwningComponentBase<ApplicationDbContext>",
-    "prefix": "yInheritsOwningComponentBase"
-  },
-  "quickGrid": {
-    "body": [
-      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" />",
-      "\t$0",
-      "</QuickGrid>"
-    ],
-    "description": "Inserts a QuickGrid",
-    "prefix": "yQuickGrid"
-  },
-  "propertyColumn": {
-    "body": [
-      "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0"
-    ],
-    "description": "PropertyColumn",
-    "prefix": "yPropertyColumn"
-  },
-  "templateColumn": {
-    "body": [
-      "<TemplateColumn Title=\"${1:Title}\" Align=\"@Align.${2|Left,Center,Right|}\" />$0"
-    ],
-    "description": "TemplateColumn",
-    "prefix": "yTemplateColumn"
-  },
-  "columnOptions": {
-    "body": ["<ColumnOptions>", "\t", "<ColumnOptions/>"],
-    "description": "ColumnOptions",
-    "prefix": "yColumnOptions"
-  },
-  "paginator": {
-    "body": ["<Paginator Value=\"@pagination\" />$0"],
-    "description": "PropertyColumn",
-    "prefix": "yPaginator"
-  },
-
   "inheritsLayoutComponentBase": {
     "body": [
       "@inherits LayoutComponentBase",
@@ -176,6 +245,11 @@
     ],
     "description": "Complete Layout component inherits LayoutComponentBase",
     "prefix": "yInheritsLayoutComponentBase"
+  },
+  "inheritsOwningComponentBase": {
+    "body": "@inherits OwningComponentBase<${1:ApplicationDbContext}>$0",
+    "description": "@inherits OwningComponentBase<ApplicationDbContext>",
+    "prefix": "yInheritsOwningComponentBase"
   },
   "injectHttpClient": {
     "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
@@ -202,11 +276,6 @@
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
-  "injectServiceDirective": {
-    "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
-    "description": "@inject MyService myService",
-    "prefix": "yInjectService"
-  },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
     "description": "@inject NavigationManager directive",
@@ -216,6 +285,11 @@
     "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|}$0",
     "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
     "prefix": "yInjectProtectedLocalStorage"
+  },
+  "injectServiceDirective": {
+    "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
+    "description": "@inject MyService myService",
+    "prefix": "yInjectService"
   },
   "injectSignOutSessionStateManager": {
     "body": [
@@ -292,15 +366,6 @@
     ],
     "description": "Inserts an InputNumber component + label",
     "prefix": "yInputNumberAndLabel"
-  },
-  "cascadingValue": {
-    "body": [
-      "<CascadingValue Value=\"@${1:PropertyName}\" Name=\"@${2:ValueName}\" IsFixed=\"false\" >",
-      "\t$0",
-      "</CascadingValue>"
-    ],
-    "description": "Inserts a CascadingValue attribute",
-    "prefix": "yCascadingValue"
   },
   "inputRadio": {
     "body": "<InputRadio Value=\"${1:value}\" />$0",
@@ -384,6 +449,20 @@
     "description": "Inserts an InputText component",
     "prefix": "yInputText"
   },
+  "inputTextAndLabel": {
+    "body": [
+      "<div class=\"mb-3\">",
+      "\t<label for=\"id$2\">${3:$2}</label>",
+      "\t<div>",
+      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
+      "\t</div>",
+      "</div>",
+      "$0"
+    ],
+    "description": "Inserts an InputText component + label",
+    "prefix": "yInputTextAndLabel"
+  },
   "inputTextArea": {
     "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
     "description": "Inserts an InputTextArea component",
@@ -403,20 +482,6 @@
     "description": "Inserts an InputTextArea component + label",
     "prefix": "inputTextAreaAndLabel"
   },
-  "inputTextAndLabel": {
-    "body": [
-      "<div class=\"mb-3\">",
-      "\t<label for=\"id$2\">${3:$2}</label>",
-      "\t<div>",
-      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
-      "\t</div>",
-      "</div>",
-      "$0"
-    ],
-    "description": "Inserts an InputText component + label",
-    "prefix": "yInputTextAndLabel"
-  },
   "layoutDirective": {
     "body": "@layout ${1:LayoutName}",
     "description": "@layout MyLayout",
@@ -431,6 +496,70 @@
     "body": "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>",
     "description": "NavLink with MatchAttribute",
     "prefix": "yNavLinkMatch"
+  },
+  "navigateTo": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
+    ],
+    "description": "NavigationManager.NavigateTo page",
+    "prefix": "yNavigateToPage"
+  },
+  "navigateToId": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
+    ],
+    "description": "NavigationManager.NavigateTo page\\Id",
+    "prefix": "yNavigateToId"
+  },
+  "onAfterRender": {
+    "body": [
+      "protected override void OnAfterRender(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRender method stub",
+    "prefix": "yOnAfterRender"
+  },
+  "onAfterRenderAsync": {
+    "body": [
+      "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRenderAsync method stub",
+    "prefix": "yOnAfterRenderAsync"
+  },
+  "onInitialized": {
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "description": "OnInitialized method stub",
+    "prefix": "yOnInitialized"
+  },
+  "onInitializedAsync": {
+    "body": [
+      "protected override async Task$1 OnInitializedAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitializedAsync method stub",
+    "prefix": "yOnInitializedAsync"
+  },
+  "onParametersSet": {
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "description": "OnParameterSet method stub",
+    "prefix": "yOnParametersSet"
+  },
+  "onParametersSetAsync": {
+    "body": [
+      "protected override async Task$1 OnParametersSetAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSetAsync method stub",
+    "prefix": "yOnParametersSetAsync"
   },
   "onValidSubmit": {
     "body": "OnValidSubmit=\"${1:MethodName}\"$0",
@@ -449,10 +578,173 @@
     "description": "@page directive with Parameter",
     "prefix": "yPageParam"
   },
+  "paginator": {
+    "body": ["<Paginator Value=\"@pagination\" />$0"],
+    "description": "PropertyColumn",
+    "prefix": "yPaginator"
+  },
+  "parameterAttribute": {
+    "body": ["[Parameter$1]$0"],
+    "description": "Inserts a Parameter attribute",
+    "prefix": "yParaAttribute"
+  },
+  "parameterIdProperty": {
+    "body": [
+      "[Parameter$1] public ${2|int,bool,DateTime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
+    ],
+    "description": "Inserts an Id property with Parameter attribute",
+    "prefix": "yParaIdProp"
+  },
+  "parameterProperty": {
+    "body": [
+      "[Parameter$1] public ${2:Type} ${3:PropertyName} { get; set; }$0"
+    ],
+    "description": "Inserts a property with Parameter attribute",
+    "prefix": "yParaProp"
+  },
+  "propBirthDate": {
+    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
+    "description": "Inserts an BirthDate property ",
+    "prefix": "yPropBirthDate"
+  },
+  "propCity": {
+    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a City property ",
+    "prefix": "yPropCity"
+  },
+  "propCountry": {
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Country property ",
+    "prefix": "yPropCountry"
+  },
+  "propDescription": {
+    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
+    "description": "Inserts a Description property ",
+    "prefix": "yPropDescription"
+  },
+  "propEndDate": {
+    "body": [
+      "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime EndDate property ",
+    "prefix": "yPropEndDate"
+  },
+  "propEndTime": {
+    "body": [
+      "public DateTime$2 ${1:EndTime} { get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime EndTime property ",
+    "prefix": "yPropEndTime"
+  },
+  "propFilter": {
+    "body": ["public string Filter{ get; set; }$0"],
+    "description": "Inserts a Filter property ",
+    "prefix": "yPropFilter"
+  },
+  "propFirstName": {
+    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropFirstName"
+  },
+  "propId": {
+    "body": [
+      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an Id property",
+    "prefix": "yPropId"
+  },
+  "propLastName": {
+    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "yPropLastName"
+  },
+  "propMobilePhone": {
+    "body": [
+      "public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Mobile Phone property ",
+    "prefix": "yPropMobilePhone"
+  },
+  "propName": {
+    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Name property ",
+    "prefix": "yPropName"
+  },
+  "propPhone": {
+    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Phone property ",
+    "prefix": "yPropPhone"
+  },
+  "propStartDate": {
+    "body": [
+      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a DateTime StartDate property ",
+    "prefix": "yPropStartDate"
+  },
+  "propStartTime": {
+    "body": [
+      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime StartTime property ",
+    "prefix": "yPropStartTime"
+  },
+  "propStreet": {
+    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Street property ",
+    "prefix": "yPropStreet"
+  },
+  "propTitle": {
+    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
+    "description": "Inserts an Title property ",
+    "prefix": "yPropTitle"
+  },
+  "propZipCode": {
+    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a ZipCode property ",
+    "prefix": "yPropZipCode"
+  },
+  "propertyColumn": {
+    "body": [
+      "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0"
+    ],
+    "description": "PropertyColumn",
+    "prefix": "yPropertyColumn"
+  },
+  "quickGrid": {
+    "body": [
+      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" />",
+      "\t$0",
+      "</QuickGrid>"
+    ],
+    "description": "Inserts a QuickGrid",
+    "prefix": "yQuickGrid"
+  },
+  "readFromJsonAsync": {
+    "body": [
+      "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadFromJsonAsync"
+  },
+  "readIdFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
+  },
   "refAttribute": {
     "body": "@ref=\"${1:Property}\"",
     "description": "@ref=\"MyProperty\"",
     "prefix": "yRef"
+  },
+  "templateColumn": {
+    "body": [
+      "<TemplateColumn Title=\"${1:Title}\" Align=\"@Align.${2|Left,Center,Right|}\" />$0"
+    ],
+    "description": "TemplateColumn",
+    "prefix": "yTemplateColumn"
   },
   "templatedComponent": {
     "body": [
@@ -521,227 +813,29 @@
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   },
-  "onAfterRender": {
+  "eventCallback": {
     "body": [
-      "protected override void OnAfterRender(bool firstRender)",
-      "{",
-      "\t$0",
-      "}"
+      "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ],
-    "description": "OnAfterRender method stub",
-    "prefix": "yOnAfterRender"
+    "description": "EventCallback parameter",
+    "prefix": "yEventCallback"
   },
-  "onAfterRenderAsync": {
+  "eventCallbackExtended": {
     "body": [
-      "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
-      "{",
-      "\t$0",
-      "}"
+      "[Parameter$1] public EventCallback<${2:MouseEventArgs}> On${3:Click} { get; set; }$0"
     ],
-    "description": "OnAfterRenderAsync method stub",
-    "prefix": "yOnAfterRenderAsync"
+    "description": "EventCallbackExtended parameter",
+    "prefix": "yEventCallbackExtended"
   },
-  "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
-    "description": "OnInitialized method stub",
-    "prefix": "yOnInitialized"
-  },
-  "onInitializedAsync": {
+  "eventCallbackChanged": {
     "body": [
-      "protected override async Task$1 OnInitializedAsync()",
-      "{",
-      "\t$0",
-      "}"
+      "[Parameter$1]",
+      "public ${2:string} ${3:PropertyName} { get; set; }",
+      "",
+      "[Parameter]",
+      "public EventCallback<$2> $3Changed { get; set; }$0"
     ],
-    "description": "OnInitializedAsync method stub",
-    "prefix": "yOnInitializedAsync"
-  },
-  "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
-    "description": "OnParameterSet method stub",
-    "prefix": "yOnParametersSet"
-  },
-  "onParametersSetAsync": {
-    "body": [
-      "protected override async Task$1 OnParametersSetAsync()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "OnParameterSetAsync method stub",
-    "prefix": "yOnParametersSetAsync"
-  }, "parameterProperty": {
-    "body": [
-      "[Parameter$1] public ${2:Type} ${3:PropertyName} { get; set; }$0"
-    ],
-    "description": "Inserts a property with Parameter attribute",
-    "prefix": "yParaProp"
-  },
-  "parameterIdProperty": {
-    "body": [
-      "[Parameter$1] public ${2|int,bool,DateTime,decimal,double,float,guid,long,string|} Id { get; set; }$0"
-    ],
-    "description": "Inserts an Id property with Parameter attribute",
-    "prefix": "yParaIdProp"
-  },
-  "parameterAttribute": {
-    "body": ["[Parameter$1]$0"],
-    "description": "Inserts a Parameter attribute",
-    "prefix": "yParaAttribute"
-  },   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
-    "description": "{ get, private set }",
-    "prefix": "yGps"
-  },
-  "getSet": {
-    "body": ["{ get; set; }$0"],
-    "description": "{ get, set }",
-    "prefix": "yGs"
-  }, 
-  "propId": {
-    "body": [
-      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
-    ],
-    "description": "Inserts an Id property",
-    "prefix": "yPropId"
-  },
-  "propName": {
-    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Name property ",
-    "prefix": "yPropName"
-  },
-  "propFirstName": {
-    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a First Name property ",
-    "prefix": "yPropFirstName"
-  },
-  "propLastName": {
-    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a First Name property ",
-    "prefix": "yPropLastName"
-  },
-  "propZipCode": {
-    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a ZipCode property ",
-    "prefix": "yPropZipCode"
-  },
-  "propCountry": {
-    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Country property ",
-    "prefix": "yPropCountry"
-  },
-  "propMobilePhone": {
-    "body": [
-      "public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"
-    ],
-    "description": "Inserts a Mobile Phone property ",
-    "prefix": "yPropMobilePhone"
-  },
-  "propPhone": {
-    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Phone property ",
-    "prefix": "yPropPhone"
-  },
-  "propCity": {
-    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a City property ",
-    "prefix": "yPropCity"
-  },
-  "propStreet": {
-    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a Street property ",
-    "prefix": "yPropStreet"
-  },
-  "propTitle": {
-    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
-    "description": "Inserts an Title property ",
-    "prefix": "yPropTitle"
-  },
-  "propDescription": {
-    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
-    "description": "Inserts a Description property ",
-    "prefix": "yPropDescription"
-  },
-  "propStartDate": {
-    "body": [
-      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
-    ],
-    "description": "Inserts a DateTime StartDate property ",
-    "prefix": "yPropStartDate"
-  },
-  "propStartTime": {
-    "body": [
-      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
-    ],
-    "description": "Inserts a DateTime StartTime property ",
-    "prefix": "yPropStartTime"
-  },
-  "propEndDate": {
-    "body": [
-      "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"
-    ],
-    "description": "Inserts a DateTime EndDate property ",
-    "prefix": "yPropEndDate"
-  },
-  "propEndTime": {
-    "body": [
-      "public DateTime$2 ${1:EndTime} { get; ${3|set;,private set;|}  }$0"
-    ],
-    "description": "Inserts a DateTime EndTime property ",
-    "prefix": "yPropEndTime"
-  },
-  "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
-    "description": "Inserts an BirthDate property ",
-    "prefix": "yPropBirthDate"
-  },
-  "propFilter": {
-    "body": ["public string Filter{ get; set; }$0"],
-    "description": "Inserts a Filter property ",
-    "prefix": "yPropFilter"
-  }, 
-  "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
-    "description": "If inline statement",
-    "prefix": "yIfInline"
-  },
-  "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
-    "description": "If not null inline statement",
-    "prefix": "yIfNotNullInline statement"
-  },
-  "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
-    "description": "If not null statement",
-    "prefix": "yIfNotNull"
-  },
-  "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
-    "description": "If null inline statement",
-    "prefix": "yIfNullInline statement"
-  },
-  "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
-    "description": "If null statement",
-    "prefix": "yIfNull"
-  },
-  "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
-    "description": "If statement",
-    "prefix": "yIf"
-  },
-  "navigateTo": {
-    "body": [
-      "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
-    ],
-    "description": "NavigationManager.NavigateTo page",
-    "prefix": "yNavigateToPage"
-  },
-  "navigateToId": {
-    "body": [
-      "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
-    ],
-    "description": "NavigationManager.NavigateTo page\\Id",
-    "prefix": "yNavigateToId"
+    "description": "EventCallbackChanged",
+    "prefix": "yEventCallbackChanged"
   }
 }

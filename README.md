@@ -20,20 +20,20 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yDbSet                               | Inserts a DbSet for a class statement in DbContext               
      yDbSetNewSyntax                      | Inserts a DbSet for a class statement in DbContext               
      yEventCallback                       | EventCallback parameter                                          
+     yEventCallbackChanged                | EventCallbackChanged                                             
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
-     yEventCallbackOnParameterChanged     | EventCallbackOnParameterChanged                                  
      yEventHandler                        | EventHandler method stub                                         
      yEventHandlerAsync                   | EventHandlerAsync method stub                                    
      yGps                                 | { get, private set }                                             
      yGs                                  | { get, set }                                                     
      yHandleFileChosenAsync               | Inserts the HandleFileChosenAsync method for an InputFile element
-     yHttpClientDeleteAsync               | HttpClient.DeleteAsync call                                      
-     yHttpClientGetAsync                  | HttpClient.GetAsync call                                         
-     yHttpClientGetFromByIdJsonAsync      | HttpClient.GetFromByIdJsonAsync call                             
-     yHttpClientGetFromJsonAsync          | HttpClient.GetFromJsonAsync call                                 
-     yHttpClientPostAsJsonAsync           | HttpClient.PostAsJsonAsync call                                  
-     yHttpClientPostAsync                 | HttpClient.PostAsync call                                        
-     yHttpClientPutAsJsonAsync            | HttpClient.PutAsJsonAsync call                                   
+     yHttpDeleteAsync                     | Http.DeleteAsync call                                            
+     yHttpGetAsync                        | Http.GetAsync call                                               
+     yHttpGetFromByIdJsonAsync            | Http.GetFromByIdJsonAsync call                                   
+     yHttpGetFromJsonAsync                | Http.GetFromJsonAsync call                                       
+     yHttpPostAsJsonAsync                 | Http.PostAsJsonAsync call                                        
+     yHttpPostAsync                       | Http.PostAsync call                                              
+     yHttpPutAsJsonAsync                  | Http.PutAsJsonAsync call                                         
      yIEnumerable                         | IEnumerable statement                                            
      yIf                                  | If statement                                                     
      yIfInline                            | If inline statement                                              
@@ -77,8 +77,27 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
      yParaIdProp                          | Inserts an Id property with Parameter attribute                  
      yParaProp                            | Inserts a property with Parameter attribute                      
+     yPropBirthDate                       | Inserts an BirthDate property                                    
+     yPropCity                            | Inserts a City property                                          
+     yPropCountry                         | Inserts a Country property                                       
+     yPropDescription                     | Inserts a Description property                                   
+     yPropEndDate                         | Inserts a DateTime EndDate property                              
+     yPropEndTime                         | Inserts a DateTime EndTime property                              
+     yPropFilter                          | Inserts a Filter property                                        
+     yPropFirstName                       | Inserts a First Name property                                    
+     yPropId                              | Inserts an Id property                                           
+     yPropLastName                        | Inserts a First Name property                                    
+     yPropMobilePhone                     | Inserts a Mobile Phone property                                  
+     yPropName                            | Inserts a Name property                                          
+     yPropPhone                           | Inserts a Phone property                                         
+     yPropStartDate                       | Inserts a DateTime StartDate property                            
+     yPropStartTime                       | Inserts a DateTime StartTime property                            
+     yPropStreet                          | Inserts a Street property                                        
+     yPropTitle                           | Inserts an Title property                                        
+     yPropZipCode                         | Inserts a ZipCode property                                       
      yRangeAttribute                      | Range attribute                                                  
-     yReadIdFromJsonAsync                 | HttpClient.ReadFromJsonAsync call                                
+     yReadFromJsonAsync                   | ReadFromJsonAsync call                                           
+     yReadIdFromJsonAsync                 | ReadFromJsonAsync call                                           
      yReadOnlyHttpClientField             | Readonly HttpClient field                                        
      yRequiredAttribute                   | RequiredAttribute                                                
      yRouteAttribute                      | RouteAttribute                                                   
@@ -107,7 +126,25 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yComponentDisposable              | Complete component inherits IDisposable                     
      yDataAnnotationsValidator         | DataAnnotationsValidator                                    
      yEditForm                         | Inserts EditForm component                                  
+     yEventCallback                    | EventCallback parameter                                     
+     yEventCallbackChanged             | EventCallbackChanged                                        
+     yEventCallbackExtended            | EventCallbackExtended parameter                             
      yFormControlClass                 | Inserts a form-control class attribute                      
+     yGps                              | { get, private set }                                        
+     yGs                               | { get, set }                                                
+     yHttpDeleteAsync                  | Http.DeleteAsync call                                       
+     yHttpGetAsync                     | Http.GetAsync call                                          
+     yHttpGetFromByIdJsonAsync         | Http.GetFromByIdJsonAsync call                              
+     yHttpGetFromJsonAsync             | Http.GetFromJsonAsync call                                  
+     yHttpPostAsJsonAsync              | Http.PostAsJsonAsync call                                   
+     yHttpPostAsync                    | Http.PostAsync call                                         
+     yHttpPutAsJsonAsync               | Http.PutAsJsonAsync call                                    
+     yIf                               | If statement                                                
+     yIfInline                         | If inline statement                                         
+     yIfNotNull                        | If not null statement                                       
+     yIfNotNullInline statement        | If not null inline statement                                
+     yIfNull                           | If null statement                                           
+     yIfNullInline statement           | If null inline statement                                    
      yImplementsIDisposable            | @implements IDisposable                                     
      yInheritsBaseComponent            | @inherits C# code-behind base class                         
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
@@ -119,7 +156,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yInjectIMapper                    | @inject IMapper directive                                   
      yInjectNavigationManager          | @inject NavigationManager directive                         
      yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
-     yInjectService                    | @inject MyService MyService                                 
+     yInjectService                    | @inject MyService myService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | Inserts an InputCheckbox component                          
      yInputCheckBoxAndLabel            | Inserts an InputCheckBox component + label                  
@@ -138,15 +175,46 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yInputTextAndLabel                | Inserts an InputText component + label                      
      yInputTextArea                    | Inserts an InputTextArea component                          
      yLayout                           | @layout MyLayout                                            
+     yNavigateToId                     | NavigationManager.NavigateTo page\\Id                       
+     yNavigateToPage                   | NavigationManager.NavigateTo page                           
      yNavLink                          | NavLink                                                     
      yNavLinkMatch                     | NavLink with MatchAttribute                                 
+     yOnAfterRender                    | OnAfterRender method stub                                   
+     yOnAfterRenderAsync               | OnAfterRenderAsync method stub                              
+     yOnInitialized                    | OnInitialized method stub                                   
+     yOnInitializedAsync               | OnInitializedAsync method stub                              
+     yOnParametersSet                  | OnParameterSet method stub                                  
+     yOnParametersSetAsync             | OnParameterSetAsync method stub                             
      yOnValidSubmit                    | OnValidSubmit                                               
      yPage                             | @page directive                                             
      yPageParam                        | @page directive with Parameter                              
      yPaginator                        | PropertyColumn                                              
+     yParaAttribute                    | Inserts a Parameter attribute                               
+     yParaIdProp                       | Inserts an Id property with Parameter attribute             
+     yParaProp                         | Inserts a property with Parameter attribute                 
      yPreventDefault                   | PreventDefault attribute                                    
+     yPropBirthDate                    | Inserts an BirthDate property                               
+     yPropCity                         | Inserts a City property                                     
+     yPropCountry                      | Inserts a Country property                                  
+     yPropDescription                  | Inserts a Description property                              
+     yPropEndDate                      | Inserts a DateTime EndDate property                         
+     yPropEndTime                      | Inserts a DateTime EndTime property                         
      yPropertyColumn                   | PropertyColumn                                              
+     yPropFilter                       | Inserts a Filter property                                   
+     yPropFirstName                    | Inserts a First Name property                               
+     yPropId                           | Inserts an Id property                                      
+     yPropLastName                     | Inserts a First Name property                               
+     yPropMobilePhone                  | Inserts a Mobile Phone property                             
+     yPropName                         | Inserts a Name property                                     
+     yPropPhone                        | Inserts a Phone property                                    
+     yPropStartDate                    | Inserts a DateTime StartDate property                       
+     yPropStartTime                    | Inserts a DateTime StartTime property                       
+     yPropStreet                       | Inserts a Street property                                   
+     yPropTitle                        | Inserts an Title property                                   
+     yPropZipCode                      | Inserts a ZipCode property                                  
      yQuickGrid                        | Inserts a QuickGrid                                         
+     yReadFromJsonAsync                | ReadFromJsonAsync call                                      
+     yReadIdFromJsonAsync              | ReadFromJsonAsync call                                      
      yRef                              | @ref="MyProperty"                                           
      yTemplateColumn                   | TemplateColumn                                              
      yTemplatedComponent               | Templated component                                         
