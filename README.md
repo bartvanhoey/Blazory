@@ -227,6 +227,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yTemplatedComponent               | Templated component                                         
      yTypeParam                        | @typeParam                                                  
      yUsing                            | @using MyNameSpace                                          
+     yUsingQuickGrid                   | @using QuickGrid NameSpace                                  
      yValidationMessageFor             | ValidationMessageFor                                        
      yValidationSummary                | ValidationSummary component                                 
      yVirtualizeComponent              | Inserts the Virtualize component                            
