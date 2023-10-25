@@ -124,20 +124,20 @@
     "description": "EventHandlerAsync method stub",
     "prefix": "yEventHandlerAsync"
   },
-  "getAsyncIAppServiceMethodDefinition": {
+  "getAsyncMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync method definition for an interface",
-    "prefix": "yGetAsyncMehthodDefinition"
+    "prefix": "yGetAsyncMethodDefinition"
   },
-  "getListAsyncIAppServiceMethodDefinition": {
+  "getListAsyncMethodDefinition": {
     "body": [
       "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> GetListAsync($4);$0"
     ],
-    "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "yGetListAsyncIAppServiceMethodDefinition"
+    "description": "Inserts a GetListAsync definition for an interface",
+    "prefix": "yGetListAsyncMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
