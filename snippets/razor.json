@@ -822,7 +822,7 @@
   },
   "quickGrid": {
     "body": [
-      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" />",
+      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" >",
       "\t$0",
       "</QuickGrid>"
     ],
