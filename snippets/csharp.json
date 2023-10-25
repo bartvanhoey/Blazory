@@ -59,6 +59,11 @@
     "description": "Compare attribute",
     "prefix": "yCompareAttribute"
   },
+  "createAsyncMethodDefinition": {
+    "body": "Task$1<${2:Type}> CreateAsync(${3:Type} ${4:${3/(.*)/${1:/downcase}/}});$0",
+    "description": "Adds a CreateAsync method Definition to an Interface ",
+    "prefix": "yCreateAsyncMethodDefinition"
+  },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
@@ -68,6 +73,11 @@
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "yDbSetNewSyntax"
+  },
+  "deleteAsyncMethodDefinition": {
+    "body": "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+    "description": "Adds a DeleteAsync method definition for an interface",
+    "prefix": "yDeleteAsyncMethodDefinition"
   },
   "eventCallback": {
     "body": [
@@ -113,6 +123,21 @@
     ],
     "description": "EventHandlerAsync method stub",
     "prefix": "yEventHandlerAsync"
+  },
+  "getAsyncIAppServiceMethodDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
+      "\t$0"
+    ],
+    "description": "Inserts a GetAsync method definition for an interface",
+    "prefix": "yGetAsyncMehthodDefinition"
+  },
+  "getListAsyncIAppServiceMethodDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> GetListAsync($4);$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an IAppService interface",
+    "prefix": "yGetListAsyncIAppServiceMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
@@ -772,5 +797,10 @@
     ],
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
+  },
+  "updateAsyncMethodDefinition": {
+    "body": "public Task$1 UpdateAsync(${2|Guid,int,string|} id, ${3:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$4 ${5:${3/(.*)/${1:/downcase}/}});$0",
+    "description": "Adds a UpdateAsync method definition for an interface",
+    "prefix": "yUpdateAsyncMethodDefinition"
   }
 }
