@@ -59,6 +59,11 @@
     "description": "Compare attribute",
     "prefix": "yCompareAttribute"
   },
+  "createAsyncMethodDefinition": {
+    "body": "Task$1<${2:Type}> CreateAsync(${3:Type} ${4:${3/(.*)/${1:/downcase}/}});$0",
+    "description": "Adds a CreateAsync method Definition to an Interface ",
+    "prefix": "yCreateAsyncMethodDefinition"
+  },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
@@ -69,19 +74,17 @@
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "yDbSetNewSyntax"
   },
+  "deleteAsyncMethodDefinition": {
+    "body": "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+    "description": "Adds a DeleteAsync method definition for an interface",
+    "prefix": "yDeleteAsyncMethodDefinition"
+  },
   "eventCallback": {
     "body": [
       "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ],
     "description": "EventCallback parameter",
     "prefix": "yEventCallback"
-  },
-  "eventCallbackExtended": {
-    "body": [
-      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
-    ],
-    "description": "EventCallbackExtended parameter",
-    "prefix": "yEventCallbackExtended"
   },
   "eventCallbackChanged": {
     "body": [
@@ -93,6 +96,13 @@
     ],
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
+  },
+  "eventCallbackExtended": {
+    "body": [
+      "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
+    ],
+    "description": "EventCallbackExtended parameter",
+    "prefix": "yEventCallbackExtended"
   },
   "eventHandler": {
     "body": [
@@ -113,6 +123,21 @@
     ],
     "description": "EventHandlerAsync method stub",
     "prefix": "yEventHandlerAsync"
+  },
+  "getAsyncMethodDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
+      "\t$0"
+    ],
+    "description": "Inserts a GetAsync method definition for an interface",
+    "prefix": "yGetAsyncMethodDefinition"
+  },
+  "getListAsyncMethodDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> GetListAsync($4);$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an interface",
+    "prefix": "yGetListAsyncMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
@@ -151,19 +176,19 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
-  "httpDeleteAsync": {
-    "body": [
-      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
-    ],
-    "description": "Http.DeleteAsync call",
-    "prefix": "yHttpDeleteAsync"
-  },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
     ],
     "description": "Http.GetAsync call",
     "prefix": "yHttpGetAsync"
+  },
+  "httpDeleteAsync": {
+    "body": [
+      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+    ],
+    "description": "Http.DeleteAsync call",
+    "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
@@ -645,6 +670,13 @@
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
+  "propPage": {
+    "body": [
+      "public int Page { get; set;} }$0"
+    ],
+    "description": "Inserts a Page property",
+    "prefix": "yPropPage"
+  },
   "propPhone": {
     "body": [
       "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
@@ -694,19 +726,19 @@
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
-  "readIdFromJsonAsync": {
-    "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
-    ],
-    "description": "ReadFromJsonAsync call",
-    "prefix": "yReadIdFromJsonAsync"
-  },
   "readFromJsonAsync": {
     "body": [
       "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
     ],
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
+  },
+  "readIdFromJsonAsync": {
+    "body": [
+      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
+    ],
+    "description": "ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
     "body": [
@@ -765,6 +797,10 @@
     ],
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
+  },
+  "updateAsyncMethodDefinition": {
+    "body": "public Task$1 UpdateAsync(${2|Guid,int,string|} id, ${3:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$4 ${5:${3/(.*)/${1:/downcase}/}});$0",
+    "description": "Adds a UpdateAsync method definition for an interface",
+    "prefix": "yUpdateAsyncMethodDefinition"
   }
-  
 }
