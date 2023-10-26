@@ -385,6 +385,16 @@
     "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
   },
+  "localStorageGetItem": {
+    "body": "var ${1:result} = await _localStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
+    "description": "Inserts await _localStorage.GetItemAsync stub",
+    "prefix": "yLocalStorageGetItemAsync"
+  },
+  "localStorageSetItem": {
+    "body": " await _localStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
+    "description": "Inserts await _localStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
+  },
   "methodAsync": {
     "body": [
       "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
