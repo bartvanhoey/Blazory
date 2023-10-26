@@ -60,7 +60,7 @@
     "prefix": "yCompareAttribute"
   },
   "createAsyncMethodDefinition": {
-    "body": "Task$1<${2:Type}> CreateAsync(${3:Type} ${4:${3/(.*)/${1:/downcase}/}});$0",
+    "body": "Task$1<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> Create${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${5:$2} ${6:${5/(.*)/${1:/downcase}/}});$0",
     "description": "Adds a CreateAsync method Definition to an Interface ",
     "prefix": "yCreateAsyncMethodDefinition"
   },
@@ -75,7 +75,7 @@
     "prefix": "yDbSetNewSyntax"
   },
   "deleteAsyncMethodDefinition": {
-    "body": "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+    "body": "public Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
     "description": "Adds a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
   },
@@ -125,17 +125,12 @@
     "prefix": "yEventHandlerAsync"
   },
   "getAsyncMethodDefinition": {
-    "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
-      "\t$0"
-    ],
+    "body": "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> Get${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${5|Guid,int,string|}$6 ${7:id});$0",
     "description": "Inserts a GetAsync method definition for an interface",
     "prefix": "yGetAsyncMethodDefinition"
   },
   "getListAsyncMethodDefinition": {
-    "body": [
-      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> GetListAsync($4);$0"
-    ],
+    "body": "\tTask$1<List<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> Get${4:$2}sAsync($6);$0",
     "description": "Inserts a GetListAsync definition for an interface",
     "prefix": "yGetListAsyncMethodDefinition"
   },
@@ -389,6 +384,16 @@
     ],
     "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
+  },
+  "localStorageGetItem": {
+    "body": "var ${1:result} = await _localStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
+    "description": "Inserts await _localStorage.GetItemAsync stub",
+    "prefix": "yLocalStorageGetItemAsync"
+  },
+  "localStorageSetItem": {
+    "body": " await _localStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
+    "description": "Inserts await _localStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
   },
   "methodAsync": {
     "body": [
@@ -799,7 +804,7 @@
     "prefix": "yStringLengthAttribute"
   },
   "updateAsyncMethodDefinition": {
-    "body": "public Task$1 UpdateAsync(${2|Guid,int,string|} id, ${3:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$4 ${5:${3/(.*)/${1:/downcase}/}});$0",
+    "body": "public Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
     "description": "Adds a UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
   }
