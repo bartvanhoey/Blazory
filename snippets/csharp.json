@@ -130,9 +130,7 @@
     "prefix": "yGetAsyncMethodDefinition"
   },
   "getListAsyncMethodDefinition": {
-    "body": [
-      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> Get${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5sAsync($6);$0"
-    ],
+    "body": "\tTask$1<List<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> Get${4:$2}sAsync($6);$0",
     "description": "Inserts a GetListAsync definition for an interface",
     "prefix": "yGetListAsyncMethodDefinition"
   },
