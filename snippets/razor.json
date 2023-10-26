@@ -822,7 +822,7 @@
   },
   "quickGrid": {
     "body": [
-      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" />",
+      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" >",
       "\t$0",
       "</QuickGrid>"
     ],
@@ -897,6 +897,11 @@
     "description": "@using MyNameSpace",
     "prefix": "yUsing"
   },
+  "usingQuickGridDirective": {
+    "body": "@using Microsoft.AspNetCore.Components.QuickGrid",
+    "description": "@using QuickGrid NameSpace",
+    "prefix": "yUsingQuickGrid"
+  },
   "validationMessageFor": {
     "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0",
     "description": "ValidationMessageFor",
@@ -927,4 +932,6 @@
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }
+
+
 }

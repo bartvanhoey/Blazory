@@ -17,13 +17,17 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yCascadingParaProp                   | Inserts a property with CascadingParameter attribute             
      yCompareAttribute                    | Compare attribute                                                
+     yCreateAsyncMethodDefinition         | Adds a CreateAsync method Definition to an Interface             
      yDbSet                               | Inserts a DbSet for a class statement in DbContext               
      yDbSetNewSyntax                      | Inserts a DbSet for a class statement in DbContext               
+     yDeleteAsyncMethodDefinition         | Adds a DeleteAsync method definition for an interface            
      yEventCallback                       | EventCallback parameter                                          
      yEventCallbackChanged                | EventCallbackChanged                                             
      yEventCallbackExtended               | EventCallbackExtended parameter                                  
      yEventHandler                        | EventHandler method stub                                         
      yEventHandlerAsync                   | EventHandlerAsync method stub                                    
+     yGetAsyncMethodDefinition            | Inserts a GetAsync method definition for an interface            
+     yGetListAsyncMethodDefinition        | Inserts a GetListAsync definition for an interface               
      yGps                                 | { get, private set }                                             
      yGs                                  | { get, set }                                                     
      yHandleFileChosenAsync               | Inserts the HandleFileChosenAsync method for an InputFile element
@@ -89,6 +93,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropLastName                        | Inserts a First Name property                                    
      yPropMobilePhone                     | Inserts a Mobile Phone property                                  
      yPropName                            | Inserts a Name property                                          
+     yPropPage                            | Inserts a Page property                                          
      yPropPhone                           | Inserts a Phone property                                         
      yPropStartDate                       | Inserts a DateTime StartDate property                            
      yPropStartTime                       | Inserts a DateTime StartTime property                            
@@ -105,6 +110,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yShouldRender                        | ShouldRender method stub                                         
      yStateHasChanged                     | Inserts StateHasChanged() method                                 
      yStringLengthAttribute               | StringLength attribute                                           
+     yUpdateAsyncMethodDefinition         | Adds a UpdateAsync method definition for an interface            
 
 ### Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
@@ -206,6 +212,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropLastName                     | Inserts a First Name property                               
      yPropMobilePhone                  | Inserts a Mobile Phone property                             
      yPropName                         | Inserts a Name property                                     
+     yPropPage                         | Inserts a Page property                                     
      yPropPhone                        | Inserts a Phone property                                    
      yPropStartDate                    | Inserts a DateTime StartDate property                       
      yPropStartTime                    | Inserts a DateTime StartTime property                       
@@ -220,6 +227,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yTemplatedComponent               | Templated component                                         
      yTypeParam                        | @typeParam                                                  
      yUsing                            | @using MyNameSpace                                          
+     yUsingQuickGrid                   | @using QuickGrid NameSpace                                  
      yValidationMessageFor             | ValidationMessageFor                                        
      yValidationSummary                | ValidationSummary component                                 
      yVirtualizeComponent              | Inserts the Virtualize component                            
