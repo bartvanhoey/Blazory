@@ -892,6 +892,11 @@
     "description": "@typeParam",
     "prefix": "yTypeParam"
   },
+  "pageTitle": {
+    "body": "<PageTitle>${1:YourPageTitle}</PageTitle>$0",
+    "description": "Inserts a PageTitle tag",
+    "prefix": "yPageTitle"
+  },
   "usingDirective": {
     "body": "@using ${1:MyNameSpace}",
     "description": "@using MyNameSpace",

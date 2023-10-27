@@ -59,6 +59,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yIsNull                              | Is equal to null                                                 
      yJSRuntimeInvokeAsync                | JSRuntimeInvokeAsync call                                        
      yJSRuntimeInvokeVoidAsync            | JSRuntimeInvokeVoidAsync call                                    
+     yLocalStorageGetItemAsync            | Inserts await _localStorage.GetItemAsync stub                    
+     yLocalStorageSetItemAsync            | Inserts await _localStorage.SetItemAsync stub                    
      yMethodAsync                         | async method stub without arguments                              
      yMethodAsyncReturn                   | async task method stub without arguments                         
      yMethodAsyncReturnWithArgs           | async task method stub with arguments                            
@@ -194,6 +196,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yOnValidSubmit                    | OnValidSubmit                                               
      yPage                             | @page directive                                             
      yPageParam                        | @page directive with Parameter                              
+     yPageTitle                        | Inserts a PageTitle tag                                     
      yPaginator                        | PropertyColumn                                              
      yParaAttribute                    | Inserts a Parameter attribute                               
      yParaIdProp                       | Inserts an Id property with Parameter attribute             
