@@ -613,6 +613,11 @@
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
+  "propUserName": {
+    "body": ["public string ${1:UserName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a UserName property ",
+    "prefix": "yPropUserName"
+  },
   "propPage": {
     "body": ["public int Page { get; set;} }$0"],
     "description": "Inserts a Page property",

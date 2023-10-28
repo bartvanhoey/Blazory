@@ -105,6 +105,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropStartTime                       | Inserts a DateTime StartTime property                            
      yPropStreet                          | Inserts a Street property                                        
      yPropTitle                           | Inserts an Title property                                        
+     yPropUserName                        | Inserts a UserName property                                      
      yPropZipCode                         | Inserts a ZipCode property                                       
      yRangeAttribute                      | Range attribute                                                  
      yReadFromJsonAsync                   | ReadFromJsonAsync call                                           
@@ -225,6 +226,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropStartTime                    | Inserts a DateTime StartTime property                       
      yPropStreet                       | Inserts a Street property                                   
      yPropTitle                        | Inserts an Title property                                   
+     yPropUserName                     | Inserts a UserName property                                 
      yPropZipCode                      | Inserts a ZipCode property                                  
      yQuickGrid                        | Inserts a QuickGrid                                         
      yReadFromJsonAsync                | ReadFromJsonAsync call                                      
