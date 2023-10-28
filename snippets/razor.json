@@ -652,6 +652,11 @@
     "description": "@page directive with Parameter",
     "prefix": "yPageParam"
   },
+  "pageTitle": {
+    "body": "<PageTitle>${1:YourPageTitle}</PageTitle>$0",
+    "description": "Inserts a PageTitle tag",
+    "prefix": "yPageTitle"
+  },
   "paginator": {
     "body": [
       "<Paginator Value=\"@pagination\" />$0"
@@ -892,11 +897,6 @@
     "description": "@typeParam",
     "prefix": "yTypeParam"
   },
-  "pageTitle": {
-    "body": "<PageTitle>${1:YourPageTitle}</PageTitle>$0",
-    "description": "Inserts a PageTitle tag",
-    "prefix": "yPageTitle"
-  },
   "usingDirective": {
     "body": "@using ${1:MyNameSpace}",
     "description": "@using MyNameSpace",
@@ -937,6 +937,4 @@
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }
-
-
 }

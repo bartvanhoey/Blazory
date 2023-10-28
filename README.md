@@ -12,7 +12,11 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAddHttpClientWithHttpMessageHandler | Add HttpClient with HttpMessageHandler                           
      yApiControllerAttribute              | ApiController attribute                                          
      yAuthorizeAttribute                  | AuthorizeAttribute                                               
+     yBuiAddDbContext                     | Inserts builder.Services.AddDbContext                            
+     yBuiAddDbContextUseSqlServer         | Inserts builder.Services.AddDbContext.Options.UseSqlServer       
      yBuilderEntity                       | builder.Entity stub                                              
+     yBuiServicesAddHttpClient            | Inserts builder.Services.AddScoped HttpClient                    
+     yBuiServicesAddScoped                | Inserts builder.Services.AddScoped INameService NameService      
      yCascadingPara                       | Inserts a CascadingParameter attribute                           
      yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yCascadingParaProp                   | Inserts a property with CascadingParameter attribute             
