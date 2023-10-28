@@ -653,7 +653,7 @@
     "prefix": "yPageParam"
   },
   "pageTitle": {
-    "body": "<PageTitle>${1:YourPageTitle}</PageTitle>$0",
+    "body": "<PageTitle>${1:${TM_FILENAME_BASE}}</PageTitle>$0",
     "description": "Inserts a PageTitle tag",
     "prefix": "yPageTitle"
   },
@@ -776,6 +776,13 @@
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
+  "propPassword": {
+    "body": [
+      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
+  },
   "propPhone": {
     "body": [
       "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
@@ -817,13 +824,6 @@
     ],
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
-  },
-  "propPassword": {
-    "body": [
-      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
-    ],
-    "description": "Inserts a Password property ",
-    "prefix": "yPropPassword"
   },
   "propZipCode": {
     "body": [
