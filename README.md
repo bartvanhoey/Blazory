@@ -221,6 +221,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropMobilePhone                  | Inserts a Mobile Phone property                             
      yPropName                         | Inserts a Name property                                     
      yPropPage                         | Inserts a Page property                                     
+     yPropPassword                     | Inserts a Password property                                 
      yPropPhone                        | Inserts a Phone property                                    
      yPropStartDate                    | Inserts a DateTime StartDate property                       
      yPropStartTime                    | Inserts a DateTime StartTime property                       

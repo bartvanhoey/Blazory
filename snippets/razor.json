@@ -818,6 +818,13 @@
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
   },
+  "propPassword": {
+    "body": [
+      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
+  },
   "propZipCode": {
     "body": [
       "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
