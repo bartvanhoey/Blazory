@@ -955,5 +955,84 @@
     ],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
+  },"methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "yMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "yMethodAsyncReturn"
+  },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "yMethodAsyncReturnWithArgs"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "yMethodAsyncWithArgs"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "yMethodReturn"
+  },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "yMethodReturnWithArgs"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
+    "prefix": "yMethodVoid"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "yMethodVoidWithArgs"
   }
 }
