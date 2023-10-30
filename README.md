@@ -87,7 +87,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
      yParaIdProp                          | Inserts an Id property with Parameter attribute                  
      yParaProp                            | Inserts a property with Parameter attribute                      
-     yPropBirthDate                       | Inserts an BirthDate property                                    
+     yPropBirthDate                       | Inserts a BirthDate property                                    
      yPropCity                            | Inserts a City property                                          
      yPropCountry                         | Inserts a Country property                                       
      yPropDescription                     | Inserts a Description property                                   
@@ -207,7 +207,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaIdProp                       | Inserts an Id property with Parameter attribute             
      yParaProp                         | Inserts a property with Parameter attribute                 
      yPreventDefault                   | PreventDefault attribute                                    
-     yPropBirthDate                    | Inserts an BirthDate property                               
+     yPropBirthDate                    | Inserts a BirthDate property                               
      yPropCity                         | Inserts a City property                                     
      yPropCountry                      | Inserts a Country property                                  
      yPropDescription                  | Inserts a Description property                              

@@ -794,7 +794,7 @@
     "body": [
       "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
     ],
-    "description": "Inserts an BirthDate property ",
+    "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
@@ -899,6 +899,13 @@
     ],
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
+  },
+  "propPrice": {
+    "body": [
+      "public decimal Price{ get; ${2|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a Price property ",
+    "prefix": "yPropPrice"
   },
   "propStartDate": {
     "body": [
