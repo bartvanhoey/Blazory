@@ -8,10 +8,7 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": [
-      "[ApiController]",
-      "$0"
-    ],
+    "body": ["[ApiController]", "$0"],
     "description": "ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -23,17 +20,12 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize]",
-      "$0"
-    ],
+    "body": ["[Authorize]", "$0"],
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
   "builderEntity": {
-    "body": [
-      "modelBuilder.Entity<${1:ClassName}>()$0;"
-    ],
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -97,6 +89,27 @@
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
   },
+  "builderAddDbContext": {
+    "body": "builder.Services.AddDbContext<${1:DataContext}>();$0",
+    "description": "Inserts builder.Services.AddDbContext",
+    "prefix": "yBuiAddDbContext"
+  },
+  "builderAddDbContextSqlServer": {
+    "body": "builder.Services.AddDbContext<${1:DataContext}>(options => options.UseSqlServer(\"name=ConnectionStrings:${2:DbConnection}\"));$0",
+    "description": "Inserts builder.Services.AddDbContext.Options.UseSqlServer",
+    "prefix": "yBuiAddDbContextUseSqlServer"
+  },
+  "builderServicesAddScoped": {
+    "body":"builder.Services.AddScoped<I{1:Name}Service$2 ${3:$1}Service>()$0",
+    "description": "Inserts builder.Services.AddScoped INameService NameService",
+    "prefix": "yBuiServicesAddScoped"
+  },
+  "builderAddHttPClientScoped": {
+    "body":"builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });$0",
+    "description": "Inserts builder.Services.AddScoped HttpClient",
+    "prefix": "yBuiServicesAddHttpClient"
+  },
+
   "eventCallbackExtended": {
     "body": [
       "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
@@ -135,16 +148,12 @@
     "prefix": "yGetListAsyncMethodDefinition"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "{ get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "{ get, set }",
     "prefix": "yGs"
   },
@@ -226,66 +235,37 @@
     "prefix": "yHttpPutAsJsonAsync"
   },
   "iEnumerable": {
-    "body": [
-      "IEnumerable$1<${2:TypeName}>$0"
-    ],
+    "body": ["IEnumerable$1<${2:TypeName}>$0"],
     "description": "IEnumerable statement",
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "yIf"
   },
@@ -295,16 +275,12 @@
     "prefix": "yImpCorrespondingInterface"
   },
   "inheritsComponentBase": {
-    "body": [
-      " ComponentBase$1"
-    ],
+    "body": [" ComponentBase$1"],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
   "injectAttribute": {
-    "body": [
-      "[Inject$1]$0"
-    ],
+    "body": ["[Inject$1]$0"],
     "description": "Inserts InjectAttribute",
     "prefix": "yInjectAttribute"
   },
@@ -323,9 +299,7 @@
     "prefix": "yInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": [
-      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
-    ],
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
@@ -351,23 +325,17 @@
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "invokeAsyncEventCallback": {
-    "body": [
-      "await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"
-    ],
+    "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
     "description": "Invoke async Eventcallback",
     "prefix": "yInvokeAsyncEventCallback"
   },
   "isNotNull": {
-    "body": [
-      "!= null$0"
-    ],
+    "body": ["!= null$0"],
     "description": "Is not null",
     "prefix": "yIsNotNull"
   },
   "isNull": {
-    "body": [
-      "== null$0"
-    ],
+    "body": ["== null$0"],
     "description": "Is equal to null",
     "prefix": "yIsNull"
   },
@@ -476,9 +444,7 @@
     "prefix": "yMethodVoidWithArgs"
   },
   "modelBuilderEntity": {
-    "body": [
-      "modelBuilder.Entity<${1:ClassName}>()$0;"
-    ],
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "builder.Entity stub",
     "prefix": "yModelBuilderEntity"
   },
@@ -517,12 +483,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -537,12 +498,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -564,9 +520,7 @@
     "prefix": "yPaginationState"
   },
   "parameterAttribute": {
-    "body": [
-      "[Parameter$1]$0"
-    ],
+    "body": ["[Parameter$1]$0"],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
@@ -592,30 +546,22 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": [
-      "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
-    ],
+    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
     "description": "Inserts an BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
-    "body": [
-      "public string ${1:City} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
   "propCountry": {
-    "body": [
-      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
   },
   "propDescription": {
-    "body": [
-      "public string Description{ get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
   },
@@ -634,16 +580,12 @@
     "prefix": "yPropEndTime"
   },
   "propFilter": {
-    "body": [
-      "public string Filter{ get; set; }$0"
-    ],
+    "body": ["public string Filter{ get; set; }$0"],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
   },
   "propFirstName": {
-    "body": [
-      "public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
     "prefix": "yPropFirstName"
   },
@@ -655,9 +597,7 @@
     "prefix": "yPropId"
   },
   "propLastName": {
-    "body": [
-      "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
     "prefix": "yPropLastName"
   },
@@ -669,23 +609,22 @@
     "prefix": "yPropMobilePhone"
   },
   "propName": {
-    "body": [
-      "public string ${1:Name} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
+  "propUserName": {
+    "body": ["public string ${1:UserName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a UserName property ",
+    "prefix": "yPropUserName"
+  },
   "propPage": {
-    "body": [
-      "public int Page { get; set;} }$0"
-    ],
+    "body": ["public int Page { get; set;} }$0"],
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
   "propPhone": {
-    "body": [
-      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
   },
@@ -704,30 +643,22 @@
     "prefix": "yPropStartTime"
   },
   "propStreet": {
-    "body": [
-      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Street property ",
     "prefix": "yPropStreet"
   },
   "propTitle": {
-    "body": [
-      "public string Title { get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
   },
   "propZipCode": {
-    "body": [
-      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a ZipCode property ",
     "prefix": "yPropZipCode"
   },
   "rangeAttribute": {
-    "body": [
-      "[Range$1(${2:0},${2:1000})]$0"
-    ],
+    "body": ["[Range$1(${2:0},${2:1000})]$0"],
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
@@ -746,25 +677,17 @@
     "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
-    "body": [
-      "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"
-    ],
+    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
     "description": "Readonly HttpClient field",
     "prefix": "yReadOnlyHttpClientField"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1]",
-      "$0"
-    ],
+    "body": ["[Required$1]", "$0"],
     "description": "RequiredAttribute",
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": [
-      "[Route(\"${1:api/[controller]/[action]}\")]",
-      "$0"
-    ],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "description": "RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -797,9 +720,7 @@
     "prefix": "yStateHasChanged"
   },
   "stringLengthAttribute": {
-    "body": [
-      "[StringLength(${1:50})$2]$0"
-    ],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
   },

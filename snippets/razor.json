@@ -652,6 +652,11 @@
     "description": "@page directive with Parameter",
     "prefix": "yPageParam"
   },
+  "pageTitle": {
+    "body": "<PageTitle>${1:${TM_FILENAME_BASE}}</PageTitle>$0",
+    "description": "Inserts a PageTitle tag",
+    "prefix": "yPageTitle"
+  },
   "paginator": {
     "body": [
       "<Paginator Value=\"@pagination\" />$0"
@@ -771,6 +776,13 @@
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
+  "propPassword": {
+    "body": [
+      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
+  },
   "propPhone": {
     "body": [
       "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
@@ -805,6 +817,13 @@
     ],
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
+  },
+  "propUserName": {
+    "body": [
+      "public string ${1:UserName} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a UserName property ",
+    "prefix": "yPropUserName"
   },
   "propZipCode": {
     "body": [
@@ -932,6 +951,4 @@
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
   }
-
-
 }

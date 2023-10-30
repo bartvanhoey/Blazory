@@ -12,7 +12,11 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAddHttpClientWithHttpMessageHandler | Add HttpClient with HttpMessageHandler                           
      yApiControllerAttribute              | ApiController attribute                                          
      yAuthorizeAttribute                  | AuthorizeAttribute                                               
+     yBuiAddDbContext                     | Inserts builder.Services.AddDbContext                            
+     yBuiAddDbContextUseSqlServer         | Inserts builder.Services.AddDbContext.Options.UseSqlServer       
      yBuilderEntity                       | builder.Entity stub                                              
+     yBuiServicesAddHttpClient            | Inserts builder.Services.AddScoped HttpClient                    
+     yBuiServicesAddScoped                | Inserts builder.Services.AddScoped INameService NameService      
      yCascadingPara                       | Inserts a CascadingParameter attribute                           
      yCascadingParaAuthState              | Cascading parameter AuthenticationState                          
      yCascadingParaProp                   | Inserts a property with CascadingParameter attribute             
@@ -59,6 +63,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yIsNull                              | Is equal to null                                                 
      yJSRuntimeInvokeAsync                | JSRuntimeInvokeAsync call                                        
      yJSRuntimeInvokeVoidAsync            | JSRuntimeInvokeVoidAsync call                                    
+     yLocalStorageGetItemAsync            | Inserts await _localStorage.GetItemAsync stub                    
+     yLocalStorageSetItemAsync            | Inserts await _localStorage.SetItemAsync stub                    
      yMethodAsync                         | async method stub without arguments                              
      yMethodAsyncReturn                   | async task method stub without arguments                         
      yMethodAsyncReturnWithArgs           | async task method stub with arguments                            
@@ -99,6 +105,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropStartTime                       | Inserts a DateTime StartTime property                            
      yPropStreet                          | Inserts a Street property                                        
      yPropTitle                           | Inserts an Title property                                        
+     yPropUserName                        | Inserts a UserName property                                      
      yPropZipCode                         | Inserts a ZipCode property                                       
      yRangeAttribute                      | Range attribute                                                  
      yReadFromJsonAsync                   | ReadFromJsonAsync call                                           
@@ -194,6 +201,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yOnValidSubmit                    | OnValidSubmit                                               
      yPage                             | @page directive                                             
      yPageParam                        | @page directive with Parameter                              
+     yPageTitle                        | Inserts a PageTitle tag                                     
      yPaginator                        | PropertyColumn                                              
      yParaAttribute                    | Inserts a Parameter attribute                               
      yParaIdProp                       | Inserts an Id property with Parameter attribute             
@@ -213,11 +221,13 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropMobilePhone                  | Inserts a Mobile Phone property                             
      yPropName                         | Inserts a Name property                                     
      yPropPage                         | Inserts a Page property                                     
+     yPropPassword                     | Inserts a Password property                                 
      yPropPhone                        | Inserts a Phone property                                    
      yPropStartDate                    | Inserts a DateTime StartDate property                       
      yPropStartTime                    | Inserts a DateTime StartTime property                       
      yPropStreet                       | Inserts a Street property                                   
      yPropTitle                        | Inserts an Title property                                   
+     yPropUserName                     | Inserts a UserName property                                 
      yPropZipCode                      | Inserts a ZipCode property                                  
      yQuickGrid                        | Inserts a QuickGrid                                         
      yReadFromJsonAsync                | ReadFromJsonAsync call                                      
