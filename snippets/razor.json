@@ -335,15 +335,20 @@
     "description": "@inject IJSRuntime directive",
     "prefix": "yInjectIJSRuntime"
   },
+  "injectILocalStorageService": {
+    "body": "@inject ILocalStorageService$1 ${2|LocalStorage,Storage|}$0",
+    "description": "@inject ILocalStorageService directive in Blazor Server app",
+    "prefix": "yInjectILocalStorageService"
+  },
   "injectIMapper": {
     "body": "@inject IMapper Mapper$0",
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
-  "injectILocalStorageService": {
-    "body": "@inject ILocalStorageService$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ILocalStorageService directive in Blazor Server app",
-    "prefix": "yInjectILocalStorageService"
+  "injectISyncLocalStorageService": {
+    "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,Storage|}$0",
+    "description": "@inject ISyncLocalStorageService directive in Blazor Server app",
+    "prefix": "yInjectISyncLocalStorageService"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
@@ -362,11 +367,6 @@
     ],
     "description": "@inject SignOutSessionStateManager directive",
     "prefix": "yInjectSignOutSessionStateManager"
-  },
-  "injectISyncLocalStorageService": {
-    "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ISyncLocalStorageService directive in Blazor Server app",
-    "prefix": "yInjectISyncLocalStorageService"
   },
   "inputCheckBoxAndLabel": {
     "body": [
@@ -555,6 +555,106 @@
     "body": "@layout ${1:LayoutName}",
     "description": "@layout MyLayout",
     "prefix": "yLayout"
+  },
+  "localStorageGetItem": {
+    "body": "var ${1:result} = LocalStorage.GetItem<${2:Type}>(\"${3:Key}\");$0",
+    "description": "Inserts await LocalStorage.GetItem stub",
+    "prefix": "yLocalStorageGetItem"
+  },
+  "localStorageGetItemAsync": {
+    "body": "var ${1:result} = await LocalStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
+    "description": "Inserts await LocalStorage.GetItemAsync stub",
+    "prefix": "yLocalStorageGetItemAsync"
+  },
+  "localStorageSetItem": {
+    "body": " await LocalStorage.SetItem(\"${1:key}\", ${2:item});$0",
+    "description": "Inserts await LocalStorage.SetItem stub",
+    "prefix": "yLocalStorageSetItem"
+  },
+  "localStorageSetItemAsync": {
+    "body": " await LocalStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
+    "description": "Inserts await LocalStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
+  },
+  "methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "yMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "yMethodAsyncReturn"
+  },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "yMethodAsyncReturnWithArgs"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "yMethodAsyncWithArgs"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "yMethodReturn"
+  },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "yMethodReturnWithArgs"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
+    "prefix": "yMethodVoid"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "yMethodVoidWithArgs"
   },
   "navLink": {
     "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
@@ -752,6 +852,11 @@
     ],
     "description": "Inserts an Id property",
     "prefix": "yPropId"
+  },
+  "propImageUrl": {
+    "body": "public string ${1:ImageUrl} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts an ImageUrl property ",
+    "prefix": "yPropImageUrl"
   },
   "propLastName": {
     "body": [
@@ -955,93 +1060,5 @@
     ],
     "description": "Dispose method stub",
     "prefix": "yVoidDispose"
-  },"methodAsync": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async method stub without arguments",
-    "prefix": "yMethodAsync"
-  },
-  "methodAsyncReturn": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub without arguments",
-    "prefix": "yMethodAsyncReturn"
-  },
-  "methodAsyncReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub with arguments",
-    "prefix": "yMethodAsyncReturnWithArgs"
-  },
-  "methodAsyncWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async method stub with arguments",
-    "prefix": "yMethodAsyncWithArgs"
-  },
-  "methodReturn": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub without arguments",
-    "prefix": "yMethodReturn"
-  },
-  "methodReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub with arguments",
-    "prefix": "yMethodReturnWithArgs"
-  },
-  "methodVoid": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub without arguments",
-    "prefix": "yMethodVoid"
-  },
-  "methodVoidWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub with arguments",
-    "prefix": "yMethodVoidWithArgs"
-  },   "localStorageGetItem": {
-    "body": "var ${1:result} = await _localStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
-    "description": "Inserts await _localStorage.GetItemAsync stub",
-    "prefix": "yLocalStorageGetItemAsync"
-  },
-  "localStorageSetItem": {
-    "body": " await _localStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
-    "description": "Inserts await _localStorage.SetItemAsync stub",
-    "prefix": "yLocalStorageSetItemAsync"
   }
 }
