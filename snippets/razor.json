@@ -340,15 +340,15 @@
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
+  "injectLocalStorageService": {
+    "body": "@inject LocalStorageService$1 ${2|LocalStorage,Storage|}$0",
+    "description": "@inject LocalStorageService directive in Blazor Server app",
+    "prefix": "yInjectLocalStorageService"
+  },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
     "description": "@inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
-  },
-  "injectProtectedLocalStorage": {
-    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
-    "prefix": "yInjectProtectedLocalStorage"
   },
   "injectServiceDirective": {
     "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
@@ -362,6 +362,11 @@
     ],
     "description": "@inject SignOutSessionStateManager directive",
     "prefix": "yInjectSignOutSessionStateManager"
+  },
+  "injectSyncLocalStorageService": {
+    "body": "@inject SyncLocalStorageService$1 ${2|LocalStorage,Storage|}$0",
+    "description": "@inject SyncLocalStorageService directive in Blazor Server app",
+    "prefix": "yInjectSyncLocalStorageService"
   },
   "inputCheckBoxAndLabel": {
     "body": [
