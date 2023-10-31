@@ -120,7 +120,7 @@
       "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
       "\t\t</div>",
       "\t</div>",
-      "\t<button class=\"btn btn-success\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
+      "\t<button class=\"btn btn-primary\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
       "</EditForm>",
       "$0"
     ],
