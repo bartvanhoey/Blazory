@@ -53,7 +53,7 @@
     "prefix": "yBuilderEntity"
   },
   "builderServicesAddScoped": {
-    "body": "builder.Services.AddScoped<I${1:Name}Service$2,${3:$1}Service>()$0",
+    "body": "builder.Services.AddScoped<I${1:Name}Service$2, ${3:$1}Service>();$0",
     "description": "Inserts builder.Services.AddScoped INameService NameService",
     "prefix": "yBuiServicesAddScoped"
   },
