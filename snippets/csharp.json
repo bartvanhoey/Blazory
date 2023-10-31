@@ -84,6 +84,11 @@
     "description": "Adds a CreateAsync method Definition to an Interface ",
     "prefix": "yCreateAsyncMethodDefinition"
   },
+  "dataTypeAttribute": {
+    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
+    "description": "DataType attribute",
+    "prefix": "yDataTypeAttribute"
+  },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
@@ -98,6 +103,13 @@
     "body": "Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
     "description": "Adds a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
+  },
+  "emailAddressAttribute": {
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
+    "description": "EmailAddress Attribute",
+    "prefix": "yEmailAddressAttribute"
   },
   "eventCallback": {
     "body": [
@@ -656,6 +668,11 @@
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
+  "propConfirmPassword": {
+    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a ConfirmPassword property ",
+    "prefix": "yPropConfirmPassword"
+  },
   "propCountry": {
     "body": [
       "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
@@ -669,6 +686,11 @@
     ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
+  },
+  "propEmail": {
+    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Email property ",
+    "prefix": "yPropEmail"
   },
   "propEndDate": {
     "body": [
@@ -729,27 +751,17 @@
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
-  "propEmail": {
-    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a Email property ",
-    "prefix": "yPropEmail"
-  },
-  "propPassword": {
-    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a Password property ",
-    "prefix": "yPropPassword"
-  },
-  "propConfirmPassword": {
-    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a ConfirmPassword property ",
-    "prefix": "yPropConfirmPassword"
-  },
   "propPage": {
     "body": [
       "public int Page { get; set;} }$0"
     ],
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
+  },
+  "propPassword": {
+    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
   },
   "propPhone": {
     "body": [
