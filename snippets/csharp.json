@@ -259,6 +259,17 @@
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
+  "ifNotNullAndCountGreaterThan0Statement": {
+    "body": [
+      "if (${1:MyVariable} != null && ${2:$1}.Count > 0)",
+      "{",
+      "\t$3",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement and count greater than zero statement",
+    "prefix": "yIfNotNullAndCountGreaterThan0Statement"
+  },
   "ifNotNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} != null) $2",
@@ -278,17 +289,6 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
-  "ifNotNullAndCountGreaterThan0Statement": {
-    "body": [
-      "if (${1:MyVariable} != null && ${2:$1}.Count > 0)",
-      "{",
-      "\t$3",
-      "}",
-      "$0"
-    ],
-    "description": "If not null statement and count greater than zero statement",
-    "prefix": "yIfNotNullAndCountGreaterThan0Statement"
-  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -296,17 +296,6 @@
     ],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
-  },
-  "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
-    "description": "If null statement",
-    "prefix": "yIfNull"
   },
   "ifNullOrCountIsZeroStatement": {
     "body": [
@@ -318,6 +307,27 @@
     ],
     "description": "If null Or Count is zero statement",
     "prefix": "yIfNullOrCountIsZeroStatement"
+  },
+  "ifNullReturnDefaultStatement": {
+    "body": "if (${1:MyVariable} == null) return ${2:default};$0",
+    "description": "If null return default statement",
+    "prefix": "yIfNullReturnDefault statement"
+  },
+  "ifNullReturnStatement": {
+    "body": "if (${1:MyVariable} == null) return;$0",
+    "description": "If null return statement",
+    "prefix": "yIfNullReturn statement"
+  },
+  "ifNullStatement": {
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If null statement",
+    "prefix": "yIfNull"
   },
   "ifStatement": {
     "body": [

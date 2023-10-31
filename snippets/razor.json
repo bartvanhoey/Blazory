@@ -287,6 +287,16 @@
     "description": "If null Or Count is zero statement",
     "prefix": "yIfNullOrCountIsZeroStatement"
   },
+  "ifNullReturnDefaultStatement": {
+    "body": "if (${1:MyVariable} == null) return ${2:default};$0",
+    "description": "If null return default statement",
+    "prefix": "yIfNullReturnDefault statement"
+  },
+  "ifNullReturnStatement": {
+    "body": "if (${1:MyVariable} == null) return;$0",
+    "description": "If null return statement",
+    "prefix": "yIfNullReturn statement"
+  },
   "ifNullStatement": {
     "body": [
       "if (${1:MyVariable} == null)",
