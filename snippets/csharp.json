@@ -73,7 +73,7 @@
   },
   "compareAttribute": {
     "body": [
-      "[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
+      "[Compare$1(nameof(${2:TypeToCompare}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
       "$0"
     ],
     "description": "Compare attribute",
@@ -903,4 +903,5 @@
     "description": "Adds a UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
   }
+  
 }
