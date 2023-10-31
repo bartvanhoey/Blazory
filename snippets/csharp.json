@@ -95,7 +95,7 @@
     "prefix": "yDbSetNewSyntax"
   },
   "deleteAsyncMethodDefinition": {
-    "body": "public Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
+    "body": "Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
     "description": "Adds a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
   },
@@ -864,7 +864,7 @@
     "prefix": "yStringLengthAttribute"
   },
   "updateAsyncMethodDefinition": {
-    "body": "public Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
+    "body": "Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
     "description": "Adds a UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
   }
