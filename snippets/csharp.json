@@ -222,9 +222,8 @@
   "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
-      "response.EnsureSuccessStatusCode();",
-      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
-      "return ${9:$6}Id;$0"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${6:result} = await response.Content.ReadFromJsonAsync<${8:TypeName}>();"
     ],
     "description": "Http.PostAsJsonAsync call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -279,6 +278,17 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
+  "ifNotNullAndCountGreaterThan0Statement": {
+    "body": [
+      "if (${1:MyVariable} != null && ${2:$1}.Count > 0)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement and count greater than zero statement",
+    "prefix": "yIfNotNullAndCountGreaterThan0Statement"
+  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -297,6 +307,17 @@
     ],
     "description": "If null statement",
     "prefix": "yIfNull"
+  },
+  "ifNullOrCountIsZeroStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || ${2:$1}.Count === 0)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroStatement"
   },
   "ifStatement": {
     "body": [
