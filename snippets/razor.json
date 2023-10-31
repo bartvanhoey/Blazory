@@ -836,6 +836,11 @@
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
+  "propConfirmPassword": {
+    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a ConfirmPassword property ",
+    "prefix": "yPropConfirmPassword"
+  },
   "propCountry": {
     "body": [
       "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
@@ -849,6 +854,11 @@
     ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
+  },
+  "propEmail": {
+    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Email property ",
+    "prefix": "yPropEmail"
   },
   "propEndDate": {
     "body": [
@@ -912,79 +922,57 @@
     "prefix": "yPropName"
   },
   "propPage": {
-    "body": [
-      "public int Page { get; set;} }$0"
-    ],
+    "body": "public int Page { get; set;} }$0",
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
   "propPassword": {
-    "body": [
-      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Password property ",
     "prefix": "yPropPassword"
   },
   "propPhone": {
-    "body": [
-      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Phone} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
   },
   "propPrice": {
-    "body": [
-      "public decimal Price{ get; ${2|set;,private set;|}  }$0"
-    ],
+    "body": "public decimal Price{ get; ${2|set;,private set;|}  }$0",
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
   },
   "propStartDate": {
-    "body": [
-      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
-    ],
+    "body": "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0",
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "yPropStartDate"
   },
   "propStartTime": {
-    "body": [
-      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
-    ],
+    "body": "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "yPropStartTime"
   },
   "propStreet": {
-    "body": [
-      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Street} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Street property ",
     "prefix": "yPropStreet"
   },
   "propTitle": {
-    "body": [
-      "public string Title { get; ${1|set;,private set;|} }$0"
-    ],
+    "body": "public string Title { get; ${1|set;,private set;|} }$0",
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
   },
   "propUserName": {
-    "body": [
-      "public string ${1:UserName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:UserName} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
   },
   "propZipCode": {
-    "body": [
-      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a ZipCode property ",
     "prefix": "yPropZipCode"
   },
   "propertyColumn": {
-    "body": [
-      "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0"
-    ],
+    "body": "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0",
     "description": "PropertyColumn",
     "prefix": "yPropertyColumn"
   },
@@ -998,16 +986,12 @@
     "prefix": "yQuickGrid"
   },
   "readFromJsonAsync": {
-    "body": [
-      "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
-    ],
+    "body": "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
   },
   "readIdFromJsonAsync": {
-    "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
-    ],
+    "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },

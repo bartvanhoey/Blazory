@@ -725,11 +725,24 @@
     "prefix": "yPropMobilePhone"
   },
   "propName": {
-    "body": [
-      "public string ${1:Name} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Name} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
+  },
+  "propEmail": {
+    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Email property ",
+    "prefix": "yPropEmail"
+  },
+  "propPassword": {
+    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
+  },
+  "propConfirmPassword": {
+    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a ConfirmPassword property ",
+    "prefix": "yPropConfirmPassword"
   },
   "propPage": {
     "body": [
