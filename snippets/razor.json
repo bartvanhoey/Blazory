@@ -268,6 +268,17 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
+  "atIfNotNullStatement": {
+    "body": [
+      "@if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement",
+    "prefix": "yAtIfNotNull"
+  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -318,6 +329,17 @@
     ],
     "description": "If statement",
     "prefix": "yIf"
+  },
+  "atIfStatement": {
+    "body": [
+      "@if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
+    "prefix": "yAtIf"
   },
   "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
