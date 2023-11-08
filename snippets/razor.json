@@ -21,6 +21,17 @@
     "description": "If statement",
     "prefix": "yAtIf"
   },
+  "atIfIsVisibleStatement": {
+    "body": [
+      "@if (${1:IsVisible})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
+    "prefix": "yAtIfIsVisible"
+  },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
     "description": "@attribute [Authorize]",
