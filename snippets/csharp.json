@@ -203,6 +203,16 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
+  "handleValidSubmitAsync": {
+    "body": [
+      "protected async void HandleValidSubmitAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts the HandleValidSubmitAsync method stub",
+    "prefix": "yHandleValidSubmitAsync"
+  },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"

@@ -1,4 +1,15 @@
 {
+  "atIfIsVisibleStatement": {
+    "body": [
+      "@if (${1:IsVisible})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
+    "prefix": "yAtIfIsVisible"
+  },
   "atIfNotNullStatement": {
     "body": [
       "@if (${1:MyVariable} != null)",
@@ -20,17 +31,6 @@
     ],
     "description": "If statement",
     "prefix": "yAtIf"
-  },
-  "atIfIsVisibleStatement": {
-    "body": [
-      "@if (${1:IsVisible})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
-    "description": "If statement",
-    "prefix": "yAtIfIsVisible"
   },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
@@ -208,6 +208,16 @@
     ],
     "description": "{ get, set }",
     "prefix": "yGs"
+  },
+  "handleValidSubmitAsync": {
+    "body": [
+      "protected async void HandleValidSubmitAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts the HandleValidSubmitAsync method stub",
+    "prefix": "yHandleValidSubmitAsync"
   },
   "httpClientGetAsync": {
     "body": [
