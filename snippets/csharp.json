@@ -732,6 +732,13 @@
     "description": "Inserts an ImageUrl property ",
     "prefix": "yPropImageUrl"
   },
+  "propIsVisible": {
+    "body": [
+      "public bool IsVisible { get; set; } = ${1|false,true|};$0"
+    ],
+    "description": "Inserts an IsVisible property ",
+    "prefix": "yPropIsVisible"
+  },
   "propLastName": {
     "body": [
       "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
@@ -903,5 +910,4 @@
     "description": "Adds a UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
   }
-  
 }
