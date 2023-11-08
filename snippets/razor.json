@@ -632,22 +632,22 @@
     "prefix": "yLayout"
   },
   "localStorageGetItem": {
-    "body": "var ${1:result} = LocalStorage.GetItem<${2:Type}>(\"${3:Key}\");$0",
+    "body": "var ${1:result} = ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItem<${3:Type}>(\"${4:Key}\");$0",
     "description": "Inserts await LocalStorage.GetItem stub",
     "prefix": "yLocalStorageGetItem"
   },
   "localStorageGetItemAsync": {
-    "body": "var ${1:result} = await LocalStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
+    "body": "var ${1:result} = await ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItemAsync<${3:Type}>(\"${4:Key}\");$0",
     "description": "Inserts await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
   },
   "localStorageSetItem": {
-    "body": " await LocalStorage.SetItem(\"${1:key}\", ${2:item});$0",
+    "body": "${1|LocalStorage,Storage,_localStorage,_storage|}.SetItem(\"${2:key}\", ${3:item});$0",
     "description": "Inserts await LocalStorage.SetItem stub",
     "prefix": "yLocalStorageSetItem"
   },
   "localStorageSetItemAsync": {
-    "body": " await LocalStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
+    "body": "await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
     "description": "Inserts await LocalStorage.SetItemAsync stub",
     "prefix": "yLocalStorageSetItemAsync"
   },
