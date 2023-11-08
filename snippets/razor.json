@@ -397,12 +397,12 @@
   },
   "injectIAccessTokenProvider": {
     "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
-    "description": "@inject IAccessTokenProvider directive in Blazor Server app",
+    "description": "@inject IAccessTokenProvider directive",
     "prefix": "yInjectIAccessTokenProvider"
   },
   "injectIConfiguration": {
     "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
-    "description": "@inject IConfiguration directive in Blazor Server app",
+    "description": "@inject IConfiguration directive",
     "prefix": "yInjectIConfiguration"
   },
   "injectIJSRuntime": {
@@ -411,8 +411,8 @@
     "prefix": "yInjectIJSRuntime"
   },
   "injectILocalStorageService": {
-    "body": "@inject ILocalStorageService$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ILocalStorageService directive in Blazor Server app",
+    "body": "@inject ILocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
+    "description": "@inject ILocalStorageService directive",
     "prefix": "yInjectILocalStorageService"
   },
   "injectIMapper": {
@@ -421,8 +421,8 @@
     "prefix": "yInjectIMapper"
   },
   "injectISyncLocalStorageService": {
-    "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ISyncLocalStorageService directive in Blazor Server app",
+    "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
+    "description": "@inject ISyncLocalStorageService directive",
     "prefix": "yInjectISyncLocalStorageService"
   },
   "injectNavigationManager": {
@@ -1049,6 +1049,11 @@
     "body": "@ref=\"${1:Property}\"",
     "description": "@ref=\"MyProperty\"",
     "prefix": "yRef"
+  },
+  "taskCompleted": {
+    "body": "await Task.CompletedTask;$0",
+    "description": "Inserts await Task.CompletedTask",
+    "prefix": "yTaskCompleted"
   },
   "templateColumn": {
     "body": [

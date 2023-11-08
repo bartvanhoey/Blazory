@@ -163,12 +163,12 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
      yInheritsOwningComponentBase      | @inherits OwningComponentBase<ApplicationDbContext>         
      yInjectHttpClient                 | @inject HttpClient directive                                
-     yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive in Blazor Server app 
-     yInjectIConfiguration             | @inject IConfiguration directive in Blazor Server app       
+     yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive 
+     yInjectIConfiguration             | @inject IConfiguration directive       
      yInjectIJSRuntime                 | @inject IJSRuntime directive                                
      yInjectIMapper                    | @inject IMapper directive                                   
      yInjectNavigationManager          | @inject NavigationManager directive                         
-     yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
+     yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive
      yInjectService                    | @inject MyService myService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | Inserts an InputCheckbox component                          

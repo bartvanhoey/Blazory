@@ -410,11 +410,19 @@
     "prefix": "yInjectNavigationManager"
   },
   "injectService": {
-    "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0"
-    ],
+    "body": "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0",
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
+  },
+  "injectILocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ILocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ILocalStorageService directive",
+    "prefix": "yInjectILocalStorageService"
+  },
+  "injectISyncLocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ISyncLocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ISyncLocalStorageService directive",
+    "prefix": "yInjectISyncLocalStorageService"
   },
   "injectSignOutSessionStateManager": {
     "body": [
@@ -914,6 +922,11 @@
     ],
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
+  },
+  "taskCompleted": {
+    "body": "await Task.CompletedTask;$0",
+    "description": "Inserts await Task.CompletedTask",
+    "prefix": "yTaskCompleted"
   },
   "updateAsyncMethodDefinition": {
     "body": "Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
