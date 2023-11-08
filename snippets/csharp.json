@@ -374,6 +374,13 @@
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
+  "inheritsAuthenticationStateProvider": {
+    "body": [
+      " AuthenticationStateProvider$1"
+    ],
+    "description": "Inherits AuthenticationStateProvider",
+    "prefix": "yInheritsAuthenticationStateProvider"
+  },
   "injectAttribute": {
     "body": [
       "[Inject$1]$0"
