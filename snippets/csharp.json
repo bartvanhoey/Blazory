@@ -311,6 +311,17 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
+  "ifNotStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (!string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrEmpty"
+  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -362,17 +373,21 @@
     "description": "If statement",
     "prefix": "yIf"
   },
+  "ifStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrEmpty"
+  },
   "implementCorrespondingInterface": {
     "body": "I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding interface",
     "prefix": "yImpCorrespondingInterface"
-  },
-  "inheritsComponentBase": {
-    "body": [
-      " ComponentBase$1"
-    ],
-    "description": "Inherits ComponentBase",
-    "prefix": "yInheritsComponentBase"
   },
   "inheritsAuthenticationStateProvider": {
     "body": [
@@ -380,6 +395,13 @@
     ],
     "description": "Inherits AuthenticationStateProvider",
     "prefix": "yInheritsAuthenticationStateProvider"
+  },
+  "inheritsComponentBase": {
+    "body": [
+      " ComponentBase$1"
+    ],
+    "description": "Inherits ComponentBase",
+    "prefix": "yInheritsComponentBase"
   },
   "injectAttribute": {
     "body": [
@@ -402,12 +424,22 @@
     "description": "Inject IJSRuntime property",
     "prefix": "yInjectIJSRuntime"
   },
+  "injectILocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ILocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ILocalStorageService directive",
+    "prefix": "yInjectILocalStorageService"
+  },
   "injectIMapper": {
     "body": [
       "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
     ],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
+  },
+  "injectISyncLocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ISyncLocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ISyncLocalStorageService directive",
+    "prefix": "yInjectISyncLocalStorageService"
   },
   "injectNavigationManager": {
     "body": [
@@ -420,16 +452,6 @@
     "body": "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0",
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
-  },
-  "injectILocalStorageService": {
-    "body": "[Inject$1] ${2|protected,public|} ILocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
-    "description": "Inject ILocalStorageService directive",
-    "prefix": "yInjectILocalStorageService"
-  },
-  "injectISyncLocalStorageService": {
-    "body": "[Inject$1] ${2|protected,public|} ISyncLocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
-    "description": "Inject ISyncLocalStorageService directive",
-    "prefix": "yInjectISyncLocalStorageService"
   },
   "injectSignOutSessionStateManager": {
     "body": [
