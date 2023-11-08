@@ -445,7 +445,7 @@
     "prefix": "yInjectIAccessTokenProvider"
   },
   "injectAuthenticationStateProvider": {
-    "body": "@inject AuthenticationStateProvider$2 ${3|_authenticationStateProvider,AuthenticationStateProvider|} { get; set; }$0",
+    "body": "@inject AuthenticationStateProvider$2 ${3|AuthenticationStateProvider,_authenticationStateProvider|}$0",
     "description": "Inject AuthenticationStateProvider property",
     "prefix": "yInjectAuthenticationStateProvider"
   },
