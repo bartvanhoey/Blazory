@@ -322,6 +322,17 @@
     "description": "Inserts if(!string.IsNullOrEmpty(MyVariable))statement",
     "prefix": "yIfNotStringIsNullOrEmpty"
   },
+  "ifNotStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (!string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrWhiteSpace"
+  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -384,6 +395,17 @@
     "description": "Inserts if(string.IsNullOrEmpty(MyVariable))statement",
     "prefix": "yIfStringIsNullOrEmpty"
   },
+  "ifStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrWhiteSpace"
+  },
   "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
     "description": "@implements IDisposable",
@@ -422,6 +444,12 @@
     "description": "@inject IAccessTokenProvider directive",
     "prefix": "yInjectIAccessTokenProvider"
   },
+  "injectAuthenticationStateProvider": {
+    "body": "@inject AuthenticationStateProvider$2 ${3|_authenticationStateProvider,AuthenticationStateProvider|} { get; set; }$0",
+    "description": "Inject AuthenticationStateProvider property",
+    "prefix": "yInjectAuthenticationStateProvider"
+  },
+
   "injectIConfiguration": {
     "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
     "description": "@inject IConfiguration directive",
@@ -662,6 +690,11 @@
     "body": "var ${1:result} = await ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItemAsync<${3:Type}>(\"${4:Key}\");$0",
     "description": "Inserts await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
+  },
+  "localStorageRemoveItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
+    "description": "Inserts await LocalStorage.RemoveItemAsync stub",
+    "prefix": "yLocalStorageRemoveItemAsync"
   },
   "localStorageSetItem": {
     "body": "${1|LocalStorage,Storage,_localStorage,_storage|}.SetItem(\"${2:key}\", ${3:item});$0",
