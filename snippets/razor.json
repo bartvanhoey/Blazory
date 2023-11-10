@@ -1,4 +1,37 @@
 {
+  "atIfIsVisibleStatement": {
+    "body": [
+      "@if (${1:IsVisible})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
+    "prefix": "yAtIfIsVisible"
+  },
+  "atIfNotNullStatement": {
+    "body": [
+      "@if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement",
+    "prefix": "yAtIfNotNull"
+  },
+  "atIfStatement": {
+    "body": [
+      "@if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If statement",
+    "prefix": "yAtIf"
+  },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
     "description": "@attribute [Authorize]",
@@ -120,7 +153,7 @@
       "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
       "\t\t</div>",
       "\t</div>",
-      "\t<button class=\"btn btn-success\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
+      "\t<button class=\"btn btn-primary\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
       "</EditForm>",
       "$0"
     ],
@@ -175,6 +208,16 @@
     ],
     "description": "{ get, set }",
     "prefix": "yGs"
+  },
+  "handleValidSubmitAsync": {
+    "body": [
+      "protected async void HandleValidSubmitAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts the HandleValidSubmitAsync method stub",
+    "prefix": "yHandleValidSubmitAsync"
   },
   "httpClientGetAsync": {
     "body": [
@@ -238,6 +281,17 @@
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
+  "ifNotNullAndCountGreaterThan0Statement": {
+    "body": [
+      "if (${1:MyVariable} != null && ${2:$1}.Count > 0)",
+      "{",
+      "\t$3",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement and count greater than zero statement",
+    "prefix": "yIfNotNullAndCountGreaterThan0Statement"
+  },
   "ifNotNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} != null) $2",
@@ -257,6 +311,28 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
+  "ifNotStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (!string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrEmpty"
+  },
+  "ifNotStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (!string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrWhiteSpace"
+  },
   "ifNullInlineStatement": {
     "body": [
       "if (${1:MyVariable} == null) $2",
@@ -264,6 +340,27 @@
     ],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
+  },
+  "ifNullOrCountIsZeroStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || ${2:$1}.Count == 0)",
+      "{",
+      "\t$3",
+      "}",
+      "$0"
+    ],
+    "description": "If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroStatement"
+  },
+  "ifNullReturnDefaultStatement": {
+    "body": "if (${1:MyVariable} == null) return ${2:default};$0",
+    "description": "If null return default statement",
+    "prefix": "yIfNullReturnDefault statement"
+  },
+  "ifNullReturnStatement": {
+    "body": "if (${1:MyVariable} == null) return;$0",
+    "description": "If null return statement",
+    "prefix": "yIfNullReturn statement"
   },
   "ifNullStatement": {
     "body": [
@@ -286,6 +383,28 @@
     ],
     "description": "If statement",
     "prefix": "yIf"
+  },
+  "ifStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrEmpty"
+  },
+  "ifStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrWhiteSpace"
   },
   "implementsIDisposable": {
     "body": "@implements ${1:IDisposable}",
@@ -322,12 +441,18 @@
   },
   "injectIAccessTokenProvider": {
     "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
-    "description": "@inject IAccessTokenProvider directive in Blazor Server app",
+    "description": "@inject IAccessTokenProvider directive",
     "prefix": "yInjectIAccessTokenProvider"
   },
+  "injectAuthenticationStateProvider": {
+    "body": "@inject AuthenticationStateProvider$2 ${3|AuthenticationStateProvider,_authenticationStateProvider|}$0",
+    "description": "Inject AuthenticationStateProvider property",
+    "prefix": "yInjectAuthenticationStateProvider"
+  },
+
   "injectIConfiguration": {
     "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
-    "description": "@inject IConfiguration directive in Blazor Server app",
+    "description": "@inject IConfiguration directive",
     "prefix": "yInjectIConfiguration"
   },
   "injectIJSRuntime": {
@@ -335,20 +460,25 @@
     "description": "@inject IJSRuntime directive",
     "prefix": "yInjectIJSRuntime"
   },
+  "injectILocalStorageService": {
+    "body": "@inject ILocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
+    "description": "@inject ILocalStorageService directive",
+    "prefix": "yInjectILocalStorageService"
+  },
   "injectIMapper": {
     "body": "@inject IMapper Mapper$0",
     "description": "@inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
+  "injectISyncLocalStorageService": {
+    "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
+    "description": "@inject ISyncLocalStorageService directive",
+    "prefix": "yInjectISyncLocalStorageService"
+  },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
     "description": "@inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
-  },
-  "injectProtectedLocalStorage": {
-    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|}$0",
-    "description": "@inject ProtectedLocalStorage directive in Blazor Server app",
-    "prefix": "yInjectProtectedLocalStorage"
   },
   "injectServiceDirective": {
     "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
@@ -551,6 +681,111 @@
     "description": "@layout MyLayout",
     "prefix": "yLayout"
   },
+  "localStorageGetItem": {
+    "body": "var ${1:result} = ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItem<${3:Type}>(\"${4:Key}\");$0",
+    "description": "Inserts await LocalStorage.GetItem stub",
+    "prefix": "yLocalStorageGetItem"
+  },
+  "localStorageGetItemAsync": {
+    "body": "var ${1:result} = await ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItemAsync<${3:Type}>(\"${4:Key}\");$0",
+    "description": "Inserts await LocalStorage.GetItemAsync stub",
+    "prefix": "yLocalStorageGetItemAsync"
+  },
+  "localStorageRemoveItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
+    "description": "Inserts await LocalStorage.RemoveItemAsync stub",
+    "prefix": "yLocalStorageRemoveItemAsync"
+  },
+  "localStorageSetItem": {
+    "body": "${1|LocalStorage,Storage,_localStorage,_storage|}.SetItem(\"${2:key}\", ${3:item});$0",
+    "description": "Inserts await LocalStorage.SetItem stub",
+    "prefix": "yLocalStorageSetItem"
+  },
+  "localStorageSetItemAsync": {
+    "body": "await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
+    "description": "Inserts await LocalStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
+  },
+  "methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "yMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "yMethodAsyncReturn"
+  },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "yMethodAsyncReturnWithArgs"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "yMethodAsyncWithArgs"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "yMethodReturn"
+  },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "yMethodReturnWithArgs"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
+    "prefix": "yMethodVoid"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "yMethodVoidWithArgs"
+  },
   "navLink": {
     "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
     "description": "NavLink",
@@ -689,7 +924,7 @@
     "body": [
       "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
     ],
-    "description": "Inserts an BirthDate property ",
+    "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
@@ -698,6 +933,11 @@
     ],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
+  },
+  "propConfirmPassword": {
+    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a ConfirmPassword property ",
+    "prefix": "yPropConfirmPassword"
   },
   "propCountry": {
     "body": [
@@ -712,6 +952,11 @@
     ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
+  },
+  "propEmail": {
+    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Email property ",
+    "prefix": "yPropEmail"
   },
   "propEndDate": {
     "body": [
@@ -748,6 +993,18 @@
     "description": "Inserts an Id property",
     "prefix": "yPropId"
   },
+  "propImageUrl": {
+    "body": "public string ${1:ImageUrl} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts an ImageUrl property ",
+    "prefix": "yPropImageUrl"
+  },
+  "propIsVisible": {
+    "body": [
+      "public bool IsVisible { get; set; } = ${1|false,true|};$0"
+    ],
+    "description": "Inserts an IsVisible property ",
+    "prefix": "yPropIsVisible"
+  },
   "propLastName": {
     "body": [
       "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
@@ -770,72 +1027,57 @@
     "prefix": "yPropName"
   },
   "propPage": {
-    "body": [
-      "public int Page { get; set;} }$0"
-    ],
+    "body": "public int Page { get; set;} }$0",
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
   "propPassword": {
-    "body": [
-      "public string ${1:Password} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Password property ",
     "prefix": "yPropPassword"
   },
   "propPhone": {
-    "body": [
-      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Phone} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
   },
+  "propPrice": {
+    "body": "public decimal Price{ get; ${2|set;,private set;|}  }$0",
+    "description": "Inserts a Price property ",
+    "prefix": "yPropPrice"
+  },
   "propStartDate": {
-    "body": [
-      "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"
-    ],
+    "body": "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0",
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "yPropStartDate"
   },
   "propStartTime": {
-    "body": [
-      "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"
-    ],
+    "body": "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "yPropStartTime"
   },
   "propStreet": {
-    "body": [
-      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:Street} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Street property ",
     "prefix": "yPropStreet"
   },
   "propTitle": {
-    "body": [
-      "public string Title { get; ${1|set;,private set;|} }$0"
-    ],
+    "body": "public string Title { get; ${1|set;,private set;|} }$0",
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
   },
   "propUserName": {
-    "body": [
-      "public string ${1:UserName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:UserName} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
   },
   "propZipCode": {
-    "body": [
-      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a ZipCode property ",
     "prefix": "yPropZipCode"
   },
   "propertyColumn": {
-    "body": [
-      "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0"
-    ],
+    "body": "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0",
     "description": "PropertyColumn",
     "prefix": "yPropertyColumn"
   },
@@ -849,16 +1091,12 @@
     "prefix": "yQuickGrid"
   },
   "readFromJsonAsync": {
-    "body": [
-      "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0"
-    ],
+    "body": "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
   },
   "readIdFromJsonAsync": {
-    "body": [
-      "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0"
-    ],
+    "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
     "description": "ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },
@@ -866,6 +1104,11 @@
     "body": "@ref=\"${1:Property}\"",
     "description": "@ref=\"MyProperty\"",
     "prefix": "yRef"
+  },
+  "taskCompleted": {
+    "body": "await Task.CompletedTask;$0",
+    "description": "Inserts await Task.CompletedTask",
+    "prefix": "yTaskCompleted"
   },
   "templateColumn": {
     "body": [

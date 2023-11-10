@@ -87,7 +87,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaCaptureUnmatchedValues          | Parameter CaptureUnmatchedValues attribute                       
      yParaIdProp                          | Inserts an Id property with Parameter attribute                  
      yParaProp                            | Inserts a property with Parameter attribute                      
-     yPropBirthDate                       | Inserts an BirthDate property                                    
+     yPropBirthDate                       | Inserts a BirthDate property                                    
      yPropCity                            | Inserts a City property                                          
      yPropCountry                         | Inserts a Country property                                       
      yPropDescription                     | Inserts a Description property                                   
@@ -163,12 +163,12 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yInheritsLayoutComponentBase      | Complete Layout component inherits LayoutComponentBase      
      yInheritsOwningComponentBase      | @inherits OwningComponentBase<ApplicationDbContext>         
      yInjectHttpClient                 | @inject HttpClient directive                                
-     yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive in Blazor Server app 
-     yInjectIConfiguration             | @inject IConfiguration directive in Blazor Server app       
+     yInjectIAccessTokenProvider       | @inject IAccessTokenProvider directive 
+     yInjectIConfiguration             | @inject IConfiguration directive       
      yInjectIJSRuntime                 | @inject IJSRuntime directive                                
      yInjectIMapper                    | @inject IMapper directive                                   
      yInjectNavigationManager          | @inject NavigationManager directive                         
-     yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive in Blazor Server app
+     yInjectProtectedLocalStorage      | @inject ProtectedLocalStorage directive
      yInjectService                    | @inject MyService myService                                 
      yInjectSignOutSessionStateManager | @inject SignOutSessionStateManager directive                
      yInputCheckbox                    | Inserts an InputCheckbox component                          
@@ -207,7 +207,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yParaIdProp                       | Inserts an Id property with Parameter attribute             
      yParaProp                         | Inserts a property with Parameter attribute                 
      yPreventDefault                   | PreventDefault attribute                                    
-     yPropBirthDate                    | Inserts an BirthDate property                               
+     yPropBirthDate                    | Inserts a BirthDate property                               
      yPropCity                         | Inserts a City property                                     
      yPropCountry                      | Inserts a Country property                                  
      yPropDescription                  | Inserts a Description property                              

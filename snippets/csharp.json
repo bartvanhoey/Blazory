@@ -24,10 +24,30 @@
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
+  "builderAddDbContext": {
+    "body": "builder.Services.AddDbContext<${1:DataContext}>();$0",
+    "description": "Inserts builder.Services.AddDbContext",
+    "prefix": "yBuiAddDbContext"
+  },
+  "builderAddDbContextSqlServer": {
+    "body": "builder.Services.AddDbContext<${1:DataContext}>(options => options.UseSqlServer(\"name=ConnectionStrings:${2:DbConnection}\"));$0",
+    "description": "Inserts builder.Services.AddDbContext.Options.UseSqlServer",
+    "prefix": "yBuiAddDbContextUseSqlServer"
+  },
+  "builderAddHttPClientScoped": {
+    "body": "builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });$0",
+    "description": "Inserts builder.Services.AddScoped HttpClient",
+    "prefix": "yBuiServicesAddHttpClient"
+  },
   "builderEntity": {
     "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "builder.Entity stub",
     "prefix": "yBuilderEntity"
+  },
+  "builderServicesAddScoped": {
+    "body": "builder.Services.AddScoped<I${1:Name}Service$2, ${3:$1}Service>();$0",
+    "description": "Inserts builder.Services.AddScoped INameService NameService",
+    "prefix": "yBuiServicesAddScoped"
   },
   "cascadingPara": {
     "body": [
@@ -45,7 +65,7 @@
   },
   "compareAttribute": {
     "body": [
-      "[Compare$1(nameof(${2:TypeName}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
+      "[Compare$1(nameof(${2:TypeToCompare}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
       "$0"
     ],
     "description": "Compare attribute",
@@ -55,6 +75,11 @@
     "body": "Task$1<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> Create${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${5:$2} ${6:${5/(.*)/${1:/downcase}/}});$0",
     "description": "Adds a CreateAsync method Definition to an Interface ",
     "prefix": "yCreateAsyncMethodDefinition"
+  },
+  "dataTypeAttribute": {
+    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
+    "description": "DataType attribute",
+    "prefix": "yDataTypeAttribute"
   },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
@@ -67,9 +92,14 @@
     "prefix": "yDbSetNewSyntax"
   },
   "deleteAsyncMethodDefinition": {
-    "body": "public Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
+    "body": "Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
     "description": "Adds a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
+  },
+  "emailAddressAttribute": {
+    "body": ["[EmailAddress$1] $0"],
+    "description": "EmailAddress Attribute",
+    "prefix": "yEmailAddressAttribute"
   },
   "eventCallback": {
     "body": [
@@ -89,27 +119,6 @@
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
   },
-  "builderAddDbContext": {
-    "body": "builder.Services.AddDbContext<${1:DataContext}>();$0",
-    "description": "Inserts builder.Services.AddDbContext",
-    "prefix": "yBuiAddDbContext"
-  },
-  "builderAddDbContextSqlServer": {
-    "body": "builder.Services.AddDbContext<${1:DataContext}>(options => options.UseSqlServer(\"name=ConnectionStrings:${2:DbConnection}\"));$0",
-    "description": "Inserts builder.Services.AddDbContext.Options.UseSqlServer",
-    "prefix": "yBuiAddDbContextUseSqlServer"
-  },
-  "builderServicesAddScoped": {
-    "body":"builder.Services.AddScoped<I{1:Name}Service$2 ${3:$1}Service>()$0",
-    "description": "Inserts builder.Services.AddScoped INameService NameService",
-    "prefix": "yBuiServicesAddScoped"
-  },
-  "builderAddHttPClientScoped": {
-    "body":"builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });$0",
-    "description": "Inserts builder.Services.AddScoped HttpClient",
-    "prefix": "yBuiServicesAddHttpClient"
-  },
-
   "eventCallbackExtended": {
     "body": [
       "[Parameter] public EventCallback<${1:MouseEventArgs}> On${2:Click} { get; set; }$0"
@@ -180,6 +189,11 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
+  "handleValidSubmitAsync": {
+    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
+    "description": "Inserts the HandleValidSubmitAsync method stub",
+    "prefix": "yHandleValidSubmitAsync"
+  },
   "httpClientGetAsync": {
     "body": [
       "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
@@ -211,9 +225,8 @@
   "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
-      "response.EnsureSuccessStatusCode();",
-      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
-      "return ${9:$6}Id;$0"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${6:result} = await response.Content.ReadFromJsonAsync<${8:TypeName}>();"
     ],
     "description": "Http.PostAsJsonAsync call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -244,6 +257,17 @@
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
+  "ifNotNullAndCountGreaterThan0Statement": {
+    "body": [
+      "if (${1:MyVariable} != null && ${2:$1}.Count > 0)",
+      "{",
+      "\t$3",
+      "}",
+      "$0"
+    ],
+    "description": "If not null statement and count greater than zero statement",
+    "prefix": "yIfNotNullAndCountGreaterThan0Statement"
+  },
   "ifNotNullInlineStatement": {
     "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "If not null inline statement",
@@ -254,10 +278,53 @@
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
+  "ifNotStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (!string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrEmpty"
+  },
+  "ifNotStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (!string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(!string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfNotStringIsNullOrWhiteSpace"
+  },
   "ifNullInlineStatement": {
     "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
+  },
+  "ifNullOrCountIsZeroStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || ${2:$1}.Count == 0)",
+      "{",
+      "\t$3",
+      "}",
+      "$0"
+    ],
+    "description": "If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroStatement"
+  },
+  "ifNullReturnDefaultStatement": {
+    "body": "if (${1:MyVariable} == null) return ${2:default};$0",
+    "description": "If null return default statement",
+    "prefix": "yIfNullReturnDefault statement"
+  },
+  "ifNullReturnStatement": {
+    "body": "if (${1:MyVariable} == null) return;$0",
+    "description": "If null return statement",
+    "prefix": "yIfNullReturn statement"
   },
   "ifNullStatement": {
     "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
@@ -269,10 +336,37 @@
     "description": "If statement",
     "prefix": "yIf"
   },
+  "ifStringIsNullOrEmptyStatement": {
+    "body": [
+      "if (string.IsNullOrEmpty(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrEmpty(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrEmpty"
+  },
+  "ifStringIsNullOrWhiteSpaceStatement": {
+    "body": [
+      "if (string.IsNullOrWhiteSpace(${1:MyVariable}))",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts if(string.IsNullOrWhiteSpace(MyVariable))statement",
+    "prefix": "yIfStringIsNullOrWhiteSpace"
+  },
   "implementCorrespondingInterface": {
     "body": "I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding interface",
     "prefix": "yImpCorrespondingInterface"
+  },
+  "inheritsAuthenticationStateProvider": {
+    "body": [" AuthenticationStateProvider$1"],
+    "description": "Inherits AuthenticationStateProvider",
+    "prefix": "yInheritsAuthenticationStateProvider"
   },
   "inheritsComponentBase": {
     "body": [" ComponentBase$1"],
@@ -298,70 +392,80 @@
     "description": "Inject IJSRuntime property",
     "prefix": "yInjectIJSRuntime"
   },
+  "injectILocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ILocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ILocalStorageService directive",
+    "prefix": "yInjectILocalStorageService"
+  },
   "injectIMapper": {
     "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
+  "injectISyncLocalStorageService": {
+    "body": "[Inject$1] ${2|protected,public|} ISyncLocalStorageService$3 ${4|LocalStorage,Storage,_localStorage,_storage|} { get; set; }$0",
+    "description": "Inject ISyncLocalStorageService directive",
+    "prefix": "yInjectISyncLocalStorageService"
+  },
   "injectNavigationManager": {
-    "body": [
-      "[Inject$1] public NavigationManager$2? ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
-    ],
+    "body": "[Inject$1] ${2|protected,public|} NavigationManager$3? ${4|NavigationManager,Navigation,Nav|} { get; set; }$0",
     "description": "Inject NavigationManager property",
     "prefix": "yInjectNavigationManager"
   },
   "injectService": {
-    "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0"
-    ],
+    "body": "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0",
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
   },
+  "injectAuthenticationStateProvider": {
+    "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
+    "description": "Inject AuthenticationStateProvider property",
+    "prefix": "yInjectAuthenticationStateProvider"
+  },
   "injectSignOutSessionStateManager": {
-    "body": [
-      "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0"
-    ],
+    "body": "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0",
     "description": "Inject SignOutSessionStateManager property",
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "invokeAsyncEventCallback": {
-    "body": ["await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});"],
+    "body": "await On${1:MyEventCallBack}.InvokeAsync(${3:MyParameter});",
     "description": "Invoke async Eventcallback",
     "prefix": "yInvokeAsyncEventCallback"
   },
   "isNotNull": {
-    "body": ["!= null$0"],
+    "body": "!= null$0",
     "description": "Is not null",
     "prefix": "yIsNotNull"
   },
   "isNull": {
-    "body": ["== null$0"],
+    "body": "== null$0",
     "description": "Is equal to null",
     "prefix": "yIsNull"
   },
   "jSRuntimeInvokeAsync": {
-    "body": [
-      "${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});"
-    ],
+    "body": "${1|await, return|} ${2|JSRuntime,jsRuntime,Js,jS|}.InvokeAsync<${3:TResult}>(\"${4:Path-to-JavaScript-function}\", ${5:arguments});",
     "description": "JSRuntimeInvokeAsync call",
     "prefix": "yJSRuntimeInvokeAsync"
   },
   "jSRuntimeInvokeVoidAsync": {
-    "body": [
-      "await ${1|JSRuntime,Js|}.InvokeVoidAsync(\"${3:Path-to-JavaScript-function}\", ${4:arguments});"
-    ],
+    "body": "await ${1|JSRuntime,Js|}.InvokeVoidAsync(\"${3:Path-to-JavaScript-function}\", ${4:arguments});",
     "description": "JSRuntimeInvokeVoidAsync call",
     "prefix": "yJSRuntimeInvokeVoidAsync"
   },
-  "localStorageGetItem": {
-    "body": "var ${1:result} = await _localStorage.GetItemAsync<${2:Type}>(\"${3:Key}\");$0",
-    "description": "Inserts await _localStorage.GetItemAsync stub",
+  "localStorageGetItemAsync": {
+    "body": "var ${1:result} = await ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItemAsync<${3:Type}>(\"${4:Key}\");$0",
+    "description": "Inserts await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
   },
-  "localStorageSetItem": {
-    "body": " await _localStorage.SetItemAsync(\"${1:key}\", ${2:item});$0",
-    "description": "Inserts await _localStorage.SetItemAsync stub",
+  "localStorageSetItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
+    "description": "Inserts await LocalStorage.SetItemAsync stub",
     "prefix": "yLocalStorageSetItemAsync"
+  },
+  "localStorageRemoveItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
+    "description": "Inserts await LocalStorage.RemoveItemAsync stub",
+    "prefix": "yLocalStorageRemoveItemAsync"
   },
   "methodAsync": {
     "body": [
@@ -547,13 +651,18 @@
   },
   "propBirthDate": {
     "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
-    "description": "Inserts an BirthDate property ",
+    "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
     "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
+  },
+  "propConfirmPassword": {
+    "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a ConfirmPassword property ",
+    "prefix": "yPropConfirmPassword"
   },
   "propCountry": {
     "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
@@ -564,6 +673,11 @@
     "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
+  },
+  "propEmail": {
+    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Email property ",
+    "prefix": "yPropEmail"
   },
   "propEndDate": {
     "body": [
@@ -596,6 +710,16 @@
     "description": "Inserts an Id property",
     "prefix": "yPropId"
   },
+  "propImageUrl": {
+    "body": "public string ${1:ImageUrl} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts an ImageUrl property ",
+    "prefix": "yPropImageUrl"
+  },
+  "propIsVisible": {
+    "body": ["public bool IsVisible { get; set; } = ${1|false,true|};$0"],
+    "description": "Inserts an IsVisible property ",
+    "prefix": "yPropIsVisible"
+  },
   "propLastName": {
     "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
@@ -609,24 +733,29 @@
     "prefix": "yPropMobilePhone"
   },
   "propName": {
-    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
+    "body": "public string ${1:Name} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
-  },
-  "propUserName": {
-    "body": ["public string ${1:UserName} { get; ${2|set;,private set;|} }$0"],
-    "description": "Inserts a UserName property ",
-    "prefix": "yPropUserName"
   },
   "propPage": {
     "body": ["public int Page { get; set;} }$0"],
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
+  "propPassword": {
+    "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a Password property ",
+    "prefix": "yPropPassword"
+  },
   "propPhone": {
     "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
+  },
+  "propPrice": {
+    "body": ["public decimal Price{ get; ${2|set;,private set;|}  }$0"],
+    "description": "Inserts a Price property ",
+    "prefix": "yPropPrice"
   },
   "propStartDate": {
     "body": [
@@ -651,6 +780,11 @@
     "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
+  },
+  "propUserName": {
+    "body": ["public string ${1:UserName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a UserName property ",
+    "prefix": "yPropUserName"
   },
   "propZipCode": {
     "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
@@ -724,8 +858,13 @@
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
   },
+  "taskCompleted": {
+    "body": "await Task.CompletedTask;$0",
+    "description": "Inserts await Task.CompletedTask",
+    "prefix": "yTaskCompleted"
+  },
   "updateAsyncMethodDefinition": {
-    "body": "public Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
+    "body": "Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
     "description": "Adds a UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
   }

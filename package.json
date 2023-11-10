@@ -1,14 +1,14 @@
 {
   "name": "blazory",
   "displayName": "Blazory",
-  "description": "Snippets that start with an y for razor and C# code-behind files",
+  "description": "Blazor Snippets that start with an y",
   "icon": "images/blazory-icon.png",
   "publisher": "BartVanHoey",
   "repository": {
     "type": "git",
     "url": "https://github.com/bartvanhoey/Blazory.git"
   },
-  "version": "0.0.225",
+  "version": "0.0.252",
   "engines": {
     "vscode": "^1.47.0"
   },
