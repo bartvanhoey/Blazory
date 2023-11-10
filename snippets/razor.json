@@ -165,12 +165,12 @@
     "description": "PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
-  "eventCallback": {
+  "eventCallbackProperty": {
     "body": [
       "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ],
-    "description": "EventCallback parameter",
-    "prefix": "yEventCallback"
+    "description": "EventCallback property",
+    "prefix": "yEventCallback property"
   },
   "eventCallbackChanged": {
     "body": [
@@ -183,12 +183,19 @@
     "description": "EventCallbackChanged",
     "prefix": "yEventCallbackChanged"
   },
-  "eventCallbackExtended": {
+  "eventCallbackOnClick": {
     "body": [
       "[Parameter$1] public EventCallback<${2:MouseEventArgs}> On${3:Click} { get; set; }$0"
     ],
-    "description": "EventCallbackExtended parameter",
-    "prefix": "yEventCallbackExtended"
+    "description": "EventCallback OnClick property",
+    "prefix": "yEventCallbackOnClick"
+  },
+  "eventCallbackWithTypeProperty": {
+    "body": [
+      "[Parameter$1] public EventCallback<${2:Type}> ${3:Click} { get; set; }$0"
+    ],
+    "description": "EventCallback with Type property",
+    "prefix": "yEventCallbackWithTypeProperty"
   },
   "formControlClass": {
     "body": "class=\"form-control\"",
