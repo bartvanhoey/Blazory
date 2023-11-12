@@ -1084,13 +1084,14 @@
     "prefix": "yPropZipCode"
   },
   "propertyColumn": {
-    "body": "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Format=\"N0\" Sortable=\"true\" />$0",
+    "body": "<PropertyColumn Property=\"@(p=> p.${1:PropertyName})\" Align=\"@Align.${2|Left,Center,Right|}\" Sortable=\"true\" />$0",
     "description": "PropertyColumn",
     "prefix": "yPropertyColumn"
   },
   "quickGrid": {
     "body": [
-      "<QuickGrid Items=\"@${1:items}\" Pagination=\"@pagination\" >",
+      "@* @using Microsoft.AspNetCore.Components.QuickGrid *@",
+      "<QuickGrid Items=\"@${1:items}\"  >",
       "\t$0",
       "</QuickGrid>"
     ],
