@@ -68,7 +68,7 @@
     "prefix": "yCode"
   },
   "columnOptions": {
-    "body": ["<ColumnOptions>", "\t", "<ColumnOptions/>"],
+    "body": ["<ColumnOptions>", "\t$0", "</ColumnOptions>"],
     "description": "ColumnOptions",
     "prefix": "yColumnOptions"
   },
