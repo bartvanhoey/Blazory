@@ -266,7 +266,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropEmail                              | Inserts a Email property                                   
      yPropEndDate                            | Inserts a DateTime EndDate property                        
      yPropEndTime                            | Inserts a DateTime EndTime property                        
-     yPropertyColumn                         | PropertyColumn                                             
+     yPropertyColumn                         | Inserts a QuickGrid PropertyColumn                         
      yPropFilter                             | Inserts a Filter property                                  
      yPropFirstName                          | Inserts a First Name property                              
      yPropId                                 | Inserts an Id property                                     
@@ -290,7 +290,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yReadIdFromJsonAsync                    | ReadFromJsonAsync call                                     
      yRef                                    | @ref="MyProperty"                                          
      yTaskCompleted                          | Inserts await Task.CompletedTask                           
-     yTemplateColumn                         | TemplateColumn                                             
+     yTemplateColumn                         | Inserts a QuickGrid TemplateColumn                         
      yTemplatedComponent                     | Templated component                                        
      yTypeParam                              | @typeParam                                                 
      yUsing                                  | @using MyNameSpace                                         
