@@ -151,6 +151,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAtIfIsVisible                          | If statement                                               
      yAtIfNotNull                            | If not null statement                                      
      yAttributeAuthorize                     | @attribute [Authorize]§0                                   
+     yAttributeRenderModeServer              | @attribute [RenderModeServer]                              
      yAttributeStreamRendering               | @attribute [StreamRendering(true)]                         
      yBind                                   | Bind attribute                                             
      yBindFormat                             | @bind:format="MyFormat"                                    
