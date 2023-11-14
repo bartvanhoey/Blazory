@@ -150,7 +150,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAtIf                                   | If statement                                               
      yAtIfIsVisible                          | If statement                                               
      yAtIfNotNull                            | If not null statement                                      
-     yAuthorizeAttribute                     | @attribute [Authorize]                                     
+     yAttributeAuthorize                     | @attribute [Authorize]§0                                   
+     yAttributeStreamRendering               | @attribute [StreamRendering(true)]                         
      yBind                                   | Bind attribute                                             
      yBindFormat                             | @bind:format="MyFormat"                                    
      yBindOnInputEvent                       | @bind:event="oninput"                                      

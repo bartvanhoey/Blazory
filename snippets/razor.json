@@ -14,10 +14,15 @@
     "description": "If statement",
     "prefix": "yAtIf"
   },
+  "attribute [StreamRendering] Directive": {
+    "body": "@attribute [StreamRendering(true)]$0",
+    "description": "@attribute [StreamRendering(true)]",
+    "prefix": "yAttributeStreamRendering"
+  },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
-    "description": "@attribute [Authorize]",
-    "prefix": "yAuthorizeAttribute"
+    "description": "@attribute [Authorize]§0",
+    "prefix": "yAttributeAuthorize"
   },
   "bindAttribute": {
     "body": "@bind=\"${1:Property}\"",
