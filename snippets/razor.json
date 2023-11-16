@@ -24,6 +24,21 @@
     "description": "@attribute [RenderModeServer]",
     "prefix": "yAttributeRenderModeServer"
   },
+  "renderModeInteractiveServer": {
+    "body": "@rendermode InteractiveServer$0",
+    "description": "@rendermode InteractiveServer",
+    "prefix": "yRendermodeInteractiveServer"
+  },
+  "renderModeInteractiveWebAssembly": {
+    "body": "@rendermode InteractiveWebAssembly$0",
+    "description": "@rendermode InteractiveWebAssembly",
+    "prefix": "yRendermodeInteractiveWebAssembly"
+  },
+  "renderModeInteractiveAuto": {
+    "body": "@rendermode InteractiveAuto$0",
+    "description": "@rendermode InteractiveAuto",
+    "prefix": "yRendermodeInteractiveAuto"
+  },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
     "description": "@attribute [Authorize]§0",
