@@ -8,7 +8,10 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": ["[ApiController]", "$0"],
+    "body": [
+      "[ApiController]",
+      "$0"
+    ],
     "description": "ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -20,7 +23,10 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": ["[Authorize]", "$0"],
+    "body": [
+      "[Authorize]",
+      "$0"
+    ],
     "description": "AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
@@ -40,7 +46,9 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
+    "body": [
+      "modelBuilder.Entity<${1:ClassName}>()$0;"
+    ],
     "description": "builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -63,6 +71,11 @@
     "description": "Inserts a property with CascadingParameter attribute",
     "prefix": "yCascadingParaProp"
   },
+  "columnTypeNameDecimalAttribute": {
+    "body": "[Column$1(TypeName =\"decimal(${2:18},${3:2})\")]$0",
+    "description": "ColumnType TypeName decimal attribute",
+    "prefix": "yColumnTypeNameDecimalAttribute"
+  },
   "compareAttribute": {
     "body": [
       "[Compare$1(nameof(${2:TypeToCompare}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
@@ -77,9 +90,14 @@
     "prefix": "yCreateAsyncMethodDefinition"
   },
   "dataTypeAttribute": {
-    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
+    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]$0",
     "description": "DataType attribute",
     "prefix": "yDataTypeAttribute"
+  },
+  "dbSaveChangesAsync": {
+    "body": " await ${1|_db, _dbContext, db, context|}.SaveChangesAsync();$0",
+    "description": "Inserts _dbContext.SaveChangesAsync",
+    "prefix": "yDbSaveChangesAsync"
   },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
@@ -96,13 +114,10 @@
     "description": "Adds a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
   },
-  "dbSaveChangesAsync": {
-    "body": " await ${1|_db, _dbContext, db, context|}.SaveChangesAsync();$0",
-    "description": "Inserts _dbContext.SaveChangesAsync",
-    "prefix": "yDbSaveChangesAsync"
-  },
   "emailAddressAttribute": {
-    "body": ["[EmailAddress$1] $0"],
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
     "description": "EmailAddress Attribute",
     "prefix": "yEmailAddressAttribute"
   },
@@ -162,12 +177,16 @@
     "prefix": "yGetListAsyncMethodDefinition"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "{ get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "{ get, set }",
     "prefix": "yGs"
   },
@@ -195,7 +214,12 @@
     "prefix": "yHandleFileChosenAsync"
   },
   "handleValidSubmitAsync": {
-    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
+    "body": [
+      "protected async void HandleValidSubmitAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Inserts the HandleValidSubmitAsync method stub",
     "prefix": "yHandleValidSubmitAsync"
   },
@@ -253,12 +277,17 @@
     "prefix": "yHttpPutAsJsonAsync"
   },
   "iEnumerable": {
-    "body": ["IEnumerable$1<${2:TypeName}>$0"],
+    "body": [
+      "IEnumerable$1<${2:TypeName}>$0"
+    ],
     "description": "IEnumerable statement",
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "If inline statement",
     "prefix": "yIfInline"
   },
@@ -274,12 +303,21 @@
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "yIfNotNull"
   },
@@ -306,7 +344,10 @@
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "If null inline statement",
     "prefix": "yIfNullInline statement"
   },
@@ -332,12 +373,24 @@
     "prefix": "yIfNullReturn statement"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "yIf"
   },
@@ -369,19 +422,30 @@
     "prefix": "yImpCorrespondingInterface"
   },
   "inheritsAuthenticationStateProvider": {
-    "body": [" AuthenticationStateProvider$1"],
+    "body": [
+      " AuthenticationStateProvider$1"
+    ],
     "description": "Inherits AuthenticationStateProvider",
     "prefix": "yInheritsAuthenticationStateProvider"
   },
   "inheritsComponentBase": {
-    "body": [" ComponentBase$1"],
+    "body": [
+      " ComponentBase$1"
+    ],
     "description": "Inherits ComponentBase",
     "prefix": "yInheritsComponentBase"
   },
   "injectAttribute": {
-    "body": ["[Inject$1]$0"],
+    "body": [
+      "[Inject$1]$0"
+    ],
     "description": "Inserts InjectAttribute",
     "prefix": "yInjectAttribute"
+  },
+  "injectAuthenticationStateProvider": {
+    "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
+    "description": "Inject AuthenticationStateProvider property",
+    "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
     "body": [
@@ -403,7 +467,9 @@
     "prefix": "yInjectILocalStorageService"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
     "description": "Inject IMapper property",
     "prefix": "yInjectIMapper"
   },
@@ -421,11 +487,6 @@
     "body": "[Inject$1] ${2|protected,public|} I${4:$3}? ${3:Name} { get; set; }$0",
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
-  },
-  "injectAuthenticationStateProvider": {
-    "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
-    "description": "Inject AuthenticationStateProvider property",
-    "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectSignOutSessionStateManager": {
     "body": "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0",
@@ -462,15 +523,15 @@
     "description": "Inserts await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
   },
-  "localStorageSetItemAsync": {
-    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
-    "description": "Inserts await LocalStorage.SetItemAsync stub",
-    "prefix": "yLocalStorageSetItemAsync"
-  },
   "localStorageRemoveItemAsync": {
     "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
     "description": "Inserts await LocalStorage.RemoveItemAsync stub",
     "prefix": "yLocalStorageRemoveItemAsync"
+  },
+  "localStorageSetItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
+    "description": "Inserts await LocalStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
   },
   "methodAsync": {
     "body": [
@@ -553,7 +614,9 @@
     "prefix": "yMethodVoidWithArgs"
   },
   "modelBuilderEntity": {
-    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
+    "body": [
+      "modelBuilder.Entity<${1:ClassName}>()$0;"
+    ],
     "description": "builder.Entity stub",
     "prefix": "yModelBuilderEntity"
   },
@@ -592,7 +655,12 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -607,7 +675,12 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -629,7 +702,9 @@
     "prefix": "yPaginationState"
   },
   "parameterAttribute": {
-    "body": ["[Parameter$1]$0"],
+    "body": [
+      "[Parameter$1]$0"
+    ],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
@@ -655,12 +730,16 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
+    "body": [
+      "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
+    ],
     "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
-    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:City} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
@@ -670,12 +749,16 @@
     "prefix": "yPropConfirmPassword"
   },
   "propCountry": {
-    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
   },
   "propDescription": {
-    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
+    "body": [
+      "public string Description{ get; ${1|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
   },
@@ -699,12 +782,16 @@
     "prefix": "yPropEndTime"
   },
   "propFilter": {
-    "body": ["public string Filter{ get; set; }$0"],
+    "body": [
+      "public string Filter{ get; set; }$0"
+    ],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
   },
   "propFirstName": {
-    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a First Name property ",
     "prefix": "yPropFirstName"
   },
@@ -721,12 +808,16 @@
     "prefix": "yPropImageUrl"
   },
   "propIsVisible": {
-    "body": ["public bool IsVisible { get; set; } = ${1|false,true|};$0"],
+    "body": [
+      "public bool IsVisible { get; set; } = ${1|false,true|};$0"
+    ],
     "description": "Inserts an IsVisible property ",
     "prefix": "yPropIsVisible"
   },
   "propLastName": {
-    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a First Name property ",
     "prefix": "yPropLastName"
   },
@@ -743,7 +834,9 @@
     "prefix": "yPropName"
   },
   "propPage": {
-    "body": ["public int Page { get; set;} }$0"],
+    "body": [
+      "public int Page { get; set;} }$0"
+    ],
     "description": "Inserts a Page property",
     "prefix": "yPropPage"
   },
@@ -753,12 +846,16 @@
     "prefix": "yPropPassword"
   },
   "propPhone": {
-    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:Phone} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Phone property ",
     "prefix": "yPropPhone"
   },
   "propPrice": {
-    "body": ["public decimal Price{ get; ${2|set;,private set;|}  }$0"],
+    "body": [
+      "public decimal Price{ get; ${2|set;,private set;|}  }$0"
+    ],
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
   },
@@ -777,27 +874,37 @@
     "prefix": "yPropStartTime"
   },
   "propStreet": {
-    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:Street} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Street property ",
     "prefix": "yPropStreet"
   },
   "propTitle": {
-    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
+    "body": [
+      "public string Title { get; ${1|set;,private set;|} }$0"
+    ],
     "description": "Inserts an Title property ",
     "prefix": "yPropTitle"
   },
   "propUserName": {
-    "body": ["public string ${1:UserName} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:UserName} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
   },
   "propZipCode": {
-    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a ZipCode property ",
     "prefix": "yPropZipCode"
   },
   "rangeAttribute": {
-    "body": ["[Range$1(${2:0},${2:1000})]$0"],
+    "body": [
+      "[Range$1(${2:0},${2:1000})]$0"
+    ],
     "description": "Range attribute",
     "prefix": "yRangeAttribute"
   },
@@ -816,17 +923,25 @@
     "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
-    "body": ["private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"],
+    "body": [
+      "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0"
+    ],
     "description": "Readonly HttpClient field",
     "prefix": "yReadOnlyHttpClientField"
   },
   "requiredAttribute": {
-    "body": ["[Required$1]", "$0"],
+    "body": [
+      "[Required$1]",
+      "$0"
+    ],
     "description": "RequiredAttribute",
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
+    "body": [
+      "[Route(\"${1:api/[controller]/[action]}\")]",
+      "$0"
+    ],
     "description": "RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -859,7 +974,9 @@
     "prefix": "yStateHasChanged"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "yStringLengthAttribute"
   },
