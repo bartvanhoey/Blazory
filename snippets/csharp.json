@@ -802,6 +802,13 @@
     "description": "Inserts an Id property",
     "prefix": "yPropId"
   },
+  "propUserId": {
+    "body": [
+      "public ${1|Guid,int,string|} ${2:UserId} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an UserId property",
+    "prefix": "yPropUserId"
+  },
   "propImageUrl": {
     "body": "public string ${1:ImageUrl} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts an ImageUrl property ",
