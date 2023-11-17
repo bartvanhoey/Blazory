@@ -861,7 +861,7 @@
   },
   "propPrice": {
     "body": [
-      "public decimal Price{ get; ${2|set;,private set;|}  }$0"
+      "public decimal ${1|Price, TotalPrice|} { get; ${2|set;,private set;|} }$0"
     ],
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
