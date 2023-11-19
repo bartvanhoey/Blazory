@@ -7,140 +7,144 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
 
 ### C# code-behind files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/csharp.json)
 
-     Prefix                                  | Description                                                      
-     --------------------------------------- | ----------------------------------------------------------------- 
-     yAddHttpClientWithHttpMessageHandler    | Add HttpClient with HttpMessageHandler                           
-     yApiControllerAttribute                 | ApiController attribute                                          
-     yAuthorizeAttribute                     | AuthorizeAttribute                                               
-     yBuiAddDbContext                        | Inserts builder.Services.AddDbContext                            
-     yBuiAddDbContextUseSqlServer            | Inserts builder.Services.AddDbContext.Options.UseSqlServer       
-     yBuilderEntity                          | builder.Entity stub                                              
-     yBuiServicesAddHttpClient               | Inserts builder.Services.AddScoped HttpClient                    
-     yBuiServicesAddScoped                   | Inserts builder.Services.AddScoped INameService NameService      
-     yCascadingPara                          | Inserts a CascadingParameter attribute                           
-     yCascadingParaAuthState                 | Cascading parameter AuthenticationState                          
-     yCascadingParaProp                      | Inserts a property with CascadingParameter attribute             
-     yCompareAttribute                       | Compare attribute                                                
-     yCreateAsyncMethodDefinition            | Adds a CreateAsync method Definition to an Interface             
-     yDataTypeAttribute                      | DataType attribute                                               
-     yDbSet                                  | Inserts a DbSet for a class statement in DbContext               
-     yDbSetNewSyntax                         | Inserts a DbSet for a class statement in DbContext               
-     yDeleteAsyncMethodDefinition            | Adds a DeleteAsync method definition for an interface            
-     yEmailAddressAttribute                  | EmailAddress Attribute                                           
-     yEventCallback                          | EventCallback parameter                                          
-     yEventCallbackChanged                   | EventCallbackChanged                                             
-     yEventCallbackExtended                  | EventCallbackExtended parameter                                  
-     yEventHandler                           | EventHandler method stub                                         
-     yEventHandlerAsync                      | EventHandlerAsync method stub                                    
-     yGetAsyncMethodDefinition               | Inserts a GetAsync method definition for an interface            
-     yGetListAsyncMethodDefinition           | Inserts a GetListAsync definition for an interface               
-     yGps                                    | { get, private set }                                             
-     yGs                                     | { get, set }                                                     
-     yHandleFileChosenAsync                  | Inserts the HandleFileChosenAsync method for an InputFile element
-     yHandleValidSubmitAsync                 | Inserts the HandleValidSubmitAsync method stub                   
-     yHttpDeleteAsync                        | Http.DeleteAsync call                                            
-     yHttpGetAsync                           | Http.GetAsync call                                               
-     yHttpGetFromByIdJsonAsync               | Http.GetFromByIdJsonAsync call                                   
-     yHttpGetFromJsonAsync                   | Http.GetFromJsonAsync call                                       
-     yHttpPostAsJsonAsync                    | Http.PostAsJsonAsync call                                        
-     yHttpPostAsync                          | Http.PostAsync call                                              
-     yHttpPutAsJsonAsync                     | Http.PutAsJsonAsync call                                         
-     yIEnumerable                            | IEnumerable statement                                            
-     yIf                                     | If statement                                                     
-     yIfInline                               | If inline statement                                              
-     yIfNotNull                              | If not null statement                                            
-     yIfNotNullAndCountGreaterThan0Statement | If not null statement and count greater than zero statement      
-     yIfNotNullInline statement              | If not null inline statement                                     
-     yIfNotStringIsNullOrEmpty               | Inserts if(!string.IsNullOrEmpty(MyVariable))statement           
-     yIfNotStringIsNullOrWhiteSpace          | Inserts if(!string.IsNullOrWhiteSpace(MyVariable))statement      
-     yIfNull                                 | If null statement                                                
-     yIfNullInline statement                 | If null inline statement                                         
-     yIfNullOrCountIsZeroStatement           | If null Or Count is zero statement                               
-     yIfNullReturn statement                 | If null return statement                                         
-     yIfNullReturnDefault statement          | If null return default statement                                 
-     yIfStringIsNullOrEmpty                  | Inserts if(string.IsNullOrEmpty(MyVariable))statement            
-     yIfStringIsNullOrWhiteSpace             | Inserts if(string.IsNullOrWhiteSpace(MyVariable))statement       
-     yImpCorrespondingInterface              | Implements corresponding interface                               
-     yInheritsAuthenticationStateProvider    | Inherits AuthenticationStateProvider                             
-     yInheritsComponentBase                  | Inherits ComponentBase                                           
-     yInjectAttribute                        | Inserts InjectAttribute                                          
-     yInjectAuthenticationStateProvider      | Inject AuthenticationStateProvider property                      
-     yInjectHttpClient                       | Inject HttpClient property                                       
-     yInjectIJSRuntime                       | Inject IJSRuntime property                                       
-     yInjectILocalStorageService             | Inject ILocalStorageService directive                            
-     yInjectIMapper                          | Inject IMapper property                                          
-     yInjectISyncLocalStorageService         | Inject ISyncLocalStorageService directive                        
-     yInjectNavigationManager                | Inject NavigationManager property                                
-     yInjectService                          | Inject MyService MyService                                       
-     yInjectSignOutSessionStateManager       | Inject SignOutSessionStateManager property                       
-     yInvokeAsyncEventCallback               | Invoke async Eventcallback                                       
-     yIsNotNull                              | Is not null                                                      
-     yIsNull                                 | Is equal to null                                                 
-     yJSRuntimeInvokeAsync                   | JSRuntimeInvokeAsync call                                        
-     yJSRuntimeInvokeVoidAsync               | JSRuntimeInvokeVoidAsync call                                    
-     yLocalStorageGetItemAsync               | Inserts await LocalStorage.GetItemAsync stub                     
-     yLocalStorageRemoveItemAsync            | Inserts await LocalStorage.RemoveItemAsync stub                  
-     yLocalStorageSetItemAsync               | Inserts await LocalStorage.SetItemAsync stub                     
-     yMethodAsync                            | async method stub without arguments                              
-     yMethodAsyncReturn                      | async task method stub without arguments                         
-     yMethodAsyncReturnWithArgs              | async task method stub with arguments                            
-     yMethodAsyncWithArgs                    | async method stub with arguments                                 
-     yMethodReturn                           | method stub without arguments                                    
-     yMethodReturnWithArgs                   | method stub with arguments                                       
-     yMethodVoid                             | void method stub without arguments                               
-     yMethodVoidWithArgs                     | void method stub with arguments                                  
-     yModelBuilderEntity                     | builder.Entity stub                                              
-     yNavigateToId                           | NavigationManager.NavigateTo page\\Id                            
-     yNavigateToPage                         | NavigationManager.NavigateTo page                                
-     yOnAfterRender                          | OnAfterRender method stub                                        
-     yOnAfterRenderAsync                     | OnAfterRenderAsync method stub                                   
-     yOnInitialized                          | OnInitialized method stub                                        
-     yOnInitializedAsync                     | OnInitializedAsync method stub                                   
-     yOnParametersSet                        | OnParameterSet method stub                                       
-     yOnParametersSetAsync                   | OnParameterSetAsync method stub                                  
-     yPaginationState                        | Inserts a PaginationState field                                  
-     yParaAttribute                          | Inserts a Parameter attribute                                    
-     yParaCaptureUnmatchedValues             | Parameter CaptureUnmatchedValues attribute                       
-     yParaIdProp                             | Inserts an Id property with Parameter attribute                  
-     yParaProp                               | Inserts a property with Parameter attribute                      
-     yPropBirthDate                          | Inserts a BirthDate property                                     
-     yPropCity                               | Inserts a City property                                          
-     yPropConfirmPassword                    | Inserts a ConfirmPassword property                               
-     yPropCountry                            | Inserts a Country property                                       
-     yPropDescription                        | Inserts a Description property                                   
-     yPropEmail                              | Inserts a Email property                                         
-     yPropEndDate                            | Inserts a DateTime EndDate property                              
-     yPropEndTime                            | Inserts a DateTime EndTime property                              
-     yPropFilter                             | Inserts a Filter property                                        
-     yPropFirstName                          | Inserts a First Name property                                    
-     yPropId                                 | Inserts an Id property                                           
-     yPropImageUrl                           | Inserts an ImageUrl property                                     
-     yPropIsVisible                          | Inserts an IsVisible property                                    
-     yPropLastName                           | Inserts a First Name property                                    
-     yPropMobilePhone                        | Inserts a Mobile Phone property                                  
-     yPropName                               | Inserts a Name property                                          
-     yPropPage                               | Inserts a Page property                                          
-     yPropPassword                           | Inserts a Password property                                      
-     yPropPhone                              | Inserts a Phone property                                         
-     yPropPrice                              | Inserts a Price property                                         
-     yPropStartDate                          | Inserts a DateTime StartDate property                            
-     yPropStartTime                          | Inserts a DateTime StartTime property                            
-     yPropStreet                             | Inserts a Street property                                        
-     yPropTitle                              | Inserts an Title property                                        
-     yPropUserName                           | Inserts a UserName property                                      
-     yPropZipCode                            | Inserts a ZipCode property                                       
-     yRangeAttribute                         | Range attribute                                                  
-     yReadFromJsonAsync                      | ReadFromJsonAsync call                                           
-     yReadIdFromJsonAsync                    | ReadFromJsonAsync call                                           
-     yReadOnlyHttpClientField                | Readonly HttpClient field                                        
-     yRequiredAttribute                      | RequiredAttribute                                                
-     yRouteAttribute                         | RouteAttribute                                                   
-     ySetParametersAsync                     | SetParametersAsync method stub                                   
-     yShouldRender                           | ShouldRender method stub                                         
-     yStateHasChanged                        | Inserts StateHasChanged() method                                 
-     yStringLengthAttribute                  | StringLength attribute                                           
-     yTaskCompleted                          | Inserts await Task.CompletedTask                                 
-     yUpdateAsyncMethodDefinition            | Adds a UpdateAsync method definition for an interface            
+     Prefix                                  | Description                                                           
+     --------------------------------------- | ---------------------------------------------------------------------- 
+     yAddHttpClientWithHttpMessageHandler    | Inserts AddHttpClient with HttpMessageHandler                         
+     yApiControllerAttribute                 | inserts an ApiController attribute                                    
+     yAuthorizeAttribute                     | Inserts an AuthorizeAttribute                                         
+     yBuiAddDbContext                        | Inserts a builder.Services.AddDbContext                               
+     yBuiAddDbContextUseSqlServer            | Inserts builder.Services.AddDbContext.Options.UseSqlServer            
+     yBuilderEntity                          | inserts builder.Entity stub                                           
+     yBuiServicesAddHttpClient               | Inserts builder.Services.AddScoped HttpClient                         
+     yBuiServicesAddScoped                   | Inserts builder.Services.AddScoped INameService NameService           
+     yCascadingPara                          | Inserts a CascadingParameter attribute                                
+     yCascadingParaAuthState                 | Inserts a CascadingParameter AuthenticationState Property             
+     yCascadingParaProp                      | Inserts a property with CascadingParameter attribute                  
+     yColumnTypeNameDecimalAttribute         | Inserts a ColumnType TypeName decimal attribute                       
+     yCompareAttribute                       | Inserts a Compare attribute                                           
+     yCreateAsyncMethodDefinition            | Inserts a CreateAsync method Definition to an Interface               
+     yDataTypeAttribute                      | Inserts a DataType attribute                                          
+     yDbSaveChangesAsync                     | Inserts _dbContext.SaveChangesAsync                                   
+     yDbSet                                  | Inserts a DbSet for a class in DbContext                              
+     yDbSetNewSyntax                         | Inserts a DbSet for a class in DbContext                              
+     yDeleteAsyncMethodDefinition            | Inserts a DeleteAsync method definition for an interface              
+     yEmailAddressAttribute                  | Inserts an EmailAddress Attribute                                     
+     yEventCallback                          | Inserts an EventCallback property                                     
+     yEventCallbackChanged                   | Inserts an EventCallbackChanged property + property                   
+     yEventCallbackExtended                  | Inserts an EventCallbackExtended OnClickProperty                      
+     yEventHandler                           | Inserts an EventHandler method stub                                   
+     yEventHandlerAsync                      | Inserts an EventHandlerAsync method stub                              
+     yGenerateClassImplementingInterface     | Generates a class and implements interface                            
+     yGetAsyncMethodDefinition               | Inserts a GetAsync method definition for an interface                 
+     yGetListAsyncMethodDefinition           | Inserts a GetListAsync definition for an interface                    
+     yGps                                    | Inserts { get, private set }                                          
+     yGs                                     | Inserts { get, set }                                                  
+     yHandleFileChosenAsync                  | Inserts the HandleFileChosenAsync method for an InputFile element     
+     yHandleValidSubmitAsync                 | Inserts the HandleValidSubmitAsync method stub                        
+     yHttpDeleteAsync                        | Inserts an Http.DeleteAsync call                                      
+     yHttpGetAsync                           | Inserts an Http.GetAsync call                                         
+     yHttpGetFromByIdJsonAsync               | Inserts an Http.GetFromByIdJsonAsync call                             
+     yHttpGetFromJsonAsync                   | Inserts an Http.GetFromJsonAsync call                                 
+     yHttpPostAsJsonAsync                    | Inserts an Http.PostAsJsonAsync call                                  
+     yHttpPostAsync                          | Inserts an Http.PostAsync call                                        
+     yHttpPutAsJsonAsync                     | Inserts an Http.PutAsJsonAsync call                                   
+     yIEnumerable                            | Inserts an IEnumerable statement                                      
+     yIf                                     | Inserts an If statement                                               
+     yIfInline                               | Inserts an If inline statement                                        
+     yIfNotNull                              | Inserts an If not null statement                                      
+     yIfNotNullAndCountGreaterThan0Statement | Inserts an If not null statement and count greater than zero statement
+     yIfNotNullInline statement              | Inserts an If not null inline statement                               
+     yIfNotStringIsNullOrEmpty               | Inserts an if(!string.IsNullOrEmpty(MyVariable))statement             
+     yIfNotStringIsNullOrWhiteSpace          | Inserts an if(!string.IsNullOrWhiteSpace(MyVariable))statement        
+     yIfNull                                 | If null statement                                                     
+     yIfNullInline statement                 | Inserts an If null inline statement                                   
+     yIfNullOrCountIsZeroStatement           | Inserts an If null Or Count is zero statement                         
+     yIfNullReturn statement                 | Inserts an If null return statement                                   
+     yIfNullReturnDefault statement          | Inserts an If null return default statement                           
+     yIfStringIsNullOrEmpty                  | Inserts an if(string.IsNullOrEmpty(MyVariable))statement              
+     yIfStringIsNullOrWhiteSpace             | Inserts an if(string.IsNullOrWhiteSpace(MyVariable))statement         
+     yImpCorrespondingInterface              | Implements corresponding interface                                    
+     yInheritsAuthenticationStateProvider    | Inherits AuthenticationStateProvider                                  
+     yInheritsComponentBase                  | Inherits ComponentBase                                                
+     yInjectAttribute                        | Inserts an InjectAttribute                                            
+     yInjectAuthenticationStateProvider      | Inject AuthenticationStateProvider property                           
+     yInjectHttpClient                       | Inserts an Inject HttpClient property                                 
+     yInjectIJSRuntime                       | Inserts an Inject IJSRuntime property                                 
+     yInjectILocalStorageService             | Inserts an Inject ILocalStorageService property                       
+     yInjectIMapper                          | Inserts an Inject IMapper property                                    
+     yInjectISyncLocalStorageService         | Inserts an Inject ISyncLocalStorageService property                   
+     yInjectNavigationManager                | Inserts an Inject NavigationManager property                          
+     yInjectService                          | Inserts an Inject MyService MyService                                 
+     yInjectSignOutSessionStateManager       | Inserts an Inject SignOutSessionStateManager property                 
+     yInvokeAsyncEventCallback               | Inserts an Invoke async Eventcallback                                 
+     yIsNotNull                              | Inserts Is not null                                                   
+     yIsNull                                 | Inserts Is equal to null                                              
+     yJSRuntimeInvokeAsync                   | Inserts a JSRuntimeInvokeAsync call                                   
+     yJSRuntimeInvokeVoidAsync               | Inserts a JSRuntimeInvokeVoidAsync call                               
+     yLocalStorageGetItemAsync               | Inserts await LocalStorage.GetItemAsync stub                          
+     yLocalStorageRemoveItemAsync            | Inserts await LocalStorage.RemoveItemAsync stub                       
+     yLocalStorageSetItemAsync               | Inserts await LocalStorage.SetItemAsync stub                          
+     yMethodAsync                            | Inserts an async method stub without arguments                        
+     yMethodAsyncReturn                      | Inserts an async task method stub without arguments                   
+     yMethodAsyncReturnWithArgs              | Inserts an async task method stub with arguments                      
+     yMethodAsyncWithArgs                    | Inserts an async method stub with arguments                           
+     yMethodReturn                           | Inserts a method stub without arguments                               
+     yMethodReturnWithArgs                   | Inserts a method stub with arguments                                  
+     yMethodVoid                             | Inserts a void method stub without arguments                          
+     yMethodVoidWithArgs                     | Inserts a void method stub with arguments                             
+     yModelBuilderEntity                     | Inserts a builder.Entity stub                                         
+     yNavigateToId                           | Inserts a NavigationManager.NavigateTo page\\Id                       
+     yNavigateToPage                         | Inserts a NavigationManager.NavigateTo page                           
+     yOnAfterRender                          | Inserts an OnAfterRender method stub                                  
+     yOnAfterRenderAsync                     | Inserts an OnAfterRenderAsync method stub                             
+     yOnInitialized                          | OnInitialized method stub                                             
+     yOnInitializedAsync                     | Inserts an OnInitializedAsync method stub                             
+     yOnParametersSet                        | Inserts an OnParameterSet method stub                                 
+     yOnParametersSetAsync                   | Inserts an OnParameterSetAsync method stub                            
+     yPaginationState                        | Inserts a PaginationState field                                       
+     yParaAttribute                          | Inserts a Parameter attribute                                         
+     yParaCaptureUnmatchedValues             | Parameter CaptureUnmatchedValues attribute property                   
+     yParaIdProp                             | Inserts an Id property with Parameter attribute                       
+     yParaProp                               | Inserts a property with Parameter attribute                           
+     yPropBirthDate                          | Inserts a BirthDate property                                          
+     yPropCity                               | Inserts a City property                                               
+     yPropConfirmPassword                    | Inserts a ConfirmPassword property                                    
+     yPropCountry                            | Inserts a Country property                                            
+     yPropDescription                        | Inserts a Description property                                        
+     yPropEmail                              | Inserts an Email property                                             
+     yPropEndDate                            | Inserts a DateTime EndDate property                                   
+     yPropEndTime                            | Inserts a DateTime EndTime property                                   
+     yPropFilter                             | Inserts a Filter property                                             
+     yPropFirstName                          | Inserts a FirstName property                                          
+     yPropId                                 | Inserts an Id property                                                
+     yPropImageUrl                           | Inserts an ImageUrl property                                          
+     yPropIsVisible                          | Inserts an IsVisible property                                         
+     yPropLastName                           | Inserts a LastName property                                           
+     yPropMobilePhone                        | Inserts a MobilePhone property                                        
+     yPropName                               | Inserts a Name property                                               
+     yPropPage                               | Inserts a Page property                                               
+     yPropPassword                           | Inserts a Password property                                           
+     yPropPhone                              | Inserts a Phone property                                              
+     yPropPrice                              | Inserts a Price property                                              
+     yPropStartDate                          | Inserts a DateTime StartDate property                                 
+     yPropStartTime                          | Inserts a DateTime StartTime property                                 
+     yPropStreet                             | Inserts a Street property                                             
+     yPropTitle                              | Inserts a Title property                                              
+     yPropUserId                             | Inserts an UserId property                                            
+     yPropUserName                           | Inserts a UserName property                                           
+     yPropZipCode                            | Inserts a ZipCode property                                            
+     yRangeAttribute                         | Inserts a Range attribute                                             
+     yReadFromJsonAsync                      | Inserts a ReadFromJsonAsync call                                      
+     yReadIdFromJsonAsync                    | Inserts a ReadFromJsonAsync call                                      
+     yReadOnlyHttpClientField                | Inserts a readonly HttpClient field                                   
+     yRequiredAttribute                      | Inserts a RequiredAttribute                                           
+     yRouteAttribute                         | Inserts a RouteAttribute                                              
+     ySetParametersAsync                     | Inserts a SetParametersAsync method stub                              
+     yShouldRender                           | Inserts a ShouldRender method stub                                    
+     yStateHasChanged                        | Inserts a StateHasChanged() method                                    
+     yStringLengthAttribute                  | Inserts a StringLength attribute                                      
+     yTaskCompleted                          | Inserts await Task.CompletedTask                                      
+     yUpdateAsyncMethodDefinition            | Inserts an UpdateAsync method definition for an interface             
 
 ### Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
@@ -291,6 +295,9 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yReadFromJsonAsync                      | ReadFromJsonAsync call                                     
      yReadIdFromJsonAsync                    | ReadFromJsonAsync call                                     
      yRef                                    | @ref="MyProperty"                                          
+     yRendermodeInteractiveAuto              | @rendermode InteractiveAuto                                
+     yRendermodeInteractiveServer            | @rendermode InteractiveServer                              
+     yRendermodeInteractiveWebAssembly       | @rendermode InteractiveWebAssembly                         
      yTaskCompleted                          | Inserts await Task.CompletedTask                           
      yTemplateColumn                         | Inserts a QuickGrid TemplateColumn                         
      yTemplatedComponent                     | Templated component                                        
