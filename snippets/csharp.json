@@ -63,6 +63,11 @@
     "description": "Inserts a property with CascadingParameter attribute",
     "prefix": "yCascadingParaProp"
   },
+  "columnTypeNameDecimalAttribute": {
+    "body": "[Column$1(TypeName =\"decimal(${2:18},${3:2})\")]$0",
+    "description": "ColumnType TypeName decimal attribute",
+    "prefix": "yColumnTypeNameDecimalAttribute"
+  },
   "compareAttribute": {
     "body": [
       "[Compare$1(nameof(${2:TypeToCompare}), ErrorMessage=\"${3:$2}s ${4:does not match!}\")]",
@@ -77,9 +82,14 @@
     "prefix": "yCreateAsyncMethodDefinition"
   },
   "dataTypeAttribute": {
-    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
+    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]$0",
     "description": "DataType attribute",
     "prefix": "yDataTypeAttribute"
+  },
+  "dbSaveChangesAsync": {
+    "body": " await ${1|_db, _dbContext, db, context|}.SaveChangesAsync();$0",
+    "description": "Inserts _dbContext.SaveChangesAsync",
+    "prefix": "yDbSaveChangesAsync"
   },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
@@ -196,35 +206,35 @@
   },
   "httpClientGetAsync": {
     "body": [
-      "${1:var response =} await ${1|HttpClient,_httpClient,Http,_http|}.GetAsync$2(\"${3:url}\");$0"
+      "${1:var response =} await ${1|_http,_httpClient,Http,HttpClient|}.GetAsync$2(\"${3:url}\");$0"
     ],
     "description": "Http.GetAsync call",
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
     "body": [
-      "await ${1|HttpClient,_httpClient,Http,_http|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+      "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
     ],
     "description": "Http.DeleteAsync call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
+      "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
     "description": "Http.GetFromByIdJsonAsync call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
   "httpGetFromJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|HttpClient,_httpClient,Http,_http|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
+      "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
     "description": "Http.GetFromJsonAsync call",
     "prefix": "yHttpGetFromJsonAsync"
   },
   "httpPostAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "// response.EnsureSuccessStatusCode();",
       "var ${6:result} = await response.Content.ReadFromJsonAsync<${8:TypeName}>();"
     ],
@@ -233,7 +243,7 @@
   },
   "httpPostAsync": {
     "body": [
-      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PostAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();"
     ],
     "description": "Http.PostAsync call",
@@ -241,7 +251,7 @@
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|HttpClient,_httpClient,Http,_http|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();$0"
     ],
     "description": "Http.PutAsJsonAsync call",
@@ -363,6 +373,16 @@
     "description": "Implements corresponding interface",
     "prefix": "yImpCorrespondingInterface"
   },
+  "generateClassImplementingInterface": {
+    "body": [
+      "public class ${TM_FILENAME_BASE/([\\I])(.*)()/$2/gi}$2 : ${TM_FILENAME_BASE}$1",
+      "{",
+      "",
+      "}"
+    ],
+    "description": "Generates a class implementing interface",
+    "prefix": "yGenerateClassImplementingInterface"
+  },
   "inheritsAuthenticationStateProvider": {
     "body": [" AuthenticationStateProvider$1"],
     "description": "Inherits AuthenticationStateProvider",
@@ -377,6 +397,11 @@
     "body": ["[Inject$1]$0"],
     "description": "Inserts InjectAttribute",
     "prefix": "yInjectAttribute"
+  },
+  "injectAuthenticationStateProvider": {
+    "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
+    "description": "Inject AuthenticationStateProvider property",
+    "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
     "body": [
@@ -417,11 +442,6 @@
     "description": "Inject MyService MyService",
     "prefix": "yInjectService"
   },
-  "injectAuthenticationStateProvider": {
-    "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
-    "description": "Inject AuthenticationStateProvider property",
-    "prefix": "yInjectAuthenticationStateProvider"
-  },
   "injectSignOutSessionStateManager": {
     "body": "[Inject$1] public SignOutSessionStateManager$2 ${3:SignOutManager} { get; set; }$0",
     "description": "Inject SignOutSessionStateManager property",
@@ -457,15 +477,15 @@
     "description": "Inserts await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
   },
-  "localStorageSetItemAsync": {
-    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
-    "description": "Inserts await LocalStorage.SetItemAsync stub",
-    "prefix": "yLocalStorageSetItemAsync"
-  },
   "localStorageRemoveItemAsync": {
     "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
     "description": "Inserts await LocalStorage.RemoveItemAsync stub",
     "prefix": "yLocalStorageRemoveItemAsync"
+  },
+  "localStorageSetItemAsync": {
+    "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
+    "description": "Inserts await LocalStorage.SetItemAsync stub",
+    "prefix": "yLocalStorageSetItemAsync"
   },
   "methodAsync": {
     "body": [
@@ -710,6 +730,13 @@
     "description": "Inserts an Id property",
     "prefix": "yPropId"
   },
+  "propUserId": {
+    "body": [
+      "public ${1|Guid,int,string|} ${2:UserId} { get; ${3|set;,private set;|} }$0"
+    ],
+    "description": "Inserts an UserId property",
+    "prefix": "yPropUserId"
+  },
   "propImageUrl": {
     "body": "public string ${1:ImageUrl} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts an ImageUrl property ",
@@ -753,7 +780,9 @@
     "prefix": "yPropPhone"
   },
   "propPrice": {
-    "body": ["public decimal Price{ get; ${2|set;,private set;|}  }$0"],
+    "body": [
+      "public decimal ${1|Price, TotalPrice|} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
   },
