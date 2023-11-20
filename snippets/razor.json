@@ -980,7 +980,7 @@
     "prefix": "yPropPhone"
   },
   "propPrice": {
-    "body": "public decimal Price{ get; ${2|set;,private set;|}  }$0",
+    "body": "public ${1|decimal,float|} ${2|Price, TotalPrice|} { get; ${3|set;,private set;|} }$0",
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
   },
