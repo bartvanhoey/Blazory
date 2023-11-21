@@ -457,7 +457,7 @@
     "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
-    "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
+    "body": "@inject HttpClient$1 ${2|Http,HttpClient|}$0",
     "description": "@inject HttpClient directive",
     "prefix": "yInjectHttpClient"
   },
