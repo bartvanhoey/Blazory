@@ -238,35 +238,35 @@
   },
   "httpClientGetAsync": {
     "body": [
-      "${1:var response =} await ${1|_http,_httpClient,Http,HttpClient|}.GetAsync$2(\"${3:url}\");$0"
+      "${1:var response =} await ${1|Http,HttpClient,_http,_httpClient|}.GetAsync$2(\"${3:url}\");$0"
     ],
     "description": "Http.GetAsync call",
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
     "body": [
-      "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+      "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
     ],
     "description": "Http.DeleteAsync call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
     "description": "Http.GetFromByIdJsonAsync call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
   "httpGetFromJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
     "description": "Http.GetFromJsonAsync call",
     "prefix": "yHttpGetFromJsonAsync"
   },
   "httpPostAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();",
       "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
       "return ${9:$6}Id;$0"
@@ -276,7 +276,7 @@
   },
   "httpPostAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();"
     ],
     "description": "Http.PostAsync call",
@@ -284,7 +284,7 @@
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();$0"
     ],
     "description": "Http.PutAsJsonAsync call",
@@ -457,7 +457,7 @@
     "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
-    "body": "@inject HttpClient$1 ${2|Http,HttpClient|}$0",
+    "body": "@inject HttpClient$1 ${2|Http,HttpClient,_http,_httpClient|}$0",
     "description": "@inject HttpClient directive",
     "prefix": "yInjectHttpClient"
   },
