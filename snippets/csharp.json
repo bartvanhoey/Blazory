@@ -895,6 +895,13 @@
     "description": "Inserts a StringLength attribute",
     "prefix": "yStringLengthAttribute"
   },
+  "supplyParameterFromForm": {
+    "body": [
+      "[SupplyParameterFromForm$1]$0"
+    ],
+    "description": "Inserts a SupplyParameterFromForm attribute",
+    "prefix": "ySupplyParameterFromFormAttribute"
+  },
   "taskCompleted": {
     "body": "await Task.CompletedTask;$0",
     "description": "Inserts await Task.CompletedTask",
