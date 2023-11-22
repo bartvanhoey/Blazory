@@ -143,6 +143,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yShouldRender                           | Inserts a ShouldRender method stub                                    
      yStateHasChanged                        | Inserts a StateHasChanged() method                                    
      yStringLengthAttribute                  | Inserts a StringLength attribute                                      
+     ySupplyParameterFromFormAttribute       | Inserts a SupplyParameterFromForm attribute                           
      yTaskCompleted                          | Inserts await Task.CompletedTask                                      
      yUpdateAsyncMethodDefinition            | Inserts an UpdateAsync method definition for an interface             
 
@@ -298,6 +299,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yRendermodeInteractiveAuto              | @rendermode InteractiveAuto                                
      yRendermodeInteractiveServer            | @rendermode InteractiveServer                              
      yRendermodeInteractiveWebAssembly       | @rendermode InteractiveWebAssembly                         
+     ySupplyParameterFromFormAttribute       | Inserts a SupplyParameterFromForm attribute                
      yTaskCompleted                          | Inserts await Task.CompletedTask                           
      yTemplateColumn                         | Inserts a QuickGrid TemplateColumn                         
      yTemplatedComponent                     | Templated component                                        
