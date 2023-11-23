@@ -849,6 +849,11 @@
     "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },
+  "readAsStringAsync": {
+    "body": "var ${1:result} = await ${2:response}.Content.ReadAsStringAsync();$0",
+    "description": "Inserts a ReadsAsStringAsync() call",
+    "prefix": "yReadAsStringAsync"
+  },
   "readOnlyHttpClientField": {
     "body": "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0",
     "description": "Inserts a readonly HttpClient field",
