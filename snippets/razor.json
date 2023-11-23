@@ -973,6 +973,11 @@
     "description": "Inserts a Price property ",
     "prefix": "yPropPrice"
   },
+  "propQuantity": {
+    "body": "public int Quantity { get; set;} }$0",
+    "description": "Inserts a Quantity property",
+    "prefix": "yPropQuantity"
+  },
   "propStartDate": {
     "body": "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0",
     "description": "Inserts a StartDate property ",

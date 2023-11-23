@@ -126,6 +126,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropPassword                           | Inserts a Password property                                           
      yPropPhone                              | Inserts a Phone property                                              
      yPropPrice                              | Inserts a Price property                                              
+     yPropQuantity                           | Inserts a Quantity property                                           
      yPropStartDate                          | Inserts a DateTime StartDate property                                 
      yPropStartTime                          | Inserts a DateTime StartTime property                                 
      yPropStreet                             | Inserts a Street property                                             
@@ -286,6 +287,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropPassword                           | Inserts a Password property                                
      yPropPhone                              | Inserts a Phone property                                   
      yPropPrice                              | Inserts a Price property                                   
+     yPropQuantity                           | Inserts a Quantity property                                
      yPropStartDate                          | Inserts a DateTime StartDate property                      
      yPropStartTime                          | Inserts a DateTime StartTime property                      
      yPropStreet                             | Inserts a Street property                                  
