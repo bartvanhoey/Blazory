@@ -7,7 +7,7 @@
       "}",
       "$0"
     ],
-    "description": "If statement",
+    "description": "Inserts an If(IsVisible) statement",
     "prefix": "yAtIfIsVisible"
   },
   "atIfNotNullStatement": {
@@ -18,8 +18,19 @@
       "}",
       "$0"
     ],
-    "description": "If not null statement",
+    "description": "Inserts an If not null statement",
     "prefix": "yAtIfNotNull"
+  },
+  "atIfNullStatement": {
+    "body": [
+      "@if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "Inserts an If null statement",
+    "prefix": "yAtIfNull"
   },
   "atIfStatement": {
     "body": [
@@ -29,47 +40,47 @@
       "}",
       "$0"
     ],
-    "description": "If statement",
+    "description": "Inserts an If statement",
     "prefix": "yAtIf"
   },
   "attribute [Authorize] Directive": {
     "body": "@attribute [Authorize]",
-    "description": "@attribute [Authorize]§0",
+    "description": "Inserts an @attribute [Authorize]§0",
     "prefix": "yAttributeAuthorize"
   },
   "attribute [RenderModeServer] Directive": {
     "body": "@attribute [RenderModeServer]$0",
-    "description": "@attribute [RenderModeServer]",
+    "description": "Inserts an @attribute [RenderModeServer]",
     "prefix": "yAttributeRenderModeServer"
   },
   "attribute [StreamRendering] Directive": {
     "body": "@attribute [StreamRendering(true)]$0",
-    "description": "@attribute [StreamRendering(true)]",
+    "description": "Inserts an @attribute [StreamRendering(true)]",
     "prefix": "yAttributeStreamRendering"
   },
   "bindAttribute": {
     "body": "@bind=\"${1:Property}\"",
-    "description": "Bind attribute",
+    "description": "Inserts @bind attribute",
     "prefix": "yBind"
   },
   "bindFormatAttribute": {
     "body": "@bind:format=\"${1:yyyy-MM-dd}\"",
-    "description": "@bind:format=\"MyFormat\"",
+    "description": "Inserts @bind:format=\"MyFormat\"",
     "prefix": "yBindFormat"
   },
   "bindOnInputEvent": {
     "body": "@bind:event=\"oninput\"$0",
-    "description": " @bind:event=\"oninput\"",
+    "description": " Inserts @bind:event=\"oninput\"",
     "prefix": "yBindOnInputEvent"
   },
   "bindOnProperty": {
     "body": "@bind=\"${1:Property}\"$0",
-    "description": "@bind=\"MyProperty\"",
+    "description": "Inserts @bind=\"MyProperty\"",
     "prefix": "yBindOnProperty"
   },
   "bindValueAttribute": {
     "body": "@bind-Value=\"${1:Property}\"$0",
-    "description": "@bind-Value=\"MyProperty\" ",
+    "description": "Inserts @bind-Value=\"MyProperty\" ",
     "prefix": "yBindValue"
   },
   "cascadingAuthenticationState": {
@@ -78,7 +89,7 @@
       "\t$0",
       "</CascadingAuthenticationState>"
     ],
-    "description": "CascadingAuthenticationState stub",
+    "description": "Inserts a CascadingAuthenticationState stub",
     "prefix": "yCascadingAuthenticationState"
   },
   "cascadingValue": {
@@ -96,17 +107,8 @@
       "\t$0",
       "}"
     ],
-    "description": "@code block",
+    "description": "Inserts a @code block",
     "prefix": "yCode"
-  },
-  "columnOptions": {
-    "body": [
-      "<ColumnOptions>",
-      "\t$0",
-      "</ColumnOptions>"
-    ],
-    "description": "ColumnOptions",
-    "prefix": "yColumnOptions"
   },
   "component": {
     "body": [
@@ -118,7 +120,7 @@
       "",
       "}"
     ],
-    "description": "Complete component",
+    "description": "Inserts a complete page component",
     "prefix": "yComponent"
   },
   "componentChildContent": {
@@ -129,12 +131,12 @@
       "\t[Parameter] public RenderFragment ChildContent { get; set; }",
       "}"
     ],
-    "description": "Complete component with ChildContent RenderFragment",
+    "description": "Inserts a complete page component with ChildContent RenderFragment",
     "prefix": "yComponentChildContent"
   },
   "dataAnnotationsValidator": {
     "body": "<DataAnnotationsValidator />",
-    "description": "DataAnnotationsValidator",
+    "description": "Inserts a DataAnnotationsValidator",
     "prefix": "yDataAnnotationsValidator"
   },
   "disposableComponent": {
@@ -148,7 +150,7 @@
       "\t}",
       "}"
     ],
-    "description": "Complete component inherits IDisposable",
+    "description": "Inserts a page component inherits IDisposable",
     "prefix": "yComponentDisposable"
   },
   "editForm": {
@@ -167,12 +169,12 @@
       "</EditForm>",
       "$0"
     ],
-    "description": "Inserts EditForm component",
+    "description": "Inserts an EditForm component",
     "prefix": "yEditForm"
   },
   "event:preventDefaultAttribute": {
     "body": "@${1:onkeypress}:preventDefault",
-    "description": "PreventDefault attribute",
+    "description": "Inserts an PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
   "eventCallbackChanged": {
@@ -183,28 +185,28 @@
       "[Parameter]",
       "public EventCallback<$2> $3Changed { get; set; }$0"
     ],
-    "description": "EventCallbackChanged",
+    "description": "Inserts an EventCallbackChanged property",
     "prefix": "yEventCallbackChanged"
   },
   "eventCallbackOnClick": {
     "body": [
       "[Parameter$1] public EventCallback<${2:MouseEventArgs}> On${3:Click} { get; set; }$0"
     ],
-    "description": "EventCallback OnClick property",
+    "description": "Inserts an EventCallback OnClick property",
     "prefix": "yEventCallbackOnClick"
   },
   "eventCallbackProperty": {
     "body": [
       "[Parameter$1] public EventCallback$2 On${3:EventName} { get; set; }$0"
     ],
-    "description": "EventCallback property",
+    "description": "Inserts an EventCallback property",
     "prefix": "yEventCallback property"
   },
   "eventCallbackWithTypeProperty": {
     "body": [
       "[Parameter$1] public EventCallback<${2:Type}> ${3:Click} { get; set; }$0"
     ],
-    "description": "EventCallback with Type property",
+    "description": "Inserts an EventCallback with Type property",
     "prefix": "yEventCallbackWithTypeProperty"
   },
   "formControlClass": {
@@ -216,14 +218,14 @@
     "body": [
       "{ get; private set; }$0"
     ],
-    "description": "{ get, private set }",
+    "description": "Inserts { get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
     "body": [
       "{ get; set; }$0"
     ],
-    "description": "{ get, set }",
+    "description": "Inserts { get, set }",
     "prefix": "yGs"
   },
   "handleValidSubmitAsync": {
@@ -240,28 +242,28 @@
     "body": [
       "${1:var response =} await ${1|Http,HttpClient,_http,_httpClient|}.GetAsync$2(\"${3:url}\");$0"
     ],
-    "description": "Http.GetAsync call",
+    "description": "Inserts a Http.GetAsync() call",
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
     "body": [
       "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
     ],
-    "description": "Http.DeleteAsync call",
+    "description": "Inserts a Http.DeleteAsync() call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
     ],
-    "description": "Http.GetFromByIdJsonAsync call",
+    "description": "Inserts a Http.GetFromByIdJsonAsync() call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
   "httpGetFromJsonAsync": {
     "body": [
       "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
     ],
-    "description": "Http.GetFromJsonAsync call",
+    "description": "Inserts a Http.GetFromJsonAsync() call",
     "prefix": "yHttpGetFromJsonAsync"
   },
   "httpPostAsJsonAsync": {
@@ -271,7 +273,7 @@
       "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
       "return ${9:$6}Id;$0"
     ],
-    "description": "Http.PostAsJsonAsync call",
+    "description": "Inserts a Http.PostAsJsonAsync() call",
     "prefix": "yHttpPostAsJsonAsync"
   },
   "httpPostAsync": {
@@ -279,7 +281,7 @@
       "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();"
     ],
-    "description": "Http.PostAsync call",
+    "description": "Inserts a Http.PostAsync() call",
     "prefix": "yHttpPostAsync"
   },
   "httpPutAsJsonAsync": {
@@ -287,7 +289,7 @@
       "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();$0"
     ],
-    "description": "Http.PutAsJsonAsync call",
+    "description": "Inserts a Http.PutAsJsonAsync() call",
     "prefix": "yHttpPutAsJsonAsync"
   },
   "ifInlineStatement": {
@@ -295,7 +297,7 @@
       "if (${1:MyCondition}) $2",
       "$0"
     ],
-    "description": "If inline statement",
+    "description": "Inserts an If inline statement",
     "prefix": "yIfInline"
   },
   "ifNotNullAndCountGreaterThan0Statement": {
@@ -306,7 +308,7 @@
       "}",
       "$0"
     ],
-    "description": "If not null statement and count greater than zero statement",
+    "description": "Inserts an If not null statement and count greater than zero statement",
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
@@ -314,7 +316,7 @@
       "if (${1:MyVariable} != null) $2",
       "$0"
     ],
-    "description": "If not null inline statement",
+    "description": "Inserts an If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
@@ -325,7 +327,7 @@
       "}",
       "$0"
     ],
-    "description": "If not null statement",
+    "description": "Inserts an If not null statement",
     "prefix": "yIfNotNull"
   },
   "ifNotStringIsNullOrEmptyStatement": {
@@ -336,7 +338,7 @@
       "}",
       "$0"
     ],
-    "description": "Inserts if(!string.IsNullOrEmpty(MyVariable))statement",
+    "description": "Inserts an if(!string.IsNullOrEmpty(MyVariable))statement",
     "prefix": "yIfNotStringIsNullOrEmpty"
   },
   "ifNotStringIsNullOrWhiteSpaceStatement": {
@@ -347,7 +349,7 @@
       "}",
       "$0"
     ],
-    "description": "Inserts if(!string.IsNullOrWhiteSpace(MyVariable))statement",
+    "description": "Inserts an if(!string.IsNullOrWhiteSpace(MyVariable))statement",
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
@@ -355,8 +357,8 @@
       "if (${1:MyVariable} == null) $2",
       "$0"
     ],
-    "description": "If null inline statement",
-    "prefix": "yIfNullInline statement"
+    "description": "Inserts an if null inline statement",
+    "prefix": "yIfNullInline"
   },
   "ifNullOrCountIsZeroStatement": {
     "body": [
@@ -366,18 +368,25 @@
       "}",
       "$0"
     ],
-    "description": "If null Or Count is zero statement",
-    "prefix": "yIfNullOrCountIsZeroStatement"
+    "description": "Inserts an if null Or count is zero statement",
+    "prefix": "yIfNullOrCountIsZero"
+  },
+  "ifNullOrCountIsZeroReturnStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || $1.Count == 0) return$0; "
+    ],
+    "description": "Inserts an If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroReturn"
   },
   "ifNullReturnDefaultStatement": {
     "body": "if (${1:MyVariable} == null) return ${2:default};$0",
-    "description": "If null return default statement",
-    "prefix": "yIfNullReturnDefault statement"
+    "description": "Inserts an if null return default statement",
+    "prefix": "yIfNullReturnDefault"
   },
   "ifNullReturnStatement": {
     "body": "if (${1:MyVariable} == null) return;$0",
-    "description": "If null return statement",
-    "prefix": "yIfNullReturn statement"
+    "description": "Inserts an if null return statement",
+    "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
     "body": [
@@ -387,7 +396,7 @@
       "}",
       "$0"
     ],
-    "description": "If null statement",
+    "description": "Inserts an if null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
@@ -398,7 +407,7 @@
       "}",
       "$0"
     ],
-    "description": "If statement",
+    "description": "Inserts an if statement",
     "prefix": "yIf"
   },
   "ifStringIsNullOrEmptyStatement": {
@@ -409,7 +418,7 @@
       "}",
       "$0"
     ],
-    "description": "Inserts if(string.IsNullOrEmpty(MyVariable))statement",
+    "description": "Inserts an if(string.IsNullOrEmpty(MyVariable))statement",
     "prefix": "yIfStringIsNullOrEmpty"
   },
   "ifStringIsNullOrWhiteSpaceStatement": {
@@ -420,7 +429,7 @@
       "}",
       "$0"
     ],
-    "description": "Inserts if(string.IsNullOrWhiteSpace(MyVariable))statement",
+    "description": "Inserts an if(string.IsNullOrWhiteSpace(MyVariable))statement",
     "prefix": "yIfStringIsNullOrWhiteSpace"
   },
   "implementsIDisposable": {
@@ -430,7 +439,7 @@
   },
   "inheritsBaseComponent": {
     "body": "@inherits ${1:${TM_FILENAME_BASE}}Base$0",
-    "description": "@inherits C# code-behind base class",
+    "description": "@inherits a C# code-behind base class",
     "prefix": "yInheritsBaseComponent"
   },
   "inheritsLayoutComponentBase": {
@@ -443,62 +452,62 @@
       "",
       "}"
     ],
-    "description": "Complete Layout component inherits LayoutComponentBase",
+    "description": "Inherits a complete Layout component inherits LayoutComponentBase",
     "prefix": "yInheritsLayoutComponentBase"
   },
   "inheritsOwningComponentBase": {
     "body": "@inherits OwningComponentBase<${1:ApplicationDbContext}>$0",
-    "description": "@inherits OwningComponentBase<ApplicationDbContext>",
+    "description": "Inserts @inherits OwningComponentBase<ApplicationDbContext>",
     "prefix": "yInheritsOwningComponentBase"
   },
   "injectAuthenticationStateProvider": {
     "body": "@inject AuthenticationStateProvider$2 ${3|AuthenticationStateProvider,_authenticationStateProvider|}$0",
-    "description": "Inject AuthenticationStateProvider property",
+    "description": "Inserts an inject AuthenticationStateProvider property",
     "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
     "body": "@inject HttpClient$1 ${2|Http,HttpClient,_http,_httpClient|}$0",
-    "description": "@inject HttpClient directive",
+    "description": "Inserts an @inject HttpClient directive",
     "prefix": "yInjectHttpClient"
   },
   "injectIAccessTokenProvider": {
     "body": "@inject Microsoft.AspNetCore.Components.WebAssembly.Authentication.IAccessTokenProvider$1 ${2|AccessTokenProvider,TokenProvider|}$0",
-    "description": "@inject IAccessTokenProvider directive",
+    "description": "Inserts an @inject IAccessTokenProvider directive",
     "prefix": "yInjectIAccessTokenProvider"
   },
   "injectIConfiguration": {
     "body": "@inject Microsoft.Extensions.Configuration.IConfiguration$1 ${2:Configuration}$0",
-    "description": "@inject IConfiguration directive",
+    "description": "Inserts an @inject IConfiguration directive",
     "prefix": "yInjectIConfiguration"
   },
   "injectIJSRuntime": {
     "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
-    "description": "@inject IJSRuntime directive",
+    "description": "Inserts an @inject IJSRuntime directive",
     "prefix": "yInjectIJSRuntime"
   },
   "injectILocalStorageService": {
     "body": "@inject ILocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
-    "description": "@inject ILocalStorageService directive",
+    "description": "Inserts an @inject ILocalStorageService directive",
     "prefix": "yInjectILocalStorageService"
   },
   "injectIMapper": {
     "body": "@inject IMapper Mapper$0",
-    "description": "@inject IMapper directive",
+    "description": "Inserts an @inject IMapper directive",
     "prefix": "yInjectIMapper"
   },
   "injectISyncLocalStorageService": {
     "body": "@inject ISyncLocalStorageService$1 ${2|LocalStorage,_localStorage,Storage,_storage|}$0",
-    "description": "@inject ISyncLocalStorageService directive",
+    "description": "Inserts an @inject ISyncLocalStorageService directive",
     "prefix": "yInjectISyncLocalStorageService"
   },
   "injectNavigationManager": {
     "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
-    "description": "@inject NavigationManager directive",
+    "description": "Inserts an @inject NavigationManager directive",
     "prefix": "yInjectNavigationManager"
   },
   "injectServiceDirective": {
     "body": "@inject I${1:Name}Service$2 ${3:$1}Service$0",
-    "description": "@inject MyService myService",
+    "description": "Inserts an @inject MyService myService",
     "prefix": "yInjectService"
   },
   "injectSignOutSessionStateManager": {
@@ -506,7 +515,7 @@
       "@inject SignOutSessionStateManager SignOutManager",
       "@* add @using Microsoft.AspNetCore.Components.WebAssembly.Authentication to _imports.razor file*@"
     ],
-    "description": "@inject SignOutSessionStateManager directive",
+    "description": "Inserts an @inject SignOutSessionStateManager directive",
     "prefix": "yInjectSignOutSessionStateManager"
   },
   "inputCheckBoxAndLabel": {
@@ -528,7 +537,7 @@
   },
   "inputDate": {
     "body": "<InputDate @bind-Value=\"${1:Model}.${2:DateProperty}\" />$0",
-    "description": "InputDate component",
+    "description": "Inserts an InputDate component",
     "prefix": "yInputDate"
   },
   "inputDateAndLabel": {
@@ -579,7 +588,7 @@
   },
   "inputRadio": {
     "body": "<InputRadio Value=\"${1:value}\" />$0",
-    "description": "Inserts a InputRadio component",
+    "description": "Inserts an InputRadio component",
     "prefix": "yInputRadio"
   },
   "inputRadioGroup": {
@@ -699,27 +708,27 @@
   },
   "localStorageGetItem": {
     "body": "var ${1:result} = ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItem<${3:Type}>(\"${4:Key}\");$0",
-    "description": "Inserts await LocalStorage.GetItem stub",
+    "description": "Inserts an await LocalStorage.GetItem stub",
     "prefix": "yLocalStorageGetItem"
   },
   "localStorageGetItemAsync": {
     "body": "var ${1:result} = await ${2|LocalStorage,Storage,_localStorage,_storage|}.GetItemAsync<${3:Type}>(\"${4:Key}\");$0",
-    "description": "Inserts await LocalStorage.GetItemAsync stub",
+    "description": "Inserts an await LocalStorage.GetItemAsync stub",
     "prefix": "yLocalStorageGetItemAsync"
   },
   "localStorageRemoveItemAsync": {
     "body": " await ${1|LocalStorage,Storage,_localStorage,_storage|}.RemoveItemAsync(\"${2:key}\");$0",
-    "description": "Inserts await LocalStorage.RemoveItemAsync stub",
+    "description": "Inserts an await LocalStorage.RemoveItemAsync stub",
     "prefix": "yLocalStorageRemoveItemAsync"
   },
   "localStorageSetItem": {
     "body": "${1|LocalStorage,Storage,_localStorage,_storage|}.SetItem(\"${2:key}\", ${3:item});$0",
-    "description": "Inserts await LocalStorage.SetItem stub",
+    "description": "Inserts an  await LocalStorage.SetItem stub",
     "prefix": "yLocalStorageSetItem"
   },
   "localStorageSetItemAsync": {
     "body": "await ${1|LocalStorage,Storage,_localStorage,_storage|}.SetItemAsync(\"${2:key}\", ${3:item});$0",
-    "description": "Inserts await LocalStorage.SetItemAsync stub",
+    "description": "Inserts an await LocalStorage.SetItemAsync stub",
     "prefix": "yLocalStorageSetItemAsync"
   },
   "methodAsync": {
@@ -729,7 +738,7 @@
       "\t$0",
       "}"
     ],
-    "description": "async method stub without arguments",
+    "description": "Inserts an async method stub without arguments",
     "prefix": "yMethodAsync"
   },
   "methodAsyncReturn": {
@@ -739,7 +748,7 @@
       "\t$0",
       "}"
     ],
-    "description": "async task method stub without arguments",
+    "description": "Inserts an async task method stub without arguments",
     "prefix": "yMethodAsyncReturn"
   },
   "methodAsyncReturnWithArgs": {
@@ -749,7 +758,7 @@
       "\t$0",
       "}"
     ],
-    "description": "async task method stub with arguments",
+    "description": "Inserts an async task method stub with arguments",
     "prefix": "yMethodAsyncReturnWithArgs"
   },
   "methodAsyncWithArgs": {
@@ -759,7 +768,7 @@
       "\t$0",
       "}"
     ],
-    "description": "async method stub with arguments",
+    "description": "Inserts an async method stub with arguments",
     "prefix": "yMethodAsyncWithArgs"
   },
   "methodReturn": {
@@ -769,7 +778,7 @@
       "\t$0",
       "}"
     ],
-    "description": "method stub without arguments",
+    "description": "Inserts a method stub without arguments",
     "prefix": "yMethodReturn"
   },
   "methodReturnWithArgs": {
@@ -779,7 +788,7 @@
       "\t$0",
       "}"
     ],
-    "description": "method stub with arguments",
+    "description": "Insert a method stub with arguments",
     "prefix": "yMethodReturnWithArgs"
   },
   "methodVoid": {
@@ -789,7 +798,7 @@
       "\t$0",
       "}"
     ],
-    "description": "void method stub without arguments",
+    "description": "Inserts a void method stub without arguments",
     "prefix": "yMethodVoid"
   },
   "methodVoidWithArgs": {
@@ -799,31 +808,31 @@
       "\t$0",
       "}"
     ],
-    "description": "void method stub with arguments",
+    "description": "Inserts a void method stub with arguments",
     "prefix": "yMethodVoidWithArgs"
   },
   "navLink": {
     "body": "<NavLink href=\"${1}\">${3:Home}</NavLink>",
-    "description": "NavLink",
+    "description": "Inserts a NavLink",
     "prefix": "yNavLink"
   },
   "navLinkWithMatchAttribute": {
     "body": "<NavLink href=\"${1}\" Match=\"${2|NavLinkMatch.All,NavLinkMatch.Prefix|}\">${3:Home}</NavLink>",
-    "description": "NavLink with MatchAttribute",
+    "description": "Inserts a NavLink with MatchAttribute",
     "prefix": "yNavLinkMatch"
   },
   "navigateTo": {
     "body": [
       "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
     ],
-    "description": "NavigationManager.NavigateTo page",
+    "description": "Inserts NavigationManager.NavigateTo page",
     "prefix": "yNavigateToPage"
   },
   "navigateToId": {
     "body": [
       "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
     ],
-    "description": "NavigationManager.NavigateTo page\\Id",
+    "description": "Inserts NavigationManager.NavigateTo page\\Id",
     "prefix": "yNavigateToId"
   },
   "onAfterRender": {
@@ -833,7 +842,7 @@
       "\t$0",
       "}"
     ],
-    "description": "OnAfterRender method stub",
+    "description": "Inserts an OnAfterRender method stub",
     "prefix": "yOnAfterRender"
   },
   "onAfterRenderAsync": {
@@ -843,7 +852,7 @@
       "\t$0",
       "}"
     ],
-    "description": "OnAfterRenderAsync method stub",
+    "description": "Inserts an OnAfterRenderAsync method stub",
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
@@ -853,7 +862,7 @@
       "\t$0",
       "}"
     ],
-    "description": "OnInitialized method stub",
+    "description": "Inserts an OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
   "onInitializedAsync": {
@@ -863,7 +872,7 @@
       "\t$0",
       "}"
     ],
-    "description": "OnInitializedAsync method stub",
+    "description": "Inserts an OnInitializedAsync method stub",
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
@@ -873,7 +882,7 @@
       "\t$0",
       "}"
     ],
-    "description": "OnParameterSet method stub",
+    "description": "Inserts an OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
   "onParametersSetAsync": {
@@ -883,24 +892,24 @@
       "\t$0",
       "}"
     ],
-    "description": "OnParameterSetAsync method stub",
+    "description": "Inserts an OnParameterSetAsync method stub",
     "prefix": "yOnParametersSetAsync"
   },
   "onValidSubmit": {
     "body": "OnValidSubmit=\"${1:MethodName}\"$0",
-    "description": "OnValidSubmit",
+    "description": "Inserts OnValidSubmit",
     "prefix": "yOnValidSubmit"
   },
   "pageDirective": {
     "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-    "description": "@page directive",
+    "description": "Inserts a @page directive",
     "prefix": "yPage"
   },
   "pageDirectiveWithParameter": {
     "body": [
       "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:ParameterName}:${3|int,bool,datetime,decimal,double,float,guid,long,string|}}\""
     ],
-    "description": "@page directive with Parameter",
+    "description": "Inserts a @page directive with Parameter",
     "prefix": "yPageParam"
   },
   "pageTitle": {
@@ -912,7 +921,7 @@
     "body": [
       "<Paginator Value=\"@pagination\" />$0"
     ],
-    "description": "PropertyColumn",
+    "description": "Inserts a QuickGrid Paginator tag",
     "prefix": "yPaginator"
   },
   "parameterAttribute": {
@@ -978,14 +987,14 @@
     "body": [
       "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"
     ],
-    "description": "Inserts a DateTime EndDate property ",
+    "description": "Inserts an EndDate property ",
     "prefix": "yPropEndDate"
   },
   "propEndTime": {
     "body": [
       "public DateTime$2 ${1:EndTime} { get; ${3|set;,private set;|}  }$0"
     ],
-    "description": "Inserts a DateTime EndTime property ",
+    "description": "Inserts an EndTime property ",
     "prefix": "yPropEndTime"
   },
   "propFilter": {
@@ -1025,7 +1034,7 @@
     "body": [
       "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
     ],
-    "description": "Inserts a First Name property ",
+    "description": "Inserts a Last Name property ",
     "prefix": "yPropLastName"
   },
   "propMobilePhone": {
@@ -1069,12 +1078,12 @@
   },
   "propStartDate": {
     "body": "public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0",
-    "description": "Inserts a DateTime StartDate property ",
+    "description": "Inserts a StartDate property ",
     "prefix": "yPropStartDate"
   },
   "propStartTime": {
     "body": "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0",
-    "description": "Inserts a DateTime StartTime property ",
+    "description": "Inserts a StartTime property ",
     "prefix": "yPropStartTime"
   },
   "propStreet": {
@@ -1084,7 +1093,7 @@
   },
   "propTitle": {
     "body": "public string Title { get; ${1|set;,private set;|} }$0",
-    "description": "Inserts an Title property ",
+    "description": "Inserts a Title property ",
     "prefix": "yPropTitle"
   },
   "propUserName": {
@@ -1116,34 +1125,48 @@
     "description": "Inserts a QuickGrid",
     "prefix": "yQuickGrid"
   },
+  "quickGridColumnOptions": {
+    "body": [
+      "<ColumnOptions>",
+      "\t$0",
+      "</ColumnOptions>"
+    ],
+    "description": "Inserts QuickGrid ColumnOptions",
+    "prefix": "yQuickGridColumnOptions"
+  },
+  "readAsStringAsync": {
+    "body": "var ${1:result} = await ${2:response}.Content.ReadAsStringAsync();$0",
+    "description": "Inserts a ReadsAsStringAsync() call",
+    "prefix": "yReadAsStringAsync"
+  },
   "readFromJsonAsync": {
     "body": "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
-    "description": "ReadFromJsonAsync call",
+    "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
   },
   "readIdFromJsonAsync": {
     "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
-    "description": "ReadFromJsonAsync call",
+    "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },
   "refAttribute": {
     "body": "@ref=\"${1:Property}\"",
-    "description": "@ref=\"MyProperty\"",
+    "description": "Inserts a @ref=\"MyProperty\"",
     "prefix": "yRef"
   },
   "renderModeInteractiveAuto": {
     "body": "@rendermode InteractiveAuto$0",
-    "description": "@rendermode InteractiveAuto",
+    "description": "Inserts @rendermode InteractiveAuto",
     "prefix": "yRendermodeInteractiveAuto"
   },
   "renderModeInteractiveServer": {
     "body": "@rendermode InteractiveServer$0",
-    "description": "@rendermode InteractiveServer",
+    "description": "Inserts @rendermode InteractiveServer",
     "prefix": "yRendermodeInteractiveServer"
   },
   "renderModeInteractiveWebAssembly": {
     "body": "@rendermode InteractiveWebAssembly$0",
-    "description": "@rendermode InteractiveWebAssembly",
+    "description": "Inserts @rendermode InteractiveWebAssembly",
     "prefix": "yRendermodeInteractiveWebAssembly"
   },
   "supplyParameterFromForm": {
@@ -1196,32 +1219,32 @@
       "\t[Parameter] public IReadOnlyList<TItem> Items { get; set; }",
       "}"
     ],
-    "description": "Templated component",
+    "description": "Inserts a Templated component",
     "prefix": "yTemplatedComponent"
   },
   "typeParamDirective": {
     "body": "@typeparam ${1:T}",
-    "description": "@typeParam",
+    "description": "Inserts @typeParam",
     "prefix": "yTypeParam"
   },
   "usingDirective": {
     "body": "@using ${1:MyNameSpace}",
-    "description": "@using MyNameSpace",
+    "description": "Inserts @using MyNameSpace",
     "prefix": "yUsing"
   },
   "usingQuickGridDirective": {
     "body": "@using Microsoft.AspNetCore.Components.QuickGrid",
-    "description": "@using QuickGrid NameSpace",
+    "description": "Inserts @using QuickGrid NameSpace",
     "prefix": "yUsingQuickGrid"
   },
   "validationMessageFor": {
     "body": "<ValidationMessage For=\"@(() => ${1:PropertyName})\" />$0",
-    "description": "ValidationMessageFor",
+    "description": "Inserts a ValidationMessageFor tag",
     "prefix": "yValidationMessageFor"
   },
   "validationSummary ": {
     "body": "<ValidationSummary  />",
-    "description": "ValidationSummary component",
+    "description": "Inserts a ValidationSummary tag",
     "prefix": "yValidationSummary "
   },
   "virtualizeComponent": {
@@ -1231,7 +1254,7 @@
       "\t$0",
       "</Virtualize>"
     ],
-    "description": "Inserts the Virtualize component",
+    "description": "Inserts a Virtualize component",
     "prefix": "yVirtualizeComponent"
   },
   "voidDispose": {
@@ -1241,7 +1264,7 @@
       "\t\t$0",
       "\t}"
     ],
-    "description": "Dispose method stub",
+    "description": "Inserts a Dispose method stub",
     "prefix": "yVoidDispose"
   }
 }

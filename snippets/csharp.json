@@ -340,7 +340,7 @@
       "$0"
     ],
     "description": "Inserts an If null inline statement",
-    "prefix": "yIfNullInline statement"
+    "prefix": "yIfNullInline"
   },
   "ifNullOrCountIsZeroStatement": {
     "body": [
@@ -351,17 +351,24 @@
       "$0"
     ],
     "description": "Inserts an If null Or Count is zero statement",
-    "prefix": "yIfNullOrCountIsZeroStatement"
+    "prefix": "yIfNullOrCountIsZero"
+  },
+  "ifNullOrCountIsZeroReturnStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || $1.Count == 0) return$0; "
+    ],
+    "description": "Inserts an If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroReturn"
   },
   "ifNullReturnDefaultStatement": {
     "body": "if (${1:MyVariable} == null) return ${2:default};$0",
     "description": "Inserts an If null return default statement",
-    "prefix": "yIfNullReturnDefault statement"
+    "prefix": "yIfNullReturnDefault"
   },
   "ifNullReturnStatement": {
     "body": "if (${1:MyVariable} == null) return;$0",
     "description": "Inserts an If null return statement",
-    "prefix": "yIfNullReturn statement"
+    "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
     "body": [
@@ -848,6 +855,11 @@
     "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
     "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
+  },
+  "readAsStringAsync": {
+    "body": "var ${1:result} = await ${2:response}.Content.ReadAsStringAsync();$0",
+    "description": "Inserts a ReadsAsStringAsync() call",
+    "prefix": "yReadAsStringAsync"
   },
   "readOnlyHttpClientField": {
     "body": "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0",
