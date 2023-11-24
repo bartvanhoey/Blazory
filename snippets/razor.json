@@ -178,9 +178,14 @@
     "prefix": "yPreventDefault"
   },
   "buttonOnClick": {
-    "body": "<button class=\"btn btn-${1:primary}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
-    "description": "Inserts a Bootstrap button with an onclick event",
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
     "prefix": "yButtonOnClick"
+  },
+  "buttonOnClickWithParameter": {
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"(() => ${2:MethodName}(${3:Parameter}))\">${4:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
+    "prefix": "yButtonOnClickWithParameter"
   },
   "eventCallbackChanged": {
     "body": [
