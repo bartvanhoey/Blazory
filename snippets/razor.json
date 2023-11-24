@@ -155,17 +155,17 @@
   },
   "editForm": {
     "body": [
-      "<EditForm Model=\"@${1:Model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+      "<EditForm Model=\"@${1:Model}\"   ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
       "\t<DataAnnotationsValidator />",
       "\t<ValidationSummary />",
       "\t<div class=\"mb-3\">",
-      "\t\t<label for=\"id$3\" class=\"form-label\" >${5:$3}</label>",
+      "\t\t<label for=\"id$4\" class=\"form-label\" >${5:$4}</label>",
       "\t\t<div>",
-      "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" placeholder=\"${4:$3}...\" />",
-      "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
+      "\t\t\t<InputText id=\"id$4\" class=\"form-control\" @bind-Value=\"@$1.${4:PropertyName}\" placeholder=\"${6:$4}...\" />",
+      "\t\t\t<ValidationMessage For=\"@(() => $1.$4)\" />",
       "\t\t</div>",
       "\t</div>",
-      "\t<button class=\"btn btn-primary\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
+      "\t<button class=\"btn btn-primary\" type=\"submit\">${7|Add,Edit,Submit,Sign In,Logout|} ${8:$1}</button>",
       "</EditForm>",
       "$0"
     ],
