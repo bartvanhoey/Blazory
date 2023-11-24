@@ -664,7 +664,7 @@
     "prefix": "yInputSelectForEachAndLabel"
   },
   "inputText": {
-    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" placeholder=\"${3:$2}...\" />$0",
     "description": "Inserts an InputText component",
     "prefix": "yInputText"
   },
@@ -673,7 +673,7 @@
       "<div class=\"mb-3\">",
       "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" placeholder=\"${3:$2}...\"  />",
       "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
@@ -683,7 +683,7 @@
     "prefix": "yInputTextAndLabel"
   },
   "inputTextArea": {
-    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" placeholder=\"${3:$2}...\"   />$0",
     "description": "Inserts an InputTextArea component",
     "prefix": "yInputTextArea"
   },
@@ -692,7 +692,7 @@
       "<div class=\"mb-3\">",
       "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\"  placeholder=\"${3:$2}...\"  />",
       "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
