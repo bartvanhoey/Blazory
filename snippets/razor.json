@@ -155,7 +155,7 @@
   },
   "editForm": {
     "body": [
-      "<EditForm Model=\"@${1:Model}\"   ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
+      "<EditForm Model=\"@${1:Model}\" ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
       "\t<DataAnnotationsValidator />",
       "\t<ValidationSummary />",
       "\t<div class=\"mb-3\">",
