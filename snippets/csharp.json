@@ -440,7 +440,7 @@
     "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
-    "body": "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0",
+    "body": "[Inject$1] public HttpClient?$2 ${3|_http,_httpClient,Http,HttpClient|} { get; set; }$0",
     "description": "Inserts an Inject HttpClient property",
     "prefix": "yInjectHttpClient"
   },
