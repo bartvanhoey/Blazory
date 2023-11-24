@@ -167,6 +167,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yBindOnInputEvent                       | Inserts @bind:event="oninput"                                         
      yBindOnProperty                         | Inserts @bind="MyProperty"                                            
      yBindValue                              | Inserts @bind-Value="MyProperty"                                      
+     yButtonOnClick                          | Inserts a Bootstrap button with an onclick event                      
      yCascadingAuthenticationState           | Inserts a CascadingAuthenticationState stub                           
      yCascadingValue                         | Inserts a CascadingValue attribute                                    
      yCode                                   | Inserts a @code block                                                 

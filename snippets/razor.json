@@ -177,6 +177,11 @@
     "description": "Inserts an PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
+  "buttonOnClick": {
+    "body": "<button class=\"btn btn-${1:primary}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
+    "description": "Inserts a Bootstrap button with an onclick event",
+    "prefix": "yButtonOnClick"
+  },
   "eventCallbackChanged": {
     "body": [
       "[Parameter$1]",
