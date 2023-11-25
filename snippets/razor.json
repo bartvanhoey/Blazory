@@ -845,6 +845,18 @@
     "description": "Inserts NavigationManager.NavigateTo page\\Id",
     "prefix": "yNavigateToId"
   },
+  "navigationManagerRefresh": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh();$0",
+    "description": "Inserts NavigationManager.Refresh()",
+    "prefix": "yNavigationManagerRefresh"
+  },
+  "navigationManagerRefreshForceReload": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh(forceReload: true);$0",
+    "description": "Inserts NavigationManager.Refresh(forceReload: true)",
+    "prefix": "yNavigationManagerRefreshForceReload"
+  },
+
+
   "onAfterRender": {
     "body": [
       "protected override void OnAfterRender(bool firstRender)",

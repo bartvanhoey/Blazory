@@ -96,6 +96,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yModelBuilderEntity                     | Inserts a builder.Entity stub                                         
      yNavigateToId                           | Inserts a NavigationManager.NavigateTo page\\Id                       
      yNavigateToPage                         | Inserts a NavigationManager.NavigateTo page                           
+     yNavigationManagerRefresh               | Inserts NavigationManager.Refresh()                                   
+     yNavigationManagerRefreshForceReload    | Inserts NavigationManager.Refresh(forceReload: true)                  
      yOnAfterRender                          | Inserts an OnAfterRender method stub                                  
      yOnAfterRenderAsync                     | Inserts an OnAfterRenderAsync method stub                             
      yOnInitialized                          | OnInitialized method stub                                             
@@ -254,6 +256,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yMethodVoidWithArgs                     | Inserts a void method stub with arguments                             
      yNavigateToId                           | Inserts NavigationManager.NavigateTo page\\Id                         
      yNavigateToPage                         | Inserts NavigationManager.NavigateTo page                             
+     yNavigationManagerRefresh               | Inserts NavigationManager.Refresh()                                   
+     yNavigationManagerRefreshForceReload    | Inserts NavigationManager.Refresh(forceReload: true)                  
      yNavLink                                | Inserts a NavLink                                                     
      yNavLinkMatch                           | Inserts a NavLink with MatchAttribute                                 
      yOnAfterRender                          | Inserts an OnAfterRender method stub                                  

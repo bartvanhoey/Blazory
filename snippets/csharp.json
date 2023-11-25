@@ -609,6 +609,16 @@
     "description": "Inserts a NavigationManager.NavigateTo page",
     "prefix": "yNavigateToPage"
   },
+  "navigationManagerRefresh": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh();$0",
+    "description": "Inserts NavigationManager.Refresh()",
+    "prefix": "yNavigationManagerRefresh"
+  },
+  "navigationManagerRefreshForceReload": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh(forceReload: true);$0",
+    "description": "Inserts NavigationManager.Refresh(forceReload: true)",
+    "prefix": "yNavigationManagerRefreshForceReload"
+  },
   "navigateToId": {
     "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0",
     "description": "Inserts a NavigationManager.NavigateTo page\\Id",
