@@ -225,7 +225,7 @@
     "prefix": "yHandleValidSubmitAsync"
   },
   "httpClientGetAsync": {
-    "body": "${1:var response =} await ${1|_http,_httpClient,Http,HttpClient|}.GetAsync$2(\"api/${3:url}\");$0",
+    "body": "${1:var response =} await ${2|_http,_httpClient,Http,HttpClient|}.GetAsync$3(\"api/${4:url}\");$0",
     "description": "Inserts an Http.GetAsync call",
     "prefix": "yHttpGetAsync"
   },
