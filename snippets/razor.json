@@ -155,17 +155,17 @@
   },
   "editForm": {
     "body": [
-      "<EditForm Model=\"@${1:Model}\" OnValidSubmit=\"${2|HandleValidSubmitAsync,OnValidSubmit|}\">",
+      "<EditForm Model=\"@${1:Model}\" ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
       "\t<DataAnnotationsValidator />",
       "\t<ValidationSummary />",
       "\t<div class=\"mb-3\">",
-      "\t\t<label for=\"id$3\" class=\"form-label\" >${5:$3}</label>",
+      "\t\t<label for=\"id$4\" class=\"form-label\" >${5:$4}</label>",
       "\t\t<div>",
-      "\t\t\t<InputText id=\"id$3\" class=\"form-control\" @bind-Value=\"@$1.${3:PropertyName}\" placeholder=\"${4:$3}...\" />",
-      "\t\t\t<ValidationMessage For=\"@(() => $1.$3)\" />",
+      "\t\t\t<InputText id=\"id$4\" class=\"form-control\" @bind-Value=\"@$1.${4:PropertyName}\" placeholder=\"${6:$4}...\" />",
+      "\t\t\t<ValidationMessage For=\"@(() => $1.$4)\" />",
       "\t\t</div>",
       "\t</div>",
-      "\t<button class=\"btn btn-primary\" type=\"submit\">${6|Add,Edit,Submit,Sign In,Logout|} ${7:$1}</button>",
+      "\t<button class=\"btn btn-primary\" type=\"submit\">${7|Add,Edit,Submit,Sign In,Logout|} ${8:$1}</button>",
       "</EditForm>",
       "$0"
     ],
@@ -176,6 +176,16 @@
     "body": "@${1:onkeypress}:preventDefault",
     "description": "Inserts an PreventDefault attribute",
     "prefix": "yPreventDefault"
+  },
+  "buttonOnClick": {
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
+    "prefix": "yButtonOnClick"
+  },
+  "buttonOnClickWithParameter": {
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"(() => ${2:MethodName}(${3:Parameter}))\">${4:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
+    "prefix": "yButtonOnClickWithParameter"
   },
   "eventCallbackChanged": {
     "body": [
@@ -247,28 +257,28 @@
   },
   "httpDeleteAsync": {
     "body": [
-      "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0"
+      "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0"
     ],
     "description": "Inserts a Http.DeleteAsync() call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0"
     ],
     "description": "Inserts a Http.GetFromByIdJsonAsync() call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
   "httpGetFromJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"api/${5:url}\");$0"
     ],
     "description": "Inserts a Http.GetFromJsonAsync() call",
     "prefix": "yHttpGetFromJsonAsync"
   },
   "httpPostAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
       "response.EnsureSuccessStatusCode();",
       "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
       "return ${9:$6}Id;$0"
@@ -278,16 +288,16 @@
   },
   "httpPostAsync": {
     "body": [
-      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
-      "response.EnsureSuccessStatusCode();"
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsync$3(\"api/${4:url}\", ${5:value});",
+      "// response.EnsureSuccessStatusCode();"
     ],
     "description": "Inserts a Http.PostAsync() call",
     "prefix": "yHttpPostAsync"
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
-      "response.EnsureSuccessStatusCode();$0"
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:Id}}\", ${6:value});",
+      "// response.EnsureSuccessStatusCode();$0"
     ],
     "description": "Inserts a Http.PutAsJsonAsync() call",
     "prefix": "yHttpPutAsJsonAsync"
@@ -664,7 +674,7 @@
     "prefix": "yInputSelectForEachAndLabel"
   },
   "inputText": {
-    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "body": "<InputText @bind-Value=\"${1:Model}.${2:Property}\" placeholder=\"${3:$2}...\" />$0",
     "description": "Inserts an InputText component",
     "prefix": "yInputText"
   },
@@ -673,7 +683,7 @@
       "<div class=\"mb-3\">",
       "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<InputText id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" placeholder=\"${3:$2}...\"  />",
       "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
@@ -683,7 +693,7 @@
     "prefix": "yInputTextAndLabel"
   },
   "inputTextArea": {
-    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" />$0",
+    "body": "<InputTextArea @bind-Value=\"${1:Model}.${2:Property}\" placeholder=\"${3:$2}...\"   />$0",
     "description": "Inserts an InputTextArea component",
     "prefix": "yInputTextArea"
   },
@@ -692,7 +702,7 @@
       "<div class=\"mb-3\">",
       "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
-      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
+      "\t\t<InputTextArea id=\"id$2\" class=\"form-control\" @bind-Value=\"@${1:Model}.${2:PropertyName}\"  placeholder=\"${3:$2}...\"  />",
       "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
@@ -835,6 +845,18 @@
     "description": "Inserts NavigationManager.NavigateTo page\\Id",
     "prefix": "yNavigateToId"
   },
+  "navigationManagerRefresh": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh();$0",
+    "description": "Inserts NavigationManager.Refresh()",
+    "prefix": "yNavigationManagerRefresh"
+  },
+  "navigationManagerRefreshForceReload": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh(forceReload: true);$0",
+    "description": "Inserts NavigationManager.Refresh(forceReload: true)",
+    "prefix": "yNavigationManagerRefreshForceReload"
+  },
+
+
   "onAfterRender": {
     "body": [
       "protected override void OnAfterRender(bool firstRender)",

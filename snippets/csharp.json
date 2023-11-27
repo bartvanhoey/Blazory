@@ -225,28 +225,28 @@
     "prefix": "yHandleValidSubmitAsync"
   },
   "httpClientGetAsync": {
-    "body": "${1:var response =} await ${1|_http,_httpClient,Http,HttpClient|}.GetAsync$2(\"${3:url}\");$0",
+    "body": "${1:var response =} await ${1|_http,_httpClient,Http,HttpClient|}.GetAsync$2(\"api/${3:url}\");$0",
     "description": "Inserts an Http.GetAsync call",
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
-    "body": "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"${2:url}/{${3:id}}\");$0",
+    "body": "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0",
     "description": "Inserts an Http.DeleteAsync call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
-    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"${5:url}/{${6:$4}Id}\");$0",
+    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0",
     "description": "Inserts an Http.GetFromByIdJsonAsync call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
   "httpGetFromJsonAsync": {
-    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"${5:url}\");$0",
+    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>(\"api/${5:url}\");$0",
     "description": "Inserts an Http.GetFromJsonAsync call",
     "prefix": "yHttpGetFromJsonAsync"
   },
   "httpPostAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
       "// response.EnsureSuccessStatusCode();$0",
       "var ${6:result} = await response.Content.ReadFromJsonAsync<${8:TypeName}>();"
     ],
@@ -255,7 +255,7 @@
   },
   "httpPostAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsync$3(\"api/${4:url}\", ${5:value});",
       "// response.EnsureSuccessStatusCode();$0"
     ],
     "description": "Inserts an Http.PostAsync call",
@@ -263,7 +263,7 @@
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3(\"${4:url}\", ${5:value});",
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:Id}}\", ${6:value});",
       "// response.EnsureSuccessStatusCode();$0"
     ],
     "description": "Inserts an Http.PutAsJsonAsync call",
@@ -440,7 +440,7 @@
     "prefix": "yInjectAuthenticationStateProvider"
   },
   "injectHttpClient": {
-    "body": "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0",
+    "body": "[Inject$1] public HttpClient?$2 ${3|_http,_httpClient,Http,HttpClient|} { get; set; }$0",
     "description": "Inserts an Inject HttpClient property",
     "prefix": "yInjectHttpClient"
   },
@@ -608,6 +608,16 @@
     "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0",
     "description": "Inserts a NavigationManager.NavigateTo page",
     "prefix": "yNavigateToPage"
+  },
+  "navigationManagerRefresh": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh();$0",
+    "description": "Inserts NavigationManager.Refresh()",
+    "prefix": "yNavigationManagerRefresh"
+  },
+  "navigationManagerRefreshForceReload": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh(forceReload: true);$0",
+    "description": "Inserts NavigationManager.Refresh(forceReload: true)",
+    "prefix": "yNavigationManagerRefreshForceReload"
   },
   "navigateToId": {
     "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0",
