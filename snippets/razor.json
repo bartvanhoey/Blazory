@@ -993,6 +993,11 @@
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
   },
+  "propState": {
+    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a State property ",
+    "prefix": "yPropState"
+  },
   "propDescription": {
     "body": [
       "public string Description{ get; ${1|set;,private set;|} }$0"
