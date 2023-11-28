@@ -48,11 +48,6 @@
     "description": "Inserts an @attribute [Authorize]§0",
     "prefix": "yAttributeAuthorize"
   },
-  "attribute [RenderModeServer] Directive": {
-    "body": "@attribute [RenderModeServer]$0",
-    "description": "Inserts an @attribute [RenderModeServer]",
-    "prefix": "yAttributeRenderModeServer"
-  },
   "attribute [StreamRendering] Directive": {
     "body": "@attribute [StreamRendering(true)]$0",
     "description": "Inserts an @attribute [StreamRendering(true)]",
@@ -1190,6 +1185,11 @@
     "body": "@rendermode InteractiveServer$0",
     "description": "Inserts @rendermode InteractiveServer",
     "prefix": "yRendermodeInteractiveServer"
+  },
+  "renderModeInteractiveServerPreRenderFalse": {
+    "body": "@rendermode @(new InteractiveServerRenderMode(prerender: false))$0",
+    "description": "Inserts @rendermode InteractiveServer with prerender:false",
+    "prefix": "yRendermodeInteractiveServerPreRenderFalse"
   },
   "renderModeInteractiveWebAssembly": {
     "body": "@rendermode InteractiveWebAssembly$0",
