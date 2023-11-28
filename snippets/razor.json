@@ -250,7 +250,7 @@
   },
   "httpClientGetAsync": {
     "body": [
-      "${1:var response =} await ${1|Http,HttpClient,_http,_httpClient|}.GetAsync$2(\"${3:url}\");$0"
+      "${1:var response =} await ${2|Http,HttpClient,_http,_httpClient|}.GetAsync$3(\"${4:url}\");$0"
     ],
     "description": "Inserts a Http.GetAsync() call",
     "prefix": "yHttpGetAsync"
@@ -992,6 +992,11 @@
     ],
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
+  },
+  "propState": {
+    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a State property ",
+    "prefix": "yPropState"
   },
   "propDescription": {
     "body": [
