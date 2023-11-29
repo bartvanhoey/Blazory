@@ -163,6 +163,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yAtIfNotNull                               | Inserts an If not null statement                                      
      yAtIfNull                                  | Inserts an If null statement                                          
      yAttributeAuthorize                        | Inserts an @attribute [Authorize]§0                                   
+     yAttributeRenderModeServer                 | Inserts an @attribute [RenderModeServer]                              
      yAttributeStreamRendering                  | Inserts an @attribute [StreamRendering(true)]                         
      yBind                                      | Inserts @bind attribute                                               
      yBindFormat                                | Inserts @bind:format="MyFormat"                                       

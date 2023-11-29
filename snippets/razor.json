@@ -48,6 +48,11 @@
     "description": "Inserts an @attribute [Authorize]§0",
     "prefix": "yAttributeAuthorize"
   },
+  "attribute [RenderModeServer] Directive": {
+    "body": "@attribute [RenderModeServer]$0",
+    "description": "Inserts an @attribute [RenderModeServer]",
+    "prefix": "yAttributeRenderModeServer"
+  },
   "attribute [StreamRendering] Directive": {
     "body": "@attribute [StreamRendering(true)]$0",
     "description": "Inserts an @attribute [StreamRendering(true)]",
