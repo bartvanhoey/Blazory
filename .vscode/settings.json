@@ -9,6 +9,7 @@
         "onclick",
         "oninput",
         "onkeypress",
+        "prerender",
         "rendermode",
         "tbody",
         "tfoot",

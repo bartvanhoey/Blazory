@@ -155,7 +155,7 @@
   },
   "editForm": {
     "body": [
-      "<EditForm Model=\"@${1:Model}\" ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
+      "<EditForm Model=\"@${1:Model}\" FormName=\"frm$1\" ${2|OnValidSubmit,OnSubmit,OnInvalidSubmit|}=\"${3|HandleValidSubmitAsync,HandleSubmitAsync,HandleInvalidSubmitAsync|}\">",
       "\t<DataAnnotationsValidator />",
       "\t<ValidationSummary />",
       "\t<div class=\"mb-3\">",
@@ -1190,6 +1190,11 @@
     "body": "@rendermode InteractiveServer$0",
     "description": "Inserts @rendermode InteractiveServer",
     "prefix": "yRendermodeInteractiveServer"
+  },
+  "renderModeInteractiveServerPreRenderFalse": {
+    "body": "@rendermode @(new InteractiveServerRenderMode(prerender: false))$0",
+    "description": "Inserts @rendermode InteractiveServer with prerender:false",
+    "prefix": "yRendermodeInteractiveServerPreRenderFalse"
   },
   "renderModeInteractiveWebAssembly": {
     "body": "@rendermode InteractiveWebAssembly$0",
