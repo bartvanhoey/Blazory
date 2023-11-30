@@ -227,7 +227,7 @@
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:id}}\");$0"
     ],
     "description": "Inserts a Http.GetFromByIdJsonAsync() call",
     "prefix": "yHttpGetFromByIdJsonAsync"

@@ -235,7 +235,7 @@
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
-    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0",
+    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:id}}\");$0",
     "description": "Inserts an Http.GetFromByIdJsonAsync call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },

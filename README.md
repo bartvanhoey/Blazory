@@ -146,6 +146,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yRequiredAttribute                      | Inserts a RequiredAttribute                                           
      yRouteAttribute                         | Inserts a RouteAttribute                                              
      ySetParametersAsync                     | Inserts a SetParametersAsync method stub                              
+     ySetsRequiredMembersAttribute           | Inserts an SetsRequiredMembersAttribute                               
      yShouldRender                           | Inserts a ShouldRender method stub                                    
      yStateHasChanged                        | Inserts a StateHasChanged() method                                    
      yStringLengthAttribute                  | Inserts a StringLength attribute                                      
@@ -315,6 +316,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yRendermodeInteractiveServer               | Inserts @rendermode InteractiveServer                                 
      yRendermodeInteractiveServerPreRenderFalse | Inserts @rendermode InteractiveServer with prerender:false            
      yRendermodeInteractiveWebAssembly          | Inserts @rendermode InteractiveWebAssembly                            
+     ySetsRequiredMembersAttribute              | Inserts an SetsRequiredMembersAttribute                               
      ySupplyParameterFromFormAttribute          | Inserts a SupplyParameterFromForm attribute                           
      yTaskCompleted                             | Inserts await Task.CompletedTask                                      
      yTemplateColumn                            | Inserts a QuickGrid TemplateColumn                                    
