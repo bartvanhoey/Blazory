@@ -434,6 +434,11 @@
     "description": "Inserts an InjectAttribute",
     "prefix": "yInjectAttribute"
   },
+  "setsRequiredMembersAttribute": {
+    "body": "[SetsRequiredMembers$1]$0",
+    "description": "Inserts an SetsRequiredMembersAttribute",
+    "prefix": "ySetsRequiredMembersAttribute"
+  },
   "injectAuthenticationStateProvider": {
     "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
     "description": "Inject AuthenticationStateProvider property",
