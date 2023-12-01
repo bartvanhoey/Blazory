@@ -8,10 +8,7 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": [
-      "[ApiController]",
-      "$0"
-    ],
+    "body": ["[ApiController]", "$0"],
     "description": "inserts an ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -23,10 +20,7 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize]",
-      "$0"
-    ],
+    "body": ["[Authorize]", "$0"],
     "description": "Inserts an AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
@@ -46,9 +40,7 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": [
-      "modelBuilder.Entity<${1:ClassName}>()$0;"
-    ],
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "inserts builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -214,13 +206,46 @@
     "description": "Inserts the HandleFileChosenAsync method for an InputFile element",
     "prefix": "yHandleFileChosenAsync"
   },
-  "handleValidSubmitAsync": {
+  "CrudResultIServiceMethodDefinitions": {
     "body": [
-      "protected async void HandleValidSubmitAsync()",
+      "public interface ${TM_FILENAME_BASE}",
       "{",
-      "\t$0",
-      "}"
+      "\tTask$2<Result$3<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto$7>> GetAsync(${4|Guid,int,string|}$5 id);",
+      "",
+      "\tTask<Result<$1Dto>$6> GetListAsync(Get$1ListDto$8? input = null);",
+      "",
+      "\tTask<Result<$1Dto>> CreateAsync(Create$1Dto$9 input);",
+      "",
+      "\tTask<Result<$1Dto>> UpdateAsync($4 id, Update$1Dto$10 input);",
+      "",
+      "\tTask<Result> DeleteAsync($4 id);",
+      "",
+      "}$0"
     ],
+    "description": "Inserts a IService interface with CRUD Result method definitions",
+    "prefix": "yCrudResultIServiceMethodDefinitions"
+  },
+  "CrudIServiceMethodDefinitions": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE}",
+      "{",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto$7> GetAsync(${4|Guid,int,string|}$5 id);",
+      "",
+      "\tTask<$1Dto>$6 GetListAsync(Get$1ListDto$8? input = null);",
+      "",
+      "\tTask<$1Dto> CreateAsync(Create$1Dto$9 input);",
+      "",
+      "\tTask<$1Dto> UpdateAsync($4 id, Update$1Dto$10 input);",
+      "",
+      "\tTask<bool> DeleteAsync($4 id);",
+      "",
+      "}$0"
+    ],
+    "description": "Inserts a IService interface with CRUD method definitions",
+    "prefix": "yCrudIServiceMethodDefinitions"
+  },
+  "handleValidSubmitAsync": {
+    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
     "description": "Inserts the HandleValidSubmitAsync method stub",
     "prefix": "yHandleValidSubmitAsync"
   },
@@ -275,10 +300,7 @@
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inserts an If inline statement",
     "prefix": "yIfInline"
   },
@@ -294,21 +316,12 @@
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inserts an If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If not null statement",
     "prefix": "yIfNotNull"
   },
@@ -335,10 +348,7 @@
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inserts an If null inline statement",
     "prefix": "yIfNullInline"
   },
@@ -354,9 +364,7 @@
     "prefix": "yIfNullOrCountIsZero"
   },
   "ifNullOrCountIsZeroReturnStatement": {
-    "body": [
-      "if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"
-    ],
+    "body": ["if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"],
     "description": "Inserts an If null Or Count is zero statement",
     "prefix": "yIfNullOrCountIsZeroReturn"
   },
@@ -371,24 +379,12 @@
     "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If statement",
     "prefix": "yIf"
   },
@@ -650,12 +646,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -670,12 +661,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "Inserts an OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -892,10 +878,7 @@
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": [
-      "[Route(\"${1:api/[controller]/[action]}\")]",
-      "$0"
-    ],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "description": "Inserts a RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -933,9 +916,7 @@
     "prefix": "yStringLengthAttribute"
   },
   "supplyParameterFromForm": {
-    "body": [
-      "[SupplyParameterFromForm$1]$0"
-    ],
+    "body": ["[SupplyParameterFromForm$1]$0"],
     "description": "Inserts a SupplyParameterFromForm attribute",
     "prefix": "ySupplyParameterFromFormAttribute"
   },

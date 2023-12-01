@@ -23,6 +23,8 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yColumnTypeNameDecimalAttribute         | Inserts a ColumnType TypeName decimal attribute                       
      yCompareAttribute                       | Inserts a Compare attribute                                           
      yCreateAsyncMethodDefinition            | Inserts a CreateAsync method Definition to an Interface               
+     yCrudIServiceMethodDefinitions          | Inserts a IService interface with CRUD method definitions             
+     yCrudResultIServiceMethodDefinitions    | Inserts a IService interface with CRUD Result method definitions      
      yDataTypeAttribute                      | Inserts a DataType attribute                                          
      yDbSaveChangesAsync                     | Inserts _dbContext.SaveChangesAsync                                   
      yDbSet                                  | Inserts a DbSet for a class in DbContext                              
