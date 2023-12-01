@@ -243,7 +243,7 @@
     "body": [
       "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
       "// response.EnsureSuccessStatusCode();",
-      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${7:TypeName}>();"
+      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${7:TypeName}>();$0"
     ],
     "description": "Inserts a Http.PostAsJsonAsync() call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -260,7 +260,7 @@
     "body": [
       "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:id}}\", ${6:value});",
       "// response.EnsureSuccessStatusCode();",
-      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$9"
+      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts a Http.PutAsJsonAsync() call",
     "prefix": "yHttpPutAsJsonAsync"

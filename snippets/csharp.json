@@ -305,8 +305,8 @@
   "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
-      "// response.EnsureSuccessStatusCode();$0",
-      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts an Http.PostAsJsonAsync call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -322,8 +322,8 @@
   "httpPutAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:id}}\", ${6:value});",
-      "// response.EnsureSuccessStatusCode();$0",
-      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts an Http.PutAsJsonAsync call",
     "prefix": "yHttpPutAsJsonAsync"
