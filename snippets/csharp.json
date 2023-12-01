@@ -929,5 +929,24 @@
     "body": "Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
     "description": "Inserts an UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
+  }, "GetListAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>$2> GetListAsync(Get$1ListDto$3? input = null);$0",
+    "description": "Inserts a GetListAsync Result method definition",
+    "prefix": "yGetListAsyncResultMethodDefinition"
+  },
+  "CreateAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>> CreateAsync(Create$1Dto$2 input);$0",
+    "description": "Inserts a CreateAsync Result method definition",
+    "prefix": "yCreateAsyncResultMethodDefinition"
+  },
+  "UpdateAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>> UpdateAsync(${2|Guid,int,string|} ${3:id}, Update$1Dto$4 input);$0",
+    "description": "Inserts a UpdateAsync Result method definition",
+    "prefix": "yUpdateAsyncResultMethodDefinition"
+  },
+  "GetDeleteAsyncResultMethodDefinition": {
+    "body": "\tTask<Result> DeleteAsync(${1|Guid,int,string|}$2 id);$0",
+    "description": "Inserts a DeleteAsync Result method definition",
+    "prefix": "yDeleteAsyncResultMethodDefinition"
   }
 }
