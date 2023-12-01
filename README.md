@@ -40,6 +40,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yEventHandlerAsync                      | Inserts an EventHandlerAsync method stub                              
      yGenerateClassImplementingInterface     | Generates a class and implements interface                            
      yGetAsyncMethodDefinition               | Inserts a GetAsync method definition for an interface                 
+     yGetAsyncResultMethodDefinition         | Inserts a GetAsync Result method definition for an interface          
      yGetListAsyncMethodDefinition           | Inserts a GetListAsync definition for an interface                    
      yGetListAsyncResultMethodDefinition     | Inserts a GetListAsync Result method definition                       
      yGps                                    | Inserts { get, private set }                                          
