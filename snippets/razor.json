@@ -220,7 +220,8 @@
   },
   "httpDeleteAsync": {
     "body": [
-      "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0"
+      "var response = await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");",
+      "// return response.IsSuccessStatusCode;$0"
     ],
     "description": "Inserts a Http.DeleteAsync() call",
     "prefix": "yHttpDeleteAsync"

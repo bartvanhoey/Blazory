@@ -8,10 +8,7 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": [
-      "[ApiController]",
-      "$0"
-    ],
+    "body": ["[ApiController]", "$0"],
     "description": "inserts an ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -23,10 +20,7 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize]",
-      "$0"
-    ],
+    "body": ["[Authorize]", "$0"],
     "description": "Inserts an AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
@@ -46,9 +40,7 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": [
-      "modelBuilder.Entity<${1:ClassName}>()$0;"
-    ],
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "inserts builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -273,12 +265,7 @@
     "prefix": "yHandleFileChosenAsync"
   },
   "handleValidSubmitAsync": {
-    "body": [
-      "protected async void HandleValidSubmitAsync()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
     "description": "Inserts the HandleValidSubmitAsync method stub",
     "prefix": "yHandleValidSubmitAsync"
   },
@@ -288,7 +275,10 @@
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
-    "body": "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0",
+    "body": [
+      "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");",
+      "// return response.IsSuccessStatusCode;$0"
+    ],
     "description": "Inserts an Http.DeleteAsync call",
     "prefix": "yHttpDeleteAsync"
   },
@@ -334,10 +324,7 @@
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inserts an If inline statement",
     "prefix": "yIfInline"
   },
@@ -353,21 +340,12 @@
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inserts an If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If not null statement",
     "prefix": "yIfNotNull"
   },
@@ -394,17 +372,12 @@
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inserts an If null inline statement",
     "prefix": "yIfNullInline"
   },
   "ifNullOrCountIsZeroReturnStatement": {
-    "body": [
-      "if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"
-    ],
+    "body": ["if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"],
     "description": "Inserts an If null Or Count is zero statement",
     "prefix": "yIfNullOrCountIsZeroReturn"
   },
@@ -430,24 +403,12 @@
     "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If statement",
     "prefix": "yIf"
   },
@@ -704,12 +665,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -724,12 +680,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "Inserts an OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -946,10 +897,7 @@
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": [
-      "[Route(\"${1:api/[controller]/[action]}\")]",
-      "$0"
-    ],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "description": "Inserts a RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -992,9 +940,7 @@
     "prefix": "yStringLengthAttribute"
   },
   "supplyParameterFromForm": {
-    "body": [
-      "[SupplyParameterFromForm$1]$0"
-    ],
+    "body": ["[SupplyParameterFromForm$1]$0"],
     "description": "Inserts a SupplyParameterFromForm attribute",
     "prefix": "ySupplyParameterFromFormAttribute"
   },
