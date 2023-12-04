@@ -23,11 +23,15 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yColumnTypeNameDecimalAttribute         | Inserts a ColumnType TypeName decimal attribute                       
      yCompareAttribute                       | Inserts a Compare attribute                                           
      yCreateAsyncMethodDefinition            | Inserts a CreateAsync method Definition to an Interface               
+     yCreateAsyncResultMethodDefinition      | Inserts a CreateAsync Result method definition                        
+     yCrudIServiceMethodDefinitions          | Inserts a IService interface with CRUD method definitions             
+     yCrudResultIServiceMethodDefinitions    | Inserts a IService interface with CRUD Result method definitions      
      yDataTypeAttribute                      | Inserts a DataType attribute                                          
      yDbSaveChangesAsync                     | Inserts _dbContext.SaveChangesAsync                                   
      yDbSet                                  | Inserts a DbSet for a class in DbContext                              
      yDbSetNewSyntax                         | Inserts a DbSet for a class in DbContext                              
      yDeleteAsyncMethodDefinition            | Inserts a DeleteAsync method definition for an interface              
+     yDeleteAsyncResultMethodDefinition      | Inserts a DeleteAsync Result method definition                        
      yEmailAddressAttribute                  | Inserts an EmailAddress Attribute                                     
      yEventCallback                          | Inserts an EventCallback property                                     
      yEventCallbackChanged                   | Inserts an EventCallbackChanged property + property                   
@@ -36,7 +40,9 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yEventHandlerAsync                      | Inserts an EventHandlerAsync method stub                              
      yGenerateClassImplementingInterface     | Generates a class and implements interface                            
      yGetAsyncMethodDefinition               | Inserts a GetAsync method definition for an interface                 
+     yGetAsyncResultMethodDefinition         | Inserts a GetAsync Result method definition for an interface          
      yGetListAsyncMethodDefinition           | Inserts a GetListAsync definition for an interface                    
+     yGetListAsyncResultMethodDefinition     | Inserts a GetListAsync Result method definition                       
      yGps                                    | Inserts { get, private set }                                          
      yGs                                     | Inserts { get, set }                                                  
      yHandleFileChosenAsync                  | Inserts the HandleFileChosenAsync method for an InputFile element     
@@ -146,12 +152,14 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yRequiredAttribute                      | Inserts a RequiredAttribute                                           
      yRouteAttribute                         | Inserts a RouteAttribute                                              
      ySetParametersAsync                     | Inserts a SetParametersAsync method stub                              
+     ySetsRequiredMembersAttribute           | Inserts an SetsRequiredMembersAttribute                               
      yShouldRender                           | Inserts a ShouldRender method stub                                    
      yStateHasChanged                        | Inserts a StateHasChanged() method                                    
      yStringLengthAttribute                  | Inserts a StringLength attribute                                      
      ySupplyParameterFromFormAttribute       | Inserts a SupplyParameterFromForm attribute                           
      yTaskCompleted                          | Inserts await Task.CompletedTask                                      
      yUpdateAsyncMethodDefinition            | Inserts an UpdateAsync method definition for an interface             
+     yUpdateAsyncResultMethodDefinition      | Inserts a UpdateAsync Result method definition                        
 
 ### Razor files [(source code)](https://github.com/bartvanhoey/Blazory/blob/master/snippets/razor.json)
 
@@ -315,6 +323,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yRendermodeInteractiveServer               | Inserts @rendermode InteractiveServer                                 
      yRendermodeInteractiveServerPreRenderFalse | Inserts @rendermode InteractiveServer with prerender:false            
      yRendermodeInteractiveWebAssembly          | Inserts @rendermode InteractiveWebAssembly                            
+     ySetsRequiredMembersAttribute              | Inserts an SetsRequiredMembersAttribute                               
      ySupplyParameterFromFormAttribute          | Inserts a SupplyParameterFromForm attribute                           
      yTaskCompleted                             | Inserts await Task.CompletedTask                                      
      yTemplateColumn                            | Inserts a QuickGrid TemplateColumn                                    

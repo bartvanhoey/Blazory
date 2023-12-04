@@ -220,14 +220,15 @@
   },
   "httpDeleteAsync": {
     "body": [
-      "await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0"
+      "var response = await ${1|Http,HttpClient,_http,_httpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");",
+      "// return response.IsSuccessStatusCode;$0"
     ],
     "description": "Inserts a Http.DeleteAsync() call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
     "body": [
-      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0"
+      "${1|var response =, response =, return|} await ${2|Http,HttpClient,_http,_httpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:id}}\");$0"
     ],
     "description": "Inserts a Http.GetFromByIdJsonAsync() call",
     "prefix": "yHttpGetFromByIdJsonAsync"
@@ -242,9 +243,8 @@
   "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
-      "response.EnsureSuccessStatusCode();",
-      "var ${6:${5/(.*)/${1:/downcase}/}}Id = await response.Content.ReadFromJsonAsync<${8:TypeName}>();",
-      "return ${9:$6}Id;$0"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${7:TypeName}>();$0"
     ],
     "description": "Inserts a Http.PostAsJsonAsync() call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -259,8 +259,9 @@
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:Id}}\", ${6:value});",
-      "// response.EnsureSuccessStatusCode();$0"
+      "var ${1:response} = await ${2|Http,HttpClient,_http,_httpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:id}}\", ${6:value});",
+      "// response.EnsureSuccessStatusCode();",
+      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts a Http.PutAsJsonAsync() call",
     "prefix": "yHttpPutAsJsonAsync"
@@ -1064,17 +1065,17 @@
     "prefix": "yQuickGridColumnOptions"
   },
   "readAsStringAsync": {
-    "body": "var ${1:result} = await ${2:response}.Content.ReadAsStringAsync();$0",
+    "body": "var ${1:responseObject} = await ${2:response}.Content.ReadAsStringAsync();$0",
     "description": "Inserts a ReadsAsStringAsync() call",
     "prefix": "yReadAsStringAsync"
   },
   "readFromJsonAsync": {
-    "body": "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
+    "body": "var  ${1:responseObject} = await ${2:response}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
     "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadFromJsonAsync"
   },
   "readIdFromJsonAsync": {
-    "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
+    "body": "var ${1:Name}Id = await ${2:response}.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
     "description": "Inserts a ReadFromJsonAsync call",
     "prefix": "yReadIdFromJsonAsync"
   },

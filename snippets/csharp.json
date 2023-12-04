@@ -8,10 +8,7 @@
     "prefix": "yAddHttpClientWithHttpMessageHandler"
   },
   "apiControllerAttribute": {
-    "body": [
-      "[ApiController]",
-      "$0"
-    ],
+    "body": ["[ApiController]", "$0"],
     "description": "inserts an ApiController attribute",
     "prefix": "yApiControllerAttribute"
   },
@@ -23,10 +20,7 @@
     "prefix": "yCascadingParaAuthState"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize]",
-      "$0"
-    ],
+    "body": ["[Authorize]", "$0"],
     "description": "Inserts an AuthorizeAttribute",
     "prefix": "yAuthorizeAttribute"
   },
@@ -46,9 +40,7 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": [
-      "modelBuilder.Entity<${1:ClassName}>()$0;"
-    ],
+    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
     "description": "inserts builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -82,9 +74,52 @@
     "prefix": "yCompareAttribute"
   },
   "createAsyncMethodDefinition": {
-    "body": "Task$1<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> Create${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${5:$2} ${6:${5/(.*)/${1:/downcase}/}});$0",
+    "body": "Task<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$2> CreateAsync(${3:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$4 ${5:${3/(.*)/${1:/downcase}/}});$0",
     "description": "Inserts a CreateAsync method Definition to an Interface ",
     "prefix": "yCreateAsyncMethodDefinition"
+  },
+  "createAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>> CreateAsync(Create$1Dto$2 input);$0",
+    "description": "Inserts a CreateAsync Result method definition",
+    "prefix": "yCreateAsyncResultMethodDefinition"
+  },
+  "crudIServiceMethodDefinitions": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE}",
+      "{",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto$7> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
+      "",
+      "\tTask<PagedResultDto$7<$1Dto>>$8 GetListAsync(Get$1ListDto$9? input = null);",
+      "",
+      "\tTask<$1Dto> CreateAsync(Create$1Dto$10 input);",
+      "",
+      "\tTask<$1Dto> UpdateAsync($4 $6, Update$1Dto$11 input);",
+      "",
+      "\tTask<bool> DeleteAsync($4 $6);",
+      "",
+      "}$0"
+    ],
+    "description": "Inserts a IService interface with CRUD method definitions",
+    "prefix": "yCrudIServiceMethodDefinitions"
+  },
+  "crudResultIServiceMethodDefinitions": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE}",
+      "{",
+      "\tTask$2<Result$3<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto$7>> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
+      "",
+      "\tTask<Result<PagedResultDto$7<$1Dto>$8>> GetListAsync(Get$1ListDto$9? input = null);",
+      "",
+      "\tTask<Result<$1Dto>> CreateAsync(Create$1Dto$10 input);",
+      "",
+      "\tTask<Result<$1Dto>> UpdateAsync($4 $6, Update$1Dto$11 input);",
+      "",
+      "\tTask<Result> DeleteAsync($4 $6);",
+      "",
+      "}$0"
+    ],
+    "description": "Inserts a IService interface with CRUD Result method definitions",
+    "prefix": "yCrudResultIServiceMethodDefinitions"
   },
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]$0",
@@ -107,9 +142,14 @@
     "prefix": "yDbSetNewSyntax"
   },
   "deleteAsyncMethodDefinition": {
-    "body": "Task$1 Delete${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id);$0",
+    "body": "Task<bool>$1 DeleteAsync(${2|Guid,int,string|} ${3:id});$0",
     "description": "Inserts a DeleteAsync method definition for an interface",
     "prefix": "yDeleteAsyncMethodDefinition"
+  },
+  "deleteAsyncResultMethodDefinition": {
+    "body": "\tTask<Result> DeleteAsync(${1|Guid,int,string|}$2 id);$0",
+    "description": "Inserts a DeleteAsync Result method definition",
+    "prefix": "yDeleteAsyncResultMethodDefinition"
   },
   "emailAddressAttribute": {
     "body": "[EmailAddress$1] $0",
@@ -172,14 +212,24 @@
     "prefix": "yGenerateClassImplementingInterface"
   },
   "getAsyncMethodDefinition": {
-    "body": "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3> Get${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${5|Guid,int,string|}$6 ${7:id});$0",
+    "body": "\tTask<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$2> GetAsync(${3|Guid,int,string|} ${4:id});$0",
     "description": "Inserts a GetAsync method definition for an interface",
     "prefix": "yGetAsyncMethodDefinition"
   },
+  "getAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$2>> GetAsync(${3|Guid,int,string|} ${4:id});$0",
+    "description": "Inserts a GetAsync Result method definition for an interface",
+    "prefix": "yGetAsyncResultMethodDefinition"
+  },
   "getListAsyncMethodDefinition": {
-    "body": "\tTask$1<List<${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$3>> Get${4:$2}sAsync($6);$0",
+    "body": "\tTask<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$2>> GetListAsync($3);$0",
     "description": "Inserts a GetListAsync definition for an interface",
     "prefix": "yGetListAsyncMethodDefinition"
+  },
+  "getListAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>$2> GetListAsync(Get$1ListDto$3? input = null);$0",
+    "description": "Inserts a GetListAsync Result method definition",
+    "prefix": "yGetListAsyncResultMethodDefinition"
   },
   "getPrivateSet": {
     "body": "{ get; private set; }$0",
@@ -215,12 +265,7 @@
     "prefix": "yHandleFileChosenAsync"
   },
   "handleValidSubmitAsync": {
-    "body": [
-      "protected async void HandleValidSubmitAsync()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
     "description": "Inserts the HandleValidSubmitAsync method stub",
     "prefix": "yHandleValidSubmitAsync"
   },
@@ -230,12 +275,15 @@
     "prefix": "yHttpGetAsync"
   },
   "httpDeleteAsync": {
-    "body": "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");$0",
+    "body": [
+      "await ${1|_http,_httpClient,Http,HttpClient|}.DeleteAsync($\"api/${2:url}/{${3:id}}\");",
+      "// return response.IsSuccessStatusCode;$0"
+    ],
     "description": "Inserts an Http.DeleteAsync call",
     "prefix": "yHttpDeleteAsync"
   },
   "httpGetFromByIdJsonAsync": {
-    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:$4}Id}\");$0",
+    "body": "${1|var response =, response =, return|} await ${2|_http,_httpClient,Http,HttpClient|}.GetFromJsonAsync$3<${4:ResponseType}>($\"api/${5:url}/{${6:id}}\");$0",
     "description": "Inserts an Http.GetFromByIdJsonAsync call",
     "prefix": "yHttpGetFromByIdJsonAsync"
   },
@@ -247,8 +295,8 @@
   "httpPostAsJsonAsync": {
     "body": [
       "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PostAsJsonAsync$3(\"api/${4:url}\", ${5:value});",
-      "// response.EnsureSuccessStatusCode();$0",
-      "var ${6:result} = await response.Content.ReadFromJsonAsync<${8:TypeName}>();"
+      "// response.EnsureSuccessStatusCode();",
+      "var ${6:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts an Http.PostAsJsonAsync call",
     "prefix": "yHttpPostAsJsonAsync"
@@ -263,8 +311,9 @@
   },
   "httpPutAsJsonAsync": {
     "body": [
-      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:Id}}\", ${6:value});",
-      "// response.EnsureSuccessStatusCode();$0"
+      "var ${1:response} = await ${2|_http,_httpClient,Http,HttpClient|}.PutAsJsonAsync$3($\"api/${4:url}/{${5:id}}\", ${6:value});",
+      "// response.EnsureSuccessStatusCode();",
+      "var ${7:responseObject} = await $1.Content.ReadFromJsonAsync<${8:TypeName}>();$0"
     ],
     "description": "Inserts an Http.PutAsJsonAsync call",
     "prefix": "yHttpPutAsJsonAsync"
@@ -275,10 +324,7 @@
     "prefix": "yIEnumerable"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inserts an If inline statement",
     "prefix": "yIfInline"
   },
@@ -294,21 +340,12 @@
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inserts an If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If not null statement",
     "prefix": "yIfNotNull"
   },
@@ -335,12 +372,14 @@
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inserts an If null inline statement",
     "prefix": "yIfNullInline"
+  },
+  "ifNullOrCountIsZeroReturnStatement": {
+    "body": ["if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"],
+    "description": "Inserts an If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroReturn"
   },
   "ifNullOrCountIsZeroStatement": {
     "body": [
@@ -353,13 +392,6 @@
     "description": "Inserts an If null Or Count is zero statement",
     "prefix": "yIfNullOrCountIsZero"
   },
-  "ifNullOrCountIsZeroReturnStatement": {
-    "body": [
-      "if (${1:MyVariable} == null || $1.Count == 0) return$2;$0"
-    ],
-    "description": "Inserts an If null Or Count is zero statement",
-    "prefix": "yIfNullOrCountIsZeroReturn"
-  },
   "ifNullReturnDefaultStatement": {
     "body": "if (${1:MyVariable} == null) return ${2:default}$3;$0",
     "description": "Inserts an If null return default statement",
@@ -371,24 +403,12 @@
     "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "Inserts an If statement",
     "prefix": "yIf"
   },
@@ -433,11 +453,6 @@
     "body": "[Inject$1]$0",
     "description": "Inserts an InjectAttribute",
     "prefix": "yInjectAttribute"
-  },
-  "setsRequiredMembersAttribute": {
-    "body": "[SetsRequiredMembers$1]$0",
-    "description": "Inserts an SetsRequiredMembersAttribute",
-    "prefix": "ySetsRequiredMembersAttribute"
   },
   "injectAuthenticationStateProvider": {
     "body": "[Inject$1] ${2|protected,public|} AuthenticationStateProvider$3 ${4:AuthenticationStateProvider} { get; set; }$0",
@@ -614,6 +629,11 @@
     "description": "Inserts a NavigationManager.NavigateTo page",
     "prefix": "yNavigateToPage"
   },
+  "navigateToId": {
+    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0",
+    "description": "Inserts a NavigationManager.NavigateTo page\\Id",
+    "prefix": "yNavigateToId"
+  },
   "navigationManagerRefresh": {
     "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh();$0",
     "description": "Inserts NavigationManager.Refresh()",
@@ -623,11 +643,6 @@
     "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.Refresh(forceReload: true);$0",
     "description": "Inserts NavigationManager.Refresh(forceReload: true)",
     "prefix": "yNavigationManagerRefreshForceReload"
-  },
-  "navigateToId": {
-    "body": "${1|NavigationManager,Navigation,Nav,_navigationManager|}!.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0",
-    "description": "Inserts a NavigationManager.NavigateTo page\\Id",
-    "prefix": "yNavigateToId"
   },
   "onAfterRender": {
     "body": [
@@ -650,12 +665,7 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": [
-      "protected override void OnInitialized()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
     "description": "OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -670,12 +680,7 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": [
-      "protected override void OnParametersSet()",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
     "description": "Inserts an OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -735,11 +740,6 @@
     "body": "public string ${1:Country} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
-  },
-  "propState": {
-    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a State property ",
-    "prefix": "yPropState"
   },
   "propDescription": {
     "body": "public string Description{ get; ${1|set;,private set;|} }$0",
@@ -836,6 +836,11 @@
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "yPropStartTime"
   },
+  "propState": {
+    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a State property ",
+    "prefix": "yPropState"
+  },
   "propStreet": {
     "body": "public string ${1:Street} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Street property ",
@@ -866,20 +871,20 @@
     "description": "Inserts a Range attribute",
     "prefix": "yRangeAttribute"
   },
-  "readFromJsonAsync": {
-    "body": "${1|var responseObject =, responseObject =, return|} await ${2:result}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
-    "description": "Inserts a ReadFromJsonAsync call",
-    "prefix": "yReadFromJsonAsync"
-  },
-  "readIdFromJsonAsync": {
-    "body": "var ${1:Name}Id = await response.Content.ReadFromJsonAsync<${2|int,string,Guid|}>();$0",
-    "description": "Inserts a ReadFromJsonAsync call",
-    "prefix": "yReadIdFromJsonAsync"
-  },
   "readAsStringAsync": {
     "body": "var ${1:result} = await ${2:response}.Content.ReadAsStringAsync();$0",
     "description": "Inserts a ReadsAsStringAsync() call",
     "prefix": "yReadAsStringAsync"
+  },
+  "readFromJsonAsync": {
+    "body": "var ${1:responseObject} = await ${2:response}.Content.ReadFromJsonAsync$3<${4:ResponseType}>();$0",
+    "description": "Inserts a ReadFromJsonAsync call",
+    "prefix": "yReadFromJsonAsync"
+  },
+  "readIdFromJsonAsync": {
+    "body": "var ${1:Name}Id = await ${2:response}.Content.ReadFromJsonAsync<${3|int,string,Guid|}>();$0",
+    "description": "Inserts a ReadFromJsonAsync call",
+    "prefix": "yReadIdFromJsonAsync"
   },
   "readOnlyHttpClientField": {
     "body": "private readonly HttpClient$2 ${3|_httpClient,_http,http|};$0",
@@ -892,10 +897,7 @@
     "prefix": "yRequiredAttribute"
   },
   "routeAttribute": {
-    "body": [
-      "[Route(\"${1:api/[controller]/[action]}\")]",
-      "$0"
-    ],
+    "body": ["[Route(\"${1:api/[controller]/[action]}\")]", "$0"],
     "description": "Inserts a RouteAttribute",
     "prefix": "yRouteAttribute"
   },
@@ -910,6 +912,11 @@
     ],
     "description": "Inserts a SetParametersAsync method stub",
     "prefix": "ySetParametersAsync"
+  },
+  "setsRequiredMembersAttribute": {
+    "body": "[SetsRequiredMembers$1]$0",
+    "description": "Inserts an SetsRequiredMembersAttribute",
+    "prefix": "ySetsRequiredMembersAttribute"
   },
   "shouldRender": {
     "body": [
@@ -933,9 +940,7 @@
     "prefix": "yStringLengthAttribute"
   },
   "supplyParameterFromForm": {
-    "body": [
-      "[SupplyParameterFromForm$1]$0"
-    ],
+    "body": ["[SupplyParameterFromForm$1]$0"],
     "description": "Inserts a SupplyParameterFromForm attribute",
     "prefix": "ySupplyParameterFromFormAttribute"
   },
@@ -945,8 +950,13 @@
     "prefix": "yTaskCompleted"
   },
   "updateAsyncMethodDefinition": {
-    "body": "Task$1 Update${2:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Async(${3|Guid,int,string|} id, ${4:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$5 ${6:${4/(.*)/${1:/downcase}/}});$0",
+    "body": "Task<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}>$2 UpdateAsync(${3|Guid,int,string|}  ${4:id}, ${5:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}$6 ${7:${5/(.*)/${1:/downcase}/}});$0",
     "description": "Inserts an UpdateAsync method definition for an interface",
     "prefix": "yUpdateAsyncMethodDefinition"
+  },
+  "updateAsyncResultMethodDefinition": {
+    "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>> UpdateAsync(${2|Guid,int,string|} ${3:id}, Update$1Dto$4 input);$0",
+    "description": "Inserts a UpdateAsync Result method definition",
+    "prefix": "yUpdateAsyncResultMethodDefinition"
   }
 }
