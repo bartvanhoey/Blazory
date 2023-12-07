@@ -99,7 +99,7 @@
       "",
       "}$0"
     ],
-    "description": "Inserts a IService interface with CRUD method definitions",
+    "description": "Inserts an IService interface with CRUD method definitions",
     "prefix": "yCrudIServiceMethodDefinitions"
   },
   "crudResultIServiceMethodDefinitions": {
@@ -118,7 +118,7 @@
       "",
       "}$0"
     ],
-    "description": "Inserts a IService interface with CRUD Result method definitions",
+    "description": "Inserts an IService interface with CRUD Result method definitions",
     "prefix": "yCrudResultIServiceMethodDefinitions"
   },
   "dataTypeAttribute": {
