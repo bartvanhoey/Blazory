@@ -958,5 +958,68 @@
     "body": "\tTask<Result<${1:${TM_FILENAME_BASE/([\\I])(.*)(Service)/$2/gi}}Dto>> UpdateAsync(${2|Guid,int,string|} ${3:id}, Update$1Dto$4 input);$0",
     "description": "Inserts a UpdateAsync Result method definition",
     "prefix": "yUpdateAsyncResultMethodDefinition"
+  },
+  "ctrlHttpGetList": {
+    "body": [
+      "[HttpGet]",  
+      "public async Task<ActionResult<List<${1:Type}>>> Get${2:$1}s()",
+      "{",
+      "\tvar ${3:${1/(.*)/${1:/downcase}/}}s = new List<$1>();"
+      "\t",
+      "\treturn Ok($3s);",
+      "}"
+    ],
+    "description": "Generates a HttpGet List action",
+    "prefix": "yCtrlHttpGetList",
+  },
+  "ctrlHttpGet": {
+    "body": [
+      "[HttpGet(\"{${1:id}}\")]",  
+      "public async Task<ActionResult<${2:Type}>> Get${3:$2}(${4|Guid,int,string|} $1)",
+      "{",
+      "\tvar ${5:${2/(.*)/${1:/downcase}/}} = new $2();"
+      "\t",
+      "\treturn Ok($5);",
+      "}"
+    ],
+    "description": "Generates a HttpGet action",
+    "prefix": "yCtrlHttpGet",
+  },
+  "ctrlHttpPost": {
+    "body": [
+      "[HttpPost]",  
+      "public async Task<ActionResult<${1:Type}>> Post${2:$1}(${3:$1} ${4:${1/(.*)/${1:/downcase}/}})",
+      "{",
+      "\tvar ${5:${2/(.*)/${1:/downcase}/}}New = new $2();"
+      "\t",
+      "\treturn Ok($5);",
+      "}"
+    ],
+    "description": "Generates a HttpPost action",
+    "prefix": "yCtrlHttpPost",
+  },
+  "ctrlHttpDelete": {
+    "body": [
+      "[HttpDelete(\"{${1:id}}\")]",  
+      "public async Task<ActionResult<bool>> Delete${2:Type}(${4|Guid,int,string|} $1)",
+      "{",
+      "\t",
+      "\treturn true;",
+      "}"
+    ],
+    "description": "Generates a HttpDelete action",
+    "prefix": "yCtrlHttpDelete",
+  },
+  "ctrlHttpPut": {
+    "body": [
+      "[HttpPut()]",  
+      "public async Task<ActionResult<bool>> Update${1:Type}(${2:$1} ${3:${1/(.*)/${1:/downcase}/}})",
+      "{",
+      "\t",
+      "\treturn true;",
+      "}"
+    ],
+    "description": "Generates a HttpPut action",
+    "prefix": "yCtrlHttpPut",
   }
 }
