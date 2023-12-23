@@ -847,7 +847,7 @@
     "prefix": "yOnValidSubmit"
   },
   "pageDirective": {
-    "body": "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
+    "body": "@page \"/$2${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"$0",
     "description": "Inserts a @page directive",
     "prefix": "yPage"
   },
