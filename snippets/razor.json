@@ -20,10 +20,21 @@
     "prefix": "yAtIf"
   },
   "attribute [Authorize] Directive": {
-    "body": "@attribute [Authorize]",
+    "body": [
+      "@* @using Microsoft.AspNetCore.Authorization *@",
+      "@attribute [Authorize]"],
     "description": "Inserts an @attribute [Authorize]§0",
     "prefix": "yAttributeAuthorize"
   },
+  "attribute [AllowAnonymous] Directive": {
+    "body": [
+      "@* @using Microsoft.AspNetCore.Authorization *@",
+      "@attribute [AllowAnonymous]"
+    ],
+    "description": "Inserts an @attribute [AllowAnonymous]§0",
+    "prefix": "yAttributeAllowAnonymous"
+  },
+
   "attribute [RenderModeServer] Directive": {
     "body": "@attribute [RenderModeServer]$0",
     "description": "Inserts an @attribute [RenderModeServer]",
