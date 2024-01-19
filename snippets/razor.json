@@ -106,7 +106,7 @@
     "description": "Inserts a complete page component",
     "prefix": "yComponent"
   },
-  "componentChildContent": {
+  "renderFragmentChildContent": {
     "body": [
       "@ChildContent",
       "",
@@ -115,7 +115,7 @@
       "}"
     ],
     "description": "Inserts a complete page component with ChildContent RenderFragment",
-    "prefix": "yComponentChildContent"
+    "prefix": "yRenderFragmentChildContent"
   },
   "dataAnnotationsValidator": {
     "body": "<DataAnnotationsValidator />",
