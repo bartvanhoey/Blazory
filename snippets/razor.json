@@ -1,30 +1,47 @@
 {
   "atIfIsVisibleStatement": {
-    "body": ["@if (${1:IsVisible})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "@if (${1:IsVisible})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an If(IsVisible) statement",
     "prefix": "yAtIfIsVisible"
   },
   "atIfNotNullStatement": {
-    "body": ["@if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "@if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an If not null statement",
     "prefix": "yAtIfNotNull"
   },
   "atIfNullStatement": {
-    "body": ["@if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "@if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an If null statement",
     "prefix": "yAtIfNull"
   },
   "atIfStatement": {
-    "body": ["@if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "@if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an If statement",
     "prefix": "yAtIf"
-  },
-  "attribute [Authorize] Directive": {
-    "body": [
-      "@* @using Microsoft.AspNetCore.Authorization *@",
-      "@attribute [Authorize]"],
-    "description": "Inserts an @attribute [Authorize]§0",
-    "prefix": "yAttributeAuthorize"
   },
   "attribute [AllowAnonymous] Directive": {
     "body": [
@@ -34,7 +51,14 @@
     "description": "Inserts an @attribute [AllowAnonymous]§0",
     "prefix": "yAttributeAllowAnonymous"
   },
-
+  "attribute [Authorize] Directive": {
+    "body": [
+      "@* @using Microsoft.AspNetCore.Authorization *@",
+      "@attribute [Authorize]"
+    ],
+    "description": "Inserts an @attribute [Authorize]§0",
+    "prefix": "yAttributeAuthorize"
+  },
   "attribute [RenderModeServer] Directive": {
     "body": "@attribute [RenderModeServer]$0",
     "description": "Inserts an @attribute [RenderModeServer]",
@@ -70,6 +94,16 @@
     "description": "Inserts @bind-Value=\"MyProperty\" ",
     "prefix": "yBindValue"
   },
+  "buttonOnClick": {
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
+    "prefix": "yButtonOnClick"
+  },
+  "buttonOnClickWithParameter": {
+    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"(() => ${2:MethodName}(${3:Parameter}))\">${4:ButtonText}</button>$0",
+    "description": "Inserts a button with an onclick event",
+    "prefix": "yButtonOnClickWithParameter"
+  },
   "cascadingAuthenticationState": {
     "body": [
       "<CascadingAuthenticationState>",
@@ -78,6 +112,13 @@
     ],
     "description": "Inserts a CascadingAuthenticationState stub",
     "prefix": "yCascadingAuthenticationState"
+  },
+  "cascadingParameterAttribute": {
+    "body": [
+      "[CascadingParameter$1]$0"
+    ],
+    "description": "Inserts a CascadingParameter attribute",
+    "prefix": "yCascadingParaAttribute"
   },
   "cascadingValue": {
     "body": [
@@ -89,7 +130,11 @@
     "prefix": "yCascadingValue"
   },
   "codeBlock": {
-    "body": ["@code {", "\t$0", "}"],
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
     "description": "Inserts a @code block",
     "prefix": "yCode"
   },
@@ -105,17 +150,6 @@
     ],
     "description": "Inserts a complete page component",
     "prefix": "yComponent"
-  },
-  "renderFragmentChildContent": {
-    "body": [
-      "@ChildContent",
-      "",
-      "@code {",
-      "\t[Parameter] public RenderFragment ChildContent { get; set; }",
-      "}"
-    ],
-    "description": "Inserts a complete page component with ChildContent RenderFragment",
-    "prefix": "yRenderFragmentChildContent"
   },
   "dataAnnotationsValidator": {
     "body": "<DataAnnotationsValidator />",
@@ -160,16 +194,6 @@
     "description": "Inserts an PreventDefault attribute",
     "prefix": "yPreventDefault"
   },
-  "buttonOnClick": {
-    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"${2:MethodName}\">${3:ButtonText}</button>$0",
-    "description": "Inserts a button with an onclick event",
-    "prefix": "yButtonOnClick"
-  },
-  "buttonOnClickWithParameter": {
-    "body": "<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\" @onclick=\"(() => ${2:MethodName}(${3:Parameter}))\">${4:ButtonText}</button>$0",
-    "description": "Inserts a button with an onclick event",
-    "prefix": "yButtonOnClickWithParameter"
-  },
   "eventCallbackChanged": {
     "body": [
       "[Parameter$1]",
@@ -208,17 +232,26 @@
     "prefix": "yFormControlClass"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "Inserts { get, private set }",
     "prefix": "yGps"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "Inserts { get, set }",
     "prefix": "yGs"
   },
   "handleValidSubmitAsync": {
-    "body": ["protected async void HandleValidSubmitAsync()", "{", "\t$0", "}"],
+    "body": [
+      "protected async void HandleValidSubmitAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Inserts the HandleValidSubmitAsync method stub",
     "prefix": "yHandleValidSubmitAsync"
   },
@@ -278,7 +311,10 @@
     "prefix": "yHttpPutAsJsonAsync"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inserts an If inline statement",
     "prefix": "yIfInline"
   },
@@ -294,12 +330,21 @@
     "prefix": "yIfNotNullAndCountGreaterThan0Statement"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inserts an If not null inline statement",
     "prefix": "yIfNotNullInline statement"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an If not null statement",
     "prefix": "yIfNotNull"
   },
@@ -326,9 +371,19 @@
     "prefix": "yIfNotStringIsNullOrWhiteSpace"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inserts an if null inline statement",
     "prefix": "yIfNullInline"
+  },
+  "ifNullOrCountIsZeroReturnStatement": {
+    "body": [
+      "if (${1:MyVariable} == null || $1.Count == 0) return$0; "
+    ],
+    "description": "Inserts an If null Or Count is zero statement",
+    "prefix": "yIfNullOrCountIsZeroReturn"
   },
   "ifNullOrCountIsZeroStatement": {
     "body": [
@@ -341,11 +396,6 @@
     "description": "Inserts an if null Or count is zero statement",
     "prefix": "yIfNullOrCountIsZero"
   },
-  "ifNullOrCountIsZeroReturnStatement": {
-    "body": ["if (${1:MyVariable} == null || $1.Count == 0) return$0; "],
-    "description": "Inserts an If null Or Count is zero statement",
-    "prefix": "yIfNullOrCountIsZeroReturn"
-  },
   "ifNullReturnDefaultStatement": {
     "body": "if (${1:MyVariable} == null) return ${2:default};$0",
     "description": "Inserts an if null return default statement",
@@ -357,12 +407,24 @@
     "prefix": "yIfNullReturn"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an if null statement",
     "prefix": "yIfNull"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "Inserts an if statement",
     "prefix": "yIf"
   },
@@ -801,7 +863,6 @@
     "description": "Inserts NavigationManager.Refresh(forceReload: true)",
     "prefix": "yNavigationManagerRefreshForceReload"
   },
-
   "onAfterRender": {
     "body": [
       "protected override void OnAfterRender(bool firstRender)",
@@ -823,7 +884,12 @@
     "prefix": "yOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Inserts an OnInitialized method stub",
     "prefix": "yOnInitialized"
   },
@@ -838,7 +904,12 @@
     "prefix": "yOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Inserts an OnParameterSet method stub",
     "prefix": "yOnParametersSet"
   },
@@ -875,24 +946,18 @@
     "prefix": "yPageTitle"
   },
   "paginator": {
-    "body": ["<Paginator Value=\"@pagination\" />$0"],
+    "body": [
+      "<Paginator Value=\"@pagination\" />$0"
+    ],
     "description": "Inserts a QuickGrid Paginator tag",
     "prefix": "yPaginator"
   },
   "parameterAttribute": {
-    "body": ["[Parameter$1]$0"],
+    "body": [
+      "[Parameter$1]$0"
+    ],
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
-  },
-  "cascadingParameterAttribute": {
-    "body": ["[CascadingParameter$1]$0"],
-    "description": "Inserts a CascadingParameter attribute",
-    "prefix": "yCascadingParaAttribute"
-  },
-  "setsRequiredMembersAttribute": {
-    "body": "[SetsRequiredMembers$1]$0",
-    "description": "Inserts an SetsRequiredMembersAttribute",
-    "prefix": "ySetsRequiredMembersAttribute"
   },
   "parameterIdProperty": {
     "body": [
@@ -909,12 +974,16 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
+    "body": [
+      "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"
+    ],
     "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
   "propCity": {
-    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:City} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a City property ",
     "prefix": "yPropCity"
   },
@@ -924,17 +993,16 @@
     "prefix": "yPropConfirmPassword"
   },
   "propCountry": {
-    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Country property ",
     "prefix": "yPropCountry"
   },
-  "propState": {
-    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a State property ",
-    "prefix": "yPropState"
-  },
   "propDescription": {
-    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
+    "body": [
+      "public string Description{ get; ${1|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Description property ",
     "prefix": "yPropDescription"
   },
@@ -958,12 +1026,16 @@
     "prefix": "yPropEndTime"
   },
   "propFilter": {
-    "body": ["public string Filter{ get; set; }$0"],
+    "body": [
+      "public string Filter{ get; set; }$0"
+    ],
     "description": "Inserts a Filter property ",
     "prefix": "yPropFilter"
   },
   "propFirstName": {
-    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a First Name property ",
     "prefix": "yPropFirstName"
   },
@@ -980,12 +1052,16 @@
     "prefix": "yPropImageUrl"
   },
   "propIsVisible": {
-    "body": ["public bool ${1:IsVisible} { get; set; } = ${2|false,true|};$0"],
+    "body": [
+      "public bool ${1:IsVisible} { get; set; } = ${2|false,true|};$0"
+    ],
     "description": "Inserts an IsVisible property ",
     "prefix": "yPropIsVisible"
   },
   "propLastName": {
-    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:LastName} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Last Name property ",
     "prefix": "yPropLastName"
   },
@@ -997,7 +1073,9 @@
     "prefix": "yPropMobilePhone"
   },
   "propName": {
-    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
+    "body": [
+      "public string ${1:Name} { get; ${2|set;,private set;|} }$0"
+    ],
     "description": "Inserts a Name property ",
     "prefix": "yPropName"
   },
@@ -1035,6 +1113,11 @@
     "body": "public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a StartTime property ",
     "prefix": "yPropStartTime"
+  },
+  "propState": {
+    "body": "public string ${1:State} { get; ${2|set;,private set;|} }$0",
+    "description": "Inserts a State property ",
+    "prefix": "yPropState"
   },
   "propStreet": {
     "body": "public string ${1:Street} { get; ${2|set;,private set;|} }$0",
@@ -1076,7 +1159,11 @@
     "prefix": "yQuickGrid"
   },
   "quickGridColumnOptions": {
-    "body": ["<ColumnOptions>", "\t$0", "</ColumnOptions>"],
+    "body": [
+      "<ColumnOptions>",
+      "\t$0",
+      "</ColumnOptions>"
+    ],
     "description": "Inserts QuickGrid ColumnOptions",
     "prefix": "yQuickGridColumnOptions"
   },
@@ -1100,6 +1187,17 @@
     "description": "Inserts a @ref=\"MyProperty\"",
     "prefix": "yRef"
   },
+  "renderFragmentChildContent": {
+    "body": [
+      "@ChildContent",
+      "",
+      "@code {",
+      "\t[Parameter] public RenderFragment ChildContent { get; set; }",
+      "}"
+    ],
+    "description": "Inserts a complete page component with ChildContent RenderFragment",
+    "prefix": "yRenderFragmentChildContent"
+  },
   "renderModeInteractiveAuto": {
     "body": "@rendermode InteractiveAuto$0",
     "description": "Inserts @rendermode InteractiveAuto",
@@ -1120,8 +1218,20 @@
     "description": "Inserts @rendermode InteractiveWebAssembly",
     "prefix": "yRendermodeInteractiveWebAssembly"
   },
+  "setsRequiredMembersAttribute": {
+    "body": "[SetsRequiredMembers$1]$0",
+    "description": "Inserts an SetsRequiredMembersAttribute",
+    "prefix": "ySetsRequiredMembersAttribute"
+  },
+  "stateHasChanged": {
+    "body": "StateHasChanged();$0",
+    "description": "Inserts a StateHasChanged() method",
+    "prefix": "yStateHasChanged"
+  },
   "supplyParameterFromForm": {
-    "body": ["[SupplyParameterFromForm$1]$0"],
+    "body": [
+      "[SupplyParameterFromForm$1]$0"
+    ],
     "description": "Inserts a SupplyParameterFromForm attribute",
     "prefix": "ySupplyParameterFromFormAttribute"
   },
@@ -1207,7 +1317,12 @@
     "prefix": "yVirtualizeComponent"
   },
   "voidDispose": {
-    "body": ["\tpublic void Dispose()", "\t{", "\t\t$0", "\t}"],
+    "body": [
+      "\tpublic void Dispose()",
+      "\t{",
+      "\t\t$0",
+      "\t}"
+    ],
     "description": "Inserts a Dispose method stub",
     "prefix": "yVoidDispose"
   }
