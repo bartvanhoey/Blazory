@@ -661,6 +661,16 @@
     "description": "Inserts an InputSelect (foreach) component",
     "prefix": "yInputSelectForEach"
   },
+  "forEach": {
+    "body": [
+      "@foreach (${1:var} ${2:item} in ${3:items})",
+      "{",
+      "\t\t$0",
+      "}"
+    ],
+    "description": "Inserts an @foreach statement",
+    "prefix": "yAtForeach"
+  },
   "inputSelectForEachAndLabel": {
     "body": [
       "<div class=\"mb-3\">",
