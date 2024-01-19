@@ -884,6 +884,11 @@
     "description": "Inserts a Parameter attribute",
     "prefix": "yParaAttribute"
   },
+  "cascadingParameterAttribute": {
+    "body": ["[CascadingParameter$1]$0"],
+    "description": "Inserts a CascadingParameter attribute",
+    "prefix": "yCascadingParaAttribute"
+  },
   "setsRequiredMembersAttribute": {
     "body": "[SetsRequiredMembers$1]$0",
     "description": "Inserts an SetsRequiredMembersAttribute",
