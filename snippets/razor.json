@@ -975,7 +975,7 @@
     "prefix": "yPropImageUrl"
   },
   "propIsVisible": {
-    "body": ["public bool IsVisible { get; set; } = ${1|false,true|};$0"],
+    "body": ["public bool ${1:IsVisible} { get; set; } = ${2|false,true|};$0"],
     "description": "Inserts an IsVisible property ",
     "prefix": "yPropIsVisible"
   },
