@@ -1110,7 +1110,7 @@
     "prefix": "yPropPrice"
   },
   "propQuantity": {
-    "body": "public int Quantity { get; set;} }$0",
+    "body": "public int Quantity { get; set;}$0",
     "description": "Inserts a Quantity property",
     "prefix": "yPropQuantity"
   },
