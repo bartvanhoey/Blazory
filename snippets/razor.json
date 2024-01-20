@@ -124,7 +124,7 @@
     "body": [
       "<CascadingValue Value=\"@${1:PropertyName}\" Name=\"@${2:ValueName}\" IsFixed=\"false\" >",
       "\t$0",
-      "</CascadingValue>"
+      "</CascadingValue>" 
     ],
     "description": "Inserts a CascadingValue component",
     "prefix": "yCascadingValue"
@@ -1207,6 +1207,13 @@
     ],
     "description": "Inserts a complete page component with ChildContent RenderFragment",
     "prefix": "yRenderFragmentChildContent"
+  },
+  "renderFragmentType": {
+    "body": [
+      "[Parameter] public RenderFragment<${1:Type}> ${2:PropertyName} { get; set; }$0"
+    ],
+    "description": "Inserts a RenderFragment<T> property",
+    "prefix": "yRenderFragmentType"
   },
   "renderModeInteractiveAuto": {
     "body": "@rendermode InteractiveAuto$0",
