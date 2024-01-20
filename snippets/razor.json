@@ -126,7 +126,7 @@
       "\t$0",
       "</CascadingValue>"
     ],
-    "description": "Inserts a CascadingValue attribute",
+    "description": "Inserts a CascadingValue component",
     "prefix": "yCascadingValue"
   },
   "codeBlock": {
