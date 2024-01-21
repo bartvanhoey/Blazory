@@ -1210,7 +1210,7 @@
   },
   "renderFragmentType": {
     "body": [
-      "[Parameter] public RenderFragment<${1:T}> ${2:ChildContent} { get; set; }$0"
+      "[Parameter] public RenderFragment<${1:TItem}> ${2:ChildContent} { get; set; }$0"
     ],
     "description": "Inserts a generic RenderFragment<T> property",
     "prefix": "yRenderFragmentGenericType"
