@@ -1299,7 +1299,7 @@
     "prefix": "yTemplatedComponent"
   },
   "typeParamDirective": {
-    "body": "@typeparam ${1:T}",
+    "body": "@typeparam T${1:Item}",
     "description": "Inserts @typeParam",
     "prefix": "yTypeParam"
   },
