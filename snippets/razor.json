@@ -1210,10 +1210,10 @@
   },
   "renderFragmentType": {
     "body": [
-      "[Parameter] public RenderFragment<${1:Type}> ${2:PropertyName} { get; set; }$0"
+      "[Parameter] public RenderFragment<${1:T}> ${2:ChildContent} { get; set; }$0"
     ],
-    "description": "Inserts a RenderFragment<T> property",
-    "prefix": "yRenderFragmentType"
+    "description": "Inserts a generic RenderFragment<T> property",
+    "prefix": "yRenderFragmentGenericType"
   },
   "renderModeInteractiveAuto": {
     "body": "@rendermode InteractiveAuto$0",
