@@ -722,7 +722,7 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0",
+    "body": "public DateTime$1 ${2:BirthDate} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
@@ -752,7 +752,7 @@
     "prefix": "yPropEmail"
   },
   "propEndDate": {
-    "body": "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0",
+    "body": "public DateTime$2 ${1:EndDate} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "yPropEndDate"
   },
