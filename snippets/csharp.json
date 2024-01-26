@@ -40,7 +40,7 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": ["builder.Entity<${1:ClassName}>()$0;"],
+    "body": "${1|builder, modelBuilder|}.Entity<${2:ClassName}>()$0;",
     "description": "inserts builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -620,7 +620,7 @@
     "prefix": "yMethodVoidWithArgs"
   },
   "modelBuilderEntity": {
-    "body": "builder.Entity<${1:ClassName}>()$0;",
+    "body": "${1|builder, modelBuilder|}.Entity<${2:ClassName}>()$0;",
     "description": "Inserts a builder.Entity stub",
     "prefix": "yModelBuilderEntity"
   },
