@@ -40,7 +40,7 @@
     "prefix": "yBuiServicesAddHttpClient"
   },
   "builderEntity": {
-    "body": ["modelBuilder.Entity<${1:ClassName}>()$0;"],
+    "body": "${1|builder, modelBuilder|}.Entity<${2:ClassName}>()$0;",
     "description": "inserts builder.Entity stub",
     "prefix": "yBuilderEntity"
   },
@@ -620,7 +620,7 @@
     "prefix": "yMethodVoidWithArgs"
   },
   "modelBuilderEntity": {
-    "body": "modelBuilder.Entity<${1:ClassName}>()$0;",
+    "body": "${1|builder, modelBuilder|}.Entity<${2:ClassName}>()$0;",
     "description": "Inserts a builder.Entity stub",
     "prefix": "yModelBuilderEntity"
   },
@@ -722,7 +722,7 @@
     "prefix": "yParaProp"
   },
   "propBirthDate": {
-    "body": "public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0",
+    "body": "public DateTime$1 ${2:BirthDate} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a BirthDate property ",
     "prefix": "yPropBirthDate"
   },
@@ -752,7 +752,7 @@
     "prefix": "yPropEmail"
   },
   "propEndDate": {
-    "body": "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0",
+    "body": "public DateTime$2 ${1:EndDate} { get; ${3|set;,private set;|}  }$0",
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "yPropEndDate"
   },
@@ -822,7 +822,7 @@
     "prefix": "yPropPrice"
   },
   "propQuantity": {
-    "body": "public int Quantity { get; set;} }$0",
+    "body": "public int Quantity { get; set;}$0",
     "description": "Inserts a Quantity property",
     "prefix": "yPropQuantity"
   },
