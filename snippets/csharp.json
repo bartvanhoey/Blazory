@@ -905,9 +905,9 @@
     "body": [
       "public override async Task$1 SetParametersAsync(ParameterView Parameters)",
       "{",
-      "\t$0",
-      "",
       "\tawait base.SetParametersAsync(Parameters);",
+      "",
+      "\t$0",
       "}"
     ],
     "description": "Inserts a SetParametersAsync method stub",
