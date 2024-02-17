@@ -852,7 +852,7 @@
     "prefix": "yPropTitle"
   },
   "propUserId": {
-    "body": "public ${1|Guid,int,string|} ${2:UserId} { get; ${3|set;,private set;|} }$0",
+    "body": "public ${1|Guid,int,string|} ${2:User}Id { get; ${3|set;,private set;|} }$0",
     "description": "Inserts an UserId property",
     "prefix": "yPropUserId"
   },
@@ -860,6 +860,11 @@
     "body": "public string ${1:UserName} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a UserName property ",
     "prefix": "yPropUserName"
+  },
+  "propIs": {
+    "body": "public bool Is{1:YourName} { get; set; } = ${2|false,true|};$0",
+    "description": "Inserts an Is YourName boolean property ",
+    "prefix": "yPropIs"
   },
   "propZipCode": {
     "body": "public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0",

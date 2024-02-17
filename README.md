@@ -132,6 +132,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropFirstName                          | Inserts a FirstName property                                          
      yPropId                                 | Inserts an Id property                                                
      yPropImageUrl                           | Inserts an ImageUrl property                                          
+     yPropIs                                 | Inserts an Is YourName boolean property                               
      yPropIsVisible                          | Inserts an IsVisible property                                         
      yPropLastName                           | Inserts a LastName property                                           
      yPropMobilePhone                        | Inserts a MobilePhone property                                        
