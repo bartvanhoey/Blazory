@@ -564,7 +564,7 @@
       "\t<label for=\"id$2\">${3:$2}</label>",
       "\t<div>",
       "\t\t<InputDate id=\"id$2\" class=\"form-control\"  @bind-Value=\"@${1:Model}.${2:PropertyName}\" />",
-      "\t\t<ValidationMessage For=\"@(() => $1.$2\") />",
+      "\t\t<ValidationMessage For=\"@(() => $1.$2)\" />",
       "\t</div>",
       "</div>",
       "$0"
