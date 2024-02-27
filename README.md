@@ -24,8 +24,13 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yCompareAttribute                       | Inserts a Compare attribute                                           
      yCreateAsyncMethodDefinition            | Inserts a CreateAsync method Definition to an Interface               
      yCreateAsyncResultMethodDefinition      | Inserts a CreateAsync Result method definition                        
-     yCrudIServiceMethodDefinitions          | Inserts a IService interface with CRUD method definitions             
-     yCrudResultIServiceMethodDefinitions    | Inserts a IService interface with CRUD Result method definitions      
+     yCrudIServiceMethodDefinitions          | Inserts an IService interface with CRUD method definitions            
+     yCrudResultIServiceMethodDefinitions    | Inserts an IService interface with CRUD Result method definitions     
+     yCtrlHttpDelete                         | Generates a HttpDelete action                                         
+     yCtrlHttpGet                            | Generates a HttpGet action                                            
+     yCtrlHttpGetList                        | Generates a HttpGet List action                                       
+     yCtrlHttpPost                           | Generates a HttpPost action                                           
+     yCtrlHttpPut                            | Generates a HttpPut action                                            
      yDataTypeAttribute                      | Inserts a DataType attribute                                          
      yDbSaveChangesAsync                     | Inserts _dbContext.SaveChangesAsync                                   
      yDbSet                                  | Inserts a DbSet for a class in DbContext                              
@@ -127,6 +132,7 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yPropFirstName                          | Inserts a FirstName property                                          
      yPropId                                 | Inserts an Id property                                                
      yPropImageUrl                           | Inserts an ImageUrl property                                          
+     yPropIs                                 | Inserts an Is YourName boolean property                               
      yPropIsVisible                          | Inserts an IsVisible property                                         
      yPropLastName                           | Inserts a LastName property                                           
      yPropMobilePhone                        | Inserts a MobilePhone property                                        
@@ -166,10 +172,12 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      Prefix                                     | Description                                                           
      ------------------------------------------ | ---------------------------------------------------------------------- 
      inputTextAreaAndLabel                      | Inserts an InputTextArea component + label                            
+     yAtForeach                                 | Inserts an @foreach statement                                         
      yAtIf                                      | Inserts an If statement                                               
      yAtIfIsVisible                             | Inserts an If(IsVisible) statement                                    
      yAtIfNotNull                               | Inserts an If not null statement                                      
      yAtIfNull                                  | Inserts an If null statement                                          
+     yAttributeAllowAnonymous                   | Inserts an @attribute [AllowAnonymous]§0                              
      yAttributeAuthorize                        | Inserts an @attribute [Authorize]§0                                   
      yAttributeRenderModeServer                 | Inserts an @attribute [RenderModeServer]                              
      yAttributeStreamRendering                  | Inserts an @attribute [StreamRendering(true)]                         
@@ -181,10 +189,10 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yButtonOnClick                             | Inserts a button with an onclick event                                
      yButtonOnClickWithParameter                | Inserts a button with an onclick event                                
      yCascadingAuthenticationState              | Inserts a CascadingAuthenticationState stub                           
-     yCascadingValue                            | Inserts a CascadingValue attribute                                    
+     yCascadingParaAttribute                    | Inserts a CascadingParameter attribute                                
+     yCascadingValue                            | Inserts a CascadingValue component                                    
      yCode                                      | Inserts a @code block                                                 
      yComponent                                 | Inserts a complete page component                                     
-     yComponentChildContent                     | Inserts a complete page component with ChildContent RenderFragment    
      yComponentDisposable                       | Inserts a page component inherits IDisposable                         
      yDataAnnotationsValidator                  | Inserts a DataAnnotationsValidator                                    
      yEditForm                                  | Inserts an EditForm component                                         
@@ -319,11 +327,14 @@ Do you see **room for improvement** or do **you have a snippet in mind** you wan
      yReadFromJsonAsync                         | Inserts a ReadFromJsonAsync call                                      
      yReadIdFromJsonAsync                       | Inserts a ReadFromJsonAsync call                                      
      yRef                                       | Inserts a @ref="MyProperty"                                           
+     yRenderFragmentChildContent                | Inserts a complete page component with ChildContent RenderFragment    
+     yRenderFragmentGenericType                 | Inserts a generic RenderFragment<T> property                          
      yRendermodeInteractiveAuto                 | Inserts @rendermode InteractiveAuto                                   
      yRendermodeInteractiveServer               | Inserts @rendermode InteractiveServer                                 
      yRendermodeInteractiveServerPreRenderFalse | Inserts @rendermode InteractiveServer with prerender:false            
      yRendermodeInteractiveWebAssembly          | Inserts @rendermode InteractiveWebAssembly                            
      ySetsRequiredMembersAttribute              | Inserts an SetsRequiredMembersAttribute                               
+     yStateHasChanged                           | Inserts a StateHasChanged() method                                    
      ySupplyParameterFromFormAttribute          | Inserts a SupplyParameterFromForm attribute                           
      yTaskCompleted                             | Inserts await Task.CompletedTask                                      
      yTemplateColumn                            | Inserts a QuickGrid TemplateColumn                                    
